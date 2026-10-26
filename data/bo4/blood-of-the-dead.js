@@ -179,7 +179,7 @@
         stepsTitle: 'Quest steps',
         video: { id: 'ABPZt30LomU', title: 'Ultimate Blood of the Dead easter egg guide', ch: 'MrRoflWaffles', len: '24:18' },
         steps: [
-          { w: 63, t: 'Scratch the Warden\'s House wall with the Spoon', d: 'Upstairs in the Warden\'s House, knife the wallpaper on the wall opposite the barrier. It shows scratches.', needs: ['spoon'], imgs: [{ src: I + 'warden-house.webp', cap: 'The Warden's House' }] },
+          { w: 63, t: 'Scratch the Warden\'s House wall with the Spoon', d: 'Upstairs in the Warden\'s House, knife the wallpaper on the wall opposite the barrier. It shows scratches.', needs: ['spoon'], imgs: [{ src: I + 'warden-house.webp', cap: "The Warden's House" }] },
           { w: 79, t: 'Have a slamming Brutus break the wall', d: 'Lead a Brutus that does the jumping electric slam up the stairs. At the top he slams, vanishes and the wall opens.', tip: 'From round 17, spirit blast the Citadel dials and enter 666 to spawn one every time. A Monkey Bomb thrown at the wall can also make a normal Brutus slam it (a bit unreliable).' },
           { w: 109, t: 'In the secret room: take the red stone and unveil the Warden', d: 'Pick up the red stone from the desk, then hold interact on the switch by the draped body to reveal the Warden\'s corpse.' },
           { w: 124, t: 'Place the stone on the map in Richtofen\'s Laboratory', d: 'Back at spawn, hold interact on the map across from the cryo chambers. Then hold interact on the glowing Kronorium in the corner: a ghost seagull steals it.' },
