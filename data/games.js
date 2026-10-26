@@ -2,7 +2,10 @@
 ZG.games = [
   { id: 'waw', name: 'World at War', short: 'WaW', year: 2008, active: false },
   { id: 'bo1', name: 'Black Ops', short: 'BO1', year: 2010, active: false },
-  { id: 'bo2', name: 'Black Ops II', short: 'BO2', year: 2012, active: false },
+  {
+    id: 'bo2', name: 'Black Ops II', short: 'BO2', year: 2012, active: true,
+    blurb: 'Every Black Ops II map with a main easter egg. TranZit, Die Rise and Buried each let you side with Maxis or Richtofen, and together they lead to one ending. Most of these quests need a full team. (Nuketown Zombies is left out: it has no main quest.)',
+  },
   {
     id: 'bo3', name: 'Black Ops III', short: 'BO3', year: 2015, active: true,
     blurb: 'Every Black Ops III map with a main easter egg: the six Aether story maps plus the four Zombies Chronicles remasters that have a full quest.',

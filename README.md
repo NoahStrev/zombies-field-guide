@@ -6,6 +6,7 @@ A personal Call of Duty Zombies guide: part locations, wonder weapons and upgrad
 
 Filled in so far:
 
+- **Black Ops II** (5 maps): TranZit, Die Rise, Mob of the Dead, Buried, Origins. Nuketown Zombies is left out (no main quest). Origins reuses the Black Ops III guide, since the quest is the same.
 - **Black Ops III** (10 maps): Shadows of Evil, The Giant, Der Eisendrache, Zetsubou No Shima, Gorod Krovi, Revelations, plus the Zombies Chronicles maps that have a main easter egg (Ascension, Shangri-La, Moon, Origins).
 - **Infinite Warfare** (5 maps): Zombies in Spaceland, Rave in the Redwoods, Shaolin Shuffle, Attack of the Radioactive Thing, The Beast from Beyond.
 - **Black Ops 4** (7 maps): IX, Voyage of Despair, Dead of the Night, Ancient Evil (Chaos story) and Blood of the Dead, Alpha Omega, Tag der Toten (Aether story). Classified is left out because its only quest is a round 150 cutscene.
@@ -40,7 +41,7 @@ css/styles.css          all styling (dark + light theme, responsive)
 js/core.js              data registry (ZG.addMap)
 js/app.js               routing, rendering, checklists, side panel, search
 data/games.js           the game tabs (set active: true to enable one)
-data/<game>/<map>.js    one file per map: all guide content (bo3, iw, bo4)
+data/<game>/<map>.js    one file per map: all guide content (bo2, bo3, iw, bo4)
 assets/img/<game>/<map>/  images (from the Call of Duty Wiki, converted to WebP)
 start-site.bat          local server for Windows
 ```
@@ -56,10 +57,12 @@ start-site.bat          local server for Windows
    - `blocks`: free content (`p`, `list`, `table`, `tip`, `warn`, `note`, `imgs`, `video`, `lookup`)
    - `lookup` (on a step or block): a picker. With `a` and `b` it shows two dropdowns and looks up `answers['A>B']`; with only `a` it shows one dropdown and looks up `answers['A']`. Answers are `[name, number]` pairs or plain lines of text.
    - `video`: `{ id: '<YouTube id>', title, ch, len }`
+   - Map-level `players`: `'solo'`, `'four'`, `'coop'`, or `{ text: '<badge text>', warn: true }` for custom wording.
+   - A quest with two sides (Black Ops II) is two `easter-egg` items whose `type` starts with `Main Easter Egg`; the map card and the Next step button follow whichever side has the most ticks.
 4. In any text, `**bold**` makes bold text and `{{item-id}}` (or `{{item-id|label}}`) makes a quick-look chip.
 5. Open the browser console after a change: the site warns about any `needs` or `{{...}}` that points to an item that doesn't exist.
 6. After editing files, bump the `?v=` number on the `<link>`/`<script>` tags in `index.html` so browsers load the new version.
 
 ## Credits
 
-Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent, CodeNamePizza, Pack A Puncher, GregFPS, Ch0pper and others). Fan-made; not affiliated with Activision, Treyarch or Infinity Ward.
+Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent, CodeNamePizza, Pack A Puncher, GregFPS, Ch0pper, AceOfSpades and others). Fan-made; not affiliated with Activision, Treyarch or Infinity Ward.

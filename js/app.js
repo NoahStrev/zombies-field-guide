@@ -73,17 +73,20 @@
     for (const key of ZG.mapOrder) {
       const map = ZG.maps[key];
       const game = map.game;
+      // Same map name in two games (Origins): say which game in search results.
+      const shared = ZG.mapOrder.some(k => k !== key && ZG.maps[k].name === map.name);
+      const mapLabel = shared ? `${map.name} (${(ZG.games.find(g => g.id === game) || {}).short || game})` : map.name;
       searchIndex.push({ rank: 0, title: map.name, sub: `${gameName(game)} · map`, href: `#/${game}/${map.id}`, text: `${map.name} ${map.dlc || ''}`.toLowerCase() });
       for (const it of map.items) {
         const itemHref = `#/${game}/${map.id}/${it.tab}/item-${it.id}`;
         const partNames = asArray(it.parts).map(p => p.name).join(' ');
         searchIndex.push({
-          rank: 1, title: it.name, sub: `${map.name} · ${it.type || tabLabel(it.tab)}`, href: itemHref,
+          rank: 1, title: it.name, sub: `${mapLabel} · ${it.type || tabLabel(it.tab)}`, href: itemHref,
           text: `${it.name} ${it.aka || ''} ${it.type || ''} ${map.name} ${partNames} ${stripRefs(it.summary || '')}`.toLowerCase(),
         });
         if (it.upgrade) {
           searchIndex.push({
-            rank: 1, title: it.upgrade.name, sub: `${map.name} · upgrade of ${it.name}`, href: itemHref,
+            rank: 1, title: it.upgrade.name, sub: `${mapLabel} · upgrade of ${it.name}`, href: itemHref,
             text: `${it.upgrade.name} ${it.upgrade.aka || ''} ${it.name} ${map.name} upgrade`.toLowerCase(),
           });
         }
@@ -96,7 +99,7 @@
             }
             searchIndex.push({
               rank: it.tab === 'easter-egg' ? 2 : 3,
-              title: `${label} ${i + 1}: ${stripRefs(st.t)}`, sub: `${map.name} · ${it.name}`,
+              title: `${label} ${i + 1}: ${stripRefs(st.t)}`, sub: `${mapLabel} · ${it.name}`,
               href: `#/${game}/${map.id}/${it.tab}/${it.id}-${listKey}-${i + 1}`,
               text: `${stripRefs(st.t)} ${it.name} ${map.name}`.toLowerCase(),
             });
@@ -460,14 +463,24 @@
     if (act && strip) strip.scrollLeft = act.offsetLeft - (strip.clientWidth - act.offsetWidth) / 2;
   }
 
+  // Progress of the main quest. Maps with two sides (Black Ops II: Maxis / Richtofen) have one
+  // checklist per side; show whichever side is furthest along.
   function eeProgress(map) {
-    const ee = map.items.find(i => i.tab === 'easter-egg' && i.steps);
-    if (!ee) return null;
-    const prefix = listPrefix(map, ee, 'steps');
-    return { done: countDone(prefix, ee.steps.length), total: ee.steps.length };
+    const lists = map.items.filter(i => i.tab === 'easter-egg' && i.steps);
+    const mains = lists.filter(i => /Main Easter Egg/.test(i.type || ''));
+    const candidates = mains.length ? mains : lists.slice(0, 1);
+    if (!candidates.length) return null;
+    let best = null;
+    for (const ee of candidates) {
+      const p = { done: countDone(listPrefix(map, ee, 'steps'), ee.steps.length), total: ee.steps.length };
+      if (!best || p.done / p.total > best.done / best.total) best = p;
+    }
+    return best;
   }
 
   function playerBadge(map) {
+    // A map can also give its own wording: players: { text: '2+ players needed', warn: true }
+    if (map.players && typeof map.players === 'object') return `<span class="badge ${map.players.warn ? 'badge-warn' : 'badge-ok'}">${esc(map.players.text)}</span>`;
     if (map.players === 'four') return '<span class="badge badge-warn">4 players required</span>';
     if (map.players === 'coop') return '<span class="badge badge-warn">Full ending needs 4 players</span>';
     return '<span class="badge badge-ok">Solo OK</span>';
@@ -713,10 +726,28 @@
     return $$('#main .content[data-tab="easter-egg"] .step');
   }
 
+  // First unticked quest step. With two side-by-side checklists (Maxis / Richtofen), follow the
+  // one with the most ticks so the button stays on the side you're doing.
+  function nextEeStep() {
+    const steps = eeStepsOnPage();
+    const byItem = new Map();
+    for (const s of steps) {
+      const item = s.closest('.item');
+      if (!byItem.has(item)) byItem.set(item, []);
+      byItem.get(item).push(s);
+    }
+    let best = null, bestDone = 0;
+    for (const list of byItem.values()) {
+      const done = list.filter(s => s.classList.contains('done')).length;
+      if (done > bestDone && list.some(s => !s.classList.contains('done'))) { best = list; bestDone = done; }
+    }
+    return (best || steps).find(s => !s.classList.contains('done'));
+  }
+
   function updateFab() {
     const fab = $('#next-step');
     if (!fab) return;
-    const next = eeStepsOnPage().find(s => !s.classList.contains('done'));
+    const next = nextEeStep();
     fab.hidden = !next;
     if (next) {
       const inPrep = next.dataset.anchor.includes('-prep-');
@@ -917,7 +948,7 @@
       }
 
       if (e.target.closest('#next-step')) {
-        const next = eeStepsOnPage().find(s => !s.classList.contains('done'));
+        const next = nextEeStep();
         if (next) scrollToAnchor(next.id);
         return;
       }
