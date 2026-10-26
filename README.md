@@ -4,7 +4,12 @@ A personal Call of Duty Zombies guide: part locations, wonder weapons and upgrad
 
 **Live site:** https://noahstrev.github.io/zombies-field-guide/
 
-**Black Ops III** is filled in, with 10 maps: Shadows of Evil, The Giant, Der Eisendrache, Zetsubou No Shima, Gorod Krovi, Revelations, plus the Zombies Chronicles maps that have a main easter egg (Ascension, Shangri-La, Moon, Origins). The other game tabs are placeholders.
+Filled in so far:
+
+- **Black Ops III** (10 maps): Shadows of Evil, The Giant, Der Eisendrache, Zetsubou No Shima, Gorod Krovi, Revelations, plus the Zombies Chronicles maps that have a main easter egg (Ascension, Shangri-La, Moon, Origins).
+- **Black Ops 4** (7 maps): IX, Voyage of Despair, Dead of the Night, Ancient Evil (Chaos story) and Blood of the Dead, Alpha Omega, Tag der Toten (Aether story). Classified is left out because its only quest is a round 150 cutscene.
+
+The other game tabs are placeholders.
 
 ## Opening it
 
@@ -34,8 +39,8 @@ css/styles.css          all styling (dark + light theme, responsive)
 js/core.js              data registry (ZG.addMap)
 js/app.js               routing, rendering, checklists, side panel, search
 data/games.js           the game tabs (set active: true to enable one)
-data/bo3/<map>.js       one file per map: all guide content
-assets/img/bo3/<map>/   images (from the Call of Duty Wiki, converted to WebP)
+data/<game>/<map>.js    one file per map: all guide content (bo3, bo4)
+assets/img/<game>/<map>/  images (from the Call of Duty Wiki, converted to WebP)
 start-site.bat          local server for Windows
 ```
 

@@ -11,7 +11,14 @@ ZG.games = [
       { id: 'chronicles', label: 'Zombies Chronicles' },
     ],
   },
-  { id: 'bo4', name: 'Black Ops 4', short: 'BO4', year: 2018, active: false },
+  {
+    id: 'bo4', name: 'Black Ops 4', short: 'BO4', year: 2018, active: true,
+    blurb: 'Every Black Ops 4 map with a main easter egg: the four Chaos story maps and the three Aether story maps. (Classified is left out: its only quest is a round 150 cutscene.)',
+    groups: [
+      { id: 'chaos', label: 'Chaos story' },
+      { id: 'aether', label: 'Aether story' },
+    ],
+  },
   { id: 'bocw', name: 'Cold War', short: 'CW', year: 2020, active: false },
   { id: 'bo6', name: 'Black Ops 6', short: 'BO6', year: 2024, active: false },
   { id: 'bo7', name: 'Black Ops 7', short: 'BO7', year: 2025, active: false },
