@@ -7,6 +7,7 @@ A personal Call of Duty Zombies guide: part locations, wonder weapons and upgrad
 Filled in so far:
 
 - **Black Ops III** (10 maps): Shadows of Evil, The Giant, Der Eisendrache, Zetsubou No Shima, Gorod Krovi, Revelations, plus the Zombies Chronicles maps that have a main easter egg (Ascension, Shangri-La, Moon, Origins).
+- **Infinite Warfare** (5 maps): Zombies in Spaceland, Rave in the Redwoods, Shaolin Shuffle, Attack of the Radioactive Thing, The Beast from Beyond.
 - **Black Ops 4** (7 maps): IX, Voyage of Despair, Dead of the Night, Ancient Evil (Chaos story) and Blood of the Dead, Alpha Omega, Tag der Toten (Aether story). Classified is left out because its only quest is a round 150 cutscene.
 
 The other game tabs are placeholders.
@@ -39,7 +40,7 @@ css/styles.css          all styling (dark + light theme, responsive)
 js/core.js              data registry (ZG.addMap)
 js/app.js               routing, rendering, checklists, side panel, search
 data/games.js           the game tabs (set active: true to enable one)
-data/<game>/<map>.js    one file per map: all guide content (bo3, bo4)
+data/<game>/<map>.js    one file per map: all guide content (bo3, iw, bo4)
 assets/img/<game>/<map>/  images (from the Call of Duty Wiki, converted to WebP)
 start-site.bat          local server for Windows
 ```
@@ -52,7 +53,8 @@ start-site.bat          local server for Windows
    - `parts`: buildable parts, each with a list of spawn `spots`; `w: <seconds>` links the part to that moment in the item's `video`
    - `steps` / `prep`: checklists. A step's `needs: ['item-id']` shows chips that open that item, and adds a "Needed for" link back. `w: <seconds>` (or `w: ['<YouTube id>', seconds]`) adds a "Watch this step" clip. Consecutive steps with the same `any: '<label>'` are grouped in an "Any order" box; `anyList: '<text>'` marks the list inside one step as any-order; `stepsOrder: 'suggested'` labels a whole list as flexible.
    - `upgrade`: a second checklist for the upgraded version
-   - `blocks`: free content (`p`, `list`, `table`, `tip`, `warn`, `note`, `imgs`, `video`)
+   - `blocks`: free content (`p`, `list`, `table`, `tip`, `warn`, `note`, `imgs`, `video`, `lookup`)
+   - `lookup` (on a step or block): a picker. With `a` and `b` it shows two dropdowns and looks up `answers['A>B']`; with only `a` it shows one dropdown and looks up `answers['A']`. Answers are `[name, number]` pairs or plain lines of text.
    - `video`: `{ id: '<YouTube id>', title, ch, len }`
 4. In any text, `**bold**` makes bold text and `{{item-id}}` (or `{{item-id|label}}`) makes a quick-look chip.
 5. Open the browser console after a change: the site warns about any `needs` or `{{...}}` that points to an item that doesn't exist.
@@ -60,4 +62,4 @@ start-site.bat          local server for Windows
 
 ## Credits
 
-Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent). Fan-made; not affiliated with Activision or Treyarch.
+Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent, CodeNamePizza, Pack A Puncher, GregFPS, Ch0pper and others). Fan-made; not affiliated with Activision, Treyarch or Infinity Ward.

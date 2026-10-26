@@ -291,9 +291,9 @@
         ${st.anyList ? `<div class="order-note">${ICON.shuffle}<span>${esc(typeof st.anyList === 'string' ? st.anyList : 'These can be done in any order')}</span></div>` : ''}
         ${bullets(st.list, map)}
         ${st.ol ? `<ol class="numbered">${st.ol.map(x => `<li>${fmt(x, map)}</li>`).join('')}</ol>` : ''}
+        ${st.lookup ? lookupHtml(st.lookup) : ''}
         ${st.table ? tableHtml(st.table, map) : ''}
         ${st.spots ? spotsList(map, st.spots) : ''}
-        ${st.lookup ? lookupHtml(st.lookup) : ''}
         ${callouts(st, map)}
         ${figures(st.imgs)}
         ${watchHtml(map, st.w, stepVideo(item, listKey), 'Watch this step')}
@@ -357,17 +357,21 @@
       `${esc(b.item.short || b.item.name)} · Step ${b.index + 1}<span class="usedin-step">${esc(stripRefs(b.step.t))}</span></a>`).join('')}</div>`;
   }
 
-  /* Two-dropdown lookup (e.g. Gorod Krovi valves): pick A and B, see the matching answer. */
+  /* Dropdown lookup. Two dropdowns (e.g. Gorod Krovi valves: pick A and B) or, without `b`,
+     one dropdown (e.g. pick a compound). Answers are [name, number] pairs ("Set name to n")
+     or plain strings (one numbered line each, **bold** allowed). */
   let lookupSeq = 0;
   function lookupHtml(lk) {
     const id = 'lookup-' + (++lookupSeq);
+    const single = !lk.b;
     const opts = lk.options.map(o => `<option value="${esc(o)}">${esc(o)}</option>`).join('');
     const field = (key, label) => `<label class="lookup-field" for="${id}-${key}"><span>${esc(label)}</span>
         <select id="${id}-${key}" data-lookup="${key}"><option value="">Choose…</option>${opts}</select></label>`;
-    const data = { answers: lk.answers, endNote: lk.endNote || '', same: lk.same || '' };
+    const hint = lk.hint || (single ? 'Pick one to see the answer.' : 'Pick both to see the answer.');
+    const data = { answers: lk.answers, endNote: lk.endNote || '', same: lk.same || '', single, hint };
     return `<div class="lookup" data-lookup-data="${esc(JSON.stringify(data))}">
-      <div class="lookup-fields">${field('a', lk.a)}${field('b', lk.b)}</div>
-      <div class="lookup-out" aria-live="polite"><p class="lookup-hint">${esc(lk.hint || 'Pick both to see the answer.')}</p></div>
+      <div class="lookup-fields${single ? ' single' : ''}">${field('a', lk.a)}${single ? '' : field('b', lk.b)}</div>
+      <div class="lookup-out" aria-live="polite"><p class="lookup-hint">${esc(hint)}</p></div>
       ${lk.source ? `<p class="lookup-source">${fmt(lk.source)}</p>` : ''}
     </div>`;
   }
@@ -375,15 +379,18 @@
   function renderLookup(box) {
     const data = JSON.parse(box.dataset.lookupData);
     const a = box.querySelector('[data-lookup="a"]').value;
-    const b = box.querySelector('[data-lookup="b"]').value;
+    const bSel = box.querySelector('[data-lookup="b"]');
+    const b = bSel ? bSel.value : '';
     const out = box.querySelector('.lookup-out');
-    if (!a || !b) { out.innerHTML = '<p class="lookup-hint">Pick both to see the answer.</p>'; return; }
-    if (a === b) { out.innerHTML = `<p class="lookup-hint">${esc(data.same || 'Those can\'t be the same.')}</p>`; return; }
-    const ans = data.answers[`${a}>${b}`];
+    if (!a || (!data.single && !b)) { out.innerHTML = `<p class="lookup-hint">${esc(data.hint)}</p>`; return; }
+    if (!data.single && a === b) { out.innerHTML = `<p class="lookup-hint">${esc(data.same || 'Those can\'t be the same.')}</p>`; return; }
+    const ans = data.answers[data.single ? a : `${a}>${b}`];
     if (!ans) { out.innerHTML = '<p class="lookup-hint">No answer for that combination.</p>'; return; }
-    out.innerHTML = `<ol class="numbered lookup-result">${ans.map(([name, n]) =>
-      `<li>Set <b>${esc(name)}</b> <span class="nowrap">to <b class="lookup-num">${esc(n)}</b></span></li>`).join('')}</ol>` +
-      (data.endNote ? `<p class="lookup-end">${esc(data.endNote.replace('{b}', b))}</p>` : '');
+    const line = x => Array.isArray(x)
+      ? `<li>Set <b>${esc(x[0])}</b> <span class="nowrap">to <b class="lookup-num">${esc(x[1])}</b></span></li>`
+      : `<li>${esc(x).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')}</li>`;
+    out.innerHTML = `<ol class="numbered lookup-result">${ans.map(line).join('')}</ol>` +
+      (data.endNote ? `<p class="lookup-end">${esc(data.endNote.replace('{a}', a).replace('{b}', b))}</p>` : '');
   }
 
   function blocksHtml(map, blocks) {

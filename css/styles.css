@@ -333,6 +333,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 /* two-dropdown lookup (valve solver) */
 .lookup { margin: 10px 0; padding: 12px 14px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--panel-2); }
 .lookup-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.lookup-fields.single { grid-template-columns: minmax(0, 28rem); }
 .lookup-field { display: flex; flex-direction: column; gap: 5px; font-size: .85rem; color: var(--text-2); }
 .lookup select { width: 100%; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--bg-2); color: var(--text); font: inherit; font-size: 1rem; }
 .lookup select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }

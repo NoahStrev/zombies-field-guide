@@ -12,6 +12,10 @@ ZG.games = [
     ],
   },
   {
+    id: 'iw', name: 'Infinite Warfare', short: 'IW', year: 2016, active: true,
+    blurb: 'All five Infinite Warfare maps. Each main easter egg recovers a piece of the Soul Key; finish all five to unlock Director\'s Cut. Infinity Ward renames most things, so start with the basics on Zombies in Spaceland.',
+  },
+  {
     id: 'bo4', name: 'Black Ops 4', short: 'BO4', year: 2018, active: true,
     blurb: 'Every Black Ops 4 map with a main easter egg: the four Chaos story maps and the three Aether story maps. (Classified is left out: its only quest is a round 150 cutscene.)',
     groups: [
