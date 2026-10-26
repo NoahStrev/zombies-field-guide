@@ -1,6 +1,6 @@
-/* One tab per game. Set active: true once a game has map data. */
+/* One tab per game. Set active: true once a game has map data.
+   World at War has no tab: none of its maps has a main easter egg. */
 ZG.games = [
-  { id: 'waw', name: 'World at War', short: 'WaW', year: 2008, active: false },
   { id: 'bo1', name: 'Black Ops', short: 'BO1', year: 2010, active: false },
   {
     id: 'bo2', name: 'Black Ops II', short: 'BO2', year: 2012, active: true,

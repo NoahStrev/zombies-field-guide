@@ -11,7 +11,7 @@ Filled in so far:
 - **Infinite Warfare** (5 maps): Zombies in Spaceland, Rave in the Redwoods, Shaolin Shuffle, Attack of the Radioactive Thing, The Beast from Beyond.
 - **Black Ops 4** (7 maps): IX, Voyage of Despair, Dead of the Night, Ancient Evil (Chaos story) and Blood of the Dead, Alpha Omega, Tag der Toten (Aether story). Classified is left out because its only quest is a round 150 cutscene.
 
-The other game tabs are placeholders.
+The other game tabs are placeholders. World at War has no tab: none of its maps has a main easter egg.
 
 ## Opening it
 
@@ -31,6 +31,10 @@ To run it on your PC instead, double-click **`start-site.bat`**. It starts a sma
 - **Order:** numbered steps go top to bottom. Steps inside a green **Any order** box, or marked with the shuffle icon, can be done in whatever order you like.
 - **Watch buttons** under steps and part spots play the exact moment from a guide video, right in the page.
 - **Next step** button (on easter egg pages) jumps to your first unticked step.
+- **Collapse done** (on every checklist) shrinks finished steps to just their title. It's one setting for the whole site.
+- **Keep screen on** (phone icon in the top bar, on browsers that support it) stops the screen sleeping while you play.
+- **Home page** lists every map with your easter egg progress and a Continue button back to the last page you had open.
+- **Offline:** on the live site, pages you open are kept on the device. "Save everything for offline" on the home page downloads all images too (about 13 MB). Videos still need internet. On a phone you can also add the site to your home screen.
 - **Search** (top bar) finds maps, items, upgrades and steps.
 
 ## How the files are laid out
@@ -43,7 +47,11 @@ js/app.js               routing, rendering, checklists, side panel, search
 data/games.js           the game tabs (set active: true to enable one)
 data/<game>/<map>.js    one file per map: all guide content (bo2, bo3, iw, bo4)
 assets/img/<game>/<map>/  images (from the Call of Duty Wiki, converted to WebP)
+assets/icons/           home-screen icons
+sw.js                   offline support (service worker, live site only)
+manifest.webmanifest    lets phones add the site to the home screen
 start-site.bat          local server for Windows
+tools/                  research, checking and publishing scripts (see tools/README.md)
 ```
 
 ## Adding a game or map later

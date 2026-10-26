@@ -514,3 +514,27 @@ tr:last-child td { border-bottom: 0; }
 .video-thumb { position: relative; flex: none; width: 160px; max-width: 40%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: #000; }
 .video-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .video-thumb .video-icon { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 44px; height: 30px; }
+
+/* ---------- keep screen on, collapsed finished steps ---------- */
+#wake-toggle[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.collapse-done .step.done { padding-top: 8px; padding-bottom: 8px; }
+.collapse-done .step.done .step-body > :not(.step-title) { display: none; }
+.collapse-done .step.done .step-title { margin: 3px 0; }
+.collapse-done .step.done .step-num { display: none; }
+
+/* ---------- home ---------- */
+.home-game .group-h a { color: var(--text); text-decoration: none; }
+.home-game .group-h a:hover { color: var(--accent-2); }
+.home-count { font-family: var(--font-body); font-size: .8rem; letter-spacing: 0; text-transform: none; color: var(--muted); order: 3; }
+.home-maps { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.home-map { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; color: var(--text); text-decoration: none; min-height: 60px; transition: border-color .15s ease; }
+.home-map:hover { border-color: var(--accent); }
+.home-map-text { display: flex; flex-direction: column; min-width: 0; }
+.home-map-name { font-family: var(--font-head); text-transform: uppercase; font-size: 1.05rem; line-height: 1.2; }
+.home-map-ee { color: var(--muted); font-size: .82rem; }
+.home-map-status { color: var(--muted); font-size: .8rem; white-space: nowrap; }
+.home-map .progress { min-width: 0; flex: 0 1 120px; margin: 0; }
+.home-soon { color: var(--muted); margin-top: 28px; font-size: .9rem; }
+.offline-box p { color: var(--text-2); max-width: 70ch; }
+.offline-status { color: var(--muted) !important; font-size: .88rem; min-height: 1.3em; }
+@media (max-width: 420px) { .brand-text b { display: none; } }

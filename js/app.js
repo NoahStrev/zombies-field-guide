@@ -17,6 +17,9 @@
     },
   };
   const isDone = k => store.get(k) === '1';
+  // Finished steps can be shrunk to just their title (one setting for the whole site).
+  const collapseDone = () => store.get('zg-collapse') === '1';
+  const applyCollapse = () => document.documentElement.classList.toggle('collapse-done', collapseDone());
 
   /* ---------- small helpers ---------- */
   const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -340,6 +343,7 @@
         <h4>${esc(title)}</h4>
         ${ORDER_CHIP[order] || ''}
         <div class="progress" aria-label="Progress"><div class="bar"><span style="width:${n ? Math.round(done / n * 100) : 0}%"></span></div><span class="count">${done}/${n}</span></div>
+        ${n > 1 ? `<button type="button" class="link-btn" data-collapse aria-pressed="${collapseDone() ? 'true' : 'false'}">${collapseDone() ? 'Expand done' : 'Collapse done'}</button>` : ''}
         <button type="button" class="link-btn" data-reset="${esc(prefix)}" data-total="${n}">Reset</button>
       </div>
       <ol class="steps">${stepsListHtml(map, item, listKey, steps, opts)}</ol>
@@ -522,7 +526,151 @@
     return `<section class="page-hero"><div class="wrap">
       <p class="eyebrow">${esc(game.year)}</p><h1>${esc(game.name)} Zombies</h1>
       <p class="lede">Guides for ${esc(game.name)} haven't been written yet. This tab is ready for them.</p>
-      <p><a class="btn" href="#/bo3">${ICON.arrow} Go to Black Ops III</a></p></div></section>`;
+      <p><a class="btn" href="#/">${ICON.arrow} Back to all games</a></p></div></section>`;
+  }
+
+  /* ---------- home ---------- */
+  function homeMapRow(map) {
+    const p = eeProgress(map);
+    const started = p && p.done;
+    const pct = started ? Math.round(p.done / p.total * 100) : 0;
+    return `<a class="home-map" href="${hrefFor(map, started ? 'easter-egg' : 'start')}">
+      <span class="home-map-text"><span class="home-map-name">${esc(map.name)}</span><span class="home-map-ee">${esc(map.eeName || '')}</span></span>
+      ${started
+        ? `<span class="progress small"><span class="bar"><span style="width:${pct}%"></span></span><span class="count">${p.done}/${p.total}</span></span>`
+        : '<span class="home-map-status">Not started</span>'}
+    </a>`;
+  }
+
+  function renderHome() {
+    document.title = 'Zombies Field Guide';
+    const active = ZG.games.filter(g => g.active);
+    const soon = ZG.games.filter(g => !g.active);
+    const total = active.reduce((n, g) => n + ZG.mapsFor(g.id).length, 0);
+    const [lg, lm, lt] = (store.get('zg-last') || '').split('/');
+    const last = ZG.maps[`${lg}/${lm}`];
+    return `<section class="page-hero"><div class="wrap">
+        <p class="eyebrow">${active.length} games · ${total} maps</p>
+        <h1>Zombies Field Guide</h1>
+        <p class="lede">Part locations, wonder weapons and step-by-step easter eggs for every Call of Duty Zombies map with a main quest. Tick steps off as you go; your progress is saved.</p>
+        ${last ? `<p><a class="btn" href="${hrefFor(last, lt || 'start')}">${ICON.arrow} Continue: ${esc(last.name)} · ${esc(tabLabel(lt || 'start'))}</a></p>` : ''}
+      </div></section>
+      <div class="wrap home">
+        ${active.map(g => {
+          const maps = ZG.mapsFor(g.id);
+          return `<section class="home-game"><h2 class="group-h"><a href="#/${g.id}">${esc(g.name)}</a><span class="home-count">${maps.length} maps</span></h2>
+            <div class="home-maps">${maps.map(homeMapRow).join('')}</div></section>`;
+        }).join('')}
+        ${soon.length ? `<p class="home-soon">Not written yet: ${soon.map(g => esc(g.name)).join(', ')}.</p>` : ''}
+        ${offlineHtml()}
+      </div>`;
+  }
+
+  /* ---------- offline ----------
+     On the public site a service worker (sw.js) keeps a copy of every page and image you open.
+     "Save everything" fills that copy with all images up front. Not used on the hosted Claude page. */
+  const OFFLINE_CACHE = 'zg-v1';
+  const CAN_OFFLINE = 'serviceWorker' in navigator && 'caches' in window && !window.ZG_HOSTED &&
+    (location.protocol === 'https:' || /[?&]sw=1/.test(location.search));
+
+  function offlineHtml() {
+    if (!CAN_OFFLINE) return '';
+    const saved = store.get('zg-offline');
+    return `<section class="offline-box">
+      <h2 class="group-h">Use it offline</h2>
+      <p>Pages you open are kept on this device automatically. To have every map ready with no signal, save everything once (about 13 MB of images). Videos still need internet.</p>
+      <p><button type="button" class="btn" id="save-offline">${saved ? 'Update the offline copy' : 'Save everything for offline'}</button></p>
+      <p class="offline-status" id="offline-status" aria-live="polite">${saved ? `Last saved ${esc(saved)}.` : ''}</p>
+    </section>`;
+  }
+
+  function allImageUrls() {
+    const out = new Set();
+    const add = s => { if (s) out.add(typeof s === 'string' ? s : s.src); };
+    for (const key of ZG.mapOrder) {
+      const m = ZG.maps[key];
+      add(m.hero);
+      for (const it of m.items) {
+        add(it.img);
+        if (it.upgrade) add(it.upgrade.img);
+        for (const p of asArray(it.parts)) { add(p.icon); for (const s of asArray(p.spots)) if (s && s.imgs) s.imgs.forEach(add); }
+        for (const b of asArray(it.blocks)) asArray(b.imgs).forEach(add);
+        for (const [, steps] of stepLists(it)) for (const st of steps) asArray(st.imgs).forEach(add);
+      }
+    }
+    return [...out];
+  }
+
+  async function saveOffline(btn) {
+    const status = $('#offline-status');
+    const shell = $$('script[src], link[rel="stylesheet"][href]').map(el => el.getAttribute('src') || el.getAttribute('href'))
+      .filter(u => !/^https?:/.test(u));
+    const urls = ['index.html', ...shell, ...allImageUrls()].map(u => new URL(u, location.href).href);
+    btn.disabled = true;
+    let done = 0, failed = 0;
+    try {
+      const cache = await caches.open(OFFLINE_CACHE);
+      const queue = urls.slice();
+      const worker = async () => {
+        while (queue.length) {
+          const u = queue.shift();
+          try {
+            if (!(await cache.match(u))) {
+              const res = await fetch(u);
+              if (res.ok) await cache.put(u, res); else failed++;
+            }
+          } catch (e) { failed++; }
+          done++;
+          status.textContent = `Saving ${done} of ${urls.length}…`;
+        }
+      };
+      await Promise.all([worker(), worker(), worker(), worker()]);
+      store.set('zg-offline', new Date().toLocaleDateString());
+      status.textContent = failed
+        ? `Saved, but ${failed} file${failed === 1 ? '' : 's'} failed. Try again later.`
+        : 'Saved. Everything except the videos now works without internet.';
+      btn.textContent = 'Update the offline copy';
+    } catch (e) {
+      status.textContent = 'This browser won\'t let the guide save files for offline use.';
+    }
+    btn.disabled = false;
+  }
+
+  function registerServiceWorker() {
+    if (!CAN_OFFLINE) return;
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  }
+
+  /* ---------- keep the screen on (Screen Wake Lock) ---------- */
+  let wakeLock = null;
+  let wakeRefused = false;
+  const wakeWanted = () => store.get('zg-awake') === '1';
+
+  function syncWakeButton() {
+    const btn = $('#wake-toggle');
+    if (!btn) return;
+    btn.hidden = !('wakeLock' in navigator) || wakeRefused;
+    btn.setAttribute('aria-pressed', wakeLock ? 'true' : 'false');
+    btn.title = wakeLock ? 'Screen stays on (tap to turn off)' : 'Keep the screen on while you play';
+  }
+
+  async function applyWake() {
+    if (!('wakeLock' in navigator)) return;
+    if (wakeWanted() && document.visibilityState === 'visible' && !wakeLock) {
+      try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        wakeLock.addEventListener('release', () => { wakeLock = null; syncWakeButton(); });
+      } catch (e) {
+        // This browser or page doesn't allow it (some embedded pages, battery saver): hide the button.
+        wakeLock = null;
+        wakeRefused = true;
+        store.del('zg-awake');
+      }
+    } else if (!wakeWanted() && wakeLock) {
+      try { await wakeLock.release(); } catch (e) { /* already released */ }
+      wakeLock = null;
+    }
+    syncWakeButton();
   }
 
   function renderMap(map, tabId) {
@@ -564,7 +712,7 @@
 
   function renderNotFound() {
     document.title = 'Not found — Zombies Field Guide';
-    return `<section class="page-hero"><div class="wrap"><h1>Page not found</h1><p class="lede">That page doesn't exist.</p><p><a class="btn" href="#/bo3">${ICON.arrow} Back to Black Ops III</a></p></div></section>`;
+    return `<section class="page-hero"><div class="wrap"><h1>Page not found</h1><p class="lede">That page doesn't exist.</p><p><a class="btn" href="#/">${ICON.arrow} Back to all games</a></p></div></section>`;
   }
 
   /* ---------- router ----------
@@ -584,7 +732,7 @@
       if (key) return `#/${ZG.maps[key].game}/${tok}`;
       if (ZG.games.some(g => g.id === tok)) return `#/${tok}`;
     }
-    return '#/bo3';
+    return '#/';
   }
 
   function go(href, replace) {
@@ -607,20 +755,23 @@
 
   function route() {
     const { parts, params } = parseHash();
-    if (!parts.length) { go('#/bo3', true); return; }
     const [g, m, t, anchor] = parts;
-    const game = ZG.games.find(x => x.id === g);
+    const game = g ? ZG.games.find(x => x.id === g) : null;
     const map = game && m ? ZG.maps[`${g}/${m}`] : null;
-    const key = [g, m || '', m ? (t || 'start') : ''].join('/');
+    const key = g ? [g, m || '', m ? (t || 'start') : ''].join('/') : 'home';
     const main = $('#main');
 
     if (renderedKey !== key) {
       const prevMap = renderedKey && renderedKey.split('/').slice(0, 2).join('/');
       renderGameTabs(g);
-      if (!game) main.innerHTML = renderNotFound();
+      if (!g) main.innerHTML = renderHome();
+      else if (!game) main.innerHTML = renderNotFound();
       else if (!m) main.innerHTML = game.active ? renderGame(game) : renderSoon(game);
       else if (!map) main.innerHTML = renderNotFound();
-      else main.innerHTML = renderMap(map, t || 'start');
+      else {
+        main.innerHTML = renderMap(map, t || 'start');
+        store.set('zg-last', `${g}/${m}/${$('.maptab.active') ? $('.maptab.active').getAttribute('href').split('/')[3] : 'start'}`);
+      }
       renderedKey = key;
       updateFab();
       const sameMap = map && prevMap === `${g}/${m}`;
@@ -720,6 +871,7 @@
       const game = ZG.games.find(x => x.id === parseHash().parts[0]);
       if (game && game.active) $('#main').innerHTML = renderGame(game);
     }
+    if ($('.home')) $('#main').innerHTML = renderHome();
   }
 
   function eeStepsOnPage() {
@@ -958,6 +1110,25 @@
         return;
       }
 
+      if (e.target.closest('[data-collapse]')) {
+        store.set('zg-collapse', collapseDone() ? '0' : '1');
+        applyCollapse();
+        $$('[data-collapse]').forEach(b => {
+          b.textContent = collapseDone() ? 'Expand done' : 'Collapse done';
+          b.setAttribute('aria-pressed', collapseDone() ? 'true' : 'false');
+        });
+        return;
+      }
+
+      const saveBtn = e.target.closest('#save-offline');
+      if (saveBtn) { saveOffline(saveBtn); return; }
+
+      if (e.target.closest('#wake-toggle')) {
+        if (wakeWanted()) store.del('zg-awake'); else store.set('zg-awake', '1');
+        applyWake();
+        return;
+      }
+
       if (e.target.closest('#theme-toggle')) {
         const t = effectiveTheme() === 'light' ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', t);
@@ -1013,11 +1184,17 @@
       const mq = window.matchMedia('(prefers-color-scheme: light)');
       if (mq.addEventListener) mq.addEventListener('change', syncThemeButton);
     }
+    // The browser drops the wake lock when the tab is hidden; take it again on return.
+    document.addEventListener('visibilitychange', applyWake);
   }
 
   buildIndex();
   bind();
+  applyCollapse();
   syncThemeButton();
+  syncWakeButton();
+  applyWake();
+  registerServiceWorker();
   setSyncStatus('local');
   current = initialHash();
   try { history.replaceState(null, '', current); } catch (e) { historyWorks = false; }
