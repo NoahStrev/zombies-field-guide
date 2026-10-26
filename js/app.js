@@ -293,6 +293,7 @@
         ${st.ol ? `<ol class="numbered">${st.ol.map(x => `<li>${fmt(x, map)}</li>`).join('')}</ol>` : ''}
         ${st.table ? tableHtml(st.table, map) : ''}
         ${st.spots ? spotsList(map, st.spots) : ''}
+        ${st.lookup ? lookupHtml(st.lookup) : ''}
         ${callouts(st, map)}
         ${figures(st.imgs)}
         ${watchHtml(map, st.w, stepVideo(item, listKey), 'Watch this step')}
@@ -356,8 +357,38 @@
       `${esc(b.item.short || b.item.name)} · Step ${b.index + 1}<span class="usedin-step">${esc(stripRefs(b.step.t))}</span></a>`).join('')}</div>`;
   }
 
+  /* Two-dropdown lookup (e.g. Gorod Krovi valves): pick A and B, see the matching answer. */
+  let lookupSeq = 0;
+  function lookupHtml(lk) {
+    const id = 'lookup-' + (++lookupSeq);
+    const opts = lk.options.map(o => `<option value="${esc(o)}">${esc(o)}</option>`).join('');
+    const field = (key, label) => `<label class="lookup-field" for="${id}-${key}"><span>${esc(label)}</span>
+        <select id="${id}-${key}" data-lookup="${key}"><option value="">Choose…</option>${opts}</select></label>`;
+    const data = { answers: lk.answers, endNote: lk.endNote || '', same: lk.same || '' };
+    return `<div class="lookup" data-lookup-data="${esc(JSON.stringify(data))}">
+      <div class="lookup-fields">${field('a', lk.a)}${field('b', lk.b)}</div>
+      <div class="lookup-out" aria-live="polite"><p class="lookup-hint">${esc(lk.hint || 'Pick both to see the answer.')}</p></div>
+      ${lk.source ? `<p class="lookup-source">${fmt(lk.source)}</p>` : ''}
+    </div>`;
+  }
+
+  function renderLookup(box) {
+    const data = JSON.parse(box.dataset.lookupData);
+    const a = box.querySelector('[data-lookup="a"]').value;
+    const b = box.querySelector('[data-lookup="b"]').value;
+    const out = box.querySelector('.lookup-out');
+    if (!a || !b) { out.innerHTML = '<p class="lookup-hint">Pick both to see the answer.</p>'; return; }
+    if (a === b) { out.innerHTML = `<p class="lookup-hint">${esc(data.same || 'Those can\'t be the same.')}</p>`; return; }
+    const ans = data.answers[`${a}>${b}`];
+    if (!ans) { out.innerHTML = '<p class="lookup-hint">No answer for that combination.</p>'; return; }
+    out.innerHTML = `<ol class="numbered lookup-result">${ans.map(([name, n]) =>
+      `<li>Set <b>${esc(name)}</b> <span class="nowrap">to <b class="lookup-num">${esc(n)}</b></span></li>`).join('')}</ol>` +
+      (data.endNote ? `<p class="lookup-end">${esc(data.endNote.replace('{b}', b))}</p>` : '');
+  }
+
   function blocksHtml(map, blocks) {
     return asArray(blocks).map(b => {
+      if (b.lookup) return lookupHtml(b.lookup);
       if (b.h) return `<h4 class="block-h">${fmt(b.h, map)}</h4>`;
       if (b.p) return paras(b.p, map);
       if (b.list) return bullets(b.list, map);
@@ -896,6 +927,8 @@
     });
 
     document.addEventListener('change', e => {
+      const lookupSel = e.target.closest('.lookup select');
+      if (lookupSel) { renderLookup(lookupSel.closest('.lookup')); return; }
       const inp = e.target.closest('input[data-key]');
       if (!inp) return;
       const key = inp.dataset.key;
