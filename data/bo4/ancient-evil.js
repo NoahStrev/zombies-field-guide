@@ -190,7 +190,7 @@
         summary: 'Light the Eternal Flame, burn three oil spills, smash statues, set cogs turning, free the Scepter of Ra, set the sundial, pass the sharpshooter trial in the Amphitheater, load a giant ballista and fight Pegasus and Perseus.',
         facts: [
           ['Players', '1–4 (solo works)'],
-          ['Reward', 'Ending cutscene, achievement, free doors on other Chaos maps for that session'],
+          ['Reward', 'Ending cutscene and achievement'],
           ['Hardest part', 'The sundial timing and the Amphitheater sharpshooter step'],
         ],
         prep: [

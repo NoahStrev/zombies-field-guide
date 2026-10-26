@@ -89,7 +89,7 @@
           { w: 572, t: 'Fill four more tubes and swap souls', d: 'At the open pyramid, four tubes rise. Kill 25 zombies near each (Samantha screams and shakes the screen). Then put the rod in the slot on the front of the pyramid. Richtofen and Samantha swap souls and the Richtofen player gets every perk.' },
           { w: 615, any: 'Do these two in either order', t: 'Win Simon Says three more times', d: 'Same four computers, but harder: starting at three colours, then four, then five. Each win raises one of three rockets in the big gap.' },
           { w: 634, any: 'Do these two in either order', t: 'Move the sphere again', needs: ['qed', 'gersh'], d: 'Throw a QED right onto the Vril interface on the front of the pyramid: the sphere shoots over to the Simon Says area. Throw a Gersh Device next to it to teleport it.' },
-          { imgs: [{ src: I + 'rockets.webp', cap: 'The rockets heading for Earth' }], w: 655, t: 'Big Bang Theory', d: 'Maxis starts a countdown and the three rockets fly to Earth and destroy it about 30–40 seconds later (Earth looks different from Area 51 from now on). Everyone gets all eight perks for the rest of the game.' },
+          { imgs: [{ src: I + 'rockets.webp', cap: 'The rockets heading for Earth' }], w: 655, t: 'Big Bang Theory', d: 'Maxis starts a countdown and the three rockets fly to Earth and destroy it about 30–40 seconds later (Earth looks different from Area 51 from now on). Everyone gets all eight perks for the rest of the game, even if they go down (solo: Quick Revive can still be used up).' },
         ],
         video: { id: '2k6L3wBsEyA', title: 'Ultimate Moon Easter Egg Guide (Zombies Chronicles)', ch: 'MrRoflWaffles', len: '11:32' },
       },

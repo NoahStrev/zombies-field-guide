@@ -130,7 +130,7 @@
         summary: 'Look into the three Pack-a-Punch crystals again to unlock three quest lines (Telescope, Knight and Effigy). Each ends in a stone slab and a lockdown; three slabs open the door to the werewolf boss.',
         facts: [
           ['Players', '1–4 (solo works)'],
-          ['Reward', 'Ending cutscene, achievement, free doors on other Chaos maps for that session'],
+          ['Reward', 'Ending cutscene and achievement'],
           ['Hardest part', 'The Atlas ring puzzle and the final lockdowns'],
         ],
         prep: [

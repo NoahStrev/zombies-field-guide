@@ -138,7 +138,7 @@
         summary: 'Set the ship\'s clocks, attune the Sentinel Artifact to four elements, Pack-a-Punch it in a flooded Turbine Room, shoot the planets out of the sky, race through the ice and destroy the Eye of Malice and Despair.',
         facts: [
           ['Players', '1–4 (solo works)'],
-          ['Reward', 'Ending cutscene, achievement, free doors on other Chaos maps for that session'],
+          ['Reward', 'Ending cutscene, achievement, and free doors on every map except Alpha Omega and Tag der Toten until you close the game'],
           ['Hardest part', 'Boss phase 5 (team-wipe attack)'],
         ],
         prep: [

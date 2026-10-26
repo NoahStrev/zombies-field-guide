@@ -29,7 +29,7 @@
         video: { id: D, title: 'Ultimate guide to Tag der Toten', ch: 'MrDalekJD', len: '33:20' },
         steps: [
           { w: 63, t: 'Turn on the power switch at the Docks (spawn)' },
-          { w: 235, t: 'Shoot down the blue rock and take it to the Hermit', d: 'A blue rock sticks out of the scenery (its spot changes). Shoot it, pick it up and bring it to the top of the lighthouse (Level 4). The Hermit lowers his pulley; give it to him. The lighthouse lights up and the challenge totems activate.', imgs: [{ src: I + 'blue-rock.webp', cap: 'Blue rock' }] },
+          { w: 235, t: 'Shoot down the blue rock and take it to the Hermit', d: 'A blue rock sticks out of the scenery, often in the cave by the lighthouse (its spot can change). Shoot or knife it, pick it up and bring it to the top of the lighthouse (Level 4). The Hermit lowers his pulley; give it to him. The lighthouse lights up and the challenge totems activate.', imgs: [{ src: I + 'blue-rock.webp', cap: 'Blue rock' }] },
           { w: 283, t: 'Turn on the boat\'s power switch', d: 'From the Beach (the original Call of the Dead spawn), go up the Gangway onto the boat and up the stairs. Pack-a-Punch is now on.' },
           { w: 298, t: 'Follow the lighthouse beam to Pack-a-Punch', d: 'It moves between the Beach, the Lagoon, the Sunken Path and the Boathouse.' },
         ],

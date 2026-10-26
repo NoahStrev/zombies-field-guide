@@ -798,9 +798,15 @@
     const box = $('#search-results');
     const words = q.toLowerCase().split(/\s+/).filter(Boolean);
     if (!words.length) { box.hidden = true; box.innerHTML = ''; return; }
+    const phrase = words.join(' ');
+    // Within a rank, titles that match the query exactly come first, then titles that start with it.
+    const titleScore = e => {
+      const t = e.title.toLowerCase();
+      return t === phrase ? 0 : t.startsWith(phrase) ? 1 : t.includes(phrase) ? 2 : 3;
+    };
     const hits = searchIndex
       .filter(e => words.every(w => e.text.includes(w)))
-      .sort((a, b) => a.rank - b.rank)
+      .sort((a, b) => a.rank - b.rank || titleScore(a) - titleScore(b))
       .slice(0, 14);
     box.innerHTML = hits.length
       ? hits.map(h => `<a class="search-hit" role="option" href="${h.href}"><strong>${esc(h.title)}</strong><span>${esc(h.sub)}</span></a>`).join('')

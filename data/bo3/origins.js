@@ -84,7 +84,7 @@
       /* ------------------------------ PARTS ------------------------------ */
       {
         id: 'zombie-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Zombie Shield', color: 'gold',
-        summary: 'Blocks hits from behind and can be planted as a barrier. Build it at any workbench.',
+        summary: 'Blocks hits from the front while you hold it and from behind while it is on your back, and can be planted as a barrier. Build it at any workbench.',
         facts: [['Parts', '3']],
         parts: [
           { w: 60, name: 'Visor', icon: I + 'shield-face.webp', area: 'Fire tunnel / trenches', spots: [

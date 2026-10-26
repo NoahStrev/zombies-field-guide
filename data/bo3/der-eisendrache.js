@@ -76,7 +76,7 @@
       /* ------------------------------ PARTS ------------------------------ */
       {
         id: 'rocket-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Rocket Shield', img: I + 'rocket-shield.webp',
-        summary: 'Blocks hits from behind, and its rocket burst launches you forward through zombies. Build it at any workbench.',
+        summary: 'Blocks hits from the front while you hold it and from behind while it is on your back. Its rocket burst launches you forward through zombies. Build it at any workbench.',
         facts: [['Parts', '3'], ['Recharge', 'Max Ammo or red-valve canisters'], ['Upgrade', 'Goddard Apparatus']],
         parts: [
           { w: 68, name: 'Eagle Plate', icon: I + 'shield-eagle.webp', area: 'Upper Courtyard', spots: [

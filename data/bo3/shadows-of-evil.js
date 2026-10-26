@@ -84,7 +84,7 @@
       /* ------------------------------ PARTS ------------------------------ */
       {
         id: 'rocket-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Rocket Shield', img: I + 'rocket-shield.webp',
-        summary: 'Blocks hits from behind and has a rocket burst that throws you forward through zombies. Build it at any workbench.',
+        summary: 'Blocks hits from the front while you hold it and from behind while it is on your back. Its rocket burst throws you forward through zombies. Build it at any workbench.',
         facts: [['Parts', '3'], ['Recharge', 'Max Ammo, gas canisters or Harvest Pods'], ['Upgrade', 'Goddard Apparatus']],
         parts: [
           { w: 26, name: 'Eagle Plate', icon: I + 'shield-eagle.webp', area: 'Canal District', spots: [
@@ -197,7 +197,7 @@
         summary: 'Turn the Keepers against the Shadowman, trap him in the Summoning Key, and (with four players) destroy the giant Apothicon over Morg City.',
         facts: [
           ['Players', 'Solo–3: up to step 3 · 4 players: full ending'],
-          ['Reward', 'Golden Civil Protector, achievement, XP'],
+          ['Reward', 'Upgraded Civil Protector, calling card, Summoning Key map icon, XP (the achievement comes from opening Pack-a-Punch)'],
           ['Hardest part', 'Capturing the Shadowman'],
         ],
         prep: [
@@ -263,7 +263,7 @@
       },
       {
         id: 'round-skip', tab: 'side', type: 'Points boost', name: 'Round skip (Shadowman)',
-        summary: 'At the very start, the Shadowman stands on the stairs up to Nero\'s ritual room. If every player shoots him, you can skip to round 5, 10 and then 15, earning 1,000, 4,000 and 11,000 points.',
+        summary: 'At the very start, the Shadowman stands on the stairs up to Nero\'s ritual room. If every player shoots him, you can skip to round 5, 10 and then 15, earning 1,000, 4,000 and 11,000 points. Solo, private and local matches only.',
       },
       {
         id: 'noir', tab: 'side', type: 'Fun', name: 'Black-and-white "Noir" mode',

@@ -161,7 +161,7 @@
           { t: 'Sergeant A.D.A.M. unlocked, free call unused', needs: ['adam'] },
           { t: 'Galvaknuckles', needs: ['galvaknuckles'] },
           { t: 'Telepads built', needs: ['telepads'] },
-          { t: 'A Pack-a-Punched gun with Brain Rot', d: 'Set it in your weapon kit before the game so the gun gets it on Pack-a-Punch.' },
+          { t: 'A Pack-a-Punched gun with Brain Rot', d: 'The ammo type is random: keep re-packing the gun at Pack-a-Punch until Brain Rot shows up. The free upgraded gun from the Prisoner Holding locker (broadcast step) is a cheap start.' },
           { t: 'Riot Shield', needs: ['riot-shield'] },
         ],
         stepsTitle: 'Quest steps',

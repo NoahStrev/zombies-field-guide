@@ -132,14 +132,14 @@
         summary: 'Make fertilizer from three odd ingredients, then pass a trial for each god (Danu, Ra, Zeus, Odin) and kill the two war elephants, Fury and Wrath.',
         facts: [
           ['Players', '1–4 (solo works)'],
-          ['Reward', 'Ending cutscene, achievement, free doors on other Chaos maps for that session'],
+          ['Reward', 'Ending cutscene, achievement, and free doors on every map except Alpha Omega and Tag der Toten until you close the game'],
           ['Hardest part', 'The Ra trial (kill special enemies in a set order)'],
         ],
         prep: [
           { t: 'Pack-a-Punch open', needs: ['pap'] },
           { t: 'Brazen Bull built', needs: ['brazen-bull'] },
           { t: 'Death of Orion (ideally upgraded to Serket\'s Kiss)', needs: ['death-of-orion'] },
-          { t: 'A weapon set to Fire Bomb and one set to Kill-O-Watt', d: 'These are Pack-a-Punch alternate ammo types. Set them in your weapon kits before the game, so the guns get them when you Pack-a-Punch.' },
+          { t: 'A Pack-a-Punched gun with Fire Bomb, and one with Kill-O-Watt', d: 'These are Pack-a-Punch alternate ammo types. The type is random: Pack-a-Punch the gun again (re-pack) until the one you want shows up in the corner of your screen. You need Fire Bomb for the Danu step and Kill-O-Watt for the Zeus step, so you can also re-roll when you get there.' },
           { t: 'Specialist weapon levelled up', d: 'Level 3 makes the trials much safer.' },
         ],
         stepsTitle: 'Quest steps',
@@ -147,7 +147,7 @@
         steps: [
           { w: 184, any: 'Collect the three ingredients in any order', t: 'Burn a wood chunk into charcoal', d: 'Pack-a-Punch must be open. Lure a Gladiator that throws axes to the Arena and stand behind one of the two burning wooden pyres so his axe hits it. Pick up the chunk of wood that breaks off (it can take a few seconds to become grabbable). Hang it on a hook above the big cauldron below Odin Tower and wait 2–3 full rounds, until it glows with embers. Then pick it up.' },
           { w: 263, any: 'Collect the three ingredients in any order', t: 'Get poop from an angry crowd', d: 'One player drops to a full red thumbs-down: stand in the Arena floor fire or throw grenades at the crowd. The crowd starts throwing poop into the Arena instead of power-ups. Run through it holding interact (costs 250 points).' },
-          { w: 326, any: 'Collect the three ingredients in any order', t: 'Grab the marked skull and grind it', d: 'In the Temple, find a wall skull with a blue symbol on its forehead (under the gold symbols on either side wall, on the middle stone pillar, or along the walls up the stairs). Stand right in front of it and activate your specialist weapon; the skull drops. Pick it up. Then find the skull grinder (one of a few corners of that underground area), put the skull in and hit the grinder with three **charged** Death of Orion shots. Collect the bone paste from the bottom.', needs: ['death-of-orion'], tip: 'If the skull won\'t drop, level your specialist up and try again. If the grinder seems stuck, give it another charged shot or two.' },
+          { w: 326, any: 'Collect the three ingredients in any order', t: 'Grab the marked skull and grind it', d: 'In the Temple, find a wall skull with a blue symbol on its forehead (under the gold symbols on either side wall, on the middle stone pillar, or along the walls up the stairs). Stand right in front of it and activate your specialist weapon; the skull drops. Pick it up. Then find the skull grinder in the Flooded Crypt (it can be in a few different corners of that area), put the skull in and hit the grinder with three **charged** Death of Orion shots. Collect the bone paste from the bottom.', needs: ['death-of-orion'], tip: 'If the skull won\'t drop, level your specialist up and try again. If the grinder seems stuck, give it another charged shot or two.' },
           { w: 495, t: 'Mix the ingredients in the Zeus Tower bowl', d: 'Bottom floor of Zeus Tower (the red blood bath room): hold interact on the bowl to add the charcoal, poop and bone paste. Wait 2–3 full rounds until it gives off green smoke, then pick up the fertilizer.' },
           { w: 527, t: 'Place the fertilizer in the Danu Arboretum', d: 'At the bottom of Danu Tower, put it on the dry patch of ground between the two trees. Wait another 2–3 rounds until it smokes green.', tip: 'Use the wait to level up specialists and Pack-a-Punch the Death of Orion into Serket\'s Kiss.' },
           { w: 572, t: 'Get a Fire Bomb kill on top of it', d: 'Kill a group of zombies right on the fertilizer with a Fire Bomb weapon. The floor cracks and glowing energy seeps into it. It can take a few tries.' },

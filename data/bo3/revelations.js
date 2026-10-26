@@ -200,7 +200,7 @@
         summary: 'Unlocks the table downstairs in Nacht for storing or passing weapons, and adds an M1927 wall-buy.',
         steps: [
           { t: 'Pick up the pink chalk', d: 'During Anti-Gravity in Der Eisendrache, on top of a narrow carved pillar in the hallway between the VMP wall-buy and the Pyramid (slightly above and left of a Fafnir part spot).' },
-          { t: 'Move six chalk drawings, in this order', ol: [
+          { t: 'Use the chalk at each spot, in this order', ol: [
             'Der Eisendrache: on the wall under where the Undercroft dragon used to be.',
             'Verrückt: upstairs in the electric-trap room, on the floor in front of the Mystery Box spot.',
             'Nacht: on the wall in the middle of the curved staircase up to Juggernog.',
