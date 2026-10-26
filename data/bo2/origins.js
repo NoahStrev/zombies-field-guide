@@ -3,11 +3,8 @@
    so this reuses that guide (data/bo3/origins.js must load first) minus the remaster-only extras.
    Ticks are kept separately for each version. */
 (() => {
-  const src = ZG.maps['bo3/origins'];
-  if (!src) { console.warn('bo2/origins: load data/bo3/origins.js first'); return; }
-  const map = JSON.parse(JSON.stringify(src));
-  delete map.group;
-  Object.assign(map, { game: 'bo2', id: 'origins', order: 5, dlc: 'Apocalypse · DLC 4' });
+  const map = ZG.copyMap('bo3/origins', { game: 'bo2', id: 'origins', order: 5, dlc: 'Apocalypse · DLC 4' });
+  if (!map) return;
 
   // Remaster-only: the "Remember Forever" song and the drone/Trip Mine note.
   map.items = map.items.filter(it => it.id !== 'song-remember');
