@@ -10,12 +10,14 @@ Filled in so far:
 - **Black Ops II** (5 maps): TranZit, Die Rise, Mob of the Dead, Buried, Origins. Nuketown Zombies is left out (no main quest). Origins reuses the Black Ops III guide, since the quest is the same.
 - **Black Ops III** (10 maps): Shadows of Evil, The Giant, Der Eisendrache, Zetsubou No Shima, Gorod Krovi, Revelations, plus the Zombies Chronicles maps that have a main easter egg (Ascension, Shangri-La, Moon, Origins).
 - **Infinite Warfare** (5 maps): Zombies in Spaceland, Rave in the Redwoods, Shaolin Shuffle, Attack of the Radioactive Thing, The Beast from Beyond.
+- **WWII** (5 maps): The Final Reich (casual and hardcore quests), The Darkest Shore, The Shadowed Throne, The Tortured Path, The Frozen Dawn. The Final Reich has a primer on WWII's rules.
 - **Black Ops 4** (7 maps): IX, Voyage of Despair, Dead of the Night, Ancient Evil (Chaos story) and Blood of the Dead, Alpha Omega, Tag der Toten (Aether story). Classified is left out because its only quest is a round 150 cutscene.
 - **Cold War** (4 maps): Die Maschine, Firebase Z, Mauer der Toten, Forsaken. Die Maschine has a primer on Cold War's new rules. The Outbreak mode quests are left out.
+- **Vanguard** (2 maps): Shi No Numa, The Archon. Shi No Numa has a primer on Vanguard's rules. Der Anfang and Terra Maledicta are left out (short story events, no main quest).
 - **Black Ops 6** (6 maps): Liberty Falls, Terminus, Citadelle des Morts, The Tomb, Shattered Veil, Reckoning. Liberty Falls has a primer on Black Ops 6's rules.
 - **Black Ops 7** (6 maps): Ashes of the Damned, Astra Malorum, Paradox Junction, Totenreich, Kowakujō, Rex Infernus. Ashes of the Damned has a primer on what changed.
 
-Games from other studios' zombies modes (Advanced Warfare, WWII, Vanguard, Modern Warfare III) aren't included, apart from Infinite Warfare. World at War has no tab: none of its maps has a main easter egg.
+Advanced Warfare's Exo Zombies and Modern Warfare III's zombies aren't included. World at War has no tab: none of its maps has a main easter egg.
 
 ## Opening it
 
@@ -49,7 +51,7 @@ css/styles.css          all styling (dark + light theme, responsive)
 js/core.js              data registry (ZG.addMap)
 js/app.js               routing, rendering, checklists, side panel, search
 data/games.js           the game tabs (set active: true to enable one)
-data/<game>/<map>.js    one file per map: all guide content (bo1, bo2, bo3, iw, bo4, bocw, bo6, bo7)
+data/<game>/<map>.js    one file per map: all guide content (bo1, bo2, bo3, iw, wwii, bo4, bocw, vg, bo6, bo7)
 assets/img/<game>/<map>/  images (from the Call of Duty Wiki, converted to WebP)
 assets/icons/           home-screen icons
 sw.js                   offline support (service worker, live site only)
@@ -78,4 +80,4 @@ tools/                  research, checking and publishing scripts (see tools/REA
 
 ## Credits
 
-Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent, CodeNamePizza, Pack A Puncher, GregFPS, Ch0pper, AceOfSpades, Rager6amer, LegoUnlocked, JokerAlex 21, TheGamingRevolution and others). Fan-made; not affiliated with Activision, Treyarch or Infinity Ward.
+Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent, CodeNamePizza, Pack A Puncher, GregFPS, Ch0pper, AceOfSpades, Rager6amer, LegoUnlocked, JokerAlex 21, TheGamingRevolution and others). Fan-made; not affiliated with Activision, Treyarch, Infinity Ward or Sledgehammer Games.

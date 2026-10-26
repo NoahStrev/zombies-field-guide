@@ -70,13 +70,13 @@
         upgrade: {
           name: 'Tiamat\'s Maw', img: I + 'tiamat.webp', summary: 'Red fireballs and far more durability (35 hits). Progress is shared in co-op; once one player has it, everyone can take it from the workbench.',
           steps: [
-            { w: 141, any: 'Do these two in either order', t: 'Stand in dragon fire with the shield up — twice', d: 'Be in the area before the fire starts, hold the shield in front of you, and stay in the flames for the whole burn.' },
-            { w: 20, any: 'Do these two in either order', t: 'Kill 50 zombies with the shield', d: 'Melee bashes and fireballs both count (shared in co-op).' },
-            { w: 61, anyList: 'Symbols in any order', t: 'Hit three purple symbols with fireballs', d: 'They appear after the kill step:', list: [
+            { w: 20, t: 'Kill 50 zombies with the shield', d: 'Melee bashes and fireballs both count (shared in co-op). A ding tells you it\'s done; it sounds different from the shield breaking.' },
+            { w: 61, anyList: 'Symbols in any order', t: 'Hit three purple symbols with fireballs', d: 'They only appear once the kills are done:', list: [
               'Dragon Command: stand on the left metal stairs to the dragon platform and look left.',
               'Supply Depot: across from the ramp up to Speed Cola, look up at the broken roof.',
               'Tank Factory: stand on the right metal stairs to the dragon platform, look right at the fallen robot\'s shoulder.',
             ], tip: 'Out of fireballs? Let the shield break and pick up a new one — it comes fully charged.' },
+            { w: 141, t: 'Stand in dragon fire with the shield up — twice', d: 'Be in the area before the fire starts, hold the shield in front of you, and stay in the flames for the whole burn. End of a round with a couple of zombies left is safest.', tip: 'This can count before the kills, but you only hear the ding when it comes after them, so doing it last is easiest.' },
             { w: 184, t: 'Dip the shield in the dead dragon in Belinski Square', d: 'Interact with the pool of blood by the dragon remains near the Trials tombstones. The upgraded shield goes back into your inventory a few seconds later.' },
           ],
           video: { id: 'iaY_sbbGd-g', title: 'Tiamat\'s Maw: Gorod Krovi Dragon Shield Upgraded', ch: 'MrRoflWaffles', len: '4:58' },

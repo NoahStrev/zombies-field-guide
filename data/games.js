@@ -22,6 +22,10 @@ ZG.games = [
     blurb: 'All five Infinite Warfare maps. Each main easter egg recovers a piece of the Soul Key; finish all five to unlock Director\'s Cut. Infinity Ward renames most things, so start with the basics on Zombies in Spaceland.',
   },
   {
+    id: 'wwii', name: 'WWII', short: 'WWII', year: 2017, active: true,
+    blurb: "All five of Sledgehammer's WWII maps with a main quest. Together they follow the hunt for the Sword of Barbarossa, piece by piece. WWII renames most things, so start with the basics on The Final Reich.",
+  },
+  {
     id: 'bo4', name: 'Black Ops 4', short: 'BO4', year: 2018, active: true,
     blurb: 'Every Black Ops 4 map with a main easter egg: the four Chaos story maps and the three Aether story maps. (Classified is left out: its only quest is a round 150 cutscene.)',
     groups: [
@@ -32,6 +36,10 @@ ZG.games = [
   {
     id: 'bocw', name: 'Cold War', short: 'CW', year: 2020, active: true,
     blurb: 'All four Cold War round-based maps. Cold War changed a lot (essence, salvage, armour, tiered Pack-a-Punch), so start with the basics on Die Maschine. Every quest can be done solo.',
+  },
+  {
+    id: 'vg', name: 'Vanguard', short: 'VG', year: 2021, active: true,
+    blurb: "Vanguard's two round-based maps, Shi No Numa and The Archon, which finish the Kortifex story. Start with the basics on Shi No Numa. (Der Anfang and Terra Maledicta are left out: they only have short objective-based story events, not main quests.)",
   },
   {
     id: 'bo6', name: 'Black Ops 6', short: 'BO6', year: 2024, active: true,
