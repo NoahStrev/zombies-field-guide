@@ -9,8 +9,8 @@
   // Steps 1–4 are the same for both sides.
   const common = [
     { w: 142, t: 'Everyone stands on a gold ring on top of an elevator at the same time', d: 'Four elevators have a gold ring on their roof: the one on the rooftop that leads to the Bowie Knife, the one just below the roof by the MP5, and the two side by side next to Quick Revive (by the Trample Steam room). Maxis and Richtofen speak when it works.', warn: 'An elevator rising to the top floor crushes anyone standing on it.' },
-    { w: 189, t: 'Step on the four gold floor symbols in the right order', d: 'Symbols: by the M14 just outside spawn, below the pylon next to the Sixes, in the building across from the Buddha room, and past the SVU in the cafeteria. The order changes every game: step on one, and if it stays lit it\'s next; a wrong one resets them all (the order stays the same).' },
-    { w: 251, t: 'Shoot the balls out of both dragons\' mouths with a sniper', d: 'Buy the SVU-AS (down past the spawn). From the roof, shoot the small ball in each dragon statue\'s mouth; fireworks go off and the balls appear under the lion statues\' paws in spawn. Now pick a side.' },
+    { w: 189, t: 'Step on the four gold floor symbols in the right order', d: 'Symbols: by the M14 just outside spawn, below the pylon next to the Semtex wall-buy, in the building across from the Buddha room, and past the SVU in the cafeteria. The order changes every game: step on one, and if it stays lit it\'s next; a wrong one resets them all (the order stays the same).' },
+    { w: 251, t: 'Shoot the balls out of both dragons\' mouths with a sniper', d: 'Buy the SVU-AS in the clothing shop (drop down from the spawn side). Shoot the small ball in the mouth of each of the two dragon statues on the roof; fireworks go off and the balls appear under the lion statues\' paws in spawn. Now pick a side.' },
   ];
   // Final step for both sides.
   const pylonCode = [
@@ -73,7 +73,7 @@
           { w: 62, name: 'Radio', area: 'Roof', spots: ['In the corner near the crashed water tower.'] },
           { w: 79, name: 'Board', area: 'Roof', spots: ['Directly opposite where the table is built, under the ramp.'] },
           { w: 85, name: 'Meteor', area: 'Roof', spots: ['In a pile of debris across from the Claymores.'] },
-          { w: 95, name: 'Power box', area: 'Dead Man\'s Corner', spots: ['Up the pylon stairs, go right past the Sixes and drop down: in the corner.'] },
+          { w: 95, name: 'Power box', area: 'Dead Man\'s Corner', spots: ['Up the pylon stairs, go right past the Semtex wall-buy and drop down: in the corner.'] },
         ],
       },
 
@@ -81,7 +81,7 @@
       {
         id: 'sliquifier', tab: 'weapons', type: 'Wonder weapon · Buildable', name: 'Sliquifier', img: I + 'sliquifier.webp', color: 'green',
         summary: 'Fires blobs of goo that kill a zombie and leave a slippery puddle that spreads the kill to others. You slide on it too. The Richtofen side needs it.',
-        facts: [['Parts', '4'], ['Build at', 'Bottom of the stairs below the power room (Dragon building)']],
+        facts: [['Parts', '4'], ['Build at', 'Bottom of the stairs below the power room (Dragon building)'], ['Slot', 'Takes a gun slot; if you lose it, it goes into the Mystery Box']],
         video: EV,
         parts: [
           { w: 312, name: 'Mannequin foot', area: 'Next to the power room', spots: ['Always in the side room to the right of the power room.'] },
@@ -112,7 +112,7 @@
           { w: 297, t: 'Build the Sliquifier', needs: ['sliquifier'] },
           { w: 388, t: 'Shoot each ball under the lion statues 20 times', d: 'Two full Sliquifier magazines per ball, until it spins. Fireworks and a Richtofen quote confirm each one.' },
           { w: 420, t: 'Build Trample Steams (one per player)', needs: ['trample-steam'] },
-          { w: 498, t: 'Place a Trample Steam on each zombie symbol, facing the pylon', d: 'Symbols: outside spawn by the M14; two on the roof below the pylon staircase (left and right); and one past the Sixes after the drop on the right. Each correct placement gives Stuhlinger a quote: move any that doesn\'t.' },
+          { w: 498, t: 'Place a Trample Steam on each zombie symbol, facing the pylon', d: 'Symbols: outside spawn by the M14; two on the roof below the pylon staircase (left and right); and one up the pylon stairs to the right, past the Semtex wall-buy after the drop. Each correct placement gives Stuhlinger a quote: move any that doesn\'t.' },
           { w: 575, t: 'Let the Trample Steams fire a few times', d: 'Fling zombies or yourselves. Richtofen then asks Stuhlinger to use the Galvaknuckles.' },
           ...pylonCode,
         ],
@@ -138,7 +138,7 @@
           { w: 915, t: 'Kill 15 zombies in a row on the ground floor of the Buddha room', d: 'Everyone stays inside: a kill outside the room resets the count. Maxis speaks when it\'s done.' },
           { w: 945, t: 'Pack-a-Punch a Ballistic Knife from the Mystery Box and fire it in the Buddha room', d: 'It becomes the Krauss Refibrillator; Maxis speaks when you upgrade it, and again when you fire it in the room.', warn: 'Only works if that player hasn\'t bought the Bowie Knife or Galvaknuckles and hasn\'t bled out this game.' },
           { w: 993, t: 'Build Trample Steams (one per player)', needs: ['trample-steam'] },
-          { w: 1070, t: 'Place a Trample Steam on each lion symbol, facing the pylon', d: 'Symbols: in spawn, at the bottom of the escalator out of spawn, on the roof next to the two elevators, and past the Sixes after the drop. Placed right, they lock in.' },
+          { w: 1070, t: 'Place a Trample Steam on each lion symbol, facing the pylon', d: 'Symbols: in spawn, at the bottom of the escalator out of spawn, on the roof next to the two elevators, and on the far rooftop (up the pylon stairs, go right and drop down twice). Placed right, they lock in.' },
           { w: 1118, t: 'Put the balls on the Trample Steams', d: 'Each ball bounces between the two Trample Steams facing each other. With both bouncing, an orange surge runs up the pylon.', tip: 'No prompt to place a ball? Destroy that Trample Steam and put down a fresh one.' },
           ...pylonCode,
         ],

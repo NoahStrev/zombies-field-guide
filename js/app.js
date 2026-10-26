@@ -123,8 +123,7 @@
         return Math.max(t + 10, Math.min(end, t + 120));
       };
 
-      const json = JSON.stringify(map.items, (k, v) => (k === 'map' ? undefined : v));
-      for (const m of json.matchAll(/\{\{([a-z0-9-]+)/g)) {
+      for (const m of JSON.stringify(map.items).matchAll(/\{\{([a-z0-9-]+)/g)) {
         if (!map.itemById[m[1]]) problems.push(`${map.id}: unknown inline ref "${m[1]}"`);
       }
     }
@@ -294,7 +293,7 @@
         ${st.anyList ? `<div class="order-note">${ICON.shuffle}<span>${esc(typeof st.anyList === 'string' ? st.anyList : 'These can be done in any order')}</span></div>` : ''}
         ${bullets(st.list, map)}
         ${st.ol ? `<ol class="numbered">${st.ol.map(x => `<li>${fmt(x, map)}</li>`).join('')}</ol>` : ''}
-        ${st.lookup ? lookupHtml(st.lookup) : ''}
+        ${st.lookup ? lookupHtml(st.lookup, map) : ''}
         ${st.table ? tableHtml(st.table, map) : ''}
         ${st.spots ? spotsList(map, st.spots) : ''}
         ${callouts(st, map)}
@@ -364,7 +363,7 @@
      one dropdown (e.g. pick a compound). Answers are [name, number] pairs ("Set name to n")
      or plain strings (one numbered line each, **bold** allowed). */
   let lookupSeq = 0;
-  function lookupHtml(lk) {
+  function lookupHtml(lk, map) {
     const id = 'lookup-' + (++lookupSeq);
     const single = !lk.b;
     const opts = lk.options.map(o => `<option value="${esc(o)}">${esc(o)}</option>`).join('');
@@ -375,7 +374,7 @@
     return `<div class="lookup" data-lookup-data="${esc(JSON.stringify(data))}">
       <div class="lookup-fields${single ? ' single' : ''}">${field('a', lk.a)}${single ? '' : field('b', lk.b)}</div>
       <div class="lookup-out" aria-live="polite"><p class="lookup-hint">${esc(hint)}</p></div>
-      ${lk.source ? `<p class="lookup-source">${fmt(lk.source)}</p>` : ''}
+      ${lk.source ? `<p class="lookup-source">${fmt(lk.source, map)}</p>` : ''}
     </div>`;
   }
 
@@ -398,7 +397,7 @@
 
   function blocksHtml(map, blocks) {
     return asArray(blocks).map(b => {
-      if (b.lookup) return lookupHtml(b.lookup);
+      if (b.lookup) return lookupHtml(b.lookup, map);
       if (b.h) return `<h4 class="block-h">${fmt(b.h, map)}</h4>`;
       if (b.p) return paras(b.p, map);
       if (b.list) return bullets(b.list, map);
@@ -433,7 +432,7 @@
       <header class="item-head">
         ${imgBtn}
         <div class="item-titles">
-          ${item.type ? `<div class="item-type">${esc(item.type)}</div>` : ''}
+          ${item.type && !opts.drawer ? `<div class="item-type">${esc(item.type)}</div>` : ''}
           ${opts.drawer ? '' : `<h3 class="item-name">${esc(item.name)}</h3>`}
           ${item.aka ? `<div class="item-aka">${esc(item.aka)}</div>` : ''}
           ${item.summary ? `<p class="item-summary">${fmt(item.summary, map)}</p>` : ''}
@@ -537,6 +536,7 @@
       ? items.map(it => `<a href="${hrefFor(map, tabId, 'item-' + it.id)}" style="${colorVar(it)}">${esc(it.short || it.name)}</a>`).join('')
       : '';
     const hasPartVideos = tabId === 'parts' && items.some(it => asArray(it.parts).some(p => p.w != null));
+    const hasPartIcons = items.some(it => asArray(it.parts).some(p => p.icon));
     return `<nav class="crumbs wrap" aria-label="Breadcrumb"><a href="#/${game.id}">${esc(game.name)}</a><span aria-hidden="true">/</span><span>${esc(map.name)}</span></nav>
       <section class="map-hero"><img class="map-hero-bg" src="${esc(map.hero)}" alt="">
         <div class="wrap map-hero-inner">
@@ -554,7 +554,7 @@
           ${toc ? `<nav class="jump" aria-label="Jump to"><span class="chip-label">Jump to</span>${toc}</nav>` : ''}
           ${intro ? `<div class="tab-intro">${paras(intro, map)}</div>` : ''}
           ${items.some(it => it.steps || it.prep || it.upgrade) ? `<div class="order-legend"><span>${ICON.shuffle}</span><p>Work through numbered steps top to bottom. Anything inside a green <strong>Any order</strong> box, or marked with this icon, can be done in whatever order suits you.${CAN_EMBED ? ' <strong>Watch</strong> buttons play the exact moment from a guide video right here.' : ''}</p></div>` : ''}
-          ${hasPartVideos ? `<div class="callout note">${ICON.play}<div>The pictures show what each part looks like. <strong>Watch these spots</strong> ${CAN_EMBED ? 'plays the part of a guide video that walks through every spawn spot, right here on the page' : 'opens a guide video at the moment it walks through that part\'s spawn spots'}.</div></div>` : ''}
+          ${hasPartVideos ? `<div class="callout note">${ICON.play}<div>${hasPartIcons ? 'The pictures show what each part looks like. ' : ''}<strong>Watch these spots</strong> ${CAN_EMBED ? 'plays the part of a guide video that walks through every spawn spot, right here on the page' : 'opens a guide video at the moment it walks through that part\'s spawn spots'}.</div></div>` : ''}
           ${items.map(it => itemHtml(map, it)).join('')}
         </div>
         ${toc ? `<aside class="toc" aria-label="On this page"><div class="toc-inner"><div class="toc-h">On this page</div>${toc}</div></aside>` : ''}
@@ -727,9 +727,12 @@
   }
 
   // First unticked quest step. With two side-by-side checklists (Maxis / Richtofen), follow the
-  // one with the most ticks so the button stays on the side you're doing.
+  // one with the most ticks so the button stays on the side you're doing. Once any quest step is
+  // ticked, unticked prep items are skipped (people rarely tick those off).
   function nextEeStep() {
     const steps = eeStepsOnPage();
+    const isDoneStep = s => s.classList.contains('done');
+    const isPrep = s => s.dataset.anchor.includes('-prep-');
     const byItem = new Map();
     for (const s of steps) {
       const item = s.closest('.item');
@@ -738,10 +741,12 @@
     }
     let best = null, bestDone = 0;
     for (const list of byItem.values()) {
-      const done = list.filter(s => s.classList.contains('done')).length;
-      if (done > bestDone && list.some(s => !s.classList.contains('done'))) { best = list; bestDone = done; }
+      const done = list.filter(isDoneStep).length;
+      if (done > bestDone && list.some(s => !isDoneStep(s))) { best = list; bestDone = done; }
     }
-    return (best || steps).find(s => !s.classList.contains('done'));
+    const pool = best || steps;
+    const started = pool.some(s => !isPrep(s) && isDoneStep(s));
+    return pool.find(s => !isDoneStep(s) && !(started && isPrep(s))) || pool.find(s => !isDoneStep(s));
   }
 
   function updateFab() {

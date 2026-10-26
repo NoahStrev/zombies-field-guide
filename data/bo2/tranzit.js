@@ -106,7 +106,7 @@
       },
       {
         id: 'zombie-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Zombie Shield', img: I + 'shield.webp', color: 'gold',
-        summary: 'Blocks hits from behind and can be bashed. Two parts around the Diner; build it at the gas station.',
+        summary: 'Protects your back while it\'s stowed; hold it up to block and bash zombies in front of you. Two parts around the Diner; build it at the gas station.',
         facts: [['Parts', '2'], ['Build at', 'The table in the gas station']],
         video: AV,
         parts: [
@@ -116,7 +116,7 @@
       },
       {
         id: 'turret', tab: 'parts', type: 'Buildable · Trap', name: 'Turret', img: I + 'turret.webp',
-        summary: 'A lawnmower with an RPD on top that shoots zombies (and you, if you stand in front). Three parts at the Farm.',
+        summary: 'A lawnmower with an RPD on top that shoots zombies (and can down you if you stand in front). It only runs with a Turbine next to it. Three parts at the Farm.',
         facts: [['Parts', '3'], ['Build at', 'The table in the farmhouse']],
         video: AV,
         parts: [
@@ -127,13 +127,13 @@
       },
       {
         id: 'electric-trap', tab: 'parts', type: 'Buildable · Trap', name: 'Electric Trap', img: I + 'electric-trap.webp',
-        summary: 'A placeable trap that shocks zombies walking through it. Three parts at the Power Station.',
+        summary: 'A placeable trap that shocks zombies that come near it (it doesn\'t stop the Avogadro). It only runs with a Turbine next to it. Three parts in the room above the power switch.',
         facts: [['Parts', '3'], ['Build at', 'The Power Station table']],
         video: AV,
         parts: [
-          { w: 217, name: 'Board', area: 'Power Station', spots: ['Near the stairs.', 'In the corner by the broken wall.', 'On the crates above the lava pit.'] },
+          { w: 217, name: 'Coil', area: 'Power Station', spots: ['Near the stairs.', 'In the corner by the broken wall.', 'On the crates above the lava pit.'] },
           { w: 233, name: 'Battery', area: 'Power Station', spots: ['Near the buildable table.', 'On a barrel across the broken walkway.', 'On barrels near the broken wall.'] },
-          { w: 241, name: 'Lamp', area: 'Power Station', spots: ['In the window above the stairs.', 'In the window across the broken walkway.', 'On a barrel next to the broken wall.'] },
+          { w: 241, name: 'TV screen', area: 'Power Station', spots: ['In the window above the stairs.', 'In the window across the broken walkway.', 'On a barrel next to the broken wall.'] },
         ],
       },
 
@@ -141,11 +141,11 @@
       {
         id: 'jet-gun', tab: 'weapons', type: 'Wonder weapon · Buildable', name: 'Jet Gun', aka: 'Thrustodyne Aeronautics Model 23', img: I + 'jet-gun.webp', color: 'wind',
         summary: 'Sucks zombies into its rotors. It heats up as you use it: let it cool (hold it out without firing) or it breaks and scatters its parts, which you then rebuild. The Richtofen side of the quest needs it.',
-        facts: [['Parts', '4'], ['Build at', 'Downstairs in the bar in Town'], ['Slot', 'Equipment (D-pad), not a gun slot']],
+        facts: [['Parts', '4'], ['Build at', 'Ground floor of the bar in Town'], ['Slot', 'Equipment (D-pad), not a gun slot']],
         video: EV,
         parts: [
           { w: 527, name: 'Pressure gauge', area: 'Hunter\'s Cabin (in the fog between the Power Station and Town)', spots: ['On the table.', 'In the fireplace.', 'On the other table (or the end of the bed frame).'] },
-          { w: 560, name: 'Wires', area: 'Power Station', spots: ['Drop down onto the catwalk: against the barrier.', 'Further along, right on the edge.', 'On a barrel in the back room.'] },
+          { w: 560, name: 'Wires', area: 'Power Station (appears once the power is on)', spots: ['Drop down onto the catwalk: against the barrier.', 'Further along, right on the edge.', 'On a barrel in the back room.'] },
           { w: 585, name: 'Engine', area: 'Tunnel (Bus Depot to Diner), near the M16 wall-buy', spots: ['By a zombie window.', 'Further down on the right, against the wall.', 'Between two cars near the M16.'] },
           { w: 615, name: 'Handbrake', area: 'Nacht der Untoten (cornfields opposite the pylon)', spots: ['On the shelf.', 'On top of the cabinet at the top of the stairs.', 'On the filing cabinet at the back by the light.'] },
         ],

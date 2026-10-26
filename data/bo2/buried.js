@@ -93,7 +93,7 @@
       },
       {
         id: 'resonator', tab: 'parts', type: 'Buildable · Trap', name: 'Subsurface Resonator', img: I + 'resonator.webp', color: 'storm',
-        summary: 'A sound cannon that blasts zombies coming up from below. Powered by a Turbine. The Maxis side uses it to break four red orbs.',
+        summary: 'A sonic blaster that kills zombies in front of it and knocks back the ones further away. It only runs with a Turbine next to it. The Maxis side uses it to break four red orbs.',
         facts: [['Parts', '4 (General Store)'], ['Build at', 'Any table']],
         video: EV,
         parts: [
@@ -111,7 +111,7 @@
         video: AV,
         parts: [
           { w: 227, name: 'Bellows', area: 'General Store', spots: ['On a desk upstairs.'] },
-          { w: 242, name: 'Mesh', area: 'General Store', spots: ['Leaning on the stair banister.'] },
+          { w: 242, name: 'Chicken wire', area: 'General Store', spots: ['Leaning on the stair banister.'] },
           { w: 242, name: 'Flag', area: 'General Store', spots: ['In a barrel under the stairs.'] },
           { w: 242, name: 'Motor', area: 'General Store', spots: ['On a shelf in the middle of the room.'] },
         ],
@@ -142,7 +142,7 @@
       /* ------------------------------ WEAPONS ------------------------------ */
       {
         id: 'paralyzer', tab: 'weapons', type: 'Wonder weapon', name: 'Paralyzer', img: I + 'paralyzer.webp', color: 'lightning',
-        summary: 'A beam that freezes and then shatters zombies. Aim it at the ground to hover and fly. From the Mystery Box only; the Richtofen side uses it to charge four orbs.',
+        summary: 'A wide beam that slows zombies to a crawl and kills them. It never runs out of ammo but overheats. Aim it down, fire and jump to fly (fire again just before landing to avoid fall damage). From the Mystery Box only; the Richtofen side uses it to charge four orbs.',
         facts: [['Get it', 'Mystery Box'], ['Upgraded', 'Petrifier']],
         video: EV,
         steps: [{ w: 77, t: 'Spin the Mystery Box', tip: 'Give Arthur candy by the box (with his back to it) so it doesn\'t move while you spin for it.' }],
@@ -195,7 +195,7 @@
             'Left of the church entrance, by the red orb.', 'Inside the church, right of the workbench.', 'By the rock in front of the mansion entrance.',
           ], warn: 'No switch? You need the Time Bomb again (a Max Ammo refills it). If the player carrying the switch goes down and it vanishes, restart.' },
           { w: 746, t: 'Add the switch to the guillotine', d: 'Only once you\'re back in normal time.' },
-          { w: 762, t: 'Pull the four coloured maze levers in the right order', d: 'Red, green, blue and yellow levers sit on maze gates. After all four are pulled, the ones in the right position spark. Swap the others and retry: to reset, everyone leaves the maze and comes back through the mansion. Yellow is sometimes in the hedges by the middle instead of on a gate.', tip: 'The Paralyzer lets you fly over the maze to get around faster.' },
+          { w: 762, t: 'Pull the four coloured maze levers in the right order', d: 'Red, green, blue and yellow levers sit on maze gates. After all four are pulled, the ones in the right position spark. Swap the others and retry: to reset, everyone leaves the maze and comes back through the mansion. Yellow is sometimes in the hedges by the middle instead of on a gate.', tip: 'Flying with the Paralyzer (aim down, fire and jump) gets you over closed gates, but not over the hedges.' },
           wish(855),
         ],
       },
@@ -243,7 +243,7 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'navcard', tab: 'side', type: 'Story ending', name: 'The ending that links the three maps', short: 'Super ending',
-        summary: 'Buried\'s navcard is on a bookshelf in the mansion (coming back in from the maze side) and goes into TranZit\'s NAV table. Once every player has done the same side on TranZit, Die Rise and Buried and all three NAV tables have the right navcard, the box of lights at the back of the courthouse opens. Press its button for the Maxis or Richtofen ending.',
+        summary: 'Buried\'s navcard is on a bookshelf in the mansion (coming back in from the maze side) and goes into TranZit\'s NAV table. Once every player has done the same side on TranZit, Die Rise and Buried and all three NAV tables have the right navcard, the box of lights at the back of the courthouse opens. Press its button for the Maxis or Richtofen ending. Richtofen\'s gives everyone a permanent Fire Sale and a Mule Kick that holds four guns; Maxis\'s turns one zombie at a time into a blue-eyed "Richtofen zombie" that drops a power-up when killed.',
         video: AV,
         steps: [
           { w: 955, t: 'Feed each map\'s NAV table the right navcard', d: 'TranZit\'s card goes into Die Rise, Die Rise\'s into Buried, and Buried\'s into TranZit.' },

@@ -49,7 +49,7 @@ start-site.bat          local server for Windows
 ## Adding a game or map later
 
 1. In `data/games.js`, set the game's `active: true` (optionally add `blurb` and `groups`).
-2. Create `data/<game>/<map>.js` modelled on an existing BO3 map file, then add a `<script>` tag for it in `index.html` before `js/app.js`.
+2. Create `data/<game>/<map>.js` modelled on an existing BO3 map file, then add a `<script>` tag for it in `index.html` before `js/app.js`. (`data/bo2/origins.js` copies `data/bo3/origins.js`, so its tag must come after that one.)
 3. Each map is a list of **items**. An item has a `tab` (`start`, `parts`, `weapons`, `easter-egg`, `side`) and can include:
    - `parts`: buildable parts, each with a list of spawn `spots`; `w: <seconds>` links the part to that moment in the item's `video`
    - `steps` / `prep`: checklists. A step's `needs: ['item-id']` shows chips that open that item, and adds a "Needed for" link back. `w: <seconds>` (or `w: ['<YouTube id>', seconds]`) adds a "Watch this step" clip. Consecutive steps with the same `any: '<label>'` are grouped in an "Any order" box; `anyList: '<text>'` marks the list inside one step as any-order; `stepsOrder: 'suggested'` labels a whole list as flexible.

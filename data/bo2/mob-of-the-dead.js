@@ -47,7 +47,7 @@
         steps: [
           { w: 17, t: 'Find which spot it\'s in', d: 'Above the cafeteria entrance, or next to the Citadel tunnels entrance by the warden\'s office.' },
           { w: 48, t: 'Go into Afterlife and zap the generator behind the blue door', d: 'Use the nearest power box, look back at the key: a blue Afterlife doorway has opened in the wall above it. Go through and zap the generator.', tip: 'Still in Afterlife? From the warden\'s office side, zap the voltmeter to the right to open the warden\'s office. From the cafeteria side, go through the blue door by the MP5 and zap the voltmeter above you to open the showers.' },
-          { w: 172, t: 'Revive yourself and pick up the key', d: 'Only one player carries it, but anyone can use it on the locks.' },
+          { w: 172, t: 'Revive yourself and pick up the key', d: 'The player carrying it opens the locks, so they come along for each plane part.' },
         ],
       },
       {
@@ -69,11 +69,11 @@
         facts: [['Parts', '5'], ['Build at', 'The runway on the roof'], ['Needs', 'The warden\'s key']],
         video: RV,
         steps: [
-          { w: 187, any: 'Parts in any order', t: 'Sheets: wash them in the showers', d: 'Unlock the washing machine cage with the warden\'s key. In Afterlife, zap the voltmeter on the machine. Back in your body, start it: you\'re locked in for about 30 seconds of zombies. Take the sheets when it\'s done.', needs: ['wardens-key'] },
+          { w: 187, any: 'Parts in any order', t: 'Uniforms: wash them in the showers', d: 'Unlock the washing machine cage with the warden\'s key. In Afterlife, zap the voltmeter that powers the machine (across the room from it). Back in your body, start it: you\'re locked in with extra zombies until the wash finishes (about 30 seconds). Take the uniforms when it\'s done.', needs: ['wardens-key'] },
           { w: 265, any: 'Parts in any order', t: 'Rigging: drop the elevator in the Citadel tunnels', d: 'Go down the big spiral staircase and unlock the cage at the bottom with the key. Go into Afterlife at the top and walk back down: three blue numbers appear on the walls. Zap the number pad to enter them. The elevator drops for 60 seconds; open the gate and grab the rigging.', needs: ['wardens-key'] },
           { w: 330, any: 'Parts in any order', t: 'Engine: switch off the barrier in the warden\'s office', d: 'A cell in the warden\'s office holds it behind an electric barrier. In Afterlife, zap the two generators in Building 64 (follow the blue wires) and the hidden third one through the blue portal. Then open the cell with the key.', needs: ['wardens-key'] },
           { w: 368, any: 'Parts in any order', t: 'Oxygen tanks: the double gate at the docks (2 players)', d: 'Unlock the gate left of the Tommy gun with the key. Both players go in; one enters Afterlife and zaps the voltmeter. The gate behind you locks and an inner gate opens; the other player grabs the tanks, then the ghost zaps again to let you out.', needs: ['wardens-key'], tip: 'While the ghost is out, run up the big white staircase and zap the gondola to power it.' },
-          { w: 438, any: 'Parts in any order', t: 'Valves: in the infirmary, then open the roof', d: 'Unlock the case in the infirmary with the key and take the valves. For roof access: enter Afterlife at the infirmary box, go through the blue door in the corridor, jump onto the roof and zap the voltmeter by the roof door.', needs: ['wardens-key'] },
+          { w: 438, any: 'Parts in any order', t: 'Valves: in the infirmary, then open the roof', d: 'Unlock the glass case next to the infirmary\'s Cerberus head with the key and take the valves. For roof access: enter Afterlife at the infirmary box, go through the blue door in the corridor, jump onto the roof and zap the voltmeter by the roof door.', needs: ['wardens-key'] },
           { w: 470, t: 'Build each part onto the plane on the roof ramp' },
         ],
       },
@@ -149,15 +149,15 @@
       },
       {
         id: 'golden-spork', tab: 'weapons', type: 'Melee wonder weapon', name: 'Golden Spork', img: I + 'spork.webp', color: 'gold',
-        summary: 'A melee weapon that one-hit kills into the 30s. Needs the spoon from the easter egg and the Acid Gat.',
-        facts: [['Needs', 'The spoon, the Acid Gat'], ['Where', 'The blood bath in the infirmary']],
+        summary: 'A melee weapon that one-hit kills into the 30s. Needs the spoon and the Acid Gat. Every player who wants one does the spoon and bathtub steps themselves.',
+        facts: [['Needs', 'The spoon, the Acid Gat'], ['Where', 'The blood-filled bathtub in the infirmary']],
         video: { id: 'WefePpfO0BQ', title: 'How to get the Golden Spork', ch: 'MrDalekJD', len: '3:32' },
         steps: [
-          { w: 57, t: 'Get the spoon', needs: ['main-ee'], d: 'See the spoon step in the easter egg prep.' },
-          { w: 102, t: 'Drop the spoon in the bathtub of blood in the infirmary', d: 'Just below the roof. The spoon stirs and disappears.' },
+          { w: 57, t: 'Get the spoon', needs: ['main-ee'], d: "After your first trip to the bridge: throw the Hell's Retriever at the 'Escape from the Tomb' poster in a cell near the warden's office, zap the spoon behind it in Afterlife, then hit the spoon in the cafeteria with the Retriever. The full steps are in the easter egg prep." },
+          { w: 102, t: 'Put the spoon in the bathtub of blood in the infirmary', d: 'The lone tub opposite a Mystery Box spot, just below the roof. The spoon stirs the blood and disappears.' },
           { w: 119, t: 'Get the Acid Gat', needs: ['blundergat', 'acid-gat-kit'] },
-          { w: 135, t: 'Kill about 50 zombies in the showers with the Acid Gat', d: 'Until you hear Samantha laugh.' },
-          { w: 150, t: 'Take the Golden Spork from the bathtub' },
+          { w: 135, t: 'Kill about 50–70 zombies in the showers with the Acid Gat', d: 'Until you hear a laugh.' },
+          { w: 150, t: 'Take the Golden Spork from the bathtub', d: 'A hand rises out of the blood holding it. If you bleed out later, put the spoon back in and take it again.' },
         ],
       },
 
