@@ -1,0 +1,176 @@
+/* Ashes of the Damned — Black Ops 7 launch map */
+(() => {
+  const I = 'assets/img/bo7/ashes-of-the-damned/';
+  const E = 'XGc-_4sT9dE'; // MrRoflWaffles easter egg guide
+  const P = 'OkOnwkWtiSk'; // MrRoflWaffles Pack-a-Punch / Ol' Tessie guide
+  const G = '82cQY5NEma4'; // MrRoflWaffles Necrofluid Gauntlet guide
+  const EV = { id: E, title: 'Ashes of the Damned easter egg guide', ch: 'MrRoflWaffles', len: '48:06' };
+  const PV = { id: P, title: 'Ashes of the Damned Pack-a-Punch and Ol\' Tessie', ch: 'MrRoflWaffles', len: '8:44' };
+  const GV = { id: G, title: 'Free Necrofluid Gauntlet', ch: 'MrRoflWaffles', len: '8:53' };
+  const purple = 'Turn purple first: shoot a frozen face of the clock tower above Ashwood with the Gauntlet, then explode the barb (aim button) close by. It wears off after a while.';
+
+  ZG.addMap({
+    game: 'bo7', id: 'ashes-of-the-damned', order: 1,
+    name: 'Ashes of the Damned', dlc: 'Launch map', eeName: 'Dust To Dust',
+    hero: I + 'hero.webp', players: 'solo',
+    tags: ['Ol\' Tessie', 'Necrofluid Gauntlet', 'Veytharion boss'],
+    blurb: 'The biggest round-based map ever: towns and a cosmodrome joined by foggy roads, crossed in the armoured truck Ol\' Tessie. Upgrade Tessie, build the Necrofluid Gauntlet, brew a serum, unlock four rituals and drive into a pyramid to fight Veytharion.',
+    quick: [
+      ['Main EE', 'Dust To Dust (solo or co-op)'],
+      ['Wonder weapons', 'Necrofluid Gauntlet (free), Ol\' Tessie (the truck)'],
+      ['Helper', 'Klaus the robot'],
+      ['Boss', 'Veytharion, fought in Ol\' Tessie'],
+    ],
+    intro: {
+      start: 'You drive Ol\' Tessie between areas; the fog roads are deadly on foot. Pack-a-Punch rides on Tessie\'s back bumper. New to Black Ops 7 zombies? Read the basics first.',
+      weapons: 'The quest needs the Necrofluid Gauntlet and all of Tessie\'s upgrades. Klaus is needed for the Gauntlet.',
+      'easter-egg': 'Most steps can be worked on side by side; start the serum ingredients early (some need several rounds). Bring long-range guns for the boss. Tap a chip to open that guide without losing your place.',
+    },
+    items: [
+      /* ------------------------------ START ------------------------------ */
+      {
+        id: 'bo7-basics', tab: 'start', type: 'Primer', name: 'Black Ops 7 zombies basics', short: 'BO7 basics',
+        summary: 'Black Ops 7 keeps Black Ops 6\'s system (see the primer on Liberty Falls) with a few changes. This applies to every Black Ops 7 map.',
+        blocks: [
+          { list: [
+            'Same core rules as Black Ops 6: Essence, Salvage, Arsenal, armour tiers, rarity, three Pack-a-Punch levels, ammo mods, GobbleGums, Field Upgrades and Augments.',
+            'Higher-rarity wall-buys and box guns matter more: buying a blue or purple gun can save a lot of salvage compared with upgrading a grey one.',
+            'Three ways to play: **Standard**, **Directed** (guided, with quest markers) and **Cursed** (harder, with optional relics). These guides follow Standard.',
+            'Ol\' Tessie (the truck) appears on more than one map. Klaus the robot is back as a helper you can call and send places.',
+            'New special enemies include Ravagers (packs that swarm you) and Zursa (zombie bears).',
+          ] },
+        ],
+      },
+      {
+        id: 'power-pap', tab: 'start', type: 'Getting started', name: 'Ol\' Tessie, power & Pack-a-Punch', short: 'Tessie & PaP',
+        summary: 'Fit T.E.D.D.\'s head to Ol\' Tessie, drive to the farm or the lake and clean the fungus off its power pump, do the same at Ashwood, then drive Tessie into the Ashwood garage and fit Pack-a-Punch to her back.',
+        video: PV,
+        steps: [
+          { w: 0, t: 'Melee the marker in the spawn building and take T.E.D.D.\'s head', d: 'Open the door in spawn; the head is under a metal plate on the floor.' },
+          { w: 16, t: 'Fit the head to Ol\' Tessie', d: 'The truck outside. Now you can drive her.', imgs: [{ src: I + 'tessie.webp', cap: 'Ol\' Tessie, fully upgraded' }] },
+          { w: 62, t: 'Smash through the gate to Vandorn Farm or Blackwater Lake', d: 'Avoid red spores on the road (they hurt Tessie); green ones heal her. Don\'t get out on the fog roads: the zombies there are super-sprinters.' },
+          { w: 107, t: 'Shoot all the fungus off the power pump within 30 seconds', d: 'All around the machine, then the big blob that appears on top. A pulse kills nearby zombies. Fail and retry next round.' },
+          { w: 152, t: 'Flip the power switch', d: 'Vandorn Farm: upstairs in the barn. Blackwater Lake: upstairs in the cabin.' },
+          { w: 197, t: 'Drive on to Ashwood and clear its pump', d: 'Up the zipline, through the building and down the stairs to the bridge. Clean the pump, then flip the switch overlooking the bridge.', warn: 'Don\'t just jump off the bridge: the drop can kill you. Slide onto a structure or take a zipline.' },
+          { w: 295, t: 'Drive Tessie into the garage and fit Pack-a-Punch', d: 'The garage door opens. Tessie repairs in there. Take the machine from the table and put it on her back.', imgs: [{ src: I + 'tessie-pap.webp', cap: 'Pack-a-Punch on Tessie' }] },
+        ],
+      },
+
+      /* ------------------------------ PARTS ------------------------------ */
+      {
+        id: 'klaus', tab: 'parts', type: 'Helper', name: 'Klaus', color: 'gold',
+        summary: 'From round 8, kill an Uber Klaus at Janus Towers Plaza for a stabilizer chip, fit it in the Ashwood jail and wake Klaus with stun grenades. His remote takes a grenade slot (bumper, or Q on PC).',
+        video: GV,
+        steps: [
+          { w: 76, t: 'Kill the Uber Klaus at Janus Towers Plaza', d: 'From about round 8 to 10, he comes out of the Project Janus container opposite the Warden 308 wall-buy. He\'s tough: Pack-a-Punch once first; Cryo Freeze or Napalm Burst help. He drops the stabilizer chip.' },
+          { w: 140, t: 'Put the chip in the cell panel in the Ashwood sheriff\'s office' },
+          { w: 156, t: 'Throw stun grenades at Klaus until he wakes', d: 'About four. Craft them for 250 salvage or pick them up around the map.' },
+        ],
+      },
+      {
+        id: 'tessie-upgrades', tab: 'parts', type: 'Ol\' Tessie upgrades', name: 'Abomination Beam and DG-2 turret', color: 'storm',
+        summary: 'Tessie\'s other two upgrades. Both are installed in the Ashwood garage, like Pack-a-Punch.',
+        video: EV,
+        steps: [
+          { w: 158, t: 'Abomination Beam: kill the cook in the Exit 115 diner for the freezer key', d: 'Kill zombies inside the diner until the cook drops the key (he may run off: check around). Open the freezer in the back hallway for the Abomination carcass.' },
+          { w: 205, t: 'Fit the carcass to the front of Tessie in the garage' },
+          { w: 1360, t: 'DG-2 turret: open the Seal of Sorrow (main quest), then fit the barrel', d: 'Part of the main quest: see the key steps.', needs: ['ee'] },
+        ],
+      },
+
+      /* ------------------------------ WEAPONS ------------------------------ */
+      {
+        id: 'gauntlet', tab: 'weapons', type: 'Wonder weapon', name: 'Necrofluid Gauntlet', img: I + 'gauntlet.webp', color: 'green',
+        summary: 'Fires a barbed spike: press reload to pull it back (hitting zombies both ways) or the aim button to explode it in place. Damage heals and overheals you. Pull spikes back from close by to keep your ammo. No upgrade quest: Pack-a-Punch it on Tessie.',
+        facts: [['Get it', 'Free quest (needs Klaus)'], ['Upgrade', 'Pack-a-Punch on Tessie']],
+        video: GV,
+        steps: [
+          { w: 46, t: 'Turn on all three power switches', needs: ['power-pap'], d: 'Farm or lake, then Ashwood, then the other one.' },
+          { w: 76, t: 'Wake Klaus', needs: ['klaus'] },
+          { w: 188, t: 'Send Klaus to the broken wall panel in the Zarya Cosmodrome', d: 'In Support Systems, next to a buyable door. He bashes it.' },
+          { w: 203, t: 'Interact with the panel and stand alone in the red scanner', d: 'Defend yourself until the bar fills (other players must stay out of the beam). Kill the purple zombies, then take the Aether barrel from the cupboard.' },
+          { w: 266, t: 'Charge the barrel at the three power pumps, against the clock', d: 'Ashwood first, then Blackwater Lake, then Vandorn Farm. Defend each while it charges. A timer runs between pumps. Using a jump pad drops the barrel.' },
+          { w: 313, t: 'Put the barrel on the cube in the Vandorn Farm cellar' },
+          { w: 328, t: 'Read the three symbols from the jump pad', d: 'Ride the jump pad between Janus Towers Plaza and the farm; red symbols are painted on the barn, shed and farmhouse roofs.' },
+          { w: 359, t: 'Set the symbols on the cube, then interact with its eye', d: 'Each side cycles through its own symbols. The cube opens.' },
+          { w: 406, t: 'Shoot and recall barbs through the green blobs to finish', d: 'You\'re rooted on a sigil until all are gone. Then the Gauntlet is yours.' },
+        ],
+      },
+
+      /* ------------------------------ EASTER EGG ------------------------------ */
+      {
+        id: 'ee', tab: 'easter-egg', type: 'Main Easter Egg', name: 'Dust To Dust',
+        summary: 'Brew a serum in Yuri\'s lab, collect three keys from the fog with the Gauntlet to open the Seal of Sorrow, use the clock tower\'s purple charge to finish four area rituals, then rally Tessie through the fog and defeat Veytharion.',
+        facts: [
+          ['Players', 'Solo or co-op'],
+          ['Reward', 'Achievement, ending cutscene'],
+          ['Boss', 'Veytharion (driving Tessie)'],
+        ],
+        prep: [
+          { t: 'Tessie with Pack-a-Punch and the Abomination Beam', needs: ['power-pap', 'tessie-upgrades'] },
+          { t: 'The Necrofluid Gauntlet and Klaus', needs: ['gauntlet', 'klaus'] },
+          { t: 'Wisp Tea (bought at the Zarya Cosmodrome) for the powder' },
+          { t: 'For the boss: long-range guns at Pack-a-Punch 3 and Legendary rarity, Kazimirs, GobbleGums such as Shields Up' },
+        ],
+        stepsTitle: 'Quest steps',
+        video: EV,
+        steps: [
+          { w: 63, t: 'Serum: gather the ingredients', d: 'You always need the powder (next step) plus the three ingredients the cipher picks. Start the slow ones early:', list: [
+            'Widow\'s Lantern: take the jar of spores from under the Blackwater cabin kitchen cabinet, use it on the mushroom-covered horse by the farm gate towards Ashwood, and come back 3 rounds later.',
+            'Ravager Eyes: kill a Ravager with a saw trap (farm or elsewhere).',
+            'Hoard Hunk Chunks: hit a purple Aether plant at ground level by a fog road with Tessie\'s Abomination Beam.',
+            'Mysterious Limb: kill a Zursa (bear, from round 16) with the Abomination Beam as the final blow.',
+            'Human Bones: in the farm barn, hit the foot of the hanging body with a combat axe, then burn the fallen foot with a Molotov.',
+          ], tip: 'Free combat axes: the Exit 115 diner, or the trophy in the Blackwater Lake toolshed.' },
+          { w: 373, t: 'Serum: get the Powder of the Forgotten', d: 'With Wisp Tea and the Gauntlet, bring your wisp into the Ashwood tailor shop: it goes into the mirror. Shoot the mirror with the Gauntlet and the powder drops.', needs: ['gauntlet'] },
+          { w: 859, t: 'Serum: read the ciphers in Yuri\'s lab and add the ingredients in order', d: 'In the Zarya Cosmodrome. Interact with the powder: three pigpen-cipher words appear on the board, top to bottom. Interact with the matching ingredient for each line. Red smoke means right; black means wait a round.', table: { head: ['Word', 'Ingredient'], rows: [
+            ['FUNGI', 'Widow\'s Lantern'],
+            ['LIMBS', 'Mysterious Limb'],
+            ['OCULI', 'Ravager Eyes'],
+            ['CONCH', 'Hoard Hunk Chunks'],
+            ['TALUS', 'Human Bones'],
+          ] } },
+          { w: 997, t: 'Serum: add your blood and survive', d: 'A lockdown with reduced health: you only heal with Gauntlet kills. Fill the serum with souls until purple gas fills the room.', tip: 'Tier 3 armour, Full Power with Aether Shroud charges, or Frenzied Guard help.' },
+          { w: 1043, any: 'Keys in any order', t: 'Red Nightbird key (stops your health regen)', d: 'Shoot it with a Gauntlet barb and recall it to pull it free. On the Ashwood–Exit 115 road: in a T-Rex skull under the dead Orda, in a T-Rex skull hanging over the road from a cliff, or behind the Project Janus vehicle by the Exit 115 gate.' },
+          { w: 1218, any: 'Keys in any order', t: 'Yellow Bruin key (melee only)', d: 'On the Ashwood–Cosmodrome road: on the fallen radio tower, on the building left of the cosmodrome exit near the radar, or high on the rocks left of the gate from Ashwood to the crashed rocket.' },
+          { w: 1265, any: 'Keys in any order', t: 'Green Terrapin key (slows you down)', d: 'On the ship between Ashwood and Vandorn Farm: in a slightly open blue container, behind a window on deck, or under the boat left of two silver barrels.' },
+          { w: 1328, t: 'Put the keys in the Seal of Sorrow in Ruby Alley', d: 'Each one as you get it. A cutscene plays and the DG-2 turret barrel appears: fit it to Tessie in the garage.' },
+          { w: 1377, t: 'Freeze the clock tower with Tessie\'s DG-2 turret', d: 'Drive a little out of Ashwood for an angle and shoot the floating clock. Three faces freeze; each gives one purple charge per round.' },
+          { w: 1425, t: 'Ritual 1, Zarya Cosmodrome: shoot both radar dishes while purple', d: purple + ' One charge per dish.' },
+          { w: 1519, t: 'Ritual 1: launch the rocket from the control room', d: 'The left monitors spell a word in pigpen: LAUNCH, WEAPON, ENGINE or ROCKET. Lock each of the six number monitors (shoot its red button) on these numbers, quickly:', table: { head: ['Word', 'Numbers, left to right'], rows: [
+            ['LAUNCH', '11 · 00 · 20 · 13 · 02 · 07'],
+            ['WEAPON', '22 · 04 · 00 · 15 · 14 · 13'],
+            ['ENGINE', '04 · 13 · 06 · 08 · 13 · 04'],
+            ['ROCKET', '17 · 14 · 02 · 10 · 04 · 19'],
+          ] } },
+          { w: 1630, t: 'Ritual 2, Exit 115: lead three revived zombies into matching lightning', d: 'Wait for coloured lightning at Exit 115 (or shoot the three sparking lamp posts with the DG-2 turret). While purple, shoot the clock at McDougal\'s service station to freeze time for a minute, then revive and lead each zombie into its colour:', list: [
+            'Red: ram the red truck trailer by the diner with Tessie; the zombie against the diner wall wakes.',
+            'Yellow: send Klaus to the mechanic under the raised car in the garage.',
+            'Blue: melee the cash register in the diner to wake the cashier.',
+          ], tip: 'Much easier in co-op. In solo, any zombie you got in stays done; retry the rest when lightning returns (2–3 rounds).' },
+          { w: 1861, t: 'Ritual 3, Vandorn Farm: wake Pa and defend the ritual items', d: 'While purple, read the clock in the farmhouse dining room, stand on that Roman numeral scratched in the floor and look at Pa at the head of the table. When his eyes go red, shoot his head. Then collect four items (Tasty-Face on the bottom bunk, Junior\'s Fun-Face upstairs in the barn, Pa\'s Pigsticker in the garage, Ma\'s Chalice in the cellar bathtub), place them on the glowing circles and defend them as they rise.' },
+          { w: 2038, t: 'Ritual 4, Blackwater Lake: the soul on the pier and the film reels', d: 'Touch the soul on the pier. While purple, shoot the projector in the cabin: it shows four places in order. Shoot a normal Gauntlet barb into the film reel at each, in that order (toolshed shelf, upstairs at the front of the cabin, under the stairs at the back by the ammo box, on a beam in the boathouse). Fail and retry next round.' },
+          { w: 2163, t: 'Ritual 4: Klaus takes the horn', d: 'The soul moves to a box at the foot of a bed in the cabin (the Speed Cola room). Open it, call Klaus and send him to it: he takes the horn and waits on the walkway.' },
+          { w: 2212, t: 'Get ready, then talk to Klaus (no turning back)', d: 'Pack-a-Punch 3 and Legendary on everything, all perks; T.E.D.D. trials can make perks permanent. Make sure Tessie is at Blackwater Lake.' },
+          { w: 2292, t: 'Rally: drive Tessie through three souls on each fog road, in order', d: 'Lake → Janus Towers, Towers → farm, farm → Ashwood, Ashwood → lake. Grab all three on a road before leaving it; a gong means you failed (talk to Klaus to retry). Turret gunners shoot mines off the road.' },
+          { w: 2448, t: 'Beat Veytharion', d: 'Ram him with Tessie and shoot his unarmoured head. Dodge missile barrages by turning constantly. When he goes immune (about 80% and 35%), drive through the purple beams that appear and boost into him; then shoot the yellow spot underneath. Later he fires a charged mouth laser: hide behind a pillar. Bears join in co-op.', tip: 'Power-ups float high up: pull them down with the Gauntlet.', imgs: [{ src: I + 'veytharion.webp', cap: 'Veytharion' }] },
+        ],
+      },
+
+      /* ------------------------------ SIDE ------------------------------ */
+      {
+        id: 'song', tab: 'side', type: 'Song', name: '"Turn to Ashes"',
+        summary: 'Interact with three Mister Peeks headphones.',
+        spots: [
+          'Server room in front of spawn, on the servers nearest Quick Revive.',
+          'Ashwood, in the Double Tap area, right above the VS Recon wall-buy.',
+          'Exit 115, inside a jeep north-west of the gas station.',
+        ],
+      },
+      {
+        id: 'good-soldiers', tab: 'side', type: 'Side quest', name: '"Good Soldiers" (play as Dempsey)',
+        summary: 'As Dempsey, go to the crashed rocket and interact with the dog tags in its nose, between two halves where bodies lie. A cinematic takes you somewhere else; kill zombies until you come back for a Legendary weapon and loot.',
+      },
+    ],
+  });
+})();

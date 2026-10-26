@@ -11,9 +11,11 @@ Filled in so far:
 - **Black Ops III** (10 maps): Shadows of Evil, The Giant, Der Eisendrache, Zetsubou No Shima, Gorod Krovi, Revelations, plus the Zombies Chronicles maps that have a main easter egg (Ascension, Shangri-La, Moon, Origins).
 - **Infinite Warfare** (5 maps): Zombies in Spaceland, Rave in the Redwoods, Shaolin Shuffle, Attack of the Radioactive Thing, The Beast from Beyond.
 - **Black Ops 4** (7 maps): IX, Voyage of Despair, Dead of the Night, Ancient Evil (Chaos story) and Blood of the Dead, Alpha Omega, Tag der Toten (Aether story). Classified is left out because its only quest is a round 150 cutscene.
-- **Cold War** (4 maps): Die Maschine, Firebase Z, Mauer der Toten, Forsaken. Die Maschine has a primer on Cold War's new rules.
+- **Cold War** (4 maps): Die Maschine, Firebase Z, Mauer der Toten, Forsaken. Die Maschine has a primer on Cold War's new rules. The Outbreak mode quests are left out.
+- **Black Ops 6** (6 maps): Liberty Falls, Terminus, Citadelle des Morts, The Tomb, Shattered Veil, Reckoning. Liberty Falls has a primer on Black Ops 6's rules.
+- **Black Ops 7** (6 maps): Ashes of the Damned, Astra Malorum, Paradox Junction, Totenreich, Kowakujō, Rex Infernus. Ashes of the Damned has a primer on what changed.
 
-Black Ops 6 and Black Ops 7 are placeholders. World at War has no tab: none of its maps has a main easter egg.
+Games from other studios' zombies modes (Advanced Warfare, WWII, Vanguard, Modern Warfare III) aren't included, apart from Infinite Warfare. World at War has no tab: none of its maps has a main easter egg.
 
 ## Opening it
 
@@ -47,7 +49,7 @@ css/styles.css          all styling (dark + light theme, responsive)
 js/core.js              data registry (ZG.addMap)
 js/app.js               routing, rendering, checklists, side panel, search
 data/games.js           the game tabs (set active: true to enable one)
-data/<game>/<map>.js    one file per map: all guide content (bo1, bo2, bo3, iw, bo4, bocw)
+data/<game>/<map>.js    one file per map: all guide content (bo1, bo2, bo3, iw, bo4, bocw, bo6, bo7)
 assets/img/<game>/<map>/  images (from the Call of Duty Wiki, converted to WebP)
 assets/icons/           home-screen icons
 sw.js                   offline support (service worker, live site only)
@@ -76,4 +78,4 @@ tools/                  research, checking and publishing scripts (see tools/REA
 
 ## Credits
 
-Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent, CodeNamePizza, Pack A Puncher, GregFPS, Ch0pper, AceOfSpades, Rager6amer, LegoUnlocked, JokerAlex 21 and others). Fan-made; not affiliated with Activision, Treyarch or Infinity Ward.
+Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent, CodeNamePizza, Pack A Puncher, GregFPS, Ch0pper, AceOfSpades, Rager6amer, LegoUnlocked, JokerAlex 21, TheGamingRevolution and others). Fan-made; not affiliated with Activision, Treyarch or Infinity Ward.

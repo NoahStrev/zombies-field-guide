@@ -33,6 +33,12 @@ ZG.games = [
     id: 'bocw', name: 'Cold War', short: 'CW', year: 2020, active: true,
     blurb: 'All four Cold War round-based maps. Cold War changed a lot (essence, salvage, armour, tiered Pack-a-Punch), so start with the basics on Die Maschine. Every quest can be done solo.',
   },
-  { id: 'bo6', name: 'Black Ops 6', short: 'BO6', year: 2024, active: false },
-  { id: 'bo7', name: 'Black Ops 7', short: 'BO7', year: 2025, active: false },
+  {
+    id: 'bo6', name: 'Black Ops 6', short: 'BO6', year: 2024, active: true,
+    blurb: "All six Black Ops 6 round-based maps; every one has a main quest that works solo. Start with the basics on Liberty Falls. Directed Mode (picked in the lobby) gives on-screen hints; these guides follow the full standard version.",
+  },
+  {
+    id: 'bo7', name: 'Black Ops 7', short: 'BO7', year: 2025, active: true,
+    blurb: "All six Black Ops 7 maps, each with a main quest that works solo. Start with the basics on Ashes of the Damned. Finishing each map's quest gives you a Shadowsmith's Blessing power-up in the later boss fights.",
+  },
 ];
