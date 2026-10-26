@@ -64,6 +64,7 @@
           { w: 141, t: 'Use the central portal to reach the projection room', d: 'Pack-a-Punch costs 5,000. You get 30 seconds in the room, then the portal shuts for a while.' },
           { w: [E, 158], t: 'Release the UFO toys while you\'re in there', d: 'Hold interact on the table of four UFO toys in the left corner. They fly out over four traps. The crystals and the easter egg both need this.' },
         ],
+        blocks: [{ imgs: [{ src: I + 'layout.webp', cap: 'Park map: Cosmic Way in the middle, with Journey into Space, Polar Peak and the Kepler System around it' }] }],
       },
       {
         id: 'elemental-cores', tab: 'start', type: 'Upgrade', name: 'Arcane Core & elemental crystals', short: 'Arcane Core',
