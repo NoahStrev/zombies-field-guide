@@ -163,6 +163,20 @@
           { w: 2043, t: 'Phase 4: flail through the walls of fire and finish him', d: 'Throw a moon orb near him and teleport through the fire, then pour damage in during his attacks. He falls and the cutscene plays.', imgs: [{ src: I + 'godking.webp', cap: 'The God-King' }] },
         ],
       },
+
+      /* ------------------------------ SIDE ------------------------------ */
+      {
+        id: 'cold-hearted', tab: 'side', type: 'Super Easter Egg', name: 'Cold Hearted: every WWII main quest', short: 'Cold Hearted', color: 'ice',
+        summary: 'WWII\'s Super Easter Egg is a challenge rather than a quest of its own: finish all five main quests (on The Final Reich, the hardcore one) and the rewards unlock.',
+        facts: [['Reward', 'Play as the Wicht Warden, the "Über-Schnalle" weapon charm, and a chosen primary weapon at the start of every match']],
+        steps: [
+          { t: 'The Final Reich: Dark Reunion', d: 'The hardcore quest, not Fireworks. [[wwii/the-final-reich/easter-egg/item-dark-reunion|Open the guide]].' },
+          { t: 'The Darkest Shore: Making History', d: '[[wwii/the-darkest-shore/easter-egg|Open the guide]].' },
+          { t: 'The Shadowed Throne: Stadtjäger Down', d: '[[wwii/the-shadowed-throne/easter-egg|Open the guide]].' },
+          { t: 'The Tortured Path: I Have the Power', d: '[[wwii/the-tortured-path/easter-egg|Open the guide]].' },
+          { t: 'The Frozen Dawn: Kingfall', d: 'This map\'s quest, on the Main Easter Egg tab.' },
+        ],
+      },
     ],
   });
 })();

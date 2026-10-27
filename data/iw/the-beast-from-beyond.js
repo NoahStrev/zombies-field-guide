@@ -168,6 +168,48 @@
 
       /* ------------------------------ SIDE ------------------------------ */
       {
+        id: 'directors-cut', tab: 'side', type: 'Super Easter Egg', name: 'Director\'s Cut and the true ending', short: 'Director\'s Cut', color: 'fire',
+        summary: 'Infinite Warfare\'s Super Easter Egg. All five main quests unlock Director\'s Cut, a boosted mode. Replay every quest in it, pick up a Talisman from each, finish The End? last, and you fight Mephistopheles for the true ending.',
+        facts: [
+          ['Unlock', 'All five main quests (one Soul Key piece each)'],
+          ['Boss', 'Mephistopheles'],
+          ['Reward', 'Play as Willard Wyler, calling cards, the final cutscene'],
+        ],
+        video: { id: 'Gkj_ptv6kDU', title: 'Mephistopheles boss fight guide', ch: 'DIG_DUG7', len: '8:52' },
+        steps: [
+          { w: ['gQTuqJ5whyM', 57], t: 'Finish all five main quests', d: 'Zombies in Spaceland, Rave in the Redwoods, Shaolin Shuffle, Attack of the Radioactive Thing and this map each give one piece of the Soul Key.' },
+          { w: ['gQTuqJ5whyM', 74], t: 'Put the five pieces in the Soul Jar', d: 'Interact with the Soul Jar in the projection room. Director\'s Cut is now unlocked: switch it on in the lobby before a game.' },
+          { w: ['gQTuqJ5whyM', 167], t: 'Replay every main quest in Director\'s Cut and grab its Talisman', d: 'When you pick up a map\'s Soul Key piece, a Talisman appears: collect it. That map gets a green star in the lobby and an animated calling card. Do The End? last.' },
+          { w: ['gQTuqJ5whyM', 200], t: 'Finish The End? and prepare in the Afterlife Arcade', d: 'You get five minutes: perks from the counter, a Mystery Wheel of double Pack-a-Punched guns and a Fate and Fortune refill. Walk into the portal (or wait) to start the fight.', tip: 'Bring a strong LMG and the {{entangler}}: you throw souls with it.', needs: ['entangler'] },
+          { w: 138, t: 'Charge the first circle', d: 'Mephistopheles flies to the back. Stand in the glowing circle in front of him to charge it. Step out to dodge an attack, but get back quickly or the charge drains.', list: [
+            'Fireballs (mostly while he moves): jump sideways, towards a gap with no zombie to block you.',
+            'Black hole in his hand: go prone before it reaches the middle, or sprint and jump away, or get behind a pillar.',
+            'Summoned zombies: clear them with explosives or the wonder weapon.',
+            'Flaming dive through the middle: just stay out of the centre.',
+          ] },
+          { w: 262, t: 'Throw souls at him, then shoot his chest symbol', d: 'A full circle releases souls. Grab them with the Entangler and throw them at him (four solo, more in co-op). He lands in the middle: shoot the blue symbol on his chest until it fades, then hide behind a pillar before he slams.', warn: 'Being close to the slam downs you, and so does walking into him as he leaves the middle (he\'s on fire).' },
+          { w: 292, t: 'Survive the lockdown, then the meteor shower', d: 'Go back to where you started, clear the lockdown, then crouch behind the pillar on your left while meteors fall.' },
+          { w: 307, t: 'Charge the other four circles the same way', d: 'Each new circle gives him one more attack:', list: [
+            'A wall of fire across the platform: stay out of its path.',
+            'A thrown meteor with a big blast: get behind a pillar or far away.',
+            'A slam in the middle: when the floor glows orange, count to five and get behind a pillar.',
+            'After the fourth lockdown, a fire tornado in the middle that throws flames.',
+          ], tip: 'The fourth lockdown ends with blue Rhinos: work round the pillar on the right until you have a clear shot.' },
+          { w: 460, t: 'Final phase: raise all five Talismans', d: 'After the last slam there\'s no lockdown: pour damage into him. Each burst of damage raises a Talisman above a circle (the circle turns grey). With all five up, interact with each to fire it at him, then finish him in the middle.', warn: 'Special zombies from every map spawn, and blue Rhinos turn up if you take too long.' },
+          { w: ['gQTuqJ5whyM', 233], t: 'Play as Willard Wyler', d: 'In the Zombies in Spaceland lobby, enter Left, Left, Down, Up, Up, Right on the D-pad. Finishing Spaceland\'s quest as Wyler unlocks the last cutscene and the "Willard\'s Test" calling card.' },
+        ],
+        blocks: [
+          { h: 'What Director\'s Cut changes' },
+          { list: [
+            'You start with all the Candy perks, 25,000 dollars and every arcade bonus from the season.',
+            'The Magic Wheel\'s guns come Pack-a-Punched once, and each map\'s wonder weapons are in it.',
+            'The Alien Fuses are already in Pack-a-Punch, so a second Pack-a-Punch is open from the start.',
+            'Unlimited Fate and Fortune refills, and a free Lost and Found.',
+            'Bigger XP for finishing a quest.',
+          ] },
+        ],
+      },
+      {
         id: 'song', tab: 'side', type: 'Song', name: '"Scattered Lies"',
         video: { id: 'c8gQZwqxA5c', title: 'The Beast from Beyond secret song: Scattered Lies', ch: 'MrWilliamThor', len: '7:08' },
         summary: 'Shoot fifteen astronaut plush toys. They\'re always in the same places. The song plays after the last one and is added to your lobby music.',

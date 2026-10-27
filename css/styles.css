@@ -596,3 +596,6 @@ tr:last-child td { border-bottom: 0; }
 .transfer-out[hidden], .transfer-in[hidden] { display: none; }
 .transfer-note { font-size: .88rem; }
 .transfer-status { color: var(--muted) !important; font-size: .88rem; min-height: 1.3em; }
+
+/* Links to another page of the guide ([[game/map/tab|label]] in the data) */
+.xlink { font-weight: 600; }

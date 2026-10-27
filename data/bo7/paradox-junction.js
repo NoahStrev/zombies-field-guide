@@ -97,6 +97,28 @@
 
       /* ------------------------------ SIDE ------------------------------ */
       {
+        id: 'super-toy', tab: 'side', type: 'Super Easter Egg · toy', name: 'Super Easter Egg: Twins toy', short: 'Super EE toy', color: 'aether',
+        summary: 'Bring the Twins\' chalk toybox to life in old Nuketown, then rebuild a Peeks doll in the nuked one and win its hide-and-seek. The doll buys the Twins toy. Part of the [[bo7/super-easter-egg/easter-egg|Super Easter Egg]].',
+        video: { id: '3KGZlHLMQi0', title: 'Super Easter Egg guide: every map', ch: 'MrDalekJD', len: '42:44' },
+        steps: [
+          { w: 1238, t: 'Open up and make your first trip back to old Nuketown', d: 'Bring Psych Grenades as your tactical. Get the truck keys and play to the first dog round to go back in time; turn on Pack-a-Punch as prompted.' },
+          { w: 1253, t: 'Interact with the chalk toybox on the garage door', d: 'In the cul-de-sac past the Nuketown sign, near the Temporal Conduit. It redraws itself with a padlock.' },
+          { w: 1268, t: 'Turn the chalk question mark into a key', d: 'Upstairs in the yellow house, left of the big window. Throw a Psych Grenade at it, then pick up the chalk key it becomes.' },
+          { w: 1284, t: 'Unlock the chalk box', d: 'It becomes a real toybox and the Twins ask for their favourite toy.' },
+          { w: 1317, t: 'Find the three missing Peeks doll parts in nuked Nuketown', d: 'Three parts already lie on the school bus roof; the other three spawn among these spots. Some you pick up, others you shoot or blow up. Found parts jump to the bus.', list: [
+            'Upstairs in the yellow house, in the cabinet behind the chair by the bed',
+            'On the bunker roof in the green house\'s backyard',
+            'On the roof of the first house on the right of Trinity Avenue',
+            'On the roof at the end of Trinity Avenue (climb the boxes and look right)',
+            'In the truck bed opposite Pack-a-Punch',
+            'On the far-right meat hook in the locked garage: blow its door open with the RC-XD',
+          ] },
+          { w: 1393, t: 'If needed: open the garage with the RC-XD', d: 'Find the controller behind the barracks at the end of Trinity Avenue, on the bottom shelf of the yellow house garage, or in the mud by the fence behind the perk spot in the green house backyard. Drive the RC-XD to the garage door and blow it up.' },
+          { w: 1440, t: 'Win the Peeks hide-and-seek', d: 'Interact with the glowing parts on the bus. Big glowing Peeks dolls appear one at a time around the cul-de-sac and Trinity Avenue: run through each before the timer runs out (each one adds a little time). Co-op gets less time than solo. Fail and you can try again next round.' },
+          { w: 1472, t: 'Put the doll in the toybox, take the Twins toy and exfil', d: 'Pick the finished doll up off the bus, trade it at the toybox, then exfil on an exfil round with the toy.', warn: 'Solo: finish in one sitting. Loading a save resets the toy quest.' },
+        ],
+      },
+      {
         id: 'song', tab: 'side', type: 'Song', name: '"Come Back Down"',
         summary: 'Interact with three Mister Peeks headphones: on a round table in the yellow house upstairs bedroom (the past), in the fence gap left of the perk spot on Trinity Ave (the past), and in the back of the wrecked truck by the exfil (destroyed town).',
       },

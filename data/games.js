@@ -47,6 +47,6 @@ ZG.games = [
   },
   {
     id: 'bo7', name: 'Black Ops 7', short: 'BO7', year: 2025, active: true,
-    blurb: "All six Black Ops 7 maps, each with a main quest that works solo. Start with the basics on Ashes of the Damned. Finishing each map's quest gives you a Shadowsmith's Blessing power-up in the later boss fights.",
+    blurb: "All six Black Ops 7 maps, each with a main quest that works solo. Start with the basics on Ashes of the Damned. Finishing each map's quest gives you a Shadowsmith's Blessing power-up in the later boss fights, and finishing all six opens the Super Easter Egg: a toy quest on every map, then a five-boss playdate with the Twins.",
   },
 ];

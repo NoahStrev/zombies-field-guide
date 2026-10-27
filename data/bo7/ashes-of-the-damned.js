@@ -159,6 +159,22 @@
 
       /* ------------------------------ SIDE ------------------------------ */
       {
+        id: 'super-toy', tab: 'side', type: 'Super Easter Egg · toy', name: 'Super Easter Egg: Ol\' Tessie toy', short: 'Super EE toy', color: 'aether',
+        summary: 'Opens up once you\'ve finished all six Black Ops 7 main quests (Standard, Cursed or Directed all count). Find the Twins, drag their toybox off the windmill, pull three crystals out of the Monolith Forest and feed the box the rock inside a meteor. Exfil with the toy to keep it. Part of the [[bo7/super-easter-egg/easter-egg|Super Easter Egg]].',
+        video: { id: '3KGZlHLMQi0', title: 'Super Easter Egg guide: every map', ch: 'MrDalekJD', len: '42:44' },
+        steps: [
+          { w: 94, t: 'Find the Twins and walk up to them', d: 'After the first power is on, they stand in one random spot each game and vanish when you get close: on the platform past the jump pad on the Ashwood bridge (across from the zip line), behind the Lost Cabin between Blackwater Lake and Ashwood, on top of the grounded ship between Vandorn Farm and Ashwood, or in the fog on the road between Blackwater and Ashwood.', tip: 'Bring Stun Grenades as your tactical so you don\'t spend salvage on them.' },
+          { w: 155, t: 'Check the Twins are on the barn roof at Vandorn Farm', d: 'They sit at the back of the barn facing the windmill, where the toybox floats in a black storm cloud. No box? Find the Twins again.' },
+          { w: 185, t: 'Build the {{gauntlet}}', needs: ['gauntlet'], d: 'Turn on the second power and do the usual main-quest steps; the Uber Klaus container in Janus Towers Plaza opens on round 8.' },
+          { w: 231, t: 'Drag the toybox down and open it', d: 'Shoot the box on the windmill with the Gauntlet a few times and reload: it drops lower. Then use a fully charged Dark Flare to clear the storm. The box lands and opens, and the Twins ask for a toy.' },
+          { w: 310, t: 'Pick up a Fumigator', d: 'There\'s one in the spawn room. You can only use the crystals while holding it.' },
+          { w: 340, t: 'Pull down three pink crystals in the Monolith Forest', d: 'They sit on top of the stone pillars in the forest between Blackwater Lake and Janus Towers Plaza, in different spots each game, and are hard to see in the fog. Shoot one with the Gauntlet to pull it down, then hold interact on it with the Fumigator out until it glows and beams away. Sometimes the next one only appears after you\'ve done the last.', tip: 'Juggernog, Stamin-Up, Monkey Bombs and Aether Shroud buy you time to look around.' },
+          { w: 418, t: 'Interact with the meteor, then play into the next round', d: 'After the third crystal a meteor lands where Blackwater Lake meets the forest. Interact with it (Fumigator out). It cracks open at the start of the next round.' },
+          { w: 449, t: 'Feed the rock to the toybox and take the Ol\' Tessie toy', d: 'Grab the small Element 115 rock from the meteor and put it in the box at the farm. It throws out some loot and the toy.' },
+          { w: 479, t: 'Exfil with the toy', d: 'On an exfil round (every five rounds from round 11) call it from a phone. The toy floats in the exfil booth: kill the HVT in time and get out. On Rex Infernus the toy now sits on the shelf in Her House.', warn: 'Solo: finish in one sitting. Loading a save resets the toy quest.' },
+        ],
+      },
+      {
         id: 'song', tab: 'side', type: 'Song', name: '"Turn to Ashes"',
         summary: 'Interact with three Mister Peeks headphones.',
         spots: [

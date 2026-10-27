@@ -392,7 +392,8 @@ def verify(args):
 
 def tick_slug(title):
     """Same as slug() in js/app.js: the key a step's ticks are saved under."""
-    s = re.sub(r"\{\{[a-z0-9-]+\|([^}]+)\}\}", r"\1", title)
+    s = re.sub(r"\[\[[a-z0-9/-]+\|([^\]]+)\]\]", r"\1", title)
+    s = re.sub(r"\{\{[a-z0-9-]+\|([^}]+)\}\}", r"\1", s)
     s = re.sub(r"\{\{([a-z0-9-]+)\}\}", r"\1", s).replace("**", "")
     s = re.sub("[̀-ͯ]", "", unicodedata.normalize("NFD", s)).lower()
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")[:60].rstrip("-")

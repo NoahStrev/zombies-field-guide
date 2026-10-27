@@ -109,6 +109,19 @@
 
       /* ------------------------------ SIDE ------------------------------ */
       {
+        id: 'super-toy', tab: 'side', type: 'Super Easter Egg · toy', name: 'Super Easter Egg: Z-Rex toy', short: 'Super EE toy', color: 'aether',
+        summary: 'The quickest toy: you can be done by round 3. Spin up cherry-blossom tornadoes to knock the toybox off the castle roof, follow its bird round three trees, and trade the origami it drops for the Z-Rex toy. Part of the [[bo7/super-easter-egg/easter-egg|Super Easter Egg]].',
+        video: { id: '3KGZlHLMQi0', title: 'Super Easter Egg guide: every map', ch: 'MrDalekJD', len: '42:44' },
+        steps: [
+          { w: 1741, t: 'Turn on power and Pack-a-Punch', needs: ['power-pap'], d: 'The toybox appears spinning on the castle roof, above the wall that blows open onto the rooftops.' },
+          { w: 1756, t: 'Charge up at the cherry tree by the Tenshu Entrance', d: 'Melee it until it blooms, then stand under it until your screen glows: that\'s the tornado power.' },
+          { w: 1772, t: 'Run circles under the toybox on the rooftops', d: 'A tornado knocks it off the roof. It opens and a bird flies out to perch on the castle.' },
+          { w: 1806, t: 'Wake three more cherry trees, in this order', d: 'Melee each until it activates; the bird flies over and chirps each time.', ol: ['Kitchens', 'Staging Area', 'Training Area'] },
+          { w: 1852, t: 'Spin on the flat stump in the Central Courtyard', d: 'Still glowing, run circles on it: a tornado sends the bird to the big tree, and an origami bird drops to the ground.' },
+          { w: 1868, t: 'Put the origami in the toybox for the Z-Rex toy, then exfil', d: 'The box now sits on the ground at the Tenshu Entrance, left of the tree. Exfil on an exfil round (round 11 is the first) with the toy.', warn: 'Solo: finish in one sitting. Loading a save resets the toy quest.' },
+        ],
+      },
+      {
         id: 'song', tab: 'side', type: 'Song', name: '"Evencry"',
         summary: 'Interact with three Mister Peeks headphones: in the Stables, the Kitchens and the Onsen Baths.',
       },

@@ -98,6 +98,25 @@
 
       /* ------------------------------ SIDE ------------------------------ */
       {
+        id: 'super-toy', tab: 'side', type: 'Super Easter Egg · toy', name: 'Super Easter Egg: Caltheris toy', short: 'Super EE toy', color: 'aether',
+        summary: 'The longest toy, and you do most of the main quest along the way. Blow the toybox across the map, finish O.S.C.A.R. beside it with Ol\' Tessie\'s DG-2 turret, catch a UFO in the telescope while time is slowed, then on Mars knock four floating objects to a second UFO with wisps. Its Little Green Man buys the Caltheris toy. Part of the [[bo7/super-easter-egg/easter-egg|Super Easter Egg]].',
+        video: { id: '3KGZlHLMQi0', title: 'Super Easter Egg guide: every map', ch: 'MrDalekJD', len: '42:44' },
+        steps: [
+          { w: 524, t: 'Turn on power and Pack-a-Punch, then get the {{lgm}}', needs: ['lgm'], d: 'Finishing it before round 10 keeps the run short.' },
+          { w: 587, t: 'Blow the floating toybox to the Crash Site', d: 'It starts outside the zombie barrier by the Luminarium. Hit it with an explosive (grenade, Ray Gun or launcher) and it drifts to a spot past the fence on the spawn side of the Luminarium. Blow it up again and it settles behind the rocks at the bottom of the Crash Site, near Ol\' Tessie.' },
+          { w: 619, t: 'Bring it down with a Kazimir grenade', d: 'Craft an LT53 Kazimir and throw it on the ground under the box. It falls, wrapped in electricity.' },
+          { w: 650, t: 'Get the DG-2 turret and fit it to Ol\' Tessie', d: 'In Abyssal Rim by Wisp Tea, hit the floating rock with an explosive so it drifts closer, then wall-run and jump off its left side: you float over to a DG-2 turret. Back at spawn, install it on the back of Ol\' Tessie.' },
+          { w: 682, t: 'Kill O.S.C.A.R. with the DG-2 next to the box', d: 'When he next shows up (with the LGM-1 steps done he also reads out the observatory panel code: note it), bring him low with your guns, lead him to the box and finish him with the turret. The electricity goes and the box opens.' },
+          { w: 744, t: 'Slow time and spot a UFO through the telescope', d: 'Melee five grandfather clocks quickly in a row: Museum Infinitum, the corner of the Luminarium, opposite Stamin-Up in Machina Astralis, left of the teleporter controls, then the upstairs corner of Machina Astralis. Your view blurs and a clock ticks. Look through the observatory telescope and hold your crosshair on the UFO that flies across until it stops and blinks.' },
+          { w: 824, t: 'Follow the main quest to Mars and place the Ascendant Eye', needs: ['ee'], d: 'Two discs in the right-hand corner of Mars now glow blue (only if the telescope step worked). Light the pillars with the LGM-1 as usual, then stop before the boss.' },
+          { w: 885, t: 'Light all nine wisp lanterns', d: 'Around the Crash Site and Luminarium, one unlit wall lantern holds white energy. Aim down sights at it for about three seconds until a wisp circles you, then aim at another unlit lantern and melee to send it in. Repeat until all nine are lit (two in the Crash Site, two outside Museum Infinitum on Scholar\'s Way, the rest around the Luminarium), then finish the round.' },
+          { w: 1007, t: 'Throw a Shock Charge onto each blue disc on Mars', d: 'A UFO arrives and blinks Morse code: short is a dot, long a dash. Each letter is the start of one of the four objects floating in the back-left corner.', list: ['Toilet (T): –', 'Space suit (S): • • •', 'Flamingo (F): • • – •', 'Lava lamp (L): • – • •'] },
+          { w: 1085, t: 'Knock the objects to the UFO in its order with wisps', d: 'Collect up to five wisps from the lit lanterns (they refill each round), then aim at an object and melee. The right one falls and the UFO takes it; a wrong one does nothing, so you can just try them. It usually starts with the toilet or the flamingo.' },
+          { w: 1176, t: 'Trade the Little Green Man for the Caltheris toy', d: 'After the fourth object the UFO drops a little green alien. Put it in the toybox at spawn: it shakes and gives the toy.' },
+          { w: 1208, t: 'Exfil with the toy', d: 'On an exfil round, kill the HVT in time and get out.', warn: 'Solo: finish in one sitting. Loading a save resets the toy quest.' },
+        ],
+      },
+      {
         id: 'song', tab: 'side', type: 'Song', name: '"Magic"',
         summary: 'Interact with three Mister Peeks headphones: on the bottom shelf left of the exit door in the Luminarium, in a display case in Machina Astralis, and on a table in the Observatory Dome.',
       },

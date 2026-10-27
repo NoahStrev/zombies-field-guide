@@ -63,7 +63,10 @@
     return lists;
   }
 
-  const stripRefs = s => String(s || '').replace(/\{\{[a-z0-9-]+\|([^}]+)\}\}/g, '$1').replace(/\{\{([a-z0-9-]+)\}\}/g, '$1').replace(/\*\*/g, '');
+  const stripRefs = s => String(s || '').replace(/\[\[[a-z0-9/-]+\|([^\]]+)\]\]/g, '$1')
+    .replace(/\{\{[a-z0-9-]+\|([^}]+)\}\}/g, '$1').replace(/\{\{([a-z0-9-]+)\}\}/g, '$1').replace(/\*\*/g, '');
+  // Quest pages (a game's Super Easter Egg) sit in the map lists but aren't counted as maps.
+  const mapCount = maps => maps.filter(m => !m.quest).length;
   const gameName = id => (ZG.games.find(g => g.id === id) || {}).name || id;
 
   // All the readable text inside a piece of guide data (for search), skipping ids, links and media.
@@ -166,6 +169,8 @@
     let h = esc(s);
     h = h.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     h = h.replace(/\{\{([a-z0-9-]+)(?:\|([^}]+))?\}\}/g, (m, id, label) => refBtn(map, id, label));
+    // [[game/map/tab(/anchor)|label]] links to another page of the guide.
+    h = h.replace(/\[\[([a-z0-9/-]+)\|([^\]]+)\]\]/g, (m, path, label) => `<a class="xlink" href="#/${path}">${label}</a>`);
     return h;
   }
 
@@ -764,7 +769,7 @@
     const groups = game.groups || [{ id: undefined, label: 'Maps' }];
     document.title = `${game.name} — Zombies Field Guide`;
     return `<section class="page-hero"><div class="wrap">
-        <p class="eyebrow">${esc(game.year)} · ${maps.length} maps</p>
+        <p class="eyebrow">${esc(game.year)} · ${mapCount(maps)} maps</p>
         <h1>${esc(game.name)} Zombies</h1>
         <p class="lede">${esc(game.blurb || '')}</p>
       </div></section>
@@ -805,7 +810,7 @@
     document.title = 'Zombies Field Guide';
     const active = ZG.games.filter(g => g.active);
     const soon = ZG.games.filter(g => !g.active);
-    const total = active.reduce((n, g) => n + ZG.mapsFor(g.id).length, 0);
+    const total = active.reduce((n, g) => n + mapCount(ZG.mapsFor(g.id)), 0);
     const [lg, lm, lt] = (store.get('zg-last') || '').split('/');
     const last = ZG.maps[`${lg}/${lm}`];
     // Quests you've started but not finished, and how many you've finished.
@@ -824,7 +829,7 @@
             <div class="home-maps">${inProgress.map(m => homeMapRow(m, true)).join('')}</div></section>` : ''}
         ${active.map(g => {
           const maps = ZG.mapsFor(g.id);
-          return `<section class="home-game"><h2 class="group-h"><a href="#/${g.id}">${esc(g.name)}</a><span class="home-count">${maps.length} maps</span></h2>
+          return `<section class="home-game"><h2 class="group-h"><a href="#/${g.id}">${esc(g.name)}</a><span class="home-count">${mapCount(maps)} maps</span></h2>
             <div class="home-maps">${maps.map(m => homeMapRow(m)).join('')}</div></section>`;
         }).join('')}
         ${soon.length ? `<p class="home-soon">Not written yet: ${soon.map(g => esc(g.name)).join(', ')}.</p>` : ''}

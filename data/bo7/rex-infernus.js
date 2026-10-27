@@ -114,6 +114,22 @@
 
       /* ------------------------------ SIDE ------------------------------ */
       {
+        id: 'super-toy', tab: 'side', type: 'Super Easter Egg · toy', name: 'Super Easter Egg: Warden toy', short: 'Super EE toy', color: 'aether',
+        summary: 'The last toy, which opens only once the other five sit on the shelf in Her House. Climb a parkour course to the toybox, knock three toy horses out of the sky, fill their skate parts with the right kills and take a hidden portal home on an exfil round. Then start the [[bo7/super-easter-egg/easter-egg|playdate]].',
+        video: { id: '3KGZlHLMQi0', title: 'Super Easter Egg guide: every map', ch: 'MrDalekJD', len: '42:44' },
+        steps: [
+          { t: 'Check the other five toys are on the shelf upstairs in Her House', d: 'Interact with the shelf to start this quest.' },
+          { w: 1933, t: 'Upgrade the Void Claw to the Void Talon', needs: ['void-claw', 'blight'], d: 'Pack-a-Punch, the Nyxara light puzzle, the house symbols, the forest and Warden\'s Blight, as in the main quest; the Eye of the Forge from Her House goes into a grapple pedestal.' },
+          { w: 2028, t: 'Grapple the lock under the bridge in Nyxara\'s Passage', d: 'It pulls everyone into a rock parkour course. Climb all the way round to Her House within 1:30.' },
+          { w: 2046, t: 'Open the toybox with Aether Shroud', d: 'It glows blue on the rocks by the house (stand on its rock a while if it hasn\'t tipped over yet). Use Aether Shroud: it opens and three lights fly off.' },
+          { w: 2077, t: 'Knock down the three floating toy horses', d: 'One floats high above each island: Spyra Insula (by Juggernog), Aranea Insula (by Widow\'s Wine) and Ruinas Insula (by PhD Flopper). Grapple up to each and melee it mid-air; it drops part of a roller skate.' },
+          { w: 2122, t: 'Fill each part with the right kills, then pick it up', d: 'Each needs its own kind of kill nearby before it becomes solid:', list: ['Shoes (Spyra Insula): kills while you\'re in the air', 'Skates (Aranea Insula): PhD Flopper kills (dive into a crowd)', 'Laces (Ruinas Insula): kills while Frenzied Guard is active'] },
+          { w: 2183, t: 'On an exfil round, take the portal in the Nexus Forge', d: 'Don\'t call the exfil. A portal opens on a rock in the Nexus Forge and takes you back to Her House.' },
+          { w: 2200, t: 'Put the skates in the toybox and take the Warden toy' },
+          { w: 2217, t: 'Every player places the Warden toy on the shelf', d: 'Upstairs in Her House.', warn: 'In co-op each player has to pick it up and place it themselves, or they won\'t get the rewards.', tip: 'Next: the playdate, five boss fights in a row. See the [[bo7/super-easter-egg/easter-egg|Super Easter Egg]] page.' },
+        ],
+      },
+      {
         id: 'song', tab: 'side', type: 'Song', name: '"All We Are"',
         summary: 'Interact with three Mister Peeks headphones: on top of a pillar in Nyxara\'s main chamber (wall-jump), at a window in Ruinas Insula, and around a skull between a rock and a low wall in Araena Insula.',
       },

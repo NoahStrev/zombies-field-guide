@@ -9,13 +9,13 @@ Filled in so far:
 - **Black Ops** (4 maps): Ascension, Call of the Dead, Shangri-La, Moon. Kino der Toten, Five and the remade World at War maps are left out (no main quest). Ascension, Shangri-La and Moon reuse the Black Ops III guides, with the original's differences swapped in.
 - **Black Ops II** (5 maps): TranZit, Die Rise, Mob of the Dead, Buried, Origins. Nuketown Zombies is left out (no main quest). Origins reuses the Black Ops III guide, since the quest is the same.
 - **Black Ops III** (10 maps): Shadows of Evil, The Giant, Der Eisendrache, Zetsubou No Shima, Gorod Krovi, Revelations, plus the Zombies Chronicles maps that have a main easter egg (Ascension, Shangri-La, Moon, Origins).
-- **Infinite Warfare** (5 maps): Zombies in Spaceland, Rave in the Redwoods, Shaolin Shuffle, Attack of the Radioactive Thing, The Beast from Beyond.
-- **WWII** (5 maps): The Final Reich (casual and hardcore quests), The Darkest Shore, The Shadowed Throne, The Tortured Path, The Frozen Dawn. The Final Reich has a primer on WWII's rules.
+- **Infinite Warfare** (5 maps): Zombies in Spaceland, Rave in the Redwoods, Shaolin Shuffle, Attack of the Radioactive Thing, The Beast from Beyond. The Beast from Beyond also covers Director's Cut and the Mephistopheles true ending.
+- **WWII** (5 maps): The Final Reich (casual and hardcore quests), The Darkest Shore, The Shadowed Throne, The Tortured Path, The Frozen Dawn. The Final Reich has a primer on WWII's rules; The Frozen Dawn lists the Cold Hearted rewards for finishing all five.
 - **Black Ops 4** (7 maps): IX, Voyage of Despair, Dead of the Night, Ancient Evil (Chaos story) and Blood of the Dead, Alpha Omega, Tag der Toten (Aether story). Classified is left out because its only quest is a round 150 cutscene.
 - **Cold War** (4 maps): Die Maschine, Firebase Z, Mauer der Toten, Forsaken. Die Maschine has a primer on Cold War's new rules. The Outbreak mode quests are left out.
 - **Vanguard** (2 maps): Shi No Numa, The Archon. Shi No Numa has a primer on Vanguard's rules. Der Anfang and Terra Maledicta are left out (short story events, no main quest).
 - **Black Ops 6** (6 maps): Liberty Falls, Terminus, Citadelle des Morts, The Tomb, Shattered Veil, Reckoning. Liberty Falls has a primer on Black Ops 6's rules.
-- **Black Ops 7** (6 maps): Ashes of the Damned, Astra Malorum, Paradox Junction, Totenreich, Kowakujō, Rex Infernus. Ashes of the Damned has a primer on what changed.
+- **Black Ops 7** (6 maps): Ashes of the Damned, Astra Malorum, Paradox Junction, Totenreich, Kowakujō, Rex Infernus, plus the Super Easter Egg (a toy quest on each map's Side Quests tab, then a five-boss playdate). Ashes of the Damned has a primer on what changed.
 
 Advanced Warfare's Exo Zombies and Modern Warfare III's zombies aren't included. World at War has no tab: none of its maps has a main easter egg.
 
@@ -79,7 +79,7 @@ tools/                  research, checking and publishing scripts (see tools/REA
    - `video`: `{ id: '<YouTube id>', title, ch, len }`
    - Map-level `players`: `'solo'`, `'four'`, `'coop'`, or `{ text: '<badge text>', warn: true }` for custom wording.
    - A quest with two sides (Black Ops II) is two `easter-egg` items whose `type` starts with `Main Easter Egg`; the map card and the Next step button follow whichever side has the most ticks.
-4. In any text, `**bold**` makes bold text and `{{item-id}}` (or `{{item-id|label}}`) makes a quick-look chip.
+4. In any text, `**bold**` makes bold text and `{{item-id}}` (or `{{item-id|label}}`) makes a quick-look chip. `[[game/map/tab|label]]` (optionally `/item-<id>` after the tab) links to another page of the guide.
 5. Open the browser console after a change: the site warns about any `needs` or `{{...}}` that points to an item that doesn't exist, and about two steps in one list sharing a tick key.
 6. After editing files, bump the `?v=` number on the `<link>`/`<script>` tags in `index.html` so browsers load the new version.
 

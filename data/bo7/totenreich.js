@@ -99,6 +99,20 @@
 
       /* ------------------------------ SIDE ------------------------------ */
       {
+        id: 'super-toy', tab: 'side', type: 'Super Easter Egg · toy', name: 'Super Easter Egg: Guardian toy', short: 'Super EE toy', color: 'aether',
+        summary: 'Fish the frozen toybox out of the sea with a burning rod, then kill King Draugvald with a special crossbow from the lighthouse. His crown buys the Guardian toy. Part of the [[bo7/super-easter-egg/easter-egg|Super Easter Egg]].',
+        video: { id: '3KGZlHLMQi0', title: 'Super Easter Egg guide: every map', ch: 'MrDalekJD', len: '42:44' },
+        steps: [
+          { w: 1488, t: 'Bring Wild Fire and grab a fishing rod', d: 'Equip the Wild Fire field upgrade. Take an Olaf\'s Cod Cranker rod from any fishing spot (there\'s one on Fishery Island).' },
+          { w: 1504, t: 'Fish up the iceberg with a burning rod', d: 'At the dock at the end of Eidskallen Square, behind Astrid Loven\'s Antique Shop, an iceberg floats in the water. Place the rod, then turn on Wild Fire so the rod catches fire. When it tugs (5 to 10 seconds), reel it in: the iceberg comes up and melts, showing the toybox. Still frozen? Burn it with any fire.', warn: 'Place the rod before Wild Fire, and don\'t press interact on the rod too early: it can get stuck.' },
+          { w: 1550, t: 'Wake King Draugvald at the burial grounds', d: 'A big ice zombie appears there and follows you around. He slows you, hits very hard and comes back next round if killed, so stay away until you have the crossbow.' },
+          { w: 1581, t: 'Get the {{jotunn}}', needs: ['jotunn'], d: 'Its steps open the lighthouse.' },
+          { w: 1628, t: 'Pick up the Silent Air crossbow in the lighthouse', d: 'On the first floor, go prone at the broken edge above the GobbleGum machine. It\'s a weak grey NX Ravager: raise its rarity and Pack-a-Punch it (Legendary and level 2 do well).' },
+          { w: 1675, t: 'Kill King Draugvald with the crossbow', d: 'Keep firing: he heals whenever you stop. He drops his crown.' },
+          { w: 1691, t: 'Put the crown in the toybox for the Guardian toy, then exfil', d: 'The box is at the end of Eidskallen Square. Exfil on an exfil round with the toy.', warn: 'Solo: finish in one sitting. Loading a save resets the toy quest.' },
+        ],
+      },
+      {
         id: 'song', tab: 'side', type: 'Song', name: '"No One There"',
         summary: 'Interact with three Mister Peeks headphones: on boxes near PhD Flopper in the Dry Dock, near Double Tap in the Core Foundry, and at the bottom of a shelf next to a plate in Loven\'s Antiquities.',
       },
