@@ -17,10 +17,12 @@ Checking (after exporting the site data with tools/browser/export.js)
   verify PREFIX [--all]         Pair every "watch" timestamp with what the video says at that moment
 
 Publishing
-  build-artifact [--since REF]  Build the hosted (claude.ai) page and print the files to publish
-                                (all files, or only those changed since git REF)
+  build-artifact [--since REF] [--mirror]
+                                Build the hosted (claude.ai) page and print the files to publish
+                                (all files, or only those changed since git REF). --mirror also
+                                copies css/js/hero banners into tools/.cache/artifact for a local test.
 """
-import io, json, os, re, subprocess, sys, time, urllib.parse, urllib.request
+import base64, io, json, os, re, shutil, subprocess, sys, time, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -388,6 +390,28 @@ def verify(args):
 
 # ---------------------------------------------------------------- publishing
 def build_artifact(args):
+    # One artifact version holds at most 511 files. So the hosted copy ships every image folder's
+    # pictures (all but hero.webp, which home and game pages show) as one pack script,
+    # img/<game>-<folder>.js, that the page loads when a map opens (see imgUrl in js/app.js).
+    out_dir = CACHE / "artifact"
+    shutil.rmtree(out_dir / "img", ignore_errors=True)
+    (out_dir / "img").mkdir(parents=True)
+    (out_dir / "data").mkdir(parents=True, exist_ok=True)
+    heroes, folders = {}, {}
+    for p in sorted((ROOT / "assets" / "img").glob("*/*/*.webp")):
+        rel = p.relative_to(ROOT).as_posix()
+        if p.name == "hero.webp":
+            heroes[rel] = p
+        else:
+            folders.setdefault(rel.rsplit("/", 1)[0] + "/", []).append((rel, p))
+    pack_of = lambda folder: "img/{}-{}.js".format(*folder.split("/")[2:4])
+    packs = {}
+    for folder, imgs in folders.items():
+        body = json.dumps({rel: base64.b64encode(p.read_bytes()).decode() for rel, p in imgs}, separators=(",", ":"))
+        (out_dir / pack_of(folder)).write_text(f"ZG.addImgs({body});\n", encoding="utf-8")
+        packs[pack_of(folder)] = out_dir / pack_of(folder)
+    pack_list = json.dumps({folder: pack_of(folder) for folder in folders}, separators=(",", ":"))
+
     src = (ROOT / "index.html").read_text(encoding="utf-8")
     head = re.search(r"<head>(.*?)</head>", src, re.S).group(1)
     body = re.search(r"<body>(.*?)</body>", src, re.S).group(1)
@@ -396,36 +420,48 @@ def build_artifact(args):
     keep += re.findall(r'<link href="https://fonts.googleapis.com[^>]*>', head)
     keep += re.findall(r'<link rel="stylesheet"[^>]*>', head)
     keep += re.findall(r"<script>.*?</script>", head, re.S)
-    keep.append("<script>window.ZG_NO_EMBED = true; window.ZG_HOSTED = true;</script>")  # hosted pages can't embed YouTube
+    # Hosted pages can't embed YouTube, and they load map pictures from the packs.
+    keep.append(f"<script>window.ZG_NO_EMBED = true; window.ZG_HOSTED = true; window.ZG_IMG_PACKS = {pack_list};</script>")
     page = re.sub(r'\?v=\d+"', '"', "\n".join(keep) + "\n" + body.strip() + "\n")
     # One artifact version holds at most 511 files, so the map scripts go out as a single bundle
     # (same load order as index.html). The GitHub Pages site keeps the separate files.
     data_srcs = re.findall(r'<script src="(data/[^"]+\.js)"></script>', page)
     page = re.sub(r'[ \t]*<script src="data/[^"]+\.js"></script>\n?', "", page)
     page = page.replace('<script src="js/app.js"></script>', '<script src="data/bundle.js"></script>\n  <script src="js/app.js"></script>')
-    out_dir = CACHE / "artifact"
-    (out_dir / "data").mkdir(parents=True, exist_ok=True)
     (out_dir / "zombies-field-guide.html").write_text(page, encoding="utf-8")
     missing = [s for s in data_srcs if not (ROOT / s).exists()]
     bundle = "\n".join(f"/* ---- {s} ---- */\n" + (ROOT / s).read_text(encoding="utf-8").rstrip() + "\n;" for s in data_srcs if (ROOT / s).exists())
     (out_dir / "data" / "bundle.js").write_text(bundle + "\n", encoding="utf-8")
     sources = {"css/styles.css": ROOT / "css/styles.css", "js/core.js": ROOT / "js/core.js", "js/app.js": ROOT / "js/app.js",
-               "data/bundle.js": out_dir / "data" / "bundle.js"}
-    for p in sorted((ROOT / "assets" / "img").glob("*/*/*.webp")):
-        sources[p.relative_to(ROOT).as_posix()] = p
+               "data/bundle.js": out_dir / "data" / "bundle.js", **heroes, **packs}
     refs = re.findall(r'(?:src|href)="((?:css|js|data)/[^"]+)"', page)
     missing += [r for r in refs if r not in sources]
+    if "--mirror" in args:  # a full local copy of the hosted files, to serve and test
+        for k, v in sources.items():
+            if v.parent != out_dir and out_dir not in v.parents:
+                (out_dir / k).parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(v, out_dir / k)
+    drops = {}
     if "--since" in args:
         ref = args[args.index("--since") + 1]
-        changed = set(subprocess.run(["git", "diff", "--name-only", ref], cwd=ROOT, capture_output=True, text=True).stdout.split())
-        changed |= set(subprocess.run(["git", "ls-files", "--others", "--exclude-standard"], cwd=ROOT, capture_output=True, text=True).stdout.split())
+        git = lambda *a: set(subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True).stdout.split())
+        changed = git("diff", "--name-only", ref) | git("ls-files", "--others", "--exclude-standard")
         if any(c.startswith("data/") for c in changed):
             changed.add("data/bundle.js")
+        for c in list(changed):  # a changed picture means its folder's pack changed
+            if c.startswith("assets/img/") and not c.endswith("/hero.webp"):
+                folder = c.rsplit("/", 1)[0] + "/"
+                if folder in folders:
+                    changed.add(pack_of(folder))
+                else:
+                    drops[pack_of(folder)] = None  # folder emptied: drop its pack
+            elif c.startswith("assets/img/") and c not in heroes:
+                drops[c] = None  # hero banner deleted
         sources = {k: v for k, v in sources.items() if k in changed}
     out = {k: v.as_posix() for k, v in sources.items()}
-    if "--drop-split-data" in args:  # once, when switching an artifact over to the bundle
-        out.update({s: None for s in data_srcs})
-    print(f"page: {(out_dir / 'zombies-field-guide.html').relative_to(ROOT)} | files: {len(out)} | data scripts bundled: {len(data_srcs)} | missing refs: {missing}")
+    out.update(drops)
+    print(f"page: {(out_dir / 'zombies-field-guide.html').relative_to(ROOT)} | files: {len(out)} | data scripts bundled: {len(data_srcs)}"
+          f" | picture packs: {len(packs)} | hero banners: {len(heroes)} | missing refs: {missing}")
     print(json.dumps(out))
 
 

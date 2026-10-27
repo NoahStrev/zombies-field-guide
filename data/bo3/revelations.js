@@ -1,6 +1,8 @@
 /* Revelations — Black Ops III, Salvation DLC */
 (() => {
   const I = 'assets/img/bo3/rev/';
+  // Pictures shared with the maps these items first appeared in (one copy each).
+  const GK = 'assets/img/bo3/gk/', SOE = 'assets/img/bo3/soe/', ASC = 'assets/img/bo3/asc/';
   ZG.addMap({
     game: 'bo3', id: 'revelations', order: 6, group: 'original',
     name: 'Revelations', dlc: 'Salvation · DLC 4', eeName: 'For The Good Of All',
@@ -71,21 +73,21 @@
         video: { id: 'SysILhxXG3E', title: 'Revelations Keeper Protector Guide (all part locations)', ch: 'MrRoflWaffles', len: '3:37' },
       },
       {
-        id: 'fafnir', tab: 'parts', type: 'Buildable · Shield', name: 'Guard of Fafnir', img: I + 'fafnir.webp', color: 'fire',
+        id: 'fafnir', tab: 'parts', type: 'Buildable · Shield', name: 'Guard of Fafnir', img: GK + 'fafnir.webp', color: 'fire',
         summary: 'The dragon shield from Gorod Krovi, with fireball attack. Parts are in the Origins, Verrückt and Der Eisendrache sections.',
         facts: [['Parts', '3']],
         parts: [
-          { w: 6, name: 'Dragon Visage', icon: I + 'fafnir-visage.webp', area: 'Origins section', spots: [
+          { w: 6, name: 'Dragon Visage', icon: GK + 'fafnir-visage.webp', area: 'Origins section', spots: [
             'Entering Origins from the House (spawn): left of the wooden crates just left of the GobbleGum machine.',
             'Past the GobbleGum machine on the left path: right before the Pharo wall-buy, hanging on a big Group 935 crate lit by a broken truck.',
             'Past the Pharo wall-buy, turn right and drop toward the Wunderfizz spot: on a chair across from it, by some shelves.',
           ] },
-          { w: 96, name: 'Core', icon: I + 'fafnir-core.webp', area: 'Verrückt section', spots: [
+          { w: 96, name: 'Core', icon: GK + 'fafnir-core.webp', area: 'Verrückt section', spots: [
             'On a column right as you land from the Kino → Verrückt jump pad.',
             'Up the stairs next to Speed Cola: walk to the hole in the wall, turn left — on a tipped-over wheelchair in the corner.',
             'On the table in the middle of the kitchen upstairs.',
           ] },
-          { w: 30, name: 'Maw', icon: I + 'fafnir-maw.webp', area: 'Der Eisendrache section · needs Anti-Gravity', note: 'All three are high up: stand on the four tiles around the Pyramid for a few seconds each to start Anti-Gravity, then double-jump to them.', spots: [
+          { w: 30, name: 'Maw', icon: GK + 'fafnir-maw.webp', area: 'Der Eisendrache section · needs Anti-Gravity', note: 'All three are high up: stand on the four tiles around the Pyramid for a few seconds each to start Anti-Gravity, then double-jump to them.', spots: [
             'High on the wall close to the VMP wall-buy: turn around to the metal plate showing Der Eisendrache locations and look straight up.',
             'High on the wall above two Primis statues set into the wall, halfway between the VMP wall-buy and the Pyramid, on the left.',
             'High up and left on the wall with the GobbleGum machine, next to small lights hanging on cables (above the small black desk).',
@@ -96,7 +98,7 @@
 
       /* ------------------------------ WEAPONS ------------------------------ */
       {
-        id: 'servant', tab: 'weapons', type: 'Wonder weapon', name: 'Apothicon Servant', img: I + 'servant.webp', color: 'aether',
+        id: 'servant', tab: 'weapons', type: 'Wonder weapon', name: 'Apothicon Servant', img: SOE + 'servant.webp', color: 'aether',
         summary: 'Black-hole launcher from the Mystery Box (only one in the game at a time). Needed for the easter egg, upgraded.',
         upgrade: {
           name: 'Estoom-oth', summary: 'The Pack-a-Punched Servant: more ammo, longer black holes, bigger blast. You must unlock it first.',
@@ -113,7 +115,7 @@
         },
       },
       {
-        id: 'thundergun', tab: 'weapons', type: 'Wonder weapon', name: 'Thundergun', img: I + 'thundergun.webp', color: 'storm',
+        id: 'thundergun', tab: 'weapons', type: 'Wonder weapon', name: 'Thundergun', img: ASC + 'thundergun.webp', color: 'storm',
         summary: 'Blasts zombies away with a shockwave. Mystery Box only (one per game). Great for the Margwa waves in the easter egg. Pack-a-Punches into the Zeus Cannon.',
       },
       {
@@ -171,7 +173,7 @@
             '**Verrückt:** in front of the metal fence in the electric-trap room · under the window right of the two test tubes in the Zetsubou room · on the grass path to the jump pad to Kino.',
             '**Mob/Origins:** right of the window beside the cafeteria GobbleGum machine, by the fallen bulletin board · upstairs toward Al\'s Hat, in front of the wooden wall before the turn to the footprint trench · under the lantern across from the KN-44 wall-buy in the tunnel below the mound.',
           ] },
-          { w: 1116, t: 'Recover the Summoning Key', needs: ['servant', 'lil-arnie', 'thundergun'], d: 'Everyone stands on the purple rift in the Kino projector room to enter the boss arena. Read the Kronorium on the podium: memorise the four symbols. Go back to where you arrived and press interact on the cycling purple symbols in that order. Two Max Ammos appear, then four waves of Margwas (lava, lightning, fire and void rooms, random order). Kill them all and grab the glowing Summoning Key.', imgs: [{ src: I + 'summoning-key.webp', cap: 'The Summoning Key' }], warn: 'A wrong symbol (or waiting too long) sends you back to Kino until next round, with new symbols.' },
+          { w: 1116, t: 'Recover the Summoning Key', needs: ['servant', 'lil-arnie', 'thundergun'], d: 'Everyone stands on the purple rift in the Kino projector room to enter the boss arena. Read the Kronorium on the podium: memorise the four symbols. Go back to where you arrived and press interact on the cycling purple symbols in that order. Two Max Ammos appear, then four waves of Margwas (lava, lightning, fire and void rooms, random order). Kill them all and grab the glowing Summoning Key.', imgs: [{ src: SOE + 'summoning-key.webp', cap: 'The Summoning Key' }], warn: 'A wrong symbol (or waiting too long) sends you back to Kino until next round, with new symbols.' },
           { w: 1403, anyList: 'Any order, but save the red barrel for last', t: 'Collect seven relics with the Summoning Key', d: 'Throw the Key at each object; it absorbs it and bounces back.', list: [
             'The radio in the Kino chandelier (look up from the podium).',
             'The clock above the Der Eisendrache Undercroft — from the Corruption Engine, look up and left back toward the Pyramid.',

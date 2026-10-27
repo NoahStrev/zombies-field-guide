@@ -89,7 +89,7 @@
             'Above the doorway to the Rocket Test teleporter, just under the glowing "eye" glyph.',
             'Hanging on the metal rings that join the four Keeper statues around the Pyramid. From the workbench by the Pyramid, turn to face it and look up and slightly left.',
           ] },
-          { w: 27, name: 'Fuel Canisters', icon: I + 'shield-fuel.webp', area: 'Lower Courtyard', spots: [
+          { w: 27, name: 'Fuel Canisters', icon: 'assets/img/bo3/soe/shield-fuel.webp', area: 'Lower Courtyard', spots: [
             'Coming uphill into the Lower Courtyard from Double Tap: on top of the crates immediately on your right, beside a window.',
             'Same entrance, turn left and climb the short stairs. At the bottom right of the other small staircase (the one that only leads to a window), leaning on small crates.',
             'From the second-floor landing pad, take the stairs toward the Death Ray. At the base of the second set of stairs, on the left against the stone wall.',

@@ -555,3 +555,6 @@ tr:last-child td { border-bottom: 0; }
 .offline-box p { color: var(--text-2); max-width: 70ch; }
 .offline-status { color: var(--muted) !important; font-size: .88rem; min-height: 1.3em; }
 @media (max-width: 420px) { .brand-text b { display: none; } }
+
+/* Hosted artifact: shown while a map's picture packs load */
+.packs-loading { padding: 64px 16px; text-align: center; color: var(--muted); }

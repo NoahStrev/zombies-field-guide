@@ -57,7 +57,7 @@
         summary: 'A grenade with a random effect — anything from a free perk or weapon to reviving players, or something bad. Mystery Box only. Used twice in the easter egg.',
       },
       {
-        id: 'gersh', tab: 'weapons', type: 'Wonder weapon · Tactical', name: 'Gersh Device', img: I + 'gersh.webp', color: 'aether',
+        id: 'gersh', tab: 'weapons', type: 'Wonder weapon · Tactical', name: 'Gersh Device', img: 'assets/img/bo3/asc/gersh.webp', color: 'aether',
         summary: 'Opens a black hole that pulls zombies in. Mystery Box only. Used twice in the easter egg.',
       },
       {

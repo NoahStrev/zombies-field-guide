@@ -188,12 +188,69 @@
     return h;
   }
 
+  /* ---------- picture packs (hosted artifact only) ----------
+     An artifact version holds at most 511 files, so there a map's pictures (all but its hero banner)
+     arrive as one pack script per image folder: window.ZG_IMG_PACKS maps a folder to its pack file,
+     and each pack calls ZG.addImgs({path: base64}). On the normal site imgUrl() returns the path as is. */
+  const PACKS = window.ZG_IMG_PACKS || null;
+  const packed = {};     // image path -> base64 from a pack
+  const packUrls = {};   // image path -> object URL (or data URL), made on first use
+  const packState = {};  // pack file -> { done, promise }; done once the script loads or fails
+  let blobOk = true, probed = false;
+  ZG.addImgs = imgs => { Object.assign(packed, imgs); };
+
+  function imgUrl(p) {
+    if (!p || !packed[p]) return p;
+    if (!packUrls[p]) {
+      if (blobOk) {
+        const bin = atob(packed[p]);
+        const bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        packUrls[p] = URL.createObjectURL(new Blob([bytes], { type: 'image/webp' }));
+      } else packUrls[p] = 'data:image/webp;base64,' + packed[p];
+    }
+    return packUrls[p];
+  }
+
+  const packOf = p => (PACKS && p ? PACKS[p.slice(0, p.lastIndexOf('/') + 1)] : null);
+  const packsFor = map => [...new Set([...mapImages(map)].map(packOf).filter(Boolean))];
+  const packsReady = map => packsFor(map).every(f => packState[f] && packState[f].done);
+
+  function loadPack(file) {
+    if (!packState[file]) {
+      const st = packState[file] = { done: false };
+      st.promise = new Promise(res => {
+        const s = document.createElement('script');
+        s.src = file;
+        s.onload = s.onerror = () => { st.done = true; res(); };
+        document.head.appendChild(s);
+      });
+    }
+    return packState[file].promise;
+  }
+
+  async function ensurePacks(map) {
+    await Promise.all(packsFor(map).map(loadPack));
+    if (probed) return;
+    probed = true;  // once: fall back to data URLs if this page blocks object URLs
+    const first = Object.keys(packed)[0];
+    if (!first) return;
+    blobOk = await new Promise(res => {
+      const im = new Image();
+      im.onload = () => res(true);
+      im.onerror = () => res(false);
+      im.src = imgUrl(first);
+    });
+    if (!blobOk) for (const k of Object.keys(packUrls)) delete packUrls[k];
+  }
+
   function figures(imgs) {
     if (!imgs || !imgs.length) return '';
     return `<div class="figs">${imgs.map(im => {
       const o = typeof im === 'string' ? { src: im } : im;
-      return `<figure class="fig${o.wide ? ' wide' : ''}"><button type="button" class="zoom" data-full="${esc(o.src)}" data-cap="${esc(o.cap || '')}">` +
-        `<img loading="lazy" decoding="async" src="${esc(o.src)}" alt="${esc(o.cap || '')}"></button>` +
+      const src = imgUrl(o.src);
+      return `<figure class="fig${o.wide ? ' wide' : ''}"><button type="button" class="zoom" data-full="${esc(src)}" data-cap="${esc(o.cap || '')}">` +
+        `<img loading="lazy" decoding="async" src="${esc(src)}" alt="${esc(o.cap || '')}"></button>` +
         `${o.cap ? `<figcaption>${esc(o.cap)}</figcaption>` : ''}</figure>`;
     }).join('')}</div>`;
   }
@@ -266,7 +323,7 @@
     const v = item.video || asArray(item.videos)[0];
     return `<div class="parts">${item.parts.map(p => `
       <div class="part">
-        <div class="part-head">${p.icon ? `<button type="button" class="zoom part-icon" data-full="${esc(p.icon)}" data-cap="${esc(p.name)}"><img src="${esc(p.icon)}" alt="${esc(p.name)}" loading="lazy"></button>` : ''}
+        <div class="part-head">${p.icon ? `<button type="button" class="zoom part-icon" data-full="${esc(imgUrl(p.icon))}" data-cap="${esc(p.name)}"><img src="${esc(imgUrl(p.icon))}" alt="${esc(p.name)}" loading="lazy"></button>` : ''}
           <div><h4>${esc(p.name)}</h4>${p.area ? `<div class="part-area">${fmt(p.area, map)}</div>` : ''}</div>
         </div>
         ${p.note ? `<p class="part-note">${fmt(p.note, map)}</p>` : ''}
@@ -429,7 +486,7 @@
     const u = item.upgrade;
     return `<section class="upgrade">
       <div class="upgrade-head${u.img ? '' : ' no-img'}">
-        ${u.img ? `<button type="button" class="zoom upgrade-img" data-full="${esc(u.img)}" data-cap="${esc(u.name)}"><img src="${esc(u.img)}" alt="" loading="lazy"></button>` : ''}
+        ${u.img ? `<button type="button" class="zoom upgrade-img" data-full="${esc(imgUrl(u.img))}" data-cap="${esc(u.name)}"><img src="${esc(imgUrl(u.img))}" alt="" loading="lazy"></button>` : ''}
         <div><div class="item-type">Upgrade</div><h4 class="upgrade-name">${esc(u.name)}</h4>${u.aka ? `<div class="item-aka">${esc(u.aka)}</div>` : ''}${u.summary ? `<p>${fmt(u.summary, map)}</p>` : ''}</div>
       </div>
       ${checklistHtml(map, item, 'upgrade', u.steps, u.stepsTitle || 'Upgrade steps', opts)}
@@ -440,7 +497,7 @@
 
   function itemHtml(map, item, opts = {}) {
     const imgBtn = item.img
-      ? `<button type="button" class="zoom item-img" data-full="${esc(item.img)}" data-cap="${esc(item.name)}"><img src="${esc(item.img)}" alt="${esc(item.name)}" loading="lazy" decoding="async"></button>`
+      ? `<button type="button" class="zoom item-img" data-full="${esc(imgUrl(item.img))}" data-cap="${esc(item.name)}"><img src="${esc(imgUrl(item.img))}" alt="${esc(item.name)}" loading="lazy" decoding="async"></button>`
       : '';
     return `<article class="item${opts.drawer ? ' in-drawer' : ''}${item.img ? '' : ' no-img'}"${opts.drawer ? '' : ` id="item-${esc(item.id)}"`} style="${colorVar(item)}">
       <header class="item-head">
@@ -605,20 +662,25 @@
     </section>`;
   }
 
+  // Every picture a map shows (its hero, item and upgrade images, part icons, figures and spot photos).
+  function mapImages(m, out = new Set()) {
+    const add = s => { if (s) out.add(typeof s === 'string' ? s : s.src); };
+    // Parts, steps and blocks can all hold a spots list, and each spot can carry its own pictures.
+    const addSpots = spots => { for (const s of asArray(spots)) if (s && s.imgs) asArray(s.imgs).forEach(add); };
+    add(m.hero);
+    for (const it of m.items) {
+      add(it.img);
+      if (it.upgrade) add(it.upgrade.img);
+      for (const p of asArray(it.parts)) { add(p.icon); addSpots(p.spots); }
+      for (const b of asArray(it.blocks)) { asArray(b.imgs).forEach(add); addSpots(b.spots); }
+      for (const [, steps] of stepLists(it)) for (const st of steps) { asArray(st.imgs).forEach(add); addSpots(st.spots); }
+    }
+    return out;
+  }
+
   function allImageUrls() {
     const out = new Set();
-    const add = s => { if (s) out.add(typeof s === 'string' ? s : s.src); };
-    for (const key of ZG.mapOrder) {
-      const m = ZG.maps[key];
-      add(m.hero);
-      for (const it of m.items) {
-        add(it.img);
-        if (it.upgrade) add(it.upgrade.img);
-        for (const p of asArray(it.parts)) { add(p.icon); for (const s of asArray(p.spots)) if (s && s.imgs) s.imgs.forEach(add); }
-        for (const b of asArray(it.blocks)) asArray(b.imgs).forEach(add);
-        for (const [, steps] of stepLists(it)) for (const st of steps) asArray(st.imgs).forEach(add);
-      }
-    }
+    for (const key of ZG.mapOrder) mapImages(ZG.maps[key], out);
     return [...out];
   }
 
@@ -805,7 +867,13 @@
       else if (!game) main.innerHTML = renderNotFound();
       else if (!m) main.innerHTML = game.active ? renderGame(game) : renderSoon(game);
       else if (!map) main.innerHTML = renderNotFound();
-      else {
+      else if (PACKS && !packsReady(map)) {
+        // Hosted artifact: fetch this map's picture packs first, then route again.
+        if (!main.querySelector('.packs-loading')) main.innerHTML = '<div class="wrap packs-loading" role="status">Loading the map…</div>';
+        renderedKey = null;
+        ensurePacks(map).then(route);
+        return;
+      } else {
         main.innerHTML = renderMap(map, t || 'start');
         store.set('zg-last', `${g}/${m}/${$('.maptab.active') ? $('.maptab.active').getAttribute('href').split('/')[3] : 'start'}`);
       }

@@ -31,4 +31,9 @@ Run it with no command to see the full list. Image downloads need Pillow (`pip i
 ## Publishing
 
 - **GitHub Pages:** bump the `?v=` numbers in `index.html`, commit and push to `main`.
-- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish. One publish takes at most 255 files, so publish only what changed. One version can hold at most 511 files, so the hosted page loads every map script from a single `data/bundle.js` (built in the same order as `index.html`); only the images are separate files. (`--drop-split-data` adds removals for the old one-file-per-map scripts; it was needed once, when switching to the bundle.)
+- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish. One publish takes at most 255 files, so publish only what changed. One version can hold at most 511 files, so the hosted copy packs things up:
+  - every map script goes into a single `data/bundle.js` (built in the same order as `index.html`);
+  - every image folder's pictures, except `hero.webp`, go into one pack, `img/<game>-<folder>.js`, which the page loads when a map opens. Hero banners stay separate files because the home and game pages show them.
+
+  That's about 105 files in all. A new or changed picture republishes its folder's pack. To test the hosted copy before publishing, run `build-artifact --mirror` (it also copies css, js and banners into `tools/.cache/artifact/`), start the `artifact-mirror` preview (port 8081) and open `/zombies-field-guide.html`.
+- **One copy per picture:** when a map reuses another map's picture (Revelations' Guard of Fafnir and Gorod Krovi's, for example), point at the original's path instead of saving a second copy.

@@ -81,7 +81,7 @@
 
       /* ------------------------------ PARTS ------------------------------ */
       {
-        id: 'turbine', tab: 'parts', type: 'Buildable · Power', name: 'Turbine', img: I + 'turbine.webp', color: 'storm',
+        id: 'turbine', tab: 'parts', type: 'Buildable · Power', name: 'Turbine', img: 'assets/img/bo2/tranzit/turbine.webp', color: 'storm',
         summary: 'A portable power source. The Maxis side uses it to power the Subsurface Resonator.',
         facts: [['Parts', '3 (General Store)'], ['Build at', 'Any table: sheriff\'s house (top floor), saloon, courthouse or church']],
         video: AV,
@@ -105,7 +105,7 @@
         blocks: [{ tip: 'Pick up one part, add it to a table, then give Arthur candy next to the table: he fetches the rest and builds it.' }],
       },
       {
-        id: 'trample-steam', tab: 'parts', type: 'Buildable · Trap', name: 'Trample Steam', img: I + 'trample-steam.webp',
+        id: 'trample-steam', tab: 'parts', type: 'Buildable · Trap', name: 'Trample Steam', img: 'assets/img/bo2/dierise/trample-steam.webp',
         summary: 'A launch pad that flings zombies (and you). Not needed for either quest.',
         facts: [['Parts', '4 (General Store)'], ['Build at', 'Any table']],
         video: AV,

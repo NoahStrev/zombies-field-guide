@@ -3,6 +3,8 @@
    which `zg.py audit` and `zg.py verify` read. */
 (async () => {
   const arr = x => (x == null ? [] : Array.isArray(x) ? x : [x]);
+  const src = i => i.src || i;
+  const spotImgs = spots => arr(spots).flatMap(s => (s && s.imgs ? arr(s.imgs).map(src) : []));
   const out = { games: ZG.games, maps: [] };
   for (const key of ZG.mapOrder) {
     const m = ZG.maps[key];
@@ -15,11 +17,12 @@
       if (it.steps) lists.push(['steps', it.steps, vid]);
       if (it.upgrade && it.upgrade.steps) lists.push(['upgrade', it.upgrade.steps, (it.upgrade.video && it.upgrade.video.id) || vid]);
       for (const [list, steps, defVideo] of lists) {
-        rec.lists.push({ list, defVideo, steps: steps.map(s => ({ t: s.t, w: s.w ?? null, d: s.d || '', list: s.list || null, imgs: arr(s.imgs).map(i => i.src || i), tip: s.tip || '', warn: s.warn || '' })) });
+        rec.lists.push({ list, defVideo, steps: steps.map(s => ({ t: s.t, w: s.w ?? null, d: s.d || '', list: s.list || null, imgs: [...arr(s.imgs).map(src), ...spotImgs(s.spots)], tip: s.tip || '', warn: s.warn || '' })) });
       }
       if (it.upgrade) rec.upgrade = { name: it.upgrade.name, img: it.upgrade.img || null, video: it.upgrade.video || null };
       for (const p of arr(it.parts)) rec.parts.push({ name: p.name, w: p.w ?? null, icon: p.icon || null, area: p.area || '', spots: p.spots });
-      for (const b of arr(it.blocks)) if (b.imgs) rec.blocksImgs.push(...b.imgs.map(i => i.src || i));
+      for (const b of arr(it.blocks)) rec.blocksImgs.push(...arr(b.imgs).map(src), ...spotImgs(b.spots));
+      for (const p of arr(it.parts)) rec.blocksImgs.push(...spotImgs(p.spots));
       mm.items.push(rec);
     }
     out.maps.push(mm);
