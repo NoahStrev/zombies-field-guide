@@ -32,6 +32,7 @@ To run it on your PC instead, double-click **`start-site.bat`**. It starts a sma
 
 - **Tabs per map:** Start Here · Parts & Buildables · Wonder Weapons · Main Easter Egg · Side Quests & Songs.
 - **Checklists:** tick steps as you go. Progress is saved in that browser on that device. Each list has a Reset button. Ticks are tied to each step's title, so they stay on the right step when the guide adds or reorders steps.
+- **Run failed?** At the bottom of every map page, **Start over** clears every tick on that map (parts, weapons, side quests and the main quest) so you can follow it again from step 1 in a new game. Tap twice to confirm. Both Start over and Reset show an **Undo** for 10 seconds afterwards.
 - **Coloured chips** (for example "Ice Staff" on an Origins easter egg step) open that item's guide in a side panel (a bottom sheet on phones). Close it and you're back exactly where you were. "Full guide" jumps to the item's section.
 - **"Needed for"** boxes on item guides link back to every easter egg step that uses the item.
 - **Order:** numbered steps go top to bottom. Steps inside a green **Any order** box, or marked with the shuffle icon, can be done in whatever order you like.

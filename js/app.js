@@ -46,6 +46,7 @@
     down: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>',
     out: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
     shuffle: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>',
+    restart: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5"/></svg>',
   };
 
   /* ---------- index: item lookups, "needed for" backlinks, search ---------- */
@@ -363,6 +364,104 @@
   function countDone(map, item, listKey) {
     const prefix = listPrefix(map, item, listKey);
     return stepKeys(map, item, listKey).filter(k => isDone(prefix + k)).length;
+  }
+
+  /* ---------- clearing ticks: "Start over" for a whole map, Reset for one list, both undoable ---------- */
+  const tickWord = n => `${n} tick${n === 1 ? '' : 's'}`;
+
+  function mapTicks(map) {
+    let n = 0;
+    for (const it of map.items) for (const [listKey] of stepLists(it)) n += countDone(map, it, listKey);
+    return n;
+  }
+
+  const runResetText = (map, n) => (n
+    ? `Start a new game from step 1. This clears all <b>${tickWord(n)}</b> on ${esc(map.name)}, from parts to the main quest. You can undo it.`
+    : `Nothing on ${esc(map.name)} is ticked yet.`);
+
+  // The "Run failed?" bar at the end of every map page.
+  function runResetHtml(map) {
+    if (!map.items.some(it => stepLists(it).length)) return '';
+    const n = mapTicks(map);
+    return `<section class="run-reset" data-run="${esc(mapKey(map))}">
+      <span class="run-reset-icon">${ICON.restart}</span>
+      <p><strong>Run failed?</strong> <span class="run-reset-text">${runResetText(map, n)}</span></p>
+      <button type="button" class="btn btn-small run-reset-btn" data-start-over="${esc(mapKey(map))}"${n ? '' : ' disabled'}>Start over</button>
+    </section>`;
+  }
+
+  function updateRunReset() {
+    const run = $('.run-reset');
+    const map = run && ZG.maps[run.dataset.run];
+    if (!map) return;
+    const n = mapTicks(map);
+    $('.run-reset-text', run).innerHTML = runResetText(map, n);
+    $('[data-start-over]', run).disabled = !n;
+  }
+
+  // Removes every tick saved under `prefix` and returns the ones that were ticked (for undo).
+  function clearTicks(prefix) {
+    const removed = store.keys().filter(k => k.startsWith(prefix) && isDone(k));
+    for (const k of store.keys()) if (k.startsWith(prefix)) store.del(k);
+    return removed;
+  }
+
+  // Two taps for anything that clears ticks (pop-up confirm dialogs don't work in hosted pages).
+  // Returns true on the second tap.
+  function secondTap(btn, prompt) {
+    if (btn.dataset.armed === '1') { disarm(btn); return true; }
+    btn.dataset.armed = '1';
+    btn.dataset.label = btn.textContent;
+    btn.textContent = prompt;
+    btn.classList.add('armed');
+    clearTimeout(btn.armTimer);
+    btn.armTimer = setTimeout(() => disarm(btn), 3000);
+    return false;
+  }
+
+  function disarm(btn) {
+    if (btn.dataset.armed !== '1') return;
+    clearTimeout(btn.armTimer);
+    btn.dataset.armed = '';
+    btn.textContent = btn.dataset.label;
+    btn.classList.remove('armed');
+  }
+
+  // A short notice at the bottom of the screen, optionally with an Undo button.
+  let toastUndo = null, toastTimer = null;
+  function showToast(text, undo, ms) {
+    let t = $('#toast');
+    if (!t) {
+      t = document.createElement('div');
+      t.id = 'toast';
+      t.className = 'toast';
+      t.setAttribute('role', 'status');
+      document.body.appendChild(t);
+    }
+    t.innerHTML = `<span>${esc(text)}</span>${undo ? '<button type="button" class="toast-btn" data-undo>Undo</button>' : ''}`;
+    const fab = $('#next-step');
+    t.classList.toggle('above-fab', !!(fab && !fab.hidden));
+    t.hidden = false;
+    toastUndo = undo || null;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, ms || 10000);
+  }
+
+  function hideToast() {
+    const t = $('#toast');
+    if (t) t.hidden = true;
+    toastUndo = null;
+  }
+
+  // After clearing, offer to put the cleared ticks back.
+  function offerUndo(text, keys, mk) {
+    if (!keys.length) return;
+    showToast(text, () => {
+      keys.forEach(k => store.set(k, '1'));
+      refreshChecks();
+      scheduleWrite(mk, 0);
+      showToast(`Put back ${tickWord(keys.length)}.`, null, 2500);
+    });
   }
 
   // Ticks used to be saved by position (…:steps:3). Move one to the step now at that position;
@@ -835,6 +934,7 @@
           ${items.some(it => it.steps || it.prep || it.upgrade) ? `<div class="order-legend"><span>${ICON.shuffle}</span><p>Work through numbered steps top to bottom. Anything inside a green <strong>Any order</strong> box, or marked with this icon, can be done in whatever order suits you.${CAN_EMBED ? ' <strong>Watch</strong> buttons play the exact moment from a guide video right here.' : ''}</p></div>` : ''}
           ${hasPartVideos ? `<div class="callout note">${ICON.play}<div>${hasPartIcons ? 'The pictures show what each part looks like. ' : ''}<strong>Watch these spots</strong> ${CAN_EMBED ? 'plays the part of a guide video that walks through every spawn spot, right here on the page' : 'opens a guide video at the moment it walks through that part\'s spawn spots'}.</div></div>` : ''}
           ${items.map(it => itemHtml(map, it)).join('')}
+          ${runResetHtml(map)}
         </div>
         ${toc ? `<aside class="toc" aria-label="On this page"><div class="toc-inner"><div class="toc-h">On this page</div>${toc}</div></aside>` : ''}
       </div>
@@ -1010,6 +1110,7 @@
       const c = $('.count', cl);
       if (c) c.textContent = `${done}/${n}`;
     });
+    updateRunReset();
     updateFab();
   }
 
@@ -1279,28 +1380,36 @@
       }
       if (e.target.closest('#lightbox')) { $('#lightbox').hidden = true; return; }
 
+      if (e.target.closest('[data-undo]')) {
+        const undo = toastUndo;
+        hideToast();
+        if (undo) undo();
+        return;
+      }
+
       const reset = e.target.closest('[data-reset]');
       if (reset) {
-        // Two taps to clear (pop-up confirm dialogs don't work in hosted pages).
-        if (reset.dataset.armed !== '1') {
-          reset.dataset.armed = '1';
-          reset.textContent = 'Tap again to clear';
-          reset.classList.add('armed');
-          setTimeout(() => { reset.dataset.armed = ''; reset.textContent = 'Reset'; reset.classList.remove('armed'); }, 3000);
-          return;
-        }
+        if (!secondTap(reset, 'Tap again to clear')) return;
         const prefix = reset.dataset.reset;
-        for (const k of store.keys()) if (k.startsWith(prefix)) store.del(k);
-        $$('input[data-key]').forEach(inp => {
-          if (!inp.dataset.key.startsWith(prefix)) return;
-          inp.checked = false;
-          inp.closest('.step').classList.remove('done');
-        });
-        reset.dataset.armed = '';
-        reset.textContent = 'Reset';
-        reset.classList.remove('armed');
-        updateProgress(prefix);
-        scheduleWrite(mapKeyOfStoreKey(prefix), 600);
+        const mk = mapKeyOfStoreKey(prefix);
+        const removed = clearTicks(prefix);
+        refreshChecks();
+        scheduleWrite(mk, 600);
+        offerUndo(`Cleared ${tickWord(removed.length)} from this list.`, removed, mk);
+        return;
+      }
+
+      const startOver = e.target.closest('[data-start-over]');
+      if (startOver) {
+        if (startOver.disabled || !secondTap(startOver, 'Tap again to clear all')) return;
+        const mk = startOver.dataset.startOver;
+        const removed = clearTicks(`zg:${mk}:`);
+        refreshChecks();
+        scheduleWrite(mk, 0);
+        offerUndo(`Cleared ${tickWord(removed.length)} on ${ZG.maps[mk].name}. Good luck on the new run!`, removed, mk);
+        // Back to the top of this tab (the tabs bar is sticky, so measure from the banner above it).
+        const hero = $('.map-hero');
+        if (hero) window.scrollTo(0, Math.max(0, hero.getBoundingClientRect().bottom + window.scrollY - headerHeight()));
         return;
       }
 
