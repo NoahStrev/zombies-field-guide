@@ -32,7 +32,9 @@ To run it on your PC instead, double-click **`start-site.bat`**. It starts a sma
 
 - **Tabs per map:** Start Here · Parts & Buildables · Wonder Weapons · Main Easter Egg · Side Quests & Songs.
 - **Checklists:** tick steps as you go. Progress is saved in that browser on that device. Each list has a Reset button. Ticks are tied to each step's title, so they stay on the right step when the guide adds or reorders steps.
-- **Run failed?** At the bottom of every map page, **Start over** clears every tick on that map (parts, weapons, side quests and the main quest) so you can follow it again from step 1 in a new game. Tap twice to confirm. Both Start over and Reset show an **Undo** for 10 seconds afterwards.
+- **Run failed?** At the bottom of every map page, **Start over** clears every tick on that map (parts, weapons, side quests and the main quest) so you can follow it again from step 1 in a new game. Tap twice to confirm. Both Start over and Reset show an **Undo** for 10 seconds afterwards. Start over also keeps a **run history** for the map ("Attempt 3 · last run: 14 of 20 quest steps done · best: 17 of 20"), with a Clear history link.
+- **Titles only** (on every checklist) shrinks steps to just their titles for following along mid-game; tap a title to open that step. The Next step button opens the step it jumps to. One setting for the whole site.
+- **Move your progress** (home page): make a progress code (and, on the public site, a link) holding every tick and run history in this browser, then load it on another device. Loading adds ticks and never removes any, with an Undo.
 - **Coloured chips** (for example "Ice Staff" on an Origins easter egg step) open that item's guide in a side panel (a bottom sheet on phones). Close it and you're back exactly where you were. "Full guide" jumps to the item's section.
 - **"Needed for"** boxes on item guides link back to every easter egg step that uses the item.
 - **Order:** numbered steps go top to bottom. Steps inside a green **Any order** box, or marked with the shuffle icon, can be done in whatever order you like.

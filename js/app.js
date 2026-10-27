@@ -20,6 +20,9 @@
   // Finished steps can be shrunk to just their title (one setting for the whole site).
   const collapseDone = () => store.get('zg-collapse') === '1';
   const applyCollapse = () => document.documentElement.classList.toggle('collapse-done', collapseDone());
+  // "Titles only" shows each step as just its title; tap a title to open that step (also site-wide).
+  const compactSteps = () => store.get('zg-compact') === '1';
+  const applyCompact = () => document.documentElement.classList.toggle('compact-steps', compactSteps());
 
   /* ---------- small helpers ---------- */
   const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
@@ -379,13 +382,46 @@
     ? `Start a new game from step 1. This clears all <b>${tickWord(n)}</b> on ${esc(map.name)}, from parts to the main quest. You can undo it.`
     : `Nothing on ${esc(map.name)} is ticked yet.`);
 
+  /* Run history: each Start over records how far the main quest got, per map, under
+     zg-runs:<game>/<map> as { n: runs so far, last: [done, total, date], best: [done, total] }. */
+  const runsKey = mk => `zg-runs:${mk}`;
+  function getRuns(mk) {
+    try { return JSON.parse(store.get(runsKey(mk)) || 'null'); } catch (e) { return null; }
+  }
+  function setRuns(mk, r) {
+    if (r && r.n) store.set(runsKey(mk), JSON.stringify(r)); else store.del(runsKey(mk));
+  }
+
+  // Records the run that's ending; returns the previous record (for undo).
+  function recordRun(map) {
+    const mk = mapKey(map);
+    const p = eeProgress(map) || { done: 0, total: 0 };
+    const prev = getRuns(mk);
+    const best = prev && prev.best && prev.best[0] >= p.done ? prev.best : [p.done, p.total];
+    setRuns(mk, { n: (prev ? prev.n : 0) + 1, last: [p.done, p.total, new Date().toLocaleDateString()], best });
+    return prev;
+  }
+
+  function runHistoryText(map) {
+    const r = getRuns(mapKey(map));
+    if (!r || !r.n) return '';
+    const [ld, lt] = r.last;
+    const last = !ld ? 'last run ended before the main quest' : ld >= lt ? 'last run finished the quest' : `last run: ${ld} of ${lt} quest steps done`;
+    const best = r.best && r.best[0] > ld ? ` · best: ${r.best[0]} of ${r.best[1]}` : '';
+    return `Attempt ${r.n + 1} · ${last}${best}`;
+  }
+
   // The "Run failed?" bar at the end of every map page.
   function runResetHtml(map) {
     if (!map.items.some(it => stepLists(it).length)) return '';
     const n = mapTicks(map);
+    const hist = runHistoryText(map);
     return `<section class="run-reset" data-run="${esc(mapKey(map))}">
       <span class="run-reset-icon">${ICON.restart}</span>
-      <p><strong>Run failed?</strong> <span class="run-reset-text">${runResetText(map, n)}</span></p>
+      <div class="run-reset-main">
+        <p><strong>Run failed?</strong> <span class="run-reset-text">${runResetText(map, n)}</span></p>
+        <p class="run-history"${hist ? '' : ' hidden'}><span>${esc(hist)}</span> <button type="button" class="link-btn" data-clear-runs="${esc(mapKey(map))}">Clear history</button></p>
+      </div>
       <button type="button" class="btn btn-small run-reset-btn" data-start-over="${esc(mapKey(map))}"${n ? '' : ' disabled'}>Start over</button>
     </section>`;
   }
@@ -397,6 +433,9 @@
     const n = mapTicks(map);
     $('.run-reset-text', run).innerHTML = runResetText(map, n);
     $('[data-start-over]', run).disabled = !n;
+    const hist = runHistoryText(map);
+    $('.run-history span', run).textContent = hist;
+    $('.run-history', run).hidden = !hist;
   }
 
   // Removes every tick saved under `prefix` and returns the ones that were ticked (for undo).
@@ -453,11 +492,12 @@
     toastUndo = null;
   }
 
-  // After clearing, offer to put the cleared ticks back.
-  function offerUndo(text, keys, mk) {
+  // After clearing, offer to put the cleared ticks back (`also` undoes anything else, like a run record).
+  function offerUndo(text, keys, mk, also) {
     if (!keys.length) return;
     showToast(text, () => {
       keys.forEach(k => store.set(k, '1'));
+      if (also) also();
       refreshChecks();
       scheduleWrite(mk, 0);
       showToast(`Put back ${tickWord(keys.length)}.`, null, 2500);
@@ -557,6 +597,7 @@
         <h4>${esc(title)}</h4>
         ${ORDER_CHIP[order] || ''}
         <div class="progress" aria-label="Progress"><div class="bar"><span style="width:${n ? Math.round(done / n * 100) : 0}%"></span></div><span class="count">${done}/${n}</span></div>
+        <button type="button" class="link-btn" data-compact aria-pressed="${compactSteps() ? 'true' : 'false'}">${compactSteps() ? 'Show details' : 'Titles only'}</button>
         ${n > 1 ? `<button type="button" class="link-btn" data-collapse aria-pressed="${collapseDone() ? 'true' : 'false'}">${collapseDone() ? 'Expand done' : 'Collapse done'}</button>` : ''}
         <button type="button" class="link-btn" data-reset="${esc(prefix)}">Reset</button>
       </div>
@@ -787,6 +828,7 @@
             <div class="home-maps">${maps.map(m => homeMapRow(m)).join('')}</div></section>`;
         }).join('')}
         ${soon.length ? `<p class="home-soon">Not written yet: ${soon.map(g => esc(g.name)).join(', ')}.</p>` : ''}
+        ${transferHtml()}
         ${offlineHtml()}
       </div>`;
   }
@@ -797,6 +839,133 @@
   const OFFLINE_CACHE = 'zg-v1';
   const CAN_OFFLINE = 'serviceWorker' in navigator && 'caches' in window && !window.ZG_HOSTED &&
     (location.protocol === 'https:' || /[?&]sw=1/.test(location.search));
+
+  /* ---------- moving progress between devices ----------
+     A progress code holds every tick and run record in this browser: "ZG1." + base64url of
+     deflate-compressed JSON {v: 1, t: {map: [tick keys]}, r: {map: runs}} ("ZG0." when this browser
+     can't compress). On the public site the code also travels as a link, #import=<code>; the part
+     after # never leaves the device. Loading a code adds its ticks; it never removes any. */
+  let pendingImport = '';
+  const b64url = bytes => { let s = ''; for (const b of bytes) s += String.fromCharCode(b); return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); };
+  const fromB64url = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((s.length + 3) % 4)), c => c.charCodeAt(0));
+  const pipeBytes = (bytes, stream) => new Response(new Blob([bytes]).stream().pipeThrough(stream)).arrayBuffer().then(b => new Uint8Array(b));
+
+  function progressData() {
+    const t = {}, r = {};
+    for (const k of store.keys()) {
+      if (k.startsWith('zg:') && isDone(k)) {
+        const mk = mapKeyOfStoreKey(k);
+        if (ZG.maps[mk]) (t[mk] = t[mk] || []).push(k.slice(mk.length + 4));
+      } else if (k.startsWith('zg-runs:')) {
+        const mk = k.slice(8);
+        if (ZG.maps[mk] && getRuns(mk)) r[mk] = getRuns(mk);
+      }
+    }
+    return { v: 1, t, r };
+  }
+
+  async function makeCode() {
+    const json = new TextEncoder().encode(JSON.stringify(progressData()));
+    if ('CompressionStream' in window) {
+      try { return 'ZG1.' + b64url(await pipeBytes(json, new CompressionStream('deflate-raw'))); } catch (e) { /* fall through */ }
+    }
+    return 'ZG0.' + b64url(json);
+  }
+
+  async function readCode(text) {
+    const m = /ZG([01])\.([A-Za-z0-9_-]+)/.exec(text || '');
+    if (!m) throw new Error('That doesn\'t look like a progress code.');
+    let bytes;
+    try { bytes = fromB64url(m[2]); } catch (e) { throw new Error('That code is incomplete. Copy the whole thing and try again.'); }
+    if (m[1] === '1') {
+      if (!('DecompressionStream' in window)) throw new Error('This browser is too old to read that code.');
+      try { bytes = await pipeBytes(bytes, new DecompressionStream('deflate-raw')); } catch (e) { throw new Error('That code is incomplete. Copy the whole thing and try again.'); }
+    }
+    let data;
+    try { data = JSON.parse(new TextDecoder().decode(bytes)); } catch (e) { data = null; }
+    if (!data || data.v !== 1 || typeof data.t !== 'object') throw new Error('That code is incomplete. Copy the whole thing and try again.');
+    return data;
+  }
+
+  // Adds a code's ticks and run records to this browser, with an Undo.
+  async function loadCode(text) {
+    const data = await readCode(text);
+    const added = [], runsBefore = {}, maps = new Set();
+    for (const [mk, subs] of Object.entries(data.t || {})) {
+      if (!ZG.maps[mk] || !Array.isArray(subs)) continue;
+      for (const sub of subs) {
+        const next = migrateSub(mk, String(sub));
+        const k = next && `zg:${mk}:${next}`;
+        if (k && !isDone(k)) { store.set(k, '1'); added.push(k); maps.add(mk); }
+      }
+    }
+    for (const [mk, r] of Object.entries(data.r || {})) {
+      const mine = getRuns(mk);
+      if (!ZG.maps[mk] || !r || !r.n || (mine && mine.n >= r.n)) continue;
+      runsBefore[mk] = mine;
+      setRuns(mk, r);
+      maps.add(mk);
+    }
+    pendingImport = '';
+    refreshChecks();
+    maps.forEach(mk => scheduleWrite(mk, 0));
+    if (!maps.size) { showToast('Nothing new: this device already has all of that progress.', null, 4000); return; }
+    const runMaps = Object.keys(runsBefore).length;
+    showToast(`Added ${tickWord(added.length)} on ${maps.size} map${maps.size === 1 ? '' : 's'}${runMaps ? ' and their run history' : ''}.`, () => {
+      added.forEach(k => store.del(k));
+      for (const [mk, r] of Object.entries(runsBefore)) setRuns(mk, r);
+      refreshChecks();
+      maps.forEach(mk => scheduleWrite(mk, 0));
+      showToast('Took that progress back off.', null, 2500);
+    });
+  }
+
+  // A link ending in #import=<code>: keep the code for the home page's "Move your progress" box.
+  function takeImportLink() {
+    const m = /^#import=(.+)$/.exec(location.hash || '');
+    if (!m) return false;
+    pendingImport = decodeURIComponent(m[1]);
+    return true;
+  }
+
+  function showImport() {
+    setTimeout(() => {
+      const box = $('#transfer');
+      if (box) box.scrollIntoView({ block: 'start' });
+    }, 0);
+  }
+
+  function copyText(text, status) {
+    const done = ok => { status.textContent = ok ? 'Copied.' : 'Select the code above and copy it.'; };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => done(true), () => done(false));
+    else done(false);
+  }
+
+  function transferHtml() {
+    const ticks = store.keys().filter(k => k.startsWith('zg:') && isDone(k)).length;
+    return `<section class="transfer-box" id="transfer">
+      <h2 class="group-h">Move your progress</h2>
+      <p>Your ticks are saved in this browser${window.ZG_HOSTED ? ' (and your Claude account, when you\'re signed in)' : ''}. To carry them to another device or browser, make a progress code here and load it there. Loading a code adds ticks; it never removes any.</p>
+      <div class="transfer-actions">
+        <button type="button" class="btn btn-small" data-make-code${ticks ? '' : ' disabled'}>Make a progress code</button>
+        <button type="button" class="btn btn-small btn-quiet" data-open-load aria-expanded="${pendingImport ? 'true' : 'false'}">Load a code</button>
+      </div>
+      <div class="transfer-out" hidden>
+        <textarea class="transfer-code" readonly rows="3" aria-label="Your progress code"></textarea>
+        <div class="transfer-actions">
+          <button type="button" class="btn btn-small" data-copy-code>Copy code</button>
+          ${window.ZG_HOSTED ? '' : '<button type="button" class="btn btn-small btn-quiet" data-copy-link>Copy link</button>'}
+        </div>
+        <p class="transfer-note">${window.ZG_HOSTED ? 'Paste it into "Load a code" on the other device.' : 'Send yourself the link and open it on the other device, or paste the code into "Load a code" there.'}</p>
+      </div>
+      <div class="transfer-in"${pendingImport ? '' : ' hidden'}>
+        ${pendingImport ? '<p class="transfer-note"><strong>This link carries progress from another device.</strong> Tap Add to put it on this one.</p>' : ''}
+        <textarea class="transfer-input" rows="3" aria-label="Paste a progress code or link" placeholder="Paste a progress code${window.ZG_HOSTED ? '' : ' or link'}">${esc(pendingImport)}</textarea>
+        <div class="transfer-actions"><button type="button" class="btn btn-small" data-load-code>Add to this device</button></div>
+      </div>
+      <p class="transfer-status" aria-live="polite"></p>
+    </section>`;
+  }
 
   function offlineHtml() {
     if (!CAN_OFFLINE) return '';
@@ -1205,7 +1374,7 @@
     cloud.timers[mk] = setTimeout(() => {
       cloud.timers[mk] = null;
       cloud.chain[mk] = (cloud.chain[mk] || Promise.resolve())
-        .then(() => cloud.col.doc(docIdFor(mk)).set({ done: localDone(mk), updatedAt: Date.now() }))
+        .then(() => cloud.col.doc(docIdFor(mk)).set({ done: localDone(mk), runs: getRuns(mk), updatedAt: Date.now() }))
         .then(() => setSyncStatus('synced'), () => setSyncStatus('error'))
         .then(() => { if (!cloud.timers[mk]) cloud.dirty[mk] = false; });
     }, delay);
@@ -1239,7 +1408,10 @@
         const mk = mapKeyForDoc(d.id);
         if (!mk) continue;
         seen.add(mk);
-        if (!cloud.dirty[mk] && applyCloud(mk, (d.data() || {}).done || {})) moved.push(mk);
+        if (cloud.dirty[mk]) continue;
+        const data = d.data() || {};
+        if (applyCloud(mk, data.done || {})) moved.push(mk);
+        if ('runs' in data) setRuns(mk, data.runs);
       }
       if (moved.length) setTimeout(() => moved.forEach(mk => scheduleWrite(mk, 0)), 0);
       if (first) {
@@ -1328,6 +1500,7 @@
       route();
     });
     window.addEventListener('hashchange', () => {
+      if (takeImportLink()) { renderedKey = null; go('#/', true); showImport(); return; }
       if ((location.hash || '').startsWith('#/') && location.hash !== current) { current = location.hash; route(); }
     });
 
@@ -1399,14 +1572,27 @@
         return;
       }
 
+      const clearRuns = e.target.closest('[data-clear-runs]');
+      if (clearRuns) {
+        if (!secondTap(clearRuns, 'Tap again to clear')) return;
+        const mk = clearRuns.dataset.clearRuns;
+        const prev = getRuns(mk);
+        setRuns(mk, null);
+        updateRunReset();
+        scheduleWrite(mk, 0);
+        showToast('Cleared the run history.', () => { setRuns(mk, prev); updateRunReset(); scheduleWrite(mk, 0); });
+        return;
+      }
+
       const startOver = e.target.closest('[data-start-over]');
       if (startOver) {
         if (startOver.disabled || !secondTap(startOver, 'Tap again to clear all')) return;
         const mk = startOver.dataset.startOver;
+        const prevRuns = recordRun(ZG.maps[mk]);
         const removed = clearTicks(`zg:${mk}:`);
         refreshChecks();
         scheduleWrite(mk, 0);
-        offerUndo(`Cleared ${tickWord(removed.length)} on ${ZG.maps[mk].name}. Good luck on the new run!`, removed, mk);
+        offerUndo(`Cleared ${tickWord(removed.length)} on ${ZG.maps[mk].name}. Good luck on the new run!`, removed, mk, () => setRuns(mk, prevRuns));
         // Back to the top of this tab (the tabs bar is sticky, so measure from the banner above it).
         const hero = $('.map-hero');
         if (hero) window.scrollTo(0, Math.max(0, hero.getBoundingClientRect().bottom + window.scrollY - headerHeight()));
@@ -1415,7 +1601,27 @@
 
       if (e.target.closest('#next-step')) {
         const next = nextEeStep();
-        if (next) scrollToAnchor(next.id);
+        if (next) {
+          if (compactSteps()) next.classList.add('open');
+          scrollToAnchor(next.id);
+        }
+        return;
+      }
+
+      if (e.target.closest('[data-compact]')) {
+        store.set('zg-compact', compactSteps() ? '0' : '1');
+        applyCompact();
+        $$('[data-compact]').forEach(b => {
+          b.textContent = compactSteps() ? 'Show details' : 'Titles only';
+          b.setAttribute('aria-pressed', compactSteps() ? 'true' : 'false');
+        });
+        return;
+      }
+
+      // In "Titles only", tapping a step's title opens or closes that step.
+      const stepTitle = e.target.closest('.step-title');
+      if (stepTitle && compactSteps()) {
+        stepTitle.closest('.step').classList.toggle('open');
         return;
       }
 
@@ -1427,6 +1633,42 @@
           b.setAttribute('aria-pressed', collapseDone() ? 'true' : 'false');
         });
         return;
+      }
+
+      const box = e.target.closest('.transfer-box');
+      if (box) {
+        const status = $('.transfer-status', box);
+        const codeEl = $('.transfer-code', box);
+        if (e.target.closest('[data-make-code]')) {
+          status.textContent = 'Making your code…';
+          makeCode().then(code => {
+            codeEl.value = code;
+            $('.transfer-out', box).hidden = false;
+            codeEl.focus();
+            codeEl.select();
+            const n = Object.values(progressData().t).reduce((a, l) => a + l.length, 0);
+            status.textContent = `Code ready: ${tickWord(n)}.`;
+          }, () => { status.textContent = 'Couldn\'t make a code in this browser.'; });
+          return;
+        }
+        if (e.target.closest('[data-copy-code]')) { codeEl.select(); copyText(codeEl.value, status); return; }
+        if (e.target.closest('[data-copy-link]')) {
+          copyText(`${location.origin}${location.pathname}#import=${codeEl.value}`, status);
+          return;
+        }
+        if (e.target.closest('[data-open-load]')) {
+          const panel = $('.transfer-in', box);
+          panel.hidden = !panel.hidden;
+          e.target.closest('[data-open-load]').setAttribute('aria-expanded', panel.hidden ? 'false' : 'true');
+          if (!panel.hidden) $('.transfer-input', box).focus();
+          return;
+        }
+        if (e.target.closest('[data-load-code]')) {
+          const text = $('.transfer-input', box).value;
+          if (!text.trim()) { status.textContent = 'Paste a progress code first.'; return; }
+          loadCode(text).catch(err => { status.textContent = err.message; });
+          return;
+        }
       }
 
       const saveBtn = e.target.closest('#save-offline');
@@ -1504,13 +1746,16 @@
   migrateLocal();
   bind();
   applyCollapse();
+  applyCompact();
   syncThemeButton();
   syncWakeButton();
   applyWake();
   registerServiceWorker();
   setSyncStatus('local');
-  current = initialHash();
+  const importLink = takeImportLink();
+  current = importLink ? '#/' : initialHash();
   try { history.replaceState(null, '', current); } catch (e) { historyWorks = false; }
   route();
+  if (importLink) showImport();
   initCloud();
 })();

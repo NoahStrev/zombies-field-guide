@@ -563,7 +563,7 @@ tr:last-child td { border-bottom: 0; }
 .run-reset { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 28px 0 8px; padding: 14px 16px; border: 1px dashed var(--line-2); border-radius: var(--radius); background: var(--panel); }
 .run-reset p { flex: 1 1 240px; margin: 0; color: var(--text-2); font-size: .92rem; }
 .run-reset strong, .run-reset b { color: var(--text); }
-.run-reset-icon { display: flex; color: var(--warn); }
+.run-reset-icon { display: flex; align-self: flex-start; margin-top: 2px; color: var(--warn); }
 .run-reset-icon .icon { width: 22px; height: 22px; }
 .btn:disabled { opacity: .45; cursor: default; filter: none; }
 .btn.armed { background: var(--danger); }
@@ -573,3 +573,26 @@ tr:last-child td { border-bottom: 0; }
 .toast.above-fab { bottom: calc(max(16px, env(safe-area-inset-bottom)) + 64px); }
 .toast[hidden] { display: none; }
 .toast-btn { flex: none; background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 8px; padding: 8px 14px; min-height: 40px; font-weight: 700; cursor: pointer; }
+.run-reset-main { flex: 1 1 240px; min-width: 0; }
+.run-reset-main p { margin: 0; }
+.run-history { margin-top: 4px !important; color: var(--muted) !important; font-size: .85rem !important; }
+.run-history[hidden] { display: none; }
+.run-history .link-btn { padding: 2px 6px; font-size: .8rem; }
+
+/* "Titles only": each step shows just its title until tapped */
+.compact-steps .step:not(.open) .step-body > :not(.step-title) { display: none; }
+.compact-steps .step:not(.open) { padding-top: 8px; padding-bottom: 8px; }
+.compact-steps .step:not(.open) .step-title { margin: 3px 0; }
+.compact-steps .step-title { cursor: pointer; }
+.compact-steps .step-title::after { content: ''; display: inline-block; width: 6px; height: 6px; margin-left: 9px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(-45deg); vertical-align: 2px; transition: transform .15s ease; }
+.compact-steps .step.open .step-title::after { transform: rotate(45deg); vertical-align: 4px; }
+@media (prefers-reduced-motion: reduce) { .compact-steps .step-title::after { transition: none; } }
+
+/* Move your progress (home page) */
+.transfer-box p { color: var(--text-2); max-width: 70ch; }
+.transfer-actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.btn-quiet { background: var(--panel-2); color: var(--text) !important; border: 1px solid var(--line-2); }
+.transfer-code, .transfer-input { display: block; width: 100%; max-width: 640px; box-sizing: border-box; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); color: var(--text); font: .85rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace; word-break: break-all; resize: vertical; }
+.transfer-out[hidden], .transfer-in[hidden] { display: none; }
+.transfer-note { font-size: .88rem; }
+.transfer-status { color: var(--muted) !important; font-size: .88rem; min-height: 1.3em; }
