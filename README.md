@@ -31,7 +31,7 @@ To run it on your PC instead, double-click **`start-site.bat`**. It starts a sma
 ## Using it
 
 - **Tabs per map:** Start Here · Parts & Buildables · Wonder Weapons · Main Easter Egg · Side Quests & Songs.
-- **Checklists:** tick steps as you go. Progress is saved in that browser on that device. Each list has a Reset button.
+- **Checklists:** tick steps as you go. Progress is saved in that browser on that device. Each list has a Reset button. Ticks are tied to each step's title, so they stay on the right step when the guide adds or reorders steps.
 - **Coloured chips** (for example "Ice Staff" on an Origins easter egg step) open that item's guide in a side panel (a bottom sheet on phones). Close it and you're back exactly where you were. "Full guide" jumps to the item's section.
 - **"Needed for"** boxes on item guides link back to every easter egg step that uses the item.
 - **Order:** numbered steps go top to bottom. Steps inside a green **Any order** box, or marked with the shuffle icon, can be done in whatever order you like.
@@ -69,6 +69,7 @@ tools/                  research, checking and publishing scripts (see tools/REA
 3. Each map is a list of **items**. An item has a `tab` (`start`, `parts`, `weapons`, `easter-egg`, `side`) and can include:
    - `parts`: buildable parts, each with a list of spawn `spots`; `w: <seconds>` links the part to that moment in the item's `video`
    - `steps` / `prep`: checklists. A step's `needs: ['item-id']` shows chips that open that item, and adds a "Needed for" link back. `w: <seconds>` (or `w: ['<YouTube id>', seconds]`) adds a "Watch this step" clip. Consecutive steps with the same `any: '<label>'` are grouped in an "Any order" box; `anyList: '<text>'` marks the list inside one step as any-order; `stepsOrder: 'suggested'` labels a whole list as flexible.
+   - **Ticks follow the step's title** (`t`), turned into a key like `recover-the-summoning-key` (case and punctuation don't matter). Adding, removing or reordering steps is safe. If you reword a title, keep its ticks by giving the step `key: '<old key>'`. `python -X utf8 tools/zg.py retitled` lists titles that changed since the last commit.
    - `upgrade`: a second checklist for the upgraded version
    - `blocks`: free content (`p`, `list`, `table`, `tip`, `warn`, `note`, `imgs`, `video`, `lookup`)
    - `lookup` (on a step or block): a picker. With `a` and `b` it shows two dropdowns and looks up `answers['A>B']`; with only `a` it shows one dropdown and looks up `answers['A']`. Answers are `[name, number]` pairs or plain lines of text.
@@ -76,7 +77,7 @@ tools/                  research, checking and publishing scripts (see tools/REA
    - Map-level `players`: `'solo'`, `'four'`, `'coop'`, or `{ text: '<badge text>', warn: true }` for custom wording.
    - A quest with two sides (Black Ops II) is two `easter-egg` items whose `type` starts with `Main Easter Egg`; the map card and the Next step button follow whichever side has the most ticks.
 4. In any text, `**bold**` makes bold text and `{{item-id}}` (or `{{item-id|label}}`) makes a quick-look chip.
-5. Open the browser console after a change: the site warns about any `needs` or `{{...}}` that points to an item that doesn't exist.
+5. Open the browser console after a change: the site warns about any `needs` or `{{...}}` that points to an item that doesn't exist, and about two steps in one list sharing a tick key.
 6. After editing files, bump the `?v=` number on the `<link>`/`<script>` tags in `index.html` so browsers load the new version.
 
 ## Credits

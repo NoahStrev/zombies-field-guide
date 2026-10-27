@@ -27,6 +27,7 @@ Run it with no command to see the full list. Image downloads need Pillow (`pip i
 3. `audit`: every image exists, every video still plays and can be embedded, every timestamp is inside its video, and declared video lengths match.
 4. `verify <game>/<map> --all`: lists every "watch" timestamp next to what the video says at that moment, in `tools/.cache/verify_<...>.txt`. Without `--all`, only likely mismatches are listed.
 5. In the console, `new Function(text)` on each script catches syntax errors (for example an unescaped apostrophe) before they break a whole map.
+6. `retitled [REF]`: step titles that existed at git REF (default: the last commit) but are gone now. Ticks are saved under each step's title, so if a step was only reworded, add `key: '<old key>'` to it before publishing, or people lose that tick.
 
 ## Publishing
 

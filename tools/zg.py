@@ -15,6 +15,8 @@ Checking (after exporting the site data with tools/browser/export.js)
   receiver                      Local server on 127.0.0.1:8099 that saves POSTs from the site to tools/.cache/<name>.json
   audit [PREFIX]                Images exist, videos play and embed, timestamps fit, declared lengths match
   verify PREFIX [--all]         Pair every "watch" timestamp with what the video says at that moment
+  retitled [REF]                Step titles in data/ that existed at git REF (default HEAD) but are gone now.
+                                Ticks are saved under the title, so a reworded step needs key: '<old slug>'
 
 Publishing
   build-artifact [--since REF] [--mirror]
@@ -22,7 +24,7 @@ Publishing
                                 (all files, or only those changed since git REF). --mirror also
                                 copies css/js/hero banners into tools/.cache/artifact for a local test.
 """
-import base64, io, json, os, re, shutil, subprocess, sys, time, urllib.parse, urllib.request
+import base64, io, json, os, re, shutil, subprocess, sys, time, unicodedata, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -388,6 +390,33 @@ def verify(args):
     print(len(out), "entries ->", path.relative_to(ROOT))
 
 
+def tick_slug(title):
+    """Same as slug() in js/app.js: the key a step's ticks are saved under."""
+    s = re.sub(r"\{\{[a-z0-9-]+\|([^}]+)\}\}", r"\1", title)
+    s = re.sub(r"\{\{([a-z0-9-]+)\}\}", r"\1", s).replace("**", "")
+    s = re.sub("[̀-ͯ]", "", unicodedata.normalize("NFD", s)).lower()
+    return re.sub(r"[^a-z0-9]+", "-", s).strip("-")[:60].rstrip("-")
+
+
+def retitled(args):
+    ref = args[0] if args else "HEAD"
+    title_re = re.compile(r"""\bt:\s*'((?:[^'\\]|\\.)*)'""")
+    key_re = re.compile(r"""[{,]\s*key:\s*'([^']*)'""")
+    def keys(text):
+        found = {tick_slug(re.sub(r"\\(.)", r"\1", m.group(1))) for m in title_re.finditer(text)}
+        return found | {m.group(1) for m in key_re.finditer(text)}
+    git = lambda *a: subprocess.run(["git", *a], cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
+    old_files = [f for f in git("ls-tree", "-r", "--name-only", ref, "data").stdout.split() if f.endswith(".js")]
+    n = 0
+    for f in sorted(old_files):
+        now = ROOT / f
+        gone = keys(git("show", f"{ref}:{f}").stdout) - (keys(now.read_text(encoding="utf-8")) if now.exists() else set())
+        for k in sorted(gone):
+            print(f"{f}: {k}")
+            n += 1
+    print(f"{n} step title(s) gone since {ref}." + (" If a step was only reworded, add key: '<old slug>' to it so its ticks stay." if n else ""))
+
+
 # ---------------------------------------------------------------- publishing
 def build_artifact(args):
     # One artifact version holds at most 511 files. So the hosted copy ships every image folder's
@@ -468,7 +497,7 @@ def build_artifact(args):
 COMMANDS = {
     "wiki-fetch": lambda a: wiki_fetch(a), "wiki-show": wiki_show, "wiki-images": wiki_images, "get-images": get_images,
     "yt-search": yt_search, "yt-info": yt_info, "captions": lambda a: captions(),
-    "receiver": lambda a: receiver(), "audit": audit, "verify": verify, "build-artifact": build_artifact,
+    "receiver": lambda a: receiver(), "audit": audit, "verify": verify, "retitled": retitled, "build-artifact": build_artifact,
 }
 
 if __name__ == "__main__":

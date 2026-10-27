@@ -108,6 +108,8 @@
             `${it.upgrade.name} ${it.upgrade.aka || ''} ${it.name} ${map.name} upgrade`, plainText([it.upgrade.summary, it.upgrade.blocks]).join(' '));
         }
         for (const [listKey, steps] of stepLists(it)) {
+          const keys = stepKeys(map, it, listKey);
+          if (new Set(keys).size !== keys.length) problems.push(`${map.id}/${it.id} ${listKey}: two steps share a tick key`);
           const label = listKey === 'prep' ? 'Prep' : listKey === 'upgrade' ? 'Upgrade step' : 'Step';
           steps.forEach((st, i) => {
             for (const need of asArray(st.needs)) {
@@ -336,10 +338,56 @@
   const mapKey = map => `${map.game}/${map.id}`;
   const listPrefix = (map, item, listKey) => `zg:${mapKey(map)}:${item.id}:${listKey}:`;
 
-  function countDone(prefix, n) {
-    let c = 0;
-    for (let i = 0; i < n; i++) if (isDone(prefix + i)) c++;
-    return c;
+  /* A tick is saved under its step's title (zg:<map>:<item>:<list>:<title-slug>), not its position,
+     so adding or reordering steps keeps everyone's progress on the right step. Punctuation and
+     capitals don't matter. Reworded a title? Give the step `key: '<old slug>'` to keep its ticks.
+     Repeated titles in one list get -2, -3… on the end. */
+  const slug = s => stripRefs(s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60).replace(/-+$/, '');
+  const stepKeyCache = new Map();
+  function stepKeys(map, item, listKey) {
+    const id = listPrefix(map, item, listKey);
+    if (!stepKeyCache.has(id)) {
+      const steps = (stepLists(item).find(([k]) => k === listKey) || [])[1] || [];
+      const seen = {};
+      stepKeyCache.set(id, steps.map(st => {
+        let k = st.key || slug(st.t);
+        if (/^\d*$/.test(k)) k = 'step-' + k;  // all-digit keys are the old position keys
+        seen[k] = (seen[k] || 0) + 1;
+        return seen[k] > 1 ? `${k}-${seen[k]}` : k;
+      }));
+    }
+    return stepKeyCache.get(id);
+  }
+
+  function countDone(map, item, listKey) {
+    const prefix = listPrefix(map, item, listKey);
+    return stepKeys(map, item, listKey).filter(k => isDone(prefix + k)).length;
+  }
+
+  // Ticks used to be saved by position (…:steps:3). Move one to the step now at that position;
+  // null drops a tick past the end of its list. Unknown items are left alone.
+  function migrateSub(mk, sub) {
+    const m = /^([^:]+):(prep|steps|upgrade):(\d+)$/.exec(sub);
+    if (!m) return sub;
+    const map = ZG.maps[mk];
+    const item = map && map.itemById[m[1]];
+    if (!item) return sub;
+    const k = stepKeys(map, item, m[2])[+m[3]];
+    return k ? `${m[1]}:${m[2]}:${k}` : null;
+  }
+
+  // Once per load, for ticks saved in this browser (synced ones are moved as they arrive).
+  function migrateLocal() {
+    for (const k of store.keys()) {
+      if (!k.startsWith('zg:') || !/:\d+$/.test(k)) continue;
+      const mk = mapKeyOfStoreKey(k);
+      const sub = k.slice(mk.length + 4);
+      const next = migrateSub(mk, sub);
+      if (next === sub) continue;
+      if (next && isDone(k)) store.set(`zg:${mk}:${next}`, '1');
+      store.del(k);
+    }
   }
 
   function stepVideo(item, listKey) {
@@ -348,7 +396,7 @@
   }
 
   function stepHtml(map, item, listKey, st, i, opts) {
-    const key = listPrefix(map, item, listKey) + i;
+    const key = listPrefix(map, item, listKey) + stepKeys(map, item, listKey)[i];
     const done = isDone(key);
     const anchor = `${item.id}-${listKey}-${i + 1}`;
     return `<li class="step${done ? ' done' : ''}"${opts.drawer ? '' : ` id="${anchor}"`} data-anchor="${anchor}">
@@ -403,15 +451,15 @@
   function checklistHtml(map, item, listKey, steps, title, opts) {
     const prefix = listPrefix(map, item, listKey);
     const n = steps.length;
-    const done = countDone(prefix, n);
+    const done = countDone(map, item, listKey);
     const order = listOrder(item, listKey);
-    return `<section class="checklist${order === 'any' ? ' order-any' : ''}" data-prefix="${esc(prefix)}" data-total="${n}">
+    return `<section class="checklist${order === 'any' ? ' order-any' : ''}" data-prefix="${esc(prefix)}">
       <div class="checklist-head">
         <h4>${esc(title)}</h4>
         ${ORDER_CHIP[order] || ''}
         <div class="progress" aria-label="Progress"><div class="bar"><span style="width:${n ? Math.round(done / n * 100) : 0}%"></span></div><span class="count">${done}/${n}</span></div>
         ${n > 1 ? `<button type="button" class="link-btn" data-collapse aria-pressed="${collapseDone() ? 'true' : 'false'}">${collapseDone() ? 'Expand done' : 'Collapse done'}</button>` : ''}
-        <button type="button" class="link-btn" data-reset="${esc(prefix)}" data-total="${n}">Reset</button>
+        <button type="button" class="link-btn" data-reset="${esc(prefix)}">Reset</button>
       </div>
       <ol class="steps">${stepsListHtml(map, item, listKey, steps, opts)}</ol>
     </section>`;
@@ -542,7 +590,7 @@
     if (!candidates.length) return null;
     let best = null;
     for (const ee of candidates) {
-      const p = { done: countDone(listPrefix(map, ee, 'steps'), ee.steps.length), total: ee.steps.length };
+      const p = { done: countDone(map, ee, 'steps'), total: ee.steps.length };
       if (!best || p.done / p.total > best.done / best.total) best = p;
     }
     return best;
@@ -954,8 +1002,9 @@
   function updateProgress(prefix) {
     $$('.checklist').forEach(cl => {
       if (prefix && cl.dataset.prefix !== prefix) return;
-      const n = +cl.dataset.total;
-      const done = countDone(cl.dataset.prefix, n);
+      const keys = $$('input[data-key]', cl).map(inp => inp.dataset.key);
+      const n = keys.length;
+      const done = keys.filter(isDone).length;
       const bar = $('.bar span', cl);
       if (bar) bar.style.width = `${n ? Math.round(done / n * 100) : 0}%`;
       const c = $('.count', cl);
@@ -1032,10 +1081,20 @@
     return done;
   }
 
+  // Copy the account's ticks for one map into this browser. Returns true when old position-based
+  // ticks were moved to title keys, so the account copy should be written back.
   function applyCloud(mk, done) {
+    const fixed = {};
+    let moved = false;
+    for (const sub of Object.keys(done)) {
+      const next = migrateSub(mk, sub);
+      if (next !== sub) moved = true;
+      if (next) fixed[next] = 1;
+    }
     const prefix = `zg:${mk}:`;
-    for (const k of store.keys()) if (k.startsWith(prefix) && !done[k.slice(prefix.length)]) store.del(k);
-    for (const sub of Object.keys(done)) store.set(prefix + sub, '1');
+    for (const k of store.keys()) if (k.startsWith(prefix) && !fixed[k.slice(prefix.length)]) store.del(k);
+    for (const sub of Object.keys(fixed)) store.set(prefix + sub, '1');
+    return moved;
   }
 
   function scheduleWrite(mk, delay) {
@@ -1073,14 +1132,15 @@
     cloud.col = col;
     let first = true;
     col.onSnapshot(snap => {
-      const seen = new Set();
+      const seen = new Set(), moved = [];
       for (const d of snap.docs) {
         if (!d.exists) continue;
         const mk = mapKeyForDoc(d.id);
         if (!mk) continue;
         seen.add(mk);
-        if (!cloud.dirty[mk]) applyCloud(mk, (d.data() || {}).done || {});
+        if (!cloud.dirty[mk] && applyCloud(mk, (d.data() || {}).done || {})) moved.push(mk);
       }
+      if (moved.length) setTimeout(() => moved.forEach(mk => scheduleWrite(mk, 0)), 0);
       if (first) {
         first = false;
         setSyncStatus('synced');
@@ -1230,7 +1290,7 @@
           return;
         }
         const prefix = reset.dataset.reset;
-        for (let i = 0; i < +reset.dataset.total; i++) store.del(prefix + i);
+        for (const k of store.keys()) if (k.startsWith(prefix)) store.del(k);
         $$('input[data-key]').forEach(inp => {
           if (!inp.dataset.key.startsWith(prefix)) return;
           inp.checked = false;
@@ -1332,6 +1392,7 @@
   }
 
   buildIndex();
+  migrateLocal();
   bind();
   applyCollapse();
   syncThemeButton();
