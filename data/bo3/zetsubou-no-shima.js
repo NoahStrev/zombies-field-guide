@@ -39,13 +39,14 @@
       {
         id: 'power-pap', tab: 'start', type: 'Getting started', name: 'Power & Pack-a-Punch', short: 'Power & PaP',
         summary: 'Power both labs with 115 water to open the bunker, turn on the main power underwater, then collect three machine tools to drain the Pack-a-Punch room.',
+        video: { id: 'wpzrgPZU1Yc', title: 'Zetsubou No Shima Pack-a-Punch guide', ch: 'MrRoflWaffles', len: '3:51' },
         steps: [
-          { t: 'Power Lab A and Lab B at the same time', needs: ['bucket'], d: 'Fill a bucket and pour it into a lab\'s generator ("Generator needs irradiated water"). The power only lasts a while, so get the second lab running before the first shuts off. When both are on, two green lights show above the bunker door and you can open it.' },
-          { t: 'Turn on the bunker\'s main power', d: 'Inside the bunker, take the door on the left from the Pack-a-Punch area into the power room. Dive into the flooded section and look left: a spider web blocks the turbine. Knife it, kill the zombies underwater, then flip the power switch.' },
-          { any: 'Collect the three machine tools in any order', t: 'Machine tool 1: the pipe', d: 'After the underwater zombies in the power room die, a small pipe appears in the pool in front of where the web was.' },
-          { any: 'Collect the three machine tools in any order', t: 'Machine tool 2: the valve wheel', d: 'Somewhere in the underwater tunnels near Mule Kick.' },
-          { any: 'Collect the three machine tools in any order', t: 'Machine tool 3: the pressure gauge', d: 'In the room with cocooned zombies. Knife the cocoons; one of them (random each game) drops the gauge.' },
-          { t: 'Fix the pumps', d: 'Take all three tools to the Pack-a-Punch chamber and repair the pumps. The water drains and Pack-a-Punch is usable.' },
+          { w: ['GJodNxauymE', 32], t: 'Power Lab A and Lab B at the same time', needs: ['bucket'], d: 'Fill a bucket and pour it into a lab\'s generator ("Generator needs irradiated water"). The power only lasts a while, so get the second lab running before the first shuts off. When both are on, two green lights show above the bunker door and you can open it.' },
+          { w: ['GJodNxauymE', 94], t: 'Turn on the bunker\'s main power', d: 'Inside the bunker, take the door on the left from the Pack-a-Punch area into the power room. Dive into the flooded section and look left: a spider web blocks the turbine. Knife it, kill the zombies underwater, then flip the power switch.' },
+          { w: 61, any: 'Collect the three machine tools in any order', t: 'Machine tool 1: the pipe', d: 'After the underwater zombies in the power room die, a small pipe appears in the pool in front of where the web was.' },
+          { w: 93, any: 'Collect the three machine tools in any order', t: 'Machine tool 2: the valve wheel', d: 'Somewhere in the underwater tunnels near Mule Kick.' },
+          { w: 139, any: 'Collect the three machine tools in any order', t: 'Machine tool 3: the pressure gauge', d: 'In the room with cocooned zombies. Knife the cocoons; one of them (random each game) drops the gauge.' },
+          { w: 186, t: 'Fix the pumps', d: 'Take all three tools to the Pack-a-Punch chamber and repair the pumps. The water drains and Pack-a-Punch is usable.' },
         ],
       },
       {
@@ -102,6 +103,12 @@
           { t: 'Upgrade the KT-4 into the Masamune', needs: ['kt4'] },
           { t: 'Start Seeds of Doubt', needs: ['main-ee'] },
         ],
+      },
+
+      {
+        id: 'layout', tab: 'start', type: 'Map layout', name: 'Map of the island', short: 'Map',
+        summary: 'The island\'s wall map: Lab A on the left, Lab B on the right, the bunker at the top between them and the docks top left. Paths loop round the jungle in the middle.',
+        blocks: [{ imgs: [{ src: I + 'layout.webp', cap: 'The wall map near spawn', wide: true }] }],
       },
 
       /* ------------------------------ PARTS ------------------------------ */
@@ -200,14 +207,15 @@
       },
       {
         id: 'spider-bait', tab: 'weapons', type: 'Hidden wonder weapon', name: 'Spider Bait', img: I + 'spider-serum.webp', color: 'red',
+        video: { id: 'BFQmV9Z_PdA', title: 'Spider Bait wonder weapon', ch: 'MrDalekJD', len: '4:33' },
         summary: 'Cocoons you and lets you control a spider for about 50 seconds while zombies chase it. Takes the Trip Mine slot. Fully optional.',
         steps: [
-          { t: 'Prerequisites', needs: ['skull', 'trials', 'kt4'], d: 'Skull of Nan Sapwe with a full charge, all Trials finished (electric shield), and the Lab A cage already used for the KT-4 venom (leave it at ground level).' },
-          { t: 'Find the red-mist spider', d: 'On your second spider round or later, use the Skull\'s mesmerise on the spiders until one emits red mist (characters comment on it). Keep it alive; killing the others makes this easier.' },
-          { anyList: 'Waters in any order', t: 'Let it drink all three waters', d: 'Lead it to the blue (Lab A), green (behind Lab B) and purple (Living Quarters) pools. Any order.', warn: 'Wall spores kill it instantly — watch the bunker entrance and the Living Quarters entrance.' },
-          { t: 'Catch it in the Lab A cage and supercharge the console', d: 'Raise the cage into Lab A, melee the console with the electric shield, then lower the cage again so it goes fully underground.' },
-          { t: 'Survive the next spider round', d: 'Every spider has red mist and is more aggressive.' },
-          { t: 'Raise the cage and take the Spider Bait', d: 'The spider is now a cocoon. Extract the venom; everyone can pick up Spider Bait from the machine.' },
+          { w: 31, t: 'Prerequisites', needs: ['skull', 'trials', 'kt4'], d: 'Skull of Nan Sapwe with a full charge, all Trials finished (electric shield), and the Lab A cage already used for the KT-4 venom (leave it at ground level).' },
+          { w: 61, t: 'Find the red-mist spider', d: 'On your second spider round or later, use the Skull\'s mesmerise on the spiders until one emits red mist (characters comment on it). Keep it alive; killing the others makes this easier.' },
+          { w: 77, anyList: 'Waters in any order', t: 'Let it drink all three waters', d: 'Lead it to the blue (Lab A), green (behind Lab B) and purple (Living Quarters) pools. Any order.', warn: 'Wall spores kill it instantly — watch the bunker entrance and the Living Quarters entrance.' },
+          { w: 124, t: 'Catch it in the Lab A cage and supercharge the console', d: 'Raise the cage into Lab A, melee the console with the electric shield, then lower the cage again so it goes fully underground.' },
+          { w: 184, t: 'Survive the next spider round', d: 'Every spider has red mist and is more aggressive.' },
+          { w: 200, t: 'Raise the cage and take the Spider Bait', d: 'The spider is now a cocoon. Extract the venom; everyone can pick up Spider Bait from the machine.' },
         ],
       },
 
@@ -261,18 +269,19 @@
       },
       {
         id: 'golden-bucket', tab: 'side', type: 'Upgrade', name: 'Golden Bucket', color: 'gold',
+        video: { id: 'QFPvSqxbkPc', title: 'Golden Bucket upgrade', ch: 'MrDalekJD', len: '2:21' },
         summary: 'Never runs out of water and lets you switch between blue, green and purple (sprint + melee).',
         steps: [
-          { anyList: 'Plants in any order', t: 'Grow one of each plant', needs: ['skull', 'seeds'], list: [
+          { w: 31, anyList: 'Plants in any order', t: 'Grow one of each plant', needs: ['skull', 'seeds'], list: [
             'One with no water at all.',
             'One watered blue three rounds.',
             'One watered green three rounds.',
             'One watered purple three rounds.',
             'One fruit plant (blue, green, purple once each).',
           ] },
-          { t: 'Reveal the bucket planter under Lab B', d: 'Mesmerise the blueprint in the Living Quarters (if not already done). Under the main part of Lab B, face the wall opposite the wall spore and mesmerise the vines. A special planter appears.' },
-          { t: 'Feed the three lure plants', d: 'Put your bucket in the planter. Three more planters appear: plant a seed in each. They grow instantly into lure plants — let them eat zombies until they sink back into the ground.' },
-          { t: 'Open the bucket plant', d: 'It only ever gives the Golden Bucket, and stays available for the rest of the game.' },
+          { w: 46, t: 'Reveal the bucket planter under Lab B', d: 'Mesmerise the blueprint in the Living Quarters (if not already done). Under the main part of Lab B, face the wall opposite the wall spore and mesmerise the vines. A special planter appears.' },
+          { w: 77, t: 'Feed the three lure plants', d: 'Put your bucket in the planter. Three more planters appear: plant a seed in each. They grow instantly into lure plants — let them eat zombies until they sink back into the ground.' },
+          { w: 92, t: 'Open the bucket plant', d: 'It only ever gives the Golden Bucket, and stays available for the rest of the game.' },
         ],
       },
     ],

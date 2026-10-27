@@ -41,7 +41,7 @@
         summary: 'Nesting-doll grenades that split into smaller exploding dolls. Mystery Box only. Needed for the final step of the easter egg.',
       },
       {
-        id: 'ray-gun', tab: 'weapons', type: 'Wonder weapon', name: 'Ray Gun / Ray Gun Mark II', color: 'green',
+        id: 'ray-gun', tab: 'weapons', type: 'Wonder weapon', name: 'Ray Gun / Ray Gun Mark II', img: I + 'ray-gun.webp', color: 'green',
         summary: 'Both come from the Mystery Box. The final easter egg step needs either one Pack-a-Punched Ray Gun (Porter\'s X2) or two Pack-a-Punched Ray Gun Mark IIs.',
       },
       {

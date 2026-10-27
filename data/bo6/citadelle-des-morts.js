@@ -11,7 +11,7 @@
 
   ZG.addMap({
     game: 'bo6', id: 'citadelle-des-morts', order: 3,
-    name: 'Citadelle des Morts', dlc: 'Season One Reloaded', eeName: 'Citadelle des Morts quest',
+    name: 'Citadelle des Morts', dlc: 'Season One Reloaded', eeName: 'Main quest: free Gabriel Krafft',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Elemental swords', 'Incantations', 'Guardian boss'],
     blurb: 'A French castle and village overrun by the undead, with four knight statues and their swords. Upgrade all four elemental swords, unlock their incantations, prove yourself to the knights, and fight the stone Guardian.',

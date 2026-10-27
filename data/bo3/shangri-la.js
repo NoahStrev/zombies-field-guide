@@ -23,14 +23,14 @@
         summary: 'Pull both water levers in the Power Room, then get every player onto a stone slab at once to raise the temple stairs.',
         steps: [
           { t: 'Reach the Power Room', d: 'From spawn, open either the debris toward the Mine Cart or toward the waterfall. Both routes lead underground to the Power Room.' },
-          { t: 'Pull both water levers', d: 'They drive the water-powered generators and turn the power on.' },
+          { w: ['tctR5oCbxWk', 31], t: 'Pull both water levers', d: 'They drive the water-powered generators and turn the power on.' },
           { w: ['tctR5oCbxWk', 737], t: 'Stop the spinning statues', d: 'Four small stone statues around the map now have spinning parts — one spinning part per player in the game. Next to each is a stone slab; standing on it stops that part.', list: [
             'Next to Quick Revive.',
-            'Under the big wooden bridge.',
+            'By the big wooden bridge.',
             'Next to the power switches.',
             'In the cave leading to the AK-74u.',
           ], note: 'Solo: only one part spins, so you just stand on that one slab.' },
-          { t: 'Climb the temple stairs to Pack-a-Punch', d: 'When every spinning part is stopped, the missing stairs rise. After a while, water washes everyone down and the stairs sink again — repeat the slab step to go back up.' },
+          { w: ['5znFzYCwYTU', 93], t: 'Climb the temple stairs to Pack-a-Punch', d: 'When every spinning part is stopped, the missing stairs rise. After a while, water washes everyone down and the stairs sink again — repeat the slab step to go back up.' },
         ],
       },
       {

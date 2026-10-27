@@ -21,12 +21,13 @@
       {
         id: 'power-pap', tab: 'start', type: 'Getting started', name: 'Power, teleporters & Pack-a-Punch', short: 'Power & PaP',
         summary: 'Turn on the power, then link all three teleporters to the Mainframe. Each link opens the Pack-a-Punch door a little more.',
+        video: { id: 'FGQgPX0FbUE', title: 'The Giant: power and Pack-a-Punch', ch: 'JokerAlex 21', len: '3:38' },
         steps: [
-          { t: 'Turn on the power in the Courtyard', d: 'Drop into the Courtyard from the Animal Testing Lab or the Garage side. The power switch is on the generator at the back.' },
-          { any: 'Link the three teleporters in any order', t: 'Link Teleporter A', d: 'Behind the Animal Testing Lab (1,250-point door). Activate the teleporter pad, then run back to the Mainframe in the spawn room and link it before the timer runs out.' },
-          { any: 'Link the three teleporters in any order', t: 'Link Teleporter B', d: 'Up the stairs from the Automobile Garage. Activate, then link at the Mainframe.' },
-          { any: 'Link the three teleporters in any order', t: 'Link Teleporter C', d: 'Behind the Courtyard (1,250-point door). Activate, then link at the Mainframe.' },
-          { t: 'Use Pack-a-Punch in the spawn room', d: 'The door in front of the machine is fully open after the third link. 5,000 to upgrade; 2,500 to re-pack for an elemental effect.' },
+          { w: 30, t: 'Turn on the power in the Courtyard', d: 'Drop into the Courtyard from the Animal Testing Lab or the Garage side. The power switch is on the generator at the back.' },
+          { w: 135, any: 'Link the three teleporters in any order', t: 'Link Teleporter A', d: 'Behind the Animal Testing Lab (1,250-point door). Activate the teleporter pad, then run back to the Mainframe in the spawn room and link it before the timer runs out.' },
+          { w: 160, any: 'Link the three teleporters in any order', t: 'Link Teleporter B', d: 'Up the stairs from the Automobile Garage. Activate, then link at the Mainframe.' },
+          { w: 90, any: 'Link the three teleporters in any order', t: 'Link Teleporter C', d: 'Behind the Courtyard (1,250-point door). Activate, then link at the Mainframe.' },
+          { w: 182, t: 'Use Pack-a-Punch in the spawn room', d: 'The door in front of the machine is fully open after the third link. 5,000 to upgrade; 2,500 to re-pack for an elemental effect.' },
         ],
       },
       {

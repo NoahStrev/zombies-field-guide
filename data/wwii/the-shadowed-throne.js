@@ -68,10 +68,11 @@
         ],
       },
       {
-        id: 'melee', tab: 'weapons', type: 'Special melee weapons', name: 'Perchta, Nachtmahr & Holda', short: 'Melee weapons', color: 'gold',
+        id: 'melee', tab: 'weapons', type: 'Special melee weapons', name: 'Perchta, Nachtmahr & Holda', short: 'Melee weapons', img: I + 'perchta.webp', color: 'gold',
         summary: 'Three cursed melee weapons, each earned from its own mini-quest. All three go into the wall by the Church to open Barbarossa\'s Refuge. You can take them back out of the wall afterwards.',
         facts: [['Perchta', 'Dagger. Its heavy attack heals you, or gives back a Geistschild point if your health is full'], ['Nachtmahr', 'Bat. Its ranged swing throws a ball of energy'], ['Holda', 'Axe. Charge kills explode and stagger zombies nearby']],
         blocks: [
+          { imgs: [{ src: I + 'perchta.webp', cap: 'Perchta (the dagger)' }, { src: I + 'nachtmahr.webp', cap: 'Nachtmahr (the bat)' }, { src: I + 'holda.webp', cap: 'Holda (the axe)' }] },
           { p: 'The steps for all three are in the main quest checklist.' },
         ],
       },

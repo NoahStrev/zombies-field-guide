@@ -10,7 +10,7 @@
 
   ZG.addMap({
     game: 'bo7', id: 'kowakujo', order: 5,
-    name: 'Kowakujō', dlc: 'Season Four Reloaded', eeName: 'Kowakujō quest',
+    name: 'Kowakujō', dlc: 'Season Four Reloaded', eeName: 'Main quest: free Nyxara',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Nekomancer', 'Murder mystery', 'Nyxara boss'],
     blurb: 'A Japanese castle on a volcano, home of Takeo\'s family. Free a spirit cat that becomes the Nekomancer, then solve who poisoned the Shogun: gather evidence for five paintings, question a ghost, set the zodiac dial and fight the Shadowsmith Nyxara.',

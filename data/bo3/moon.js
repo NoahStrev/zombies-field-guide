@@ -25,7 +25,7 @@
           { t: 'Teleport from Area 51 to the Moon', d: 'Pack-a-Punch is right there in Area 51 (No Man\'s Land), but you can\'t afford it yet.' },
           { t: 'Put on a P.E.S. suit', d: 'There\'s one right in front of you in the Receiving Bay. Without it you run out of air anywhere without oxygen.' },
           { w: ['2k6L3wBsEyA', 52], t: 'Turn on the power', d: 'Go through Tunnel 6 (cheaper, faster) or Tunnel 11 (has Stamin-Up) to the Power Room. The power switch is next to the tunnel entrances. Power brings oxygen and gravity back indoors.' },
-          { t: 'Go back to Pack-a-Punch', d: 'All players stand on the teleporter pad above the power switch (jump down onto it from the raised walkway beside it). You\'re sent to Area 51 to use Pack-a-Punch, and a teleporter there takes you back.', note: 'After teleporting back, the pad can\'t be used again until the next round.' },
+          { w: ['eS9Wq_pIxR8', 31], t: 'Go back to Pack-a-Punch', d: 'All players stand on the teleporter pad above the power switch (jump down onto it from the raised walkway beside it). You\'re sent to Area 51 to use Pack-a-Punch, and a teleporter there takes you back.', note: 'After teleporting back, the pad can\'t be used again until the next round.' },
         ],
       },
       {

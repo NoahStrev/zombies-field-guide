@@ -10,7 +10,7 @@
 
   ZG.addMap({
     game: 'bo7', id: 'totenreich', order: 4,
-    name: 'Totenreich', dlc: 'Season Three Reloaded', eeName: 'Totenreich quest',
+    name: 'Totenreich', dlc: 'Season Three Reloaded', eeName: 'Main quest: repair Tyr',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Jotunn Star', 'Giant robot Tyr', 'Dravakar boss'],
     blurb: 'A frozen Norwegian fjord village and Group 935 factory, watched over by the giant robot Tyr. Build the Jotunn Star, repair the Wundersignal, forge an Atomkraft core from three uranium rods, follow the runes and fight the ice Shadowsmith Dravakar.',

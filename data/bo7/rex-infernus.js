@@ -10,7 +10,7 @@
 
   ZG.addMap({
     game: 'bo7', id: 'rex-infernus', order: 6,
-    name: 'Rex Infernus', dlc: 'Season Five Reloaded', eeName: 'Rex Infernus quest',
+    name: 'Rex Infernus', dlc: 'Season Five Reloaded', eeName: 'Main quest: defeat the Warden',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Warden\'s Blight', 'Void Claw', 'The Warden'],
     blurb: 'The final Black Ops 7 map: the Warden\'s domain, with a temple for each of the four Shadowsmiths around the Nexus Forge. Build the bow Warden\'s Blight, upgrade the Void Claw grapple, cleanse all four temples and fight the Warden himself.',
@@ -43,7 +43,7 @@
 
       /* ------------------------------ WEAPONS ------------------------------ */
       {
-        id: 'void-claw', tab: 'weapons', type: 'Special weapon', name: 'Void Claw → Void Talon', short: 'Void Claw', color: 'green',
+        id: 'void-claw', tab: 'weapons', type: 'Special weapon', name: 'Void Claw → Void Talon', short: 'Void Claw', img: I + 'void-claw.webp', color: 'green',
         summary: 'A grapple from the glowing green pedestals once Pack-a-Punch is on. About 30 seconds of unlimited grapples per pickup, a few pickups per round per player. It also pulls items and orbs towards you. The quest upgrades it to the Void Talon.',
         video: EV,
         steps: [

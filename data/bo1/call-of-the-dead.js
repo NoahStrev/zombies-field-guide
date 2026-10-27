@@ -66,6 +66,12 @@
         ] }],
       },
 
+      {
+        id: 'layout', tab: 'start', type: 'Map layout', name: 'Map of the ship and lighthouse', short: 'Map',
+        summary: 'A labelled map showing every level of the lighthouse and ship, the perks, wall weapons, Pack-a-Punch spots and zipline routes.',
+        blocks: [{ imgs: [{ src: I + 'layout.webp', cap: 'Call of the Dead layout (fan-made, from the Call of Duty Wiki)', wide: true }] }],
+      },
+
       /* ------------------------------ WEAPONS ------------------------------ */
       {
         id: 'vr11', tab: 'weapons', type: 'Wonder weapon', name: 'V-R11', img: I + 'vr11.webp', color: 'green',

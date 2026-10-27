@@ -62,6 +62,17 @@
   const stripRefs = s => String(s || '').replace(/\{\{[a-z0-9-]+\|([^}]+)\}\}/g, '$1').replace(/\{\{([a-z0-9-]+)\}\}/g, '$1').replace(/\*\*/g, '');
   const gameName = id => (ZG.games.find(g => g.id === id) || {}).name || id;
 
+  // All the readable text inside a piece of guide data (for search), skipping ids, links and media.
+  const SKIP_KEYS = new Set(['id', 'tab', 'img', 'icon', 'src', 'w', 'color', 'needs', 'video', 'videos', 'imgs',
+    'steps', 'prep', 'upgrade', 'lookup', 'any', 'anyList', 'stepsOrder', 'prepOrder', 'order', 'short', 'cap']);
+  function plainText(v, out = []) {
+    if (typeof v === 'string') out.push(stripRefs(v));
+    else if (Array.isArray(v)) v.forEach(x => plainText(x, out));
+    else if (v && typeof v === 'object') for (const [k, x] of Object.entries(v)) if (!SKIP_KEYS.has(k)) plainText(x, out);
+    return out;
+  }
+  const stepText = st => plainText([st.d, st.list, st.ol, st.tip, st.warn, st.note, st.table, st.spots]).join(' ');
+
   function buildIndex() {
     const problems = [];
     for (const key of ZG.mapOrder) {
@@ -79,19 +90,22 @@
       // Same map name in two games (Origins): say which game in search results.
       const shared = ZG.mapOrder.some(k => k !== key && ZG.maps[k].name === map.name);
       const mapLabel = shared ? `${map.name} (${(ZG.games.find(g => g.id === game) || {}).short || game})` : map.name;
-      searchIndex.push({ rank: 0, title: map.name, sub: `${gameName(game)} · map`, href: `#/${game}/${map.id}`, text: `${map.name} ${map.dlc || ''}`.toLowerCase() });
+      // Each entry: `head` (title-level words) and `body` (the details, searched second and shown as a snippet).
+      const entry = (rank, title, sub, href, head, body) => searchIndex.push({
+        rank, title, sub, href, mapKey: key, head: head.toLowerCase(), body: body.replace(/\s+/g, ' ').trim(),
+        bodyLc: body.replace(/\s+/g, ' ').trim().toLowerCase(),
+      });
+      entry(0, map.name, `${gameName(game)} · map`, `#/${game}/${map.id}`, `${map.name} ${map.dlc || ''} ${map.eeName || ''} ${asArray(map.tags).join(' ')}`,
+        plainText([map.blurb, map.quick]).join(' '));
       for (const it of map.items) {
         const itemHref = `#/${game}/${map.id}/${it.tab}/item-${it.id}`;
         const partNames = asArray(it.parts).map(p => p.name).join(' ');
-        searchIndex.push({
-          rank: 1, title: it.name, sub: `${mapLabel} · ${it.type || tabLabel(it.tab)}`, href: itemHref,
-          text: `${it.name} ${it.aka || ''} ${it.type || ''} ${map.name} ${partNames} ${stripRefs(it.summary || '')}`.toLowerCase(),
-        });
+        entry(1, it.name, `${mapLabel} · ${it.type || tabLabel(it.tab)}`, itemHref,
+          `${it.name} ${it.aka || ''} ${it.type || ''} ${map.name} ${partNames}`,
+          plainText([it.summary, it.facts, it.blocks, it.spots, it.parts]).join(' '));
         if (it.upgrade) {
-          searchIndex.push({
-            rank: 1, title: it.upgrade.name, sub: `${mapLabel} · upgrade of ${it.name}`, href: itemHref,
-            text: `${it.upgrade.name} ${it.upgrade.aka || ''} ${it.name} ${map.name} upgrade`.toLowerCase(),
-          });
+          entry(1, it.upgrade.name, `${mapLabel} · upgrade of ${it.name}`, itemHref,
+            `${it.upgrade.name} ${it.upgrade.aka || ''} ${it.name} ${map.name} upgrade`, plainText([it.upgrade.summary, it.upgrade.blocks]).join(' '));
         }
         for (const [listKey, steps] of stepLists(it)) {
           const label = listKey === 'prep' ? 'Prep' : listKey === 'upgrade' ? 'Upgrade step' : 'Step';
@@ -100,12 +114,8 @@
               if (!map.itemById[need]) { problems.push(`${map.id}/${it.id}: unknown need "${need}"`); continue; }
               (map.backlinks[need] = map.backlinks[need] || []).push({ item: it, list: listKey, index: i, step: st });
             }
-            searchIndex.push({
-              rank: it.tab === 'easter-egg' ? 2 : 3,
-              title: `${label} ${i + 1}: ${stripRefs(st.t)}`, sub: `${mapLabel} · ${it.name}`,
-              href: `#/${game}/${map.id}/${it.tab}/${it.id}-${listKey}-${i + 1}`,
-              text: `${stripRefs(st.t)} ${it.name} ${map.name}`.toLowerCase(),
-            });
+            entry(it.tab === 'easter-egg' ? 2 : 3, `${label} ${i + 1}: ${stripRefs(st.t)}`, `${mapLabel} · ${it.name}`,
+              `#/${game}/${map.id}/${it.tab}/${it.id}-${listKey}-${i + 1}`, `${stripRefs(st.t)} ${it.name} ${map.name}`, stepText(st));
           });
         }
       }
@@ -530,15 +540,19 @@
   }
 
   /* ---------- home ---------- */
-  function homeMapRow(map) {
+  function homeMapRow(map, showGame) {
     const p = eeProgress(map);
     const started = p && p.done;
+    const finished = started && p.done === p.total;
     const pct = started ? Math.round(p.done / p.total * 100) : 0;
-    return `<a class="home-map" href="${hrefFor(map, started ? 'easter-egg' : 'start')}">
-      <span class="home-map-text"><span class="home-map-name">${esc(map.name)}</span><span class="home-map-ee">${esc(map.eeName || '')}</span></span>
-      ${started
-        ? `<span class="progress small"><span class="bar"><span style="width:${pct}%"></span></span><span class="count">${p.done}/${p.total}</span></span>`
-        : '<span class="home-map-status">Not started</span>'}
+    const sub = showGame ? `${gameName(map.game)} · ${map.eeName || ''}` : (map.eeName || '');
+    return `<a class="home-map${finished ? ' finished' : ''}" href="${hrefFor(map, started ? 'easter-egg' : 'start')}">
+      <span class="home-map-text"><span class="home-map-name">${esc(map.name)}</span><span class="home-map-ee">${esc(sub)}</span></span>
+      ${finished
+        ? '<span class="home-map-status done">Done</span>'
+        : started
+          ? `<span class="progress small"><span class="bar"><span style="width:${pct}%"></span></span><span class="count">${p.done}/${p.total}</span></span>`
+          : '<span class="home-map-status">Not started</span>'}
     </a>`;
   }
 
@@ -549,17 +563,24 @@
     const total = active.reduce((n, g) => n + ZG.mapsFor(g.id).length, 0);
     const [lg, lm, lt] = (store.get('zg-last') || '').split('/');
     const last = ZG.maps[`${lg}/${lm}`];
+    // Quests you've started but not finished, and how many you've finished.
+    const progress = ZG.mapOrder.map(k => ZG.maps[k]).filter(m => active.some(g => g.id === m.game))
+      .map(m => ({ m, p: eeProgress(m) })).filter(x => x.p && x.p.done);
+    const inProgress = progress.filter(x => x.p.done < x.p.total).map(x => x.m);
+    const finished = progress.length - inProgress.length;
     return `<section class="page-hero"><div class="wrap">
-        <p class="eyebrow">${active.length} games · ${total} maps</p>
+        <p class="eyebrow">${active.length} games · ${total} maps${finished ? ` · ${finished} quest${finished === 1 ? '' : 's'} finished` : ''}</p>
         <h1>Zombies Field Guide</h1>
-        <p class="lede">Part locations, wonder weapons and step-by-step easter eggs for every Call of Duty Zombies map with a main quest. Tick steps off as you go; your progress is saved.</p>
+        <p class="lede">Part locations, wonder weapons and step-by-step easter eggs for Call of Duty Zombies maps with a main quest, from Black Ops to Black Ops 7. Tick steps off as you go; your progress is saved.</p>
         ${last ? `<p><a class="btn" href="${hrefFor(last, lt || 'start')}">${ICON.arrow} Continue: ${esc(last.name)} · ${esc(tabLabel(lt || 'start'))}</a></p>` : ''}
       </div></section>
       <div class="wrap home">
+        ${inProgress.length ? `<section class="home-game home-progress"><h2 class="group-h">In progress<span class="home-count">${inProgress.length} quest${inProgress.length === 1 ? '' : 's'}</span></h2>
+            <div class="home-maps">${inProgress.map(m => homeMapRow(m, true)).join('')}</div></section>` : ''}
         ${active.map(g => {
           const maps = ZG.mapsFor(g.id);
           return `<section class="home-game"><h2 class="group-h"><a href="#/${g.id}">${esc(g.name)}</a><span class="home-count">${maps.length} maps</span></h2>
-            <div class="home-maps">${maps.map(homeMapRow).join('')}</div></section>`;
+            <div class="home-maps">${maps.map(m => homeMapRow(m)).join('')}</div></section>`;
         }).join('')}
         ${soon.length ? `<p class="home-soon">Not written yet: ${soon.map(g => esc(g.name)).join(', ')}.</p>` : ''}
         ${offlineHtml()}
@@ -578,7 +599,7 @@
     const saved = store.get('zg-offline');
     return `<section class="offline-box">
       <h2 class="group-h">Use it offline</h2>
-      <p>Pages you open are kept on this device automatically. To have every map ready with no signal, save everything once (about 13 MB of images). Videos still need internet.</p>
+      <p>Pages you open are kept on this device automatically. To have every map ready with no signal, save everything once (${allImageUrls().length} images, about ${Math.max(1, Math.round(allImageUrls().length * 0.046))} MB). Videos still need internet.</p>
       <p><button type="button" class="btn" id="save-offline">${saved ? 'Update the offline copy' : 'Save everything for offline'}</button></p>
       <p class="offline-status" id="offline-status" aria-live="polite">${saved ? `Last saved ${esc(saved)}.` : ''}</p>
     </section>`;
@@ -707,7 +728,23 @@
         </div>
         ${toc ? `<aside class="toc" aria-label="On this page"><div class="toc-inner"><div class="toc-h">On this page</div>${toc}</div></aside>` : ''}
       </div>
+      ${pagerHtml(map, game)}
       ${tabId === 'easter-egg' ? `<button type="button" class="fab" id="next-step">${ICON.down}<span>Next step</span></button>` : ''}`;
+  }
+
+  // Previous and next map in the same game, so you can move through a game without going back.
+  function pagerHtml(map, game) {
+    const maps = ZG.mapsFor(map.game);
+    const i = maps.indexOf(map);
+    const prev = maps[i - 1];
+    const next = maps[i + 1];
+    const link = (m, dir) => `<a class="pager-link ${dir}" href="#/${m.game}/${m.id}">` +
+      `<span class="pager-dir">${dir === 'prev' ? 'Previous map' : 'Next map'}</span><span class="pager-name">${esc(m.name)}</span></a>`;
+    return `<nav class="pager wrap" aria-label="More ${esc(game.name)} maps">
+      ${prev ? link(prev, 'prev') : '<span></span>'}
+      <a class="pager-all" href="#/${game.id}">All ${esc(game.name)} maps</a>
+      ${next ? link(next, 'next') : '<span></span>'}
+    </nav>`;
   }
 
   function renderNotFound() {
@@ -989,24 +1026,59 @@
   }
 
   /* ---------- search ---------- */
+  // A short piece of the details around the first matching word, with the words highlighted.
+  function snippet(e, words) {
+    const at = Math.min(...words.map(w => e.bodyLc.indexOf(w)).filter(i => i >= 0));
+    if (!isFinite(at)) return '';
+    const start = Math.max(0, e.body.lastIndexOf(' ', Math.max(0, at - 50)) + 1);
+    const end = Math.min(e.body.length, at + 90);
+    const raw = (start > 0 ? '…' : '') + e.body.slice(start, end) + (end < e.body.length ? '…' : '');
+    const re = new RegExp(`(${words.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+    return raw.split(re).map((part, i) => (i % 2 ? `<mark>${esc(part)}</mark>` : esc(part))).join('');
+  }
+
   function runSearch(q) {
     const box = $('#search-results');
     const words = q.toLowerCase().split(/\s+/).filter(Boolean);
     if (!words.length) { box.hidden = true; box.innerHTML = ''; return; }
     const phrase = words.join(' ');
-    // Within a rank, titles that match the query exactly come first, then titles that start with it.
+    const here = currentMap();
+    const hereKey = here ? mapKey(here) : null;
+    // Matches in titles come before matches in the details. Then: the map you're on, the kind of
+    // result (map, item, quest step, other step), and titles that equal or start with the query.
     const titleScore = e => {
       const t = e.title.toLowerCase();
       return t === phrase ? 0 : t.startsWith(phrase) ? 1 : t.includes(phrase) ? 2 : 3;
     };
-    const hits = searchIndex
-      .filter(e => words.every(w => e.text.includes(w)))
-      .sort((a, b) => a.rank - b.rank || titleScore(a) - titleScore(b))
-      .slice(0, 14);
+    const scored = [];
+    for (const e of searchIndex) {
+      let inHead = true;
+      let ok = true;
+      for (const w of words) {
+        if (e.head.includes(w)) continue;
+        inHead = false;
+        if (!e.bodyLc.includes(w)) { ok = false; break; }
+      }
+      if (ok) scored.push({ e, tier: inHead ? 0 : 1, here: e.mapKey === hereKey ? 0 : 1, ts: titleScore(e) });
+    }
+    scored.sort((a, b) => a.tier - b.tier || a.here - b.here || a.e.rank - b.e.rank || a.ts - b.ts);
+    const hits = scored.slice(0, 16);
     box.innerHTML = hits.length
-      ? hits.map(h => `<a class="search-hit" role="option" href="${h.href}"><strong>${esc(h.title)}</strong><span>${esc(h.sub)}</span></a>`).join('')
+      ? hits.map(({ e, tier }) => `<a class="search-hit" role="option" href="${e.href}"><strong>${esc(e.title)}</strong><span>${esc(e.sub)}</span>` +
+        `${tier ? `<span class="search-snip">${snippet(e, words)}</span>` : ''}</a>`).join('') +
+        (scored.length > hits.length ? `<div class="search-more">${scored.length - hits.length} more. Add another word to narrow it down.</div>` : '')
       : '<div class="search-empty">No matches</div>';
     box.hidden = false;
+  }
+
+  // Up and down arrows move through the results; Enter opens the highlighted one.
+  function moveSearch(dir) {
+    const hits = $$('#search-results .search-hit');
+    if (!hits.length) return;
+    const cur = hits.findIndex(h => h.classList.contains('kbd'));
+    const next = cur < 0 ? (dir > 0 ? 0 : hits.length - 1) : (cur + dir + hits.length) % hits.length;
+    hits.forEach((h, i) => h.classList.toggle('kbd', i === next));
+    hits[next].scrollIntoView({ block: 'nearest' });
   }
 
   /* ---------- theme ---------- */
@@ -1174,9 +1246,12 @@
     input.addEventListener('input', () => runSearch(input.value));
     input.addEventListener('focus', () => { if (input.value) runSearch(input.value); });
     input.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
-        const first = $('#search-results .search-hit');
-        if (first) first.click();
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        moveSearch(e.key === 'ArrowDown' ? 1 : -1);
+      } else if (e.key === 'Enter') {
+        const pick = $('#search-results .search-hit.kbd') || $('#search-results .search-hit');
+        if (pick) pick.click();
       }
     });
 

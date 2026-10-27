@@ -10,7 +10,7 @@
 
   ZG.addMap({
     game: 'bo7', id: 'astra-malorum', order: 2,
-    name: 'Astra Malorum', dlc: 'Season One', eeName: 'Astra Malorum quest',
+    name: 'Astra Malorum', dlc: 'Season One', eeName: 'Main quest: free the celestial Shadowsmith',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['LGM-1', 'O.S.C.A.R.', 'Mars'],
     blurb: 'Silas Thurston\'s observatory, haunted by the robot O.S.C.A.R. Kill O.S.C.A.R. with three traps for the LGM-1, steal Thurston\'s brain to power a teleporter to Mars, and fight the Shadowsmith Caltheris in a Martian temple.',

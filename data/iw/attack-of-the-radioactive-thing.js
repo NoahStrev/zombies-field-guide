@@ -53,10 +53,10 @@
         id: 'double-pap', tab: 'start', type: 'Upgrade', name: 'Double Pack-a-Punch (Alien Fuses)', short: 'Double PaP',
         summary: 'The fuses don\'t carry over. Find them in the hidden RV, charge them with the Power Station trap and install them.',
         steps: [
-          { t: 'Press the button in the projection room, then leave', d: 'You come out inside an RV in the trailer park. Crowbar the shelf to take the Alien Fuses.', needs: ['crowbar'] },
-          { t: 'Fill Elvira\'s vial again with Cleaver kills', needs: ['cleaver'] },
-          { t: 'Charge the fuses in the Power Station', d: 'Put them down by the entrance closest to the Magic Wheel, run the Power Station\'s electric trap, then pick them up.' },
-          { t: 'Install them in Pack-a-Punch', d: 'Second upgrades now cost 10,000.' },
+          { w: ['MoVjGghPiZw', 32], t: 'Press the button in the projection room, then leave', d: 'You come out inside an RV in the trailer park. Crowbar the shelf to take the Alien Fuses.', needs: ['crowbar'] },
+          { w: ['MoVjGghPiZw', 64], t: 'Fill Elvira\'s vial again with Cleaver kills', needs: ['cleaver'] },
+          { w: ['MoVjGghPiZw', 96], t: 'Charge the fuses in the Power Station', d: 'Put them down by the entrance closest to the Magic Wheel, run the Power Station\'s electric trap, then pick them up.' },
+          { w: ['MoVjGghPiZw', 128], t: 'Install them in Pack-a-Punch', d: 'Second upgrades now cost 10,000.' },
         ],
       },
 
@@ -164,6 +164,13 @@
           { w: 1623, t: 'Run the laser maze and reach the bomb before the timer ends', d: 'Crouch under the first laser, then jump and slide through. The right-hand path is easiest. Everyone must interact with the bomb in time.' },
           { w: 1638, t: 'Inside the Radioactive Thing, enter the nuclear codes', d: 'Same as the typewriter. Get it right and the ending plays; get it wrong and you redo the acid and laser part.' },
         ],
+      },
+
+      /* ------------------------------ SIDE ------------------------------ */
+      {
+        id: 'elvira-code', tab: 'side', type: 'Unlockable character', name: 'Play as Elvira',
+        summary: 'Once you\'ve finished Soul-Less, quickly press **Down, Right, Down, Left, Up, Right** in the Attack of the Radioactive Thing pre-game lobby. You start as Elvira.',
+        facts: [['Needs', 'Soul-Less completed'], ['Reward', '"Mistress of the Dark" achievement']],
       },
     ],
   });

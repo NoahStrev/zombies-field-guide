@@ -11,7 +11,7 @@
 
   ZG.addMap({
     game: 'bo7', id: 'paradox-junction', order: 3,
-    name: 'Paradox Junction', dlc: 'Season Two Reloaded', eeName: 'Paradox Junction quest',
+    name: 'Paradox Junction', dlc: 'Season Two Reloaded', eeName: 'Main quest: kill the Dark Heart',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Blundergat / Sundergat', 'Two Nuketowns', 'Dark Heart boss'],
     blurb: 'Nuketown in two times at once: the town before the bomb and the destroyed town after, with teleporters between them. Build and upgrade the Blundergat, play three children\'s games with the ghostly Twins and destroy the Dark Heart.',
@@ -42,7 +42,7 @@
 
       /* ------------------------------ WEAPONS ------------------------------ */
       {
-        id: 'blundergat', tab: 'weapons', type: 'Wonder weapon', name: 'Blundergat → Sundergat', short: 'Blundergat', color: 'fire',
+        id: 'blundergat', tab: 'weapons', type: 'Wonder weapon', name: 'Blundergat → Sundergat', short: 'Blundergat', img: I + 'blundergat.webp', color: 'fire',
         summary: 'A wonder shotgun. Build it from four parts across both towns, then feed three Tortured zombies to its bench to upgrade it into the Sundergat, which the quest needs.',
         facts: [['Build at', 'The bench in the destroyed truck trailer (melee it to open)'], ['Upgrade', 'Sundergat']],
         video: BV,
@@ -53,7 +53,7 @@
           { w: 138, any: 'Parts in any order', t: 'Sealant: upstairs in the yellow house (the past)', d: 'Crouch at the bookcase by the window; bottom shelf, left.' },
           { w: 154, t: 'Melee the bench in the destroyed truck trailer and build it' },
           { w: 169, t: 'Kill three Tortured zombies at the bench with the Blundergat', d: 'After a few rounds in the destroyed town, a Tortured zombie spins in a fire tornado (green house yard, yellow house yard, or by the Trinity Ave alley). Walk up to free it and lead it to the bench; other zombies nearby drain it, so do it at the end of a round. The third one is a Tortured Mimic.' },
-          { w: 234, t: 'Upgrade it: melee the bench in the past, put the Blundergat in, collect the Sundergat in the destroyed town' },
+          { w: 234, t: 'Upgrade it: melee the bench in the past, put the Blundergat in, collect the Sundergat in the destroyed town', imgs: [{ src: I + 'sundergat.webp', cap: 'The Sundergat' }] },
         ],
       },
 

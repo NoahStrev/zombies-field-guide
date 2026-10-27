@@ -81,6 +81,12 @@
         ],
       },
 
+      {
+        id: 'layout', tab: 'start', type: 'Map layout', name: 'Map of Morg City', short: 'Map',
+        summary: 'The in-game wall map. The Junction is in the middle, with the Footlight District at the top, the Canal District to the left and the Waterfront District to the right. The four drawn symbols mark the ritual sites.',
+        blocks: [{ imgs: [{ src: I + 'layout.webp', cap: 'Morg City wall map', wide: true }] }],
+      },
+
       /* ------------------------------ PARTS ------------------------------ */
       {
         id: 'rocket-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Rocket Shield', img: I + 'rocket-shield.webp',
@@ -179,15 +185,16 @@
         id: 'lil-arnie', tab: 'weapons', type: 'Tactical upgrade', name: 'Li\'l Arnie', img: I + 'lil-arnie.webp', color: 'green',
         summary: 'A Mystery Box tactical that summons a little Apothicon to maul nearby zombies. It can be upgraded after the rituals.',
         stepsTitle: 'Upgrade steps',
+        video: { id: 'H-UEEixc3Bs', title: 'Upgraded Li\'l Arnies', ch: 'MrDalekJD', len: '4:26' },
         steps: [
-          { t: 'Finish all the rituals', needs: ['rituals-pap'] },
-          { t: 'Kill 100 zombies with Li\'l Arnies' },
-          { anyList: 'Items in any order', t: 'Throw a Li\'l Arnie at three items so they vanish', list: [
+          { w: 31, t: 'Finish all the rituals', needs: ['rituals-pap'] },
+          { w: 47, t: 'Kill 100 zombies with Li\'l Arnies' },
+          { w: 109, anyList: 'Items in any order', t: 'Throw a Li\'l Arnie at three items so they vanish', list: [
             'Top hat on a mannequin\'s head in Nero\'s lair.',
             'Bow tie on a shelf in the boxing gym (The Anvil).',
             'Walking cane on a sofa on the first floor of the Ruby Rabbit.',
           ] },
-          { t: 'Throw one at the ritual stand on the Black Lace stage', d: 'The little creature dances with four Gateworms. When the song ends, your Li\'l Arnies are upgraded: they last longer, kill faster and survive more Margwa hits.' },
+          { w: 154, t: 'Throw one at the ritual stand on the Black Lace stage', d: 'The little creature dances with four Gateworms. When the song ends, your Li\'l Arnies are upgraded: they last longer, kill faster and survive more Margwa hits.' },
         ],
       },
 

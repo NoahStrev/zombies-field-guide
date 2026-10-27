@@ -1,9 +1,9 @@
 /* Origins — Zombies Chronicles remaster (originally Black Ops II) */
 (() => {
   const I = 'assets/img/bo3/ori/';
-  const staffEnd = (color, pedestal, kills) => ([
-    { t: `Turn the Excavation Site rings ${color}`, d: `In the lower levels of the Excavation Site, pull the four levers (two on the walkway, two on the wooden scaffolding) to rotate the floating rings until all four ring lights are ${color}. Then shoot the ${color} orb in the middle with the staff — it glows and flies up.` },
-    { t: `Charge it on the ${pedestal} pedestal in the Crazy Place`, d: `Place the staff on its pedestal in the Crazy Place and kill about ${kills} zombies there. Samantha mentions the element\'s power, the staff icon gets a red outline, and you can pick up the upgraded staff.`, note: 'Lose an upgraded staff and it goes back to its Excavation Site pedestal still upgraded.' },
+  const staffEnd = (color, pedestal, kills, wRings, wCharge) => ([
+    { w: wRings, t: `Turn the Excavation Site rings ${color}`, d: `In the lower levels of the Excavation Site, pull the four levers (two on the walkway, two on the wooden scaffolding) to rotate the floating rings until all four ring lights are ${color}. Then shoot the ${color} orb in the middle with the staff — it glows and flies up.` },
+    { w: wCharge, t: `Charge it on the ${pedestal} pedestal in the Crazy Place`, d: `Place the staff on its pedestal in the Crazy Place and kill about ${kills} zombies there. Samantha mentions the element\'s power, the staff icon gets a red outline, and you can pick up the upgraded staff.`, note: 'Lose an upgraded staff and it goes back to its Excavation Site pedestal still upgraded.' },
   ]);
   ZG.addMap({
     game: 'bo3', id: 'origins', order: 10, group: 'chronicles',
@@ -132,18 +132,18 @@
         stepsTitle: 'Build it',
         steps: [
           { w: ['3d-l8B48Q34', 491], any: 'Get the three parts and the record in any order', t: 'Part 1: the Generator 6 reward box', needs: ['generators'], d: 'Once Generator 6 is on, the box next to it opens with a part.', imgs: [{ src: I + 'fire-part-box.webp', cap: 'The box at Generator 6' }] },
-          { any: 'Get the three parts and the record in any order', t: 'Part 2: shoot down the burning plane', d: 'An orange-glowing plane appears the round after you open the path to the church. Shoot it down; the part falls by the soul box closest to the Excavation Site, on the small walkway between two giant footprints.', imgs: [{ src: I + 'fire-part-plane.webp', cap: 'Where the plane\'s part lands' }] },
-          { any: 'Get the three parts and the record in any order', t: 'Part 3: kill the round-8 Panzer Soldat', d: 'The Panzer that comes on round 8 drops the last part.' },
-          { any: 'Get the three parts and the record in any order', t: 'Find the red record', d: 'Near the church: on boxes between the tank and the stairs up, on the church benches across from the basin, or on boxes next to Generator 6.' },
-          { t: 'Get the fire gem from the Crazy Place', needs: ['crazy-place'], d: 'Use the gramophone and red record at the Fire tunnel (near spawn toward Generator 3). Take the gem from the pedestal that opens with a red glow.' },
-          { t: 'Build it on the red pedestal', d: 'In the lowest level of the Excavation Site.' },
+          { w: ['cLtA6ItrbIc', 200], any: 'Get the three parts and the record in any order', t: 'Part 2: shoot down the burning plane', d: 'An orange-glowing plane appears the round after you open the path to the church. Shoot it down; the part falls by the soul box closest to the Excavation Site, on the small walkway between two giant footprints.', imgs: [{ src: I + 'fire-part-plane.webp', cap: 'Where the plane\'s part lands' }] },
+          { w: ['cLtA6ItrbIc', 232], any: 'Get the three parts and the record in any order', t: 'Part 3: kill the round-8 Panzer Soldat', d: 'The Panzer that comes on round 8 drops the last part.' },
+          { w: ['cLtA6ItrbIc', 249], any: 'Get the three parts and the record in any order', t: 'Find the red record', d: 'Near the church: on boxes between the tank and the stairs up, on the church benches across from the basin, or on boxes next to Generator 6.' },
+          { w: ['cLtA6ItrbIc', 311], t: 'Get the fire gem from the Crazy Place', needs: ['crazy-place'], d: 'Use the gramophone and red record at the Fire tunnel (near spawn toward Generator 3). Take the gem from the pedestal that opens with a red glow.' },
+          { w: ['cLtA6ItrbIc', 343], t: 'Build it on the red pedestal', d: 'In the lowest level of the Excavation Site.' },
         ],
         upgrade: {
           name: 'Kagutsuchi\'s Blood', summary: 'Bigger blasts, a charged shot, a melee swipe and a revive shot (Sekhmet\'s Vigor).',
           steps: [
             { w: ['3d-l8B48Q34', 569], t: 'Fill the four cauldrons in the Crazy Place', d: 'In the fire section, kill about 30 zombies standing on the metal grates with the Fire Staff. They burst into black smoke that fills the cauldrons.', tip: 'These kills also count toward the other staffs\' final step.' },
-            { t: 'Light the matching church torches', d: 'Upstairs in the church, four of the symbols on the far wall are lit. Each is a number written in base 3 (use the key below). In the basement, seven torches have a number under them (the 4 is a bloodstain). Shoot the four torches whose numbers match. A beam of light shoots up from the Excavation Site when it\'s right.', imgs: [{ src: I + 'fire-key.webp', cap: 'Symbol → number key', wide: true }, { src: I + 'fire-torches.webp', cap: 'Some of the numbered torches' }], tip: '4 is always one of the numbers.' },
-            ...staffEnd('red', 'red', 20),
+            { w: 436, t: 'Light the matching church torches', d: 'Upstairs in the church, four of the symbols on the far wall are lit. Each is a number written in base 3 (use the key below). In the basement, seven torches have a number under them (the 4 is a bloodstain). Shoot the four torches whose numbers match. A beam of light shoots up from the Excavation Site when it\'s right.', imgs: [{ src: I + 'fire-key.webp', cap: 'Symbol → number key', wide: true }, { src: I + 'fire-torches.webp', cap: 'Some of the numbered torches' }], tip: '4 is always one of the numbers.' },
+            ...staffEnd('red', 'red', 20, 517, 550),
           ],
           video: { id: 'cLtA6ItrbIc', title: 'How to upgrade the Fire Staff', ch: 'CrashPower', len: '12:44' },
         },
@@ -154,20 +154,20 @@
         stepsTitle: 'Build it',
         steps: [
           { w: ['3d-l8B48Q34', 169], any: 'Either order', t: 'Dig up the three parts on a snowy round', needs: ['zombie-blood'], d: 'With a shovel, dig the dirt piles while it\'s snowing (usually rounds 2–4, round 10, and randomly later). One part is in the starting area (spawn to workshop, either side), one in the middle of the map and one near the church.', imgs: [{ src: I + 'ice-part.webp', cap: 'An Ice Staff part' }] },
-          { any: 'Either order', t: 'Find the blue record', d: 'On a shelf inside the tank station by Generator 2.' },
-          { t: 'Get the ice gem from the Crazy Place', needs: ['crazy-place'], d: 'Gramophone + blue record at the Ice tunnel by the church.' },
-          { t: 'Build it on the blue pedestal', d: 'Lowest level of the Excavation Site.' },
+          { w: ['QwX-Y3qTga0', 128], any: 'Either order', t: 'Find the blue record', d: 'On a shelf inside the tank station by Generator 2.' },
+          { w: ['QwX-Y3qTga0', 161], t: 'Get the ice gem from the Crazy Place', needs: ['crazy-place'], d: 'Gramophone + blue record at the Ice tunnel by the church.' },
+          { w: ['QwX-Y3qTga0', 334], t: 'Build it on the blue pedestal', d: 'Lowest level of the Excavation Site.' },
         ],
         upgrade: {
           name: 'Ull\'s Arrow', img: I + 'ulls-arrow.webp', summary: 'Wider freeze, a blizzard charged shot, melee swipe and a revive shot.',
           steps: [
             { w: ['3d-l8B48Q34', 220], t: 'Flip the six floating tablets in the Crazy Place', d: 'Above the ice portal, six stone tablets show numbers in one notation; the ice panel on the wall shows a number in dots. Shoot the tablet matching the wall pattern; it flips. Do all six. A wrong shot flips them all back.', imgs: [{ src: I + 'ice-key.webp', cap: 'Wall pattern → tablet key', wide: true }] },
-            { anyList: 'Tombstones in any order', t: 'Freeze and break three tombstones', d: 'Each has water running out of it. Freeze it with the Ice Staff, then shoot it with a normal gun.', spots: [
+            { w: 430, anyList: 'Tombstones in any order', t: 'Freeze and break three tombstones', d: 'Each has water running out of it. Freeze it with the Ice Staff, then shoot it with a normal gun.', spots: [
               { label: 'Grave 1', text: 'Right of the MP40/KN-44 wall-buy near Generator 4.', imgs: [{ src: I + 'ice-tomb-1.webp', cap: 'Tombstone 1' }] },
               { label: 'Grave 2', text: 'Between the Excavation Site and a giant footprint, near Generator 4.', imgs: [{ src: I + 'ice-tomb-2.webp', cap: 'Tombstone 2' }] },
               { label: 'Grave 3', text: 'On the small hill to the right of the bunker\'s back exit near Generator 2, by the fallen robot\'s hand.', imgs: [{ src: I + 'ice-tomb-3.webp', cap: 'Tombstone 3' }] },
             ] },
-            ...staffEnd('blue', 'blue', 20),
+            ...staffEnd('blue', 'blue', 20, 493, 524),
           ],
           video: { id: 'QwX-Y3qTga0', title: 'Origins Ultimate Ice Staff Build & Upgrade Guide', ch: 'MrRoflWaffles', len: '12:35' },
         },
@@ -182,20 +182,20 @@
         stepsTitle: 'Build it',
         steps: [
           { w: ['3d-l8B48Q34', 45], any: 'Either order', t: 'Get a part from each giant robot\'s head', d: 'Shoot the robot foot that has lights under it and let it step on you — you\'re carried up into the head, where the part is. Each of the three robots (Freya, Odin, Thor) holds one. Only one foot is lit per pass, chosen at random.', imgs: [{ src: I + 'wind-part.webp', cap: 'A Wind Staff part in a robot head' }] },
-          { any: 'Either order', t: 'Find the yellow record', d: 'Near Generator 5: on the broken wall right of Stamin-Up, on boxes by the Lightning tunnel entrance, or on the table just inside the Lightning tunnel.' },
-          { t: 'Get the wind gem from the Crazy Place', needs: ['crazy-place'], d: 'Gramophone + yellow record at the Wind tunnel near Generator 4.' },
-          { t: 'Build it on the yellow pedestal', d: 'Lowest level of the Excavation Site.' },
+          { w: ['e2aTMTxM06Y', 116], any: 'Either order', t: 'Find the yellow record', d: 'Near Generator 5: on the broken wall right of Stamin-Up, on boxes by the Lightning tunnel entrance, or on the table just inside the Lightning tunnel.' },
+          { w: ['e2aTMTxM06Y', 131], t: 'Get the wind gem from the Crazy Place', needs: ['crazy-place'], d: 'Gramophone + yellow record at the Wind tunnel near Generator 4.' },
+          { w: ['e2aTMTxM06Y', 210], t: 'Build it on the yellow pedestal', d: 'Lowest level of the Excavation Site.' },
         ],
         upgrade: {
           name: 'Boreas\' Fury', img: I + 'boreas.webp', summary: 'Longer range, a tornado charged shot, melee swipe and a revive shot.',
           steps: [
             { w: ['3d-l8B48Q34', 101], t: 'Align the four rings above the wind portal', d: 'In the Crazy Place, shoot each ring with the Wind Staff to rotate it until its symbols add up to the totals shown on the pillars. The answer is always the same — use the key.', imgs: [{ src: I + 'wind-key.webp', cap: 'Ring solution', wide: true }], tip: 'Stand between the rocks to the right of the portal for a good view.' },
-            { anyList: 'Balls in any order', t: 'Point three smoking stone balls at the Excavation Site', d: 'Shoot each ball so its smoke drifts toward the Excavation Site.', spots: [
+            { w: 321, anyList: 'Balls in any order', t: 'Point three smoking stone balls at the Excavation Site', d: 'Shoot each ball so its smoke drifts toward the Excavation Site.', spots: [
               { label: 'Ball 1', text: 'At Generator 4.', imgs: [{ src: I + 'wind-ball-1.webp', cap: 'Ball 1' }] },
               { label: 'Ball 2', text: 'Next to the tank\'s return path — reach it by walking back along the tank path from the church (or jumping off the returning tank).', imgs: [{ src: I + 'wind-ball-2.webp', cap: 'Ball 2' }] },
               { label: 'Ball 3', text: 'Near Generator 5.', imgs: [{ src: I + 'wind-ball-3.webp', cap: 'Ball 3' }] },
             ] },
-            ...staffEnd('yellow', 'yellow', 20),
+            ...staffEnd('yellow', 'yellow', 20, 400, 417),
           ],
           video: { id: 'e2aTMTxM06Y', title: 'Wind Staff — How to Build and Upgrade', ch: 'CrashPower', len: '10:07' },
         },
@@ -210,15 +210,15 @@
             { label: 'Part 2', text: 'Tank station → church: cut-off wooden scaffolding on the left joined to the Excavation Site; the part is in a small hole.', imgs: [{ src: I + 'lightning-jump-2.webp', cap: 'Jump spot 2' }] },
             { label: 'Part 3', text: 'Tank station → church: a dirt path on the right just before the church, leading to the church\'s upper level.', imgs: [{ src: I + 'lightning-jump-3.webp', cap: 'Jump spot 3' }] },
           ], tip: 'Getting both return-trip parts in one ride is very hard solo. Plan two rides.' },
-          { any: 'Either order', t: 'Find the purple record', d: 'Near Generator 4: inside the tunnel by the Crazy Place gateway, on the wagon on the left as you enter the tunnel, or on the table next to the Wunderfizz.' },
-          { t: 'Get the lightning gem from the Crazy Place', needs: ['crazy-place'], d: 'Gramophone + purple record at the Lightning tunnel near Generator 5.' },
-          { t: 'Build it on the purple pedestal', d: 'Lowest level of the Excavation Site.' },
+          { w: ['2wxVU2_J5aQ', 94], any: 'Either order', t: 'Find the purple record', d: 'Near Generator 4: inside the tunnel by the Crazy Place gateway, on the wagon on the left as you enter the tunnel, or on the table next to the Wunderfizz.' },
+          { w: ['2wxVU2_J5aQ', 141], t: 'Get the lightning gem from the Crazy Place', needs: ['crazy-place'], d: 'Gramophone + purple record at the Lightning tunnel near Generator 5.' },
+          { w: ['2wxVU2_J5aQ', 283], t: 'Build it on the purple pedestal', d: 'Lowest level of the Excavation Site.' },
         ],
         upgrade: {
           name: 'Kimat\'s Bite', summary: 'Longer chains, an electric-ball charged shot, melee swipe and a revive shot.',
           steps: [
             { w: ['3d-l8B48Q34', 378], t: 'Play three chords on the Crazy Place keys', d: 'Near the lightning portal, purple triangles on the wall act as a keyboard. Only use the bottom row; number its seven keys 1–7 from left to right and shoot: **1-3-6**, then **3-5-7**, then **2-4-6**.', imgs: [{ src: I + 'lightning-keys.webp', cap: 'Keyboard reference', wide: true }] },
-            { t: 'Turn seven panel knobs, in order', d: 'After the chords, the next panel sparks until set correctly (one at a time, in this order):', ol: [
+            { w: 420, t: 'Turn seven panel knobs, in order', d: 'After the chords, the next panel sparks until set correctly (one at a time, in this order):', ol: [
               'Right next to Generator 5 → point down.',
               'Church basement, next to the torch numbered 3 → point right.',
               'Church upstairs, next to the repairable window → point up.',
@@ -227,23 +227,24 @@
               'Tank station by Generator 2, left of the back door → point down.',
               'Behind the Excavation Site, by the path to the church → point up.',
             ], tip: 'You can pre-set knobs any time you walk past them, as long as you remember how far each was turned.' },
-            ...staffEnd('purple', 'purple', 25),
+            ...staffEnd('purple', 'purple', 25, 576, 621),
           ],
           video: { id: '2wxVU2_J5aQ', title: 'Lightning Staff — Build and Upgrade (Kimat\'s Bite)', ch: 'CrashPower', len: '13:28' },
         },
       },
       {
         id: 'g-strike', tab: 'weapons', type: 'Wonder weapon · Grenade', name: 'G-Strike', img: I + 'g-strike.webp', color: 'red',
+        video: { id: 'aSbOTvjzNzY', title: 'Origins G-Strike guide', ch: 'JustGamingFella', len: '2:12' },
         summary: 'A beacon that calls a giant robot\'s missile barrage. Each player earns their own. Needed for step 3 of the easter egg — get it early, it\'s all melee kills.',
         steps: [
-          { t: 'Take a dirty stone tablet from the tank station', d: 'One of four tablets at the tank station by Generator 2 (no prompt — just press interact).' },
-          { t: 'Cleanse it in the church\'s holy water', d: 'Put it in the water basin in the church and kill 20 zombies near it with melee.' },
-          { t: 'Carry it back without touching mud', d: 'Take the clean tablet back to the tank station table. Step in mud and it gets dirty — re-dip it in the basin (no extra kills).' },
-          { t: 'Melee 20 more zombies at the tank station', d: 'The G-Strike appears.' },
+          { w: 0, t: 'Take a dirty stone tablet from the tank station', d: 'One of four tablets at the tank station by Generator 2 (no prompt — just press interact).' },
+          { w: 15, t: 'Cleanse it in the church\'s holy water', d: 'Put it in the water basin in the church and kill 20 zombies near it with melee.' },
+          { w: 46, t: 'Carry it back without touching mud', d: 'Take the clean tablet back to the tank station table. Step in mud and it gets dirty — re-dip it in the basin (no extra kills).' },
+          { w: 110, t: 'Melee 20 more zombies at the tank station', d: 'The G-Strike appears.' },
         ],
       },
       {
-        id: 'one-inch-punch', tab: 'weapons', type: 'Wonder weapon · Melee', name: 'One Inch Punch', color: 'gold',
+        id: 'one-inch-punch', tab: 'weapons', type: 'Wonder weapon · Melee', name: 'One Inch Punch', img: I + 'one-inch-punch.webp', color: 'gold',
         summary: 'Replaces your knife with a punch that one-hits zombies until about round 19. Every player needs it (and its Iron Fist upgrade) for the easter egg.',
         steps: [
           { anyList: 'Chests in any order', t: 'Fill the four soul chests (30 kills each)', d: 'Each sits in a giant footprint. If a robot steps on an unfinished chest, it resets.', list: [

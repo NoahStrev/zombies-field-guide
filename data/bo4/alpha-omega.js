@@ -90,7 +90,7 @@
 
       /* ------------------------------ WEAPONS ------------------------------ */
       {
-        id: 'galvaknuckles', tab: 'weapons', type: 'Melee weapon', name: 'Galvaknuckles', color: 'lightning',
+        id: 'galvaknuckles', tab: 'weapons', type: 'Melee weapon', name: 'Galvaknuckles', img: I + 'galvaknuckles.webp', color: 'lightning',
         summary: 'Electric brass knuckles. Needed for the broadcast step and great for knocking the Avogadro into a ball at the end.',
         facts: [['Cost', '5,000 points'], ['Where', 'Inside the red truck in the Cul-de-sac']],
       },

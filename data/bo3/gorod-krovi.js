@@ -25,10 +25,10 @@
         summary: 'Turn on the power, defend three Groph Pods for the Dragon Network Controller, then ride a dragon to the Hatchery.',
         steps: [
           { w: ['EDLnCiwz24w', 7], t: 'Turn on the power in Dragon Command', d: 'Work your way to the Dragon Command building and turn the power on.' },
-          { t: 'Talk to S.O.P.H.I.A.', d: 'Press the button under her centre console (it flashes green, then red). Zombies now start dropping Code Cylinders.' },
+          { w: ['EDLnCiwz24w', 17], t: 'Talk to S.O.P.H.I.A.', d: 'Press the button under her centre console (it flashes green, then red). Zombies now start dropping Code Cylinders.' },
           { w: ['EDLnCiwz24w', 20], anyList: 'Pods in any order', t: 'Defend three Groph Pods', d: 'Each Code Cylinder matches a console in Dragon Command, the Supply Depot or the Tank Factory. Insert it and a Groph Pod crashes somewhere on the map (green beam in the sky). Kill 15 zombies close to the pod before they wreck it; it opens with a module. Get all three.', warn: 'Zombies start attacking the pod right away, even far from you. Lose one and you need another Code Cylinder.', tip: 'Buy Stamin-Up before calling pods, especially solo.' },
           { t: 'Install the modules in the Operations Bunker', d: 'Put all three into the Dragon Network console in the middle of the room. This is the Dragon Network Controller.' },
-          { t: 'Ride the dragon to Pack-a-Punch', d: 'Call the dragon (500 points) at the platform in Dragon Command, the Supply Depot or the Tank Factory and hold interact to climb on. It flies you to the Hatchery, where Pack-a-Punch is on the ground floor. The sewer in the Hatchery basement takes you back to Belinski Square.' },
+          { w: ['EDLnCiwz24w', 33], t: 'Ride the dragon to Pack-a-Punch', d: 'Call the dragon (500 points) at the platform in Dragon Command, the Supply Depot or the Tank Factory and hold interact to climb on. It flies you to the Hatchery, where Pack-a-Punch is on the ground floor. The sewer in the Hatchery basement takes you back to Belinski Square.' },
         ],
       },
       {
@@ -113,15 +113,16 @@
         ],
         upgrade: {
           name: 'Draconite Controller', summary: 'Bigger blast and more damage. Progress is shared in co-op.',
+          video: { id: '1yAdvnjykT0', title: 'Dragon Strike upgrade (Draconite Controller)', ch: 'MrRoflWaffles', len: '6:54' },
           steps: [
-            { t: 'Kill about 40 zombies with Dragon Strikes', d: 'A loud roar plays when done.' },
-            { anyList: 'Flags in any order', t: 'Mark the red Iron Cross flags', d: 'Solo: one flag (random) remains of four; co-op: more. Mark each remaining flag with the Dragon Strike:', list: [
+            { w: 31, t: 'Kill about 40 zombies with Dragon Strikes', d: 'A loud roar plays when done.' },
+            { w: 79, anyList: 'Flags in any order', t: 'Mark the red Iron Cross flags', d: 'Solo: one flag (random) remains of four; co-op: more. Mark each remaining flag with the Dragon Strike:', list: [
               'Supply Depot: stand on the left dragon-platform stairs and look left.',
               'Dragon Command: left dragon-platform stairs, look straight ahead at ground level (half behind rubble).',
               'Tank Factory: top of the stairs up to Double Tap, look out of bounds near the hanging tank.',
               'Belinski Square: corner by Quick Revive behind the gushing water pipe, look out of bounds.',
             ] },
-            { t: 'Redo the Hatchery lockdown, using Dragon Strikes', d: 'Everyone interacts with the crystal again. Fire the Dragon Strike out of the windows as often as you can each wave (it recharges every 15–20 seconds here). Then take the Draconite Controller from the crystal.' },
+            { w: 223, t: 'Redo the Hatchery lockdown, using Dragon Strikes', d: 'Everyone interacts with the crystal again. Fire the Dragon Strike out of the windows as often as you can each wave (it recharges every 15–20 seconds here). Then take the Draconite Controller from the crystal.' },
           ],
         },
       },

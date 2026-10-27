@@ -61,22 +61,23 @@
         ],
         blocks: [{ note: 'Build it at the workbench right in front of you when you come back up those stairs (near the Poop Deck). Repairs cost points at the bench.' }],
         upgrade: {
-          name: 'Svalinn Guard', summary: 'A frost-covered shield: tougher, more damage, and its shots get the Cryofreeze effect. Long, but fun: rebuild a skeleton, launch his car with fireworks, and an iceberg chunk upgrades your shield.',
+          name: 'Svalinn Guard', summary: 'A frost-covered shield: tougher, more damage, and its shots get the Cryofreeze effect. Turn on the Sentinel Artifact first. Long, but fun: rebuild a skeleton, launch his car with fireworks, and an iceberg chunk upgrades your shield.',
+          video: { id: 'EbGCRHmN6So', title: 'Voyage of Despair elemental shield upgrade', ch: 'Fast Guides Glitch', len: '4:13' },
           steps: [
-            { t: 'Knock the code breaker off the Mail Room safe', d: 'Melee the code breaker on the big safe in the Mail Rooms with the shield. It falls off; pick it up.' },
-            { t: 'Learn the four skeleton parts and their codes', d: 'Each bone has a 4-digit code written next to it:', list: [
+            { w: 130, t: 'Knock the code breaker off the Mail Room safe', d: 'Melee the code breaker on the big safe in the Mail Rooms with the shield. It falls off; pick it up.' },
+            { w: 78, t: 'Learn the four skeleton parts and their codes', d: 'Each bone has a 4-digit code written next to it:', list: [
               'Skull: on a table in the small room just above the Mail Rooms. The code is on a box behind it; break the bottles on top and look from the stairs.',
               'Long bone: back right of the Mail Rooms on a shelf, across from the safe. Code on the floor under the shelf.',
               'Hand: on a table to the right as you come down the stairs into the Mail Rooms. Code on the floor under it.',
               'Foot: Cargo Hold, on the pile of wooden boxes left of the room near a car (towards the Pack-a-Punch spot). Code right next to it.',
             ] },
-            { anyList: 'Safes in any order', t: 'Fill four small safes', d: 'Put the code breaker on a small safe and read the 4 digits it shows. Grab the bone with that code, put it in the safe, then melee the code breaker off with the shield (if it won\'t come off, you got it wrong; try again next round). Safes:', list: [
+            { w: 138, anyList: 'Safes in any order', t: 'Fill four small safes', d: 'Put the code breaker on a small safe and read the 4 digits it shows. Grab the bone with that code, put it in the safe, then melee the code breaker off with the shield (if it won\'t come off, you got it wrong; try again next round). Safes:', list: [
               '3rd Class Berths: hallway on the first floor.', '1st Class Lounge: against furniture and debris blocking an exit.', 'Bridge: in the bedroom, right next to the bed.', 'Millionaire Suites: next to the large dresser.',
             ] },
-            { t: 'Interact with the car in the Cargo Hold', d: 'It sinks through the floor and the skeleton starts flying it above the ship.' },
-            { t: 'Shoot green vials into the pipes (four times)', d: 'Small green vials sit in pipes outside the map. Shoot one and it shoots up the pipe, then drops out of an exit pipe somewhere else; pick it up. Vial pipes: Bridge (through the hallway window left of the wheel, and on the communications room wall behind you), Promenade Starboard Deck (back of a room with a red object), 3rd Class Berths (behind the big window at the bottom of the stairs), 1st Class Lounge (next to a mirror outside a small window). Exit pipes: Engine Room (bottom of the stairs by the "HELP" graffiti), Mail Rooms (back, by a table), Millionaire Suites (other side of the wall left of the portal).' },
-            { t: 'Launch a firework into the flying car', d: 'Put a vial in one of the white slots (two at the Forecastle, two at the Poop Deck), then shoot the slot. Steer the firework into the bottom of the skeleton\'s car. If you miss, the firework respawns in a few minutes.' },
-            { t: 'Wait for the ice chunk', d: 'The skeleton crashes into floating ice. A glowing blue chunk floats over to the workbench where you built the shield and upgrades it to the Svalinn Guard for the rest of the game.' },
+            { w: 184, t: 'Interact with the car in the Cargo Hold', d: 'It sinks through the floor and the skeleton starts flying it above the ship.' },
+            { w: 32, t: 'Shoot green vials into the pipes (four times)', d: 'Small green vials sit in pipes outside the map. Shoot one and it shoots up the pipe, then drops out of an exit pipe somewhere else; pick it up. Vial pipes: Bridge (through the hallway window left of the wheel, and on the communications room wall behind you), Promenade Starboard Deck (back of a room with a red object), 3rd Class Berths (behind the big window at the bottom of the stairs), 1st Class Lounge (next to a mirror outside a small window). Exit pipes: Engine Room (bottom of the stairs by the "HELP" graffiti), Mail Rooms (back, by a table), Millionaire Suites (other side of the wall left of the portal).' },
+            { w: 200, t: 'Launch a firework into the flying car', d: 'Put a vial in one of the white slots (two at the Forecastle, two at the Poop Deck), then shoot the slot. Steer the firework into the bottom of the skeleton\'s car. If you miss, the firework respawns in a few minutes.' },
+            { w: 232, t: 'Wait for the ice chunk', d: 'The skeleton crashes into floating ice. A glowing blue chunk floats over to the workbench where you built the shield and upgrades it to the Svalinn Guard for the rest of the game.' },
           ],
         },
       },

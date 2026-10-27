@@ -10,7 +10,7 @@
 
   ZG.addMap({
     game: 'bo6', id: 'reckoning', order: 6,
-    name: 'Reckoning', dlc: 'Season Five', eeName: 'Reckoning quest',
+    name: 'Reckoning', dlc: 'Season Five', eeName: 'Main quest: unleash the Sentinel Artifact',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Gorgofex', 'Franken-Klaus', 'Choose a side'],
     blurb: 'The Janus Towers above Liberty Falls, the final Black Ops 6 map. Build the Gorgofex, rebuild Klaus, open a portal to Tower 3 and decide the ending: side with Richtofen and fight S.A.M., or side with S.A.M. and fight Richtofen.',

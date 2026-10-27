@@ -22,12 +22,13 @@
       /* ------------------------------ START ------------------------------ */
       {
         id: 'power-pap', tab: 'start', type: 'Getting started', name: 'Corruption Engines & Pack-a-Punch', short: 'Engines & PaP',
+        video: { id: 'r4xtsq_skww', title: 'Revelations Pack-a-Punch guide', ch: 'MrRoflWaffles', len: '3:37' },
         summary: 'Four Corruption Engines link portals to Nacht der Untoten. With all four overridden, you can freeze the Giant Apothicon and climb inside to find Pack-a-Punch.',
         steps: [
-          { anyList: 'Engines in any order', t: 'Override all four Corruption Engines', d: 'One each in the Spawn area, Mob of the Dead, Der Eisendrache and Verrückt sections. Each costs 500; defend it from a small horde for about 30 seconds. Each opens a portal to Nacht der Untoten.', tip: 'Override all four before round 6 for an achievement.' },
-          { t: 'Go to Nacht der Untoten', d: 'Juggernog is at the top of the curved staircase.' },
-          { t: 'Freeze the Giant Apothicon', d: 'A panel to the right of Juggernog lights up and buzzes when the Giant Apothicon flies past. Press it right then: four Death Rays freeze the monster in place.', warn: 'Press too early and it just swims past — wait for the buzz.' },
-          { t: 'Climb inside and shoot Pack-a-Punch loose', d: 'Go down the stairs to the frozen Apothicon and enter its belly. Shoot the Pack-a-Punch machine out of its heart; it drops down and is ready to use.' },
+          { w: 15, anyList: 'Engines in any order', t: 'Override all four Corruption Engines', d: 'One each in the Spawn area, Mob of the Dead, Der Eisendrache and Verrückt sections. Each costs 500; defend it from a small horde for about 30 seconds. Each opens a portal to Nacht der Untoten.', tip: 'Override all four before round 6 for an achievement.' },
+          { w: 141, t: 'Go to Nacht der Untoten', d: 'Juggernog is at the top of the curved staircase.' },
+          { w: 156, t: 'Freeze the Giant Apothicon', d: 'A panel to the right of Juggernog lights up and buzzes when the Giant Apothicon flies past. Press it right then: four Death Rays freeze the monster in place.', warn: 'Press too early and it just swims past — wait for the buzz.' },
+          { w: 187, t: 'Climb inside and shoot Pack-a-Punch loose', d: 'Go down the stairs to the frozen Apothicon and enter its belly. Shoot the Pack-a-Punch machine out of its heart; it drops down and is ready to use.' },
         ],
       },
       {

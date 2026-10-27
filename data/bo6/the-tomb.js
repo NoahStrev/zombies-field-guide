@@ -10,7 +10,7 @@
 
   ZG.addMap({
     game: 'bo6', id: 'the-tomb', order: 4,
-    name: 'The Tomb', dlc: 'Season Two', eeName: 'The Tomb quest',
+    name: 'The Tomb', dlc: 'Season Two', eeName: 'Main quest: claim the Sentinel Artifact',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Staff of Ice', 'Dark Aether Nexus', 'Sentinel Artifact'],
     blurb: 'An excavation site in catacombs below Avalon, with portals into a Dark Aether Nexus. Build and upgrade the Staff of Ice, complete four creature challenges, and destroy the Sentinel Artifact.',

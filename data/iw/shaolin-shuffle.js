@@ -44,9 +44,9 @@
         id: 'double-pap', tab: 'start', type: 'Upgrade', name: 'Double Pack-a-Punch (Alien Fuses)', short: 'Double PaP',
         summary: 'The fuses don\'t carry over to this map. Free them from a box on the rooftops and charge them on the subway rail.',
         steps: [
-          { t: 'Press the button left of Pack-a-Punch and leave right away', d: 'Take the teleporter outside the Pink Cat building; it drops you on the rooftops by Racin\' Stripes. The box just left of that portal is open with the fuses inside.', tip: 'In co-op, one player presses the button while another waits at the box. Too slow and it shuts; press the button again.' },
-          { t: 'Put the fuses on the live rail in the Bang Bangs subway', d: 'On the side of the tracks closest to the stairs up. Wait for a train to run over them, then pick them up.' },
-          { t: 'Install them in Pack-a-Punch', d: 'Second upgrades now cost 10,000.' },
+          { w: ['YqZ0Vwy6pKA', 30], t: 'Press the button left of Pack-a-Punch and leave right away', d: 'Take the teleporter outside the Pink Cat building; it drops you on the rooftops by Racin\' Stripes. The box just left of that portal is open with the fuses inside.', tip: 'In co-op, one player presses the button while another waits at the box. Too slow and it shuts; press the button again.' },
+          { w: ['YqZ0Vwy6pKA', 76], t: 'Put the fuses on the live rail in the Bang Bangs subway', d: 'On the side of the tracks closest to the stairs up. Wait for a train to run over them, then pick them up.' },
+          { w: ['YqZ0Vwy6pKA', 107], t: 'Install them in Pack-a-Punch', d: 'Second upgrades now cost 10,000.' },
         ],
       },
 
@@ -156,6 +156,36 @@
           { w: 1125, any: 'Trials in any order', t: 'Eye trial: scan and shoot the symbols', d: 'Place the eye in the middle and scan with your own eye. Shoot every symbol: first on the ceiling, then lower on the walls above the sewer holes.' },
           { w: 1156, t: 'Kill the Rat King', d: 'Between trials he comes back stronger. After all three, finish him for the cutscene and the Soul Key piece. The Kirisute Gomen is now free on the dojo wall.' },
         ],
+      },
+
+      /* ------------------------------ SIDE ------------------------------ */
+      {
+        id: 'song', tab: 'side', type: 'Song', name: '"Cats on the Boulevard"',
+        video: { id: 'G7GjJsnRJpE', title: 'All 16 radio locations, Shaolin Shuffle', ch: 'Cragusmaximuss', len: '3:01' },
+        summary: 'Collect seven radios. Each game they appear in seven of these sixteen spots, so check them all. The song plays when you pick up the seventh and is added to your lobby music.',
+        spots: [
+          'In some rubbish right of the toy robot mahjong table.',
+          'Behind a wooden pallet by the main entrance to the Heebie Jeebies.',
+          'Behind a speaker inside the Heebie Jeebies.',
+          'In a red crate in the small hallway of the Heebie Jeebies.',
+          'In a tyre on the roof by the scaffolding up to the rooftops.',
+          'Behind the stack of pallets holding the first character-bio item.',
+          'In a bin left of the chi door that opens the air vent.',
+          'On scaffolding to your left as you land in the dumpster from the air vent.',
+          'On a green power box across from the RPR Evo on the rooftops.',
+          'Behind a lone bin near a Lava Lamp part spot.',
+          'Under the table that can hold a Lava Lamp part.',
+          'In a bin right of the left-hand entrance to the Inferno Club dance floor from the lobby.',
+          'Under a vent across from the pallet that can hold the Skullbuster cloth.',
+          'Behind a pile of bricks left of a barrier near Quickies.',
+          'Inside the steaming pipe in the tunnel down to the sewers.',
+          'Behind a bin across from the spawn entrance to the Rat King\'s lair.',
+        ],
+      },
+      {
+        id: 'pam', tab: 'side', type: 'Unlockable character', name: 'Play as Pam Grier',
+        summary: 'Once you\'ve finished Pest Control, quickly press **Up, Up, Right, Left, Down, Left** in the Shaolin Shuffle pre-game lobby. You start as Pam Grier, and the Nunchucks join the Magic Wheel.',
+        facts: [['Needs', 'Pest Control completed']],
       },
     ],
   });

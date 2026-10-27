@@ -14,7 +14,7 @@
 
   ZG.addMap({
     game: 'bo6', id: 'shattered-veil', order: 5,
-    name: 'Shattered Veil', dlc: 'Season Three', eeName: 'Shattered Veil quest',
+    name: 'Shattered Veil', dlc: 'Season Three', eeName: 'Main quest: recharge the Sentinel Artifact',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Ray Gun Mark II', 'Wunderwaffe DG-2', 'Z-Rex boss'],
     blurb: 'Richtofen\'s mansion above Liberty Falls, with S.A.M. waiting in a lab underneath. Build all three elemental Ray Gun Mark IIs, use each to open a liminal room and complete its ritual, then fight a zombie T-Rex.',
@@ -94,7 +94,7 @@
         ],
       },
       {
-        id: 'wunderwaffe', tab: 'weapons', type: 'Wonder weapon', name: 'Wunderwaffe DG-2', color: 'lightning',
+        id: 'wunderwaffe', tab: 'weapons', type: 'Wonder weapon', name: 'Wunderwaffe DG-2', img: I + 'wunderwaffe.webp', color: 'lightning',
         summary: 'Chain lightning that kills crowds. Free after one ritual, or from the Mystery Box.',
         video: WV,
         steps: [

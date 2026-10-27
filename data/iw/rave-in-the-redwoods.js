@@ -154,6 +154,30 @@
           { w: 791, t: 'Unload on him until he dies, then grab the Soul Key piece', d: 'He doesn\'t go back on the roof this time. Picking up the piece starts the ending cutscene.' },
         ],
       },
+
+      /* ------------------------------ SIDE ------------------------------ */
+      {
+        id: 'song', tab: 'side', type: 'Song', name: '"Puppet Strings"',
+        video: { id: '1eG_QYQ73EQ', title: 'Rave in the Redwoods secret song: Puppet Strings', ch: 'MrWilliamThor', len: '1:40' },
+        summary: 'Shoot ten glowing purple spots in and around the Bear Lodge. They only show up in Rave Mode. The song plays when you hit the last one and is added to your lobby music.',
+        spots: [
+          'In the rafters above the fireplace.',
+          'On a wooden pallet left of the M1 wall buy.',
+          'Under the pool table upstairs.',
+          'Behind the bar upstairs.',
+          'Above the doorway to the Banshee wall buy on the balcony.',
+          'Under the table with the computer used for the alien fuses.',
+          'On the sloped roof below and right of the Magic Wheel on the balcony.',
+          'Under a shelf near one of the boat engine parts.',
+          'Behind some boxes left of a barrier in the bunk room.',
+          'In an open locker left of Tuff \'Nuff.',
+        ],
+      },
+      {
+        id: 'kevin', tab: 'side', type: 'Unlockable character', name: 'Play as Kevin Smith',
+        summary: 'Once you\'ve finished Locksmith, quickly press **Right, Left, Left, Down, Down, Right** in the Rave in the Redwoods pre-game lobby. You start the match as Kevin Smith.',
+        facts: [['Needs', 'Locksmith completed']],
+      },
     ],
   });
 })();

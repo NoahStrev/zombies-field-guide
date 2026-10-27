@@ -26,12 +26,12 @@
         summary: 'Turn on the power, then send Pack-a-Punch pieces away from two of its three possible spots so the machine builds at the third.',
         steps: [
           { t: 'Turn on the power', d: 'Open your way up into the castle. The power switch is in the Armory, on the T-shaped hallway that joins Samantha\'s Room and the Church (Mission Control). Power opens the way down to the Undercroft.' },
-          { anyList: 'Any two spots, in any order', t: 'Visit the three Pack-a-Punch spots', list: [
+          { w: ['nwjpp1jWZ5Y', 31], anyList: 'Any two spots, in any order', t: 'Visit the three Pack-a-Punch spots', list: [
             '**Undercroft**: by the large central pillar, on the side opposite the dragon statue.',
             '**Bastion**: the outdoor area behind the power switch, across from the Wundersphere.',
             '**Rocket Launch Pad**: on the walkway next to the rocket. Get there through the Undercroft teleporter, or by {{wundersphere}} from the Bastion once you have visited the pad.',
           ] },
-          { t: 'Teleport the pieces away from two spots', d: 'At each spot you\'ll get a prompt to teleport the machine pieces. Once two spots have sent their pieces, the machine builds itself at the third.', tip: 'The machine moves between the three spots during the game. A board near each spot lists where it is right now.' },
+          { w: ['nwjpp1jWZ5Y', 47], t: 'Teleport the pieces away from two spots', d: 'At each spot you\'ll get a prompt to teleport the machine pieces. Once two spots have sent their pieces, the machine builds itself at the third.', tip: 'The machine moves between the three spots during the game. A board near each spot lists where it is right now.' },
         ],
       },
       {
@@ -124,10 +124,10 @@
         summary: 'A 60-arrow bow with explosive charged shots that never hurt you. Every player can take one, and each player can upgrade theirs into one of four elemental bows.',
         stepsTitle: 'How to get it',
         steps: [
-          { any: 'Feed the three dragons in any order', t: 'Feed the dragon head in the Lower Courtyard', d: 'Near Double Tap, above the tunnel that leads to the underground lab.' },
-          { any: 'Feed the three dragons in any order', t: 'Feed the dragon head in the Church (Mission Control)', d: 'The Speed Cola room: above the fireplace at the back.' },
-          { any: 'Feed the three dragons in any order', t: 'Feed the dragon head in the Undercroft', d: 'In the Pyramid room, across from the workbench.' },
-          { t: 'Pick up the bow in the Family Crypt', d: 'The room right above the Undercroft where a stone knight lies. The bow floats above the crate at the back.' },
+          { w: ['tLMm9I-xZ8k', 44], any: 'Feed the three dragons in any order', t: 'Feed the dragon head in the Lower Courtyard', d: 'Near Double Tap, above the tunnel that leads to the underground lab.' },
+          { w: ['tLMm9I-xZ8k', 122], any: 'Feed the three dragons in any order', t: 'Feed the dragon head in the Church (Mission Control)', d: 'The Speed Cola room: above the fireplace at the back.' },
+          { w: ['tLMm9I-xZ8k', 168], any: 'Feed the three dragons in any order', t: 'Feed the dragon head in the Undercroft', d: 'In the Pyramid room, across from the workbench.' },
+          { w: ['tLMm9I-xZ8k', 213], t: 'Pick up the bow in the Family Crypt', d: 'The room right above the Undercroft where a stone knight lies. The bow floats above the crate at the back.' },
         ],
         blocks: [
           { h: 'Feeding a dragon' },

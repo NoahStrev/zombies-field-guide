@@ -39,9 +39,10 @@ To run it on your PC instead, double-click **`start-site.bat`**. It starts a sma
 - **Next step** button (on easter egg pages) jumps to your first unticked step.
 - **Collapse done** (on every checklist) shrinks finished steps to just their title. It's one setting for the whole site.
 - **Keep screen on** (phone icon in the top bar, on browsers that support it) stops the screen sleeping while you play.
-- **Home page** lists every map with your easter egg progress and a Continue button back to the last page you had open.
-- **Offline:** on the live site, pages you open are kept on the device. "Save everything for offline" on the home page downloads all images too (about 13 MB). Videos still need internet. On a phone you can also add the site to your home screen.
-- **Search** (top bar) finds maps, items, upgrades and steps.
+- **Home page** lists every map with your easter egg progress, an "In progress" list of quests you've started, and a Continue button back to the last page you had open.
+- **Previous / Next map** links at the bottom of every map page move through that game's maps.
+- **Offline:** on the live site, pages you open are kept on the device. "Save everything for offline" on the home page downloads all images too (about 22 MB). Videos still need internet. On a phone you can also add the site to your home screen.
+- **Search** (top bar) finds maps, items, upgrades and steps, including words inside step details and primers (shown as a highlighted snippet). Up and down arrows move through the results; Enter opens one.
 
 ## How the files are laid out
 

@@ -179,8 +179,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .search-results { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: var(--panel); border: 1px solid var(--line-2); border-radius: 12px; box-shadow: var(--shadow); max-height: 70vh; overflow: auto; padding: 6px; z-index: 60; }
 .search-hit { display: flex; flex-direction: column; padding: 9px 10px; border-radius: 8px; text-decoration: none; color: var(--text); }
 .search-hit span { font-size: .82rem; color: var(--muted); }
-.search-hit:hover, .search-hit:focus { background: var(--panel-2); }
-.search-empty { padding: 10px; color: var(--muted); }
+.search-hit:hover, .search-hit:focus, .search-hit.kbd { background: var(--panel-2); }
+.search-hit .search-snip { margin-top: 3px; font-size: .8rem; line-height: 1.4; color: var(--text-2, var(--muted)); }
+.search-snip mark { background: color-mix(in srgb, var(--accent) 30%, transparent); color: inherit; border-radius: 3px; padding: 0 1px; }
+.search-empty, .search-more { padding: 10px; color: var(--muted); }
+.search-more { font-size: .8rem; border-top: 1px solid var(--line); margin-top: 4px; }
 #search-toggle { display: none; }
 @media (max-width: 759px) {
   #search-toggle { display: inline-grid; }
@@ -427,6 +430,18 @@ tr:last-child td { border-bottom: 0; }
 .part > .watch { align-self: flex-start; margin-top: 0; }
 
 /* ============ Floating "next step" ============ */
+/* previous / next map */
+.pager { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; margin-top: -30px; padding-bottom: 40px; }
+.pager-link { display: flex; flex-direction: column; gap: 2px; text-decoration: none; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); min-width: 0; }
+.pager-link:hover { border-color: var(--accent); }
+.pager-link.next { text-align: right; }
+.pager-dir { font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.pager-name { font-family: var(--font-head); font-weight: 600; font-size: 1.05rem; color: var(--accent); text-transform: uppercase; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pager-all { font-size: .85rem; color: var(--muted); text-align: center; }
+@media (max-width: 600px) {
+  .pager { grid-template-columns: 1fr 1fr; }
+  .pager-all { grid-column: 1 / -1; grid-row: 2; }
+}
 .fab { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 35; display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 999px; padding: 12px 18px; font-weight: 700; box-shadow: var(--shadow); cursor: pointer; min-height: 48px; }
 .fab[hidden] { display: none; }
 
@@ -533,6 +548,8 @@ tr:last-child td { border-bottom: 0; }
 .home-map-name { font-family: var(--font-head); text-transform: uppercase; font-size: 1.05rem; line-height: 1.2; }
 .home-map-ee { color: var(--muted); font-size: .82rem; }
 .home-map-status { color: var(--muted); font-size: .8rem; white-space: nowrap; }
+.home-map-status.done { color: var(--ok); font-weight: 700; }
+.home-map.finished { border-color: color-mix(in srgb, var(--ok) 45%, var(--line)); }
 .home-map .progress { min-width: 0; flex: 0 1 120px; margin: 0; }
 .home-soon { color: var(--muted); margin-top: 28px; font-size: .9rem; }
 .offline-box p { color: var(--text-2); max-width: 70ch; }
