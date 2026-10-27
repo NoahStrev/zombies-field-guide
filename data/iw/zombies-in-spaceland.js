@@ -238,7 +238,7 @@
           { w: 976, t: 'Beat the alien (one per player)', d: 'Its collar goes green → amber → red as you damage it. On red, wait until it\'s in front of you and finish the bar: it drops to one knee. Get behind it and knife the backpack to knock out a fuse. Do it again for the second fuse, then the third time just kill it.', tip: 'Play safe. If it kneels somewhere dangerous, let it heal rather than risk going down: you can\'t easily rebuy your perks here.' },
           { w: 1182, t: 'Pick up the Alien Fuses and put them in Pack-a-Punch', d: 'They\'re outside the central portal. The UFO keeps firing energy balls at you from now on. Pack-a-Punch can now upgrade weapons twice and upgrade the Weapons of Rock.' },
           { w: 1215, t: 'Pack-a-Punch a Weapon of Rock', d: '10,000 points.', needs: ['shredder', 'dischord', 'face-melter', 'head-cutter'] },
-          { w: 1230, t: 'Shoot the blue lights on the Welcome to Spaceland sign with it', d: 'Use the upgraded Weapon of Rock. The sign is by the spawn; each light turns yellow when hit. Fire at the last one when the UFO is right above the central portal: the beam blows it up.' },
+          { w: 1230, t: 'Shoot the blue lights on the Welcome to Spaceland sign with it', d: 'Use the upgraded Weapon of Rock. The sign is by the spawn and has five blue lights; each turns yellow when hit. Fire at the last one when the UFO is right above the central portal: the beam blows it up.' },
           { w: 1261, t: 'Pick up the piece of the Soul Key', d: 'It lands outside the central portal.' },
         ],
       },

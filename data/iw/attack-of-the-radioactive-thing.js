@@ -106,7 +106,7 @@
         video: AV,
         steps: [
           { w: 169, any: 'Body parts in any order', t: 'Leg: blow it out of the tree', d: 'On the tree by the door from the Racin\' Stripes area towards the TV studio. Use an explosive.' },
-          { w: 188, any: 'Body parts in any order', t: 'Leg: kill the first radioactive soldier zombie', d: 'The first one killed in the game drops it. Make sure someone picks it up.' },
+          { w: 188, any: 'Body parts in any order', key: 'leg-kill-the-first-radioactive-soldier-zombie', t: 'Leg: kill a radioactive soldier zombie after getting the Cleaver', d: 'Pick up the Cleaver from the market first (the wiki and other guides say the leg comes from a radioactive soldier killed once you have it; using the Cleaver for the kill is the safe bet). The first one killed after that drops the leg: make sure someone picks it up.' },
           { w: 215, any: 'Body parts in any order', t: 'Arm: dig it up on the beach with the Seismic Wave Generator', d: 'Place it on the patch where the power handle\'s hand was; the arm slowly rises out of the sand.', needs: ['seismic'] },
           { w: 237, any: 'Body parts in any order', t: 'Arm: in a fire pit in the trailer park' },
           { w: 272, any: 'Body parts in any order', t: 'Head: inside the hidden RV', d: 'Press the button on the wall of the projection room; you come out inside an RV with the head.' },

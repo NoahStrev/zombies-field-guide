@@ -11,6 +11,9 @@
   for (const it of map.items) {
     if (it.facts) it.facts = it.facts.filter(([k]) => !/BO3/.test(k));
   }
+  // Black Ops II only: the quest can't be finished on Easy.
+  const ee = map.items.find(it => it.id === 'main-ee');
+  if (ee) ee.facts = [...ee.facts, ['Difficulty', 'Not on Easy']];
   map.intro = Object.assign({}, map.intro, {
     start: 'The original version of the map. The quest and every part spot match the Black Ops III remaster (the videos are from that version). ' + map.intro.start,
   });

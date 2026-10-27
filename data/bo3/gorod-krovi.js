@@ -138,7 +138,7 @@
         summary: 'Crack S.O.P.H.I.A.\'s code, collect six silver trophies, finish her six tasks and free the original Nikolai — then kill a dragon and defeat Nikolai\'s mech.',
         facts: [
           ['Players', '1–4 (solo works; co-op makes timed tasks easier)'],
-          ['Reward', 'All perks if done within 1 h 55 min, achievement, Gateworm icon'],
+          ['Reward', 'Every perk with unlimited perk slots (kept if you go down), achievement, Gateworm icon, 7,500 XP'],
           ['Hardest part', 'Bomb defuse task and the boss'],
         ],
         prep: [

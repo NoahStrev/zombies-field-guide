@@ -136,7 +136,7 @@
         summary: 'Rebuild S.O.P.H.I.A., recover the Kronorium and Summoning Key, gather the old easter egg relics, and kill the Shadowman.',
         facts: [
           ['Players', '1–4 (solo works)'],
-          ['Reward', 'Achievement — and "A Better Tomorrow" if you finished every earlier BO3 easter egg'],
+          ['Reward', 'Achievement, 20,000 XP and a calling card, plus "A Better Tomorrow" if you finished every earlier BO3 easter egg'],
           ['Watch out', 'Summoning Key glitches (see step 11)'],
         ],
         prep: [

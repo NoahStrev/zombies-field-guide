@@ -16,7 +16,7 @@
   const pylonCode = [
     { w: 620, t: 'Work out the pylon order from the Mahjong tiles', needs: ['mahjong'] },
     { w: 807, t: 'Buy the Galvaknuckles in the elevator shaft', d: '6,000. Drop down the shaft one ledge.' },
-    { w: 823, t: 'Punch the four sides of the pylon in your order', d: 'On the roof. One round, one try: if it fails, wait for the next round. Done right, power surges through the pylon, the dragons fire and everyone gets every perk on the map.' },
+    { w: 823, t: 'Punch the four sides of the pylon in your order', d: 'On the roof. One round, one try: if it fails, wait for the next round. Done right, power surges through the pylon, the dragons fire and everyone gets every perk on the map.', tip: 'Known glitch: sometimes the right order does nothing. Let the round end so the pylon lights up again, punch the other three sides once each (not the side that comes first in your order), then punch your full order even if the pylon stops glowing.' },
   ];
 
   ZG.addMap({
@@ -138,7 +138,7 @@
           { w: 915, t: 'Kill 15 zombies in a row on the ground floor of the Buddha room', d: 'Everyone stays inside: a kill outside the room resets the count. Maxis speaks when it\'s done.' },
           { w: 945, t: 'Pack-a-Punch a Ballistic Knife from the Mystery Box and fire it in the Buddha room', d: 'It becomes the Krauss Refibrillator; Maxis speaks when you upgrade it, and again when you fire it in the room.', warn: 'Only works if that player hasn\'t bought the Bowie Knife or Galvaknuckles and hasn\'t bled out this game.' },
           { w: 993, t: 'Build Trample Steams (one per player)', needs: ['trample-steam'] },
-          { w: 1070, t: 'Place a Trample Steam on each lion symbol, facing the pylon', d: 'Symbols: in spawn, at the bottom of the escalator out of spawn, on the roof next to the two elevators, and on the far rooftop (up the pylon stairs, go right and drop down twice). Placed right, they lock in.' },
+          { w: 1070, key: 'place-a-trample-steam-on-each-lion-symbol-facing-the-pylon', t: 'Place a Trample Steam on each lion symbol', d: 'Face each one the way the lion on its symbol faces: placed right, it locks in and can\'t be picked up, and the two pairs end up facing each other. Symbols: in spawn, at the bottom of the escalator out of spawn, on the roof next to the two elevators, and on the far rooftop (up the pylon stairs, go right and drop down twice).' },
           { w: 1118, t: 'Put the balls on the Trample Steams', d: 'Each ball bounces between the two Trample Steams facing each other. With both bouncing, an orange surge runs up the pylon.', tip: 'No prompt to place a ball? Destroy that Trample Steam and put down a fresh one.' },
           ...pylonCode,
         ],

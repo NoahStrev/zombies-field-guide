@@ -161,7 +161,7 @@
           ['Difficulty', 'Original only'],
         ],
         prep: [
-          { t: 'NAV table built', needs: ['nav-table'] },
+          { key: 'nav-table-built', t: 'Optional: the NAV table', needs: ['nav-table'], d: 'Not needed for this quest (it has been finished without one), but Buried\'s navcard ending needs every map\'s NAV table.' },
           { t: 'Power switch built', needs: ['power-switch'] },
           { t: 'At least two players carrying a Turbine', needs: ['turbine'] },
         ],
@@ -186,16 +186,16 @@
         ],
         prep: [
           { t: 'Someone plays as Stuhlinger', d: 'Only he hears Richtofen, and his quotes are how you know each step worked. In solo, restart until you are Stuhlinger.' },
-          { t: 'NAV table built', needs: ['nav-table'] },
+          { key: 'nav-table-built', t: 'Optional: the NAV table', needs: ['nav-table'], d: 'Not needed for this quest (it has been finished without one), but Buried\'s navcard ending needs every map\'s NAV table.' },
           { t: 'Power on (and left on)', needs: ['power-switch'] },
-          { t: 'An explosive weapon: the original Ray Gun or Mustang & Sally', d: 'There\'s no PhD Flopper on this map, so mind the splash.' },
+          { key: 'an-explosive-weapon-the-original-ray-gun-or-mustang-sally', t: 'An explosive weapon: Ray Gun, Ray Gun Mark II or Mustang & Sally', d: 'There\'s no PhD Flopper on this map, so mind the splash.' },
         ],
         stepsTitle: 'Quest steps',
         video: EV,
         steps: [
           { w: 518, t: 'Build the Jet Gun', needs: ['jet-gun'] },
           { w: 655, t: 'Fire the Jet Gun at the pylon until it breaks', d: 'Stand under the pylon in the cornfields, look up and hold the trigger until it blows apart. Stuhlinger hears Richtofen.', tip: 'If Richtofen later says the pylon isn\'t hot enough, rebuild the Jet Gun (let it cool fully first) and break it again.' },
-          { w: 687, t: 'Kill 25 zombies under the pylon with explosives', d: 'The guide uses the original Ray Gun (not the Mark II) and Mustang & Sally. Richtofen tells Stuhlinger when there\'s enough power.' },
+          { w: 687, t: 'Kill 25 zombies under the pylon with explosives', d: 'Explosive kills only: the Ray Gun, Ray Gun Mark II and Mustang & Sally all count. Richtofen tells Stuhlinger when there\'s enough power.' },
           { w: 718, t: 'Get EMP Grenades from the Mystery Box', d: 'Ideally every player; at least two.' },
           { w: 733, t: 'Throw EMPs at four different green lamp posts at the same time', d: 'Each player stands at a different lamp post and everyone throws together. The Bus Depot and Diner posts are the easiest; the others are in the fog. Blue beams on the posts mean it\'s done.', list: lamps },
           { w: 779, t: 'Fewer than four players? Use Denizen teleporters', d: 'Place a Turbine by a lamp post, bring a Denizen there so it digs a teleporter, throw an EMP, jump in and throw your second EMP at the post where you land.' },

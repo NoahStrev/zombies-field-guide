@@ -153,7 +153,7 @@
           { t: 'Two totems completed (six challenges)', needs: ['totems'] },
           { t: 'Wunderwaffe DG-Scharfschütze', needs: ['wunderwaffe'] },
           { t: 'Samantha\'s Music Box (several)', needs: ['music-box'] },
-          { t: 'A dynamite bundle', needs: ['dynamite'] },
+          { t: 'A dynamite bundle', needs: ['dynamite'], d: 'Also blow open every dynamite-blocked path (like the Hidden Path) beforehand: some offerings and hints are behind them.' },
           { t: 'Riot Shield, and subtitles turned on', needs: ['riot-shield'], d: 'The Blood\'s hints are spoken only once.' },
         ],
         stepsTitle: 'Quest steps',
