@@ -23,7 +23,7 @@ ZG.games = [
   },
   {
     id: 'wwii', name: 'WWII', short: 'WWII', year: 2017, active: true,
-    blurb: "All five of Sledgehammer's WWII maps with a main quest. Together they follow the hunt for the Sword of Barbarossa, piece by piece. WWII renames most things, so start with the basics on The Final Reich.",
+    blurb: "All five of Sledgehammer's WWII maps with a main quest. Together they follow the hunt for the Sword of Barbarossa, piece by piece. WWII renames most things, so start with the basics on The Final Reich. That map has two versions of its quest: Fireworks (casual) and Dark Reunion (hardcore, which also saves Klaus); the four DLC maps have one main quest each.",
   },
   {
     id: 'bo4', name: 'Black Ops 4', short: 'BO4', year: 2018, active: true,

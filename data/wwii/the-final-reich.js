@@ -15,7 +15,7 @@
 
   ZG.addMap({
     game: 'wwii', id: 'the-final-reich', order: 1,
-    name: 'The Final Reich', dlc: 'Launch map', eeName: 'Fireworks / Dark Reunion',
+    name: 'The Final Reich', dlc: 'Launch map', eeName: 'Fireworks (casual) / Dark Reunion (hardcore)',
     hero: I + 'hero.webp', players: 'solo',
     tags: ['Tesla Gun', 'Hilt of Barbarossa', 'Panzermörder'],
     blurb: 'A snowy Bavarian village called Mittelburg, sitting on top of a Nazi research bunker. Build the Tesla Gun, power two ancient machines and pull the hilt of Barbarossa\'s sword free. A harder version of the quest saves Klaus.',

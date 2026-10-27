@@ -86,7 +86,7 @@
       /* ------------------------------ EASTER EGG ------------------------------ */
       {
         id: 'ee', tab: 'easter-egg', type: 'Main Easter Egg', name: 'Making History',
-        summary: 'Wake the corpse in the U-Boat Pens, call in the Allies (planes, an artillery escort, a radio and enemy ships), then get the pommel from the monk\'s three sacrifices and fight a glowing Meuchler across the island.',
+        summary: 'Wake the corpse in the U-Boat Pens, call in the Allies (planes, an artillery escort, a radio and enemy ships), then get the pommel from the monk\'s three sacrifices and fight a glowing Meuchler across the island. The Allies part (steps 5–9) and the pommel part (steps 10–21) can be done in either order; the boss needs both.',
         facts: [
           ['Players', 'Solo or co-op'],
           ['Reward', 'Achievement, ending cutscene'],
@@ -123,7 +123,7 @@
           { w: 946, any: 'Sacrifices in any order', t: 'Sacrifice 2: a charged Pest spine, then ricochet saw blades into it', d: 'A glowing Pest runs a fixed route. Open the fuse boxes around the map (in the U-Boat Pens, by the power switch, at Bunker 3, up by the artillery gun) and bounce Ripsaw blades off the fuses so they hit it at each stop. Then kill it in a chamber lockdown and hang its head.', tip: 'This is easiest following the video. A max ammo helps.' },
           { w: 1162, any: 'Sacrifices in any order', t: 'Sacrifice 3: a Wüstling spine, then lead it to four Blitz machines in order', d: 'It follows you. Walk it to Kugelblitz, Faustblitz, Laufenblitz, then Lebenblitz. Stay away from Schnellblitz and don\'t pass the others early. It runs into the crack in the waterfall. Kill it in a chamber lockdown and hang its head.', warn: 'This step can glitch (it gets stuck or dies). Try again with a new spine.' },
           { w: 1337, t: 'Hang the monk\'s head on the last hook and fill the basin', d: 'Another lockdown: the statue cries blood into the basin. When it\'s full you get the pommel.', needs: ['pommel'] },
-          { w: 1400, t: 'Get ready, then touch the radio', d: 'It takes you straight to the boss. Full armour, Pack-a-Punch, a full special meter, and everyone holding a pommel.', tip: 'Buy Blitz in the order you can most afford to lose: Schnellblitz first, Kugelblitz last. You lose them in purchase order when you go down.' },
+          { w: 1384, key: 'get-ready-then-touch-the-radio', t: 'Throw a pommel at the radio, get ready, then touch it', d: 'The pommel switches the radio on. Touching it then takes you straight to the boss, so first get full armour, Pack-a-Punch, a full special meter, and everyone holding a pommel.', tip: 'Buy Blitz in the order you can most afford to lose: Schnellblitz first, Kugelblitz last. You lose them in purchase order when you go down.' },
           { w: 1478, t: 'Kill the glowing Meuchler: beach area', d: 'Throw pommels at it to stun it, then hit it hard. Use Shellshock or Camouflage when it gets busy. When it dies you get a max ammo.' },
           { w: 1508, t: 'Take the minecart to the U-Boat Pens and kill it again', d: 'The floor here can be on fire.' },
           { w: 1586, t: 'Minecart to the beach and finish it', d: 'Lots of Meuchlers at once. Focus the glowing one; the cutscene plays about ten seconds after it dies.' },
