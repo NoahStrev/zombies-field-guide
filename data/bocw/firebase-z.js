@@ -94,7 +94,7 @@
             'The Planning Offices.',
             'Around Juggernog in Military Command and up the walkway to the Colonel\'s Office.',
           ], tip: 'Lost one? Check the jungle areas. Nothing anywhere? Try again next round.' },
-          { w: 324, t: 'Weaken it, then trap it', d: 'Get it to about a tenth of its health, throw the trap and double-tap interact. If it breaks out, the trap is gone; get another from the station. Once it's trapped you have three minutes to bring it back.' },
+          { w: 324, t: 'Weaken it, then trap it', d: 'Get it to about a tenth of its health, throw the trap and double-tap interact. If it breaks out, the trap is gone; get another from the station. Once it\'s trapped you have three minutes to bring it back.' },
           { w: 339, t: 'Put it in the station and listen', d: 'Interact on the side of the machine, not the front. Sokolov, Brahms or Zhabin talking means it\'s a right one. Anyone else, or "memory corrupted", means try another.' },
           { w: 449, t: 'Repeat until you have all three memories', d: 'Then a floppy disk comes out of the station.' },
           { w: 479, t: 'Put the floppy disk in the computer in the Planning Offices', d: 'The OPC (the big metal sphere) opens. Go inside and look.' },

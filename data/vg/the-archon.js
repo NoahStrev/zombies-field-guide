@@ -59,7 +59,7 @@
         ],
         prep: [
           { t: 'Grab a shovel', needs: ['shovel'] },
-          { t: 'Ring of Fire as your Field Upgrade for the Trial of Sacrifice', d: 'You can switch to it mid-game by reselecting your class.' },
+          { t: 'Ring of Fire as your Field Upgrade for the Trial of Sacrifice', d: 'You can switch to it mid-game by reselecting your class, or take it from the lit stone next to where the Sacrifice trial\'s red orb was.' },
         ],
         video: EV,
         steps: [
@@ -72,7 +72,7 @@
           { w: 154, any: 'Trials in any order', t: 'Sacrifice: light the three torches in the Derailment with Molotovs, fast', d: 'One is inside the train car on the way in. The Molotov wall buy is on the middle right of the map. Miss one and you start over.' },
           { w: 169, any: 'Trials in any order', t: 'Sacrifice: feed the red orb a Pack-a-Punched gun and kill the Uberkrieger', d: 'You lose the gun for the game and all your armour.', tip: 'Buy a wall weapon that\'s already Pack-a-Punched (the blue one) for 4,000 and give it that.' },
           { w: 199, any: 'Trials in any order', t: 'Sacrifice: charge the obelisks with Ring of Fire', d: 'Start the obelisk on top of the train car. Kill near it until a Full Power drops, then pop Ring of Fire at an outer obelisk and kill about seven or eight zombies there. A beam connects it. Repeat for each (four in solo).' },
-          { w: 246, any: 'Trials in any order', t: 'Mindfulness: dig near Pack-a-Punch until a red orb flies out', d: 'Do this with one zombie left in the round.' },
+          { w: 246, any: 'Trials in any order', t: 'Mindfulness: dig near Pack-a-Punch until a red orb flies out', d: 'Dig around Merchant Road, by the obelisk behind Pack-a-Punch. Do this with one zombie left in the round.' },
           { w: 261, any: 'Trials in any order', t: 'Mindfulness: copy the symbols, then survive the condition', d: 'The orb shows some symbols. The same ones (and others) appear on the floor: stand on the matching ones in the same order to charge them. Then survive a minute under a rule (no damage, or don\'t move, and so on). Three times: three, four, then five symbols.' },
           { w: 321, any: 'Trials in any order', t: 'Mindfulness: charge the floor symbols without killing', d: 'Start the obelisk. Kill as few zombies as you can: too many kills fails it. A Zaballa spawns; her stun helps you get past zombies.' },
           { w: 351, t: 'Get ready for the boss', d: 'Tier 3 armour, Fiendish Fortitude maxed, your best gun upgraded. Ring of Fire is great for burst damage. Monkey bombs aren\'t much use here.' },

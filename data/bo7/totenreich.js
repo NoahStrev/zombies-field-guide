@@ -76,7 +76,7 @@
         video: EV,
         steps: [
           { w: 450, t: 'Take the crowbar from the lighthouse shelf' },
-          { w: 466, t: 'Pry open crates until one holds a flak round', d: 'Wooden crates with red IDs: in the War Factory near the Admin room, the Core Foundry by the VS Recon wall-buy, Fjord Road by the Flammenfalle trap, and the Dry Dock behind the boat. A note on the ground (Dry Dock or by Tyr\'s foot) says which ID is right; a wrong crate shocks, gasses or confuses you for 30 seconds.' },
+          { w: 466, t: 'Pry open crates until one holds a flak round', d: 'Wooden crates with red IDs: in the War Factory near the Admin room, the Core Foundry by the VS Recon wall-buy, Fjord Road by the Flammenfalle trap, and the Dry Dock behind the boat. A note on the ground (Dry Dock or by Tyr\'s foot) says which ID is right; a wrong crate shocks, gasses or confuses you for 30 seconds.', tip: 'The note\'s wording tells you the crate: "parts from the lab" is III-6, "couldn\'t tamper" is V-7, "robot parts" is X-9, "chemical bomb" is IV-3.' },
           { w: 498, t: 'Load it in the right flak gun by the lighthouse and hit it with the Jotunn Star', d: 'The one facing spawn. It shoots the Riese robot head in spawn.' },
           { w: 513, t: 'Take the transmitter from the robot head and fit it in Tyr\'s head', d: 'Second floor, in the sparking slot.' },
           { w: 544, t: 'Count the blinking lights in Tyr\'s head', d: 'Two lights blink together, then one carries on alone. Count each light: that\'s one two-digit pair (left, right). After a pause comes the second pair. Example: three together then two more on the right = 3 and 5.' },

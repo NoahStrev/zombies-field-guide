@@ -17,7 +17,7 @@
       ['Unlock', 'All six main quests (Standard, Cursed or Directed)'],
       ['Toys', 'One per map, in any order; Rex Infernus last'],
       ['Finale', 'Five boss fights, started from Her House'],
-      ['Reward', 'The Warden operator, Mister Peeks Mayhem relic'],
+      ['Reward', 'The Warden operator, a Memento Mori skin, Mister Peeks Mayhem relic'],
     ],
     intro: {
       start: 'This isn\'t a map: it\'s a quest across all six Black Ops 7 maps. Each toy\'s steps are on that map\'s Side Quests tab.',
@@ -55,7 +55,7 @@
         facts: [
           ['Players', 'Solo or co-op'],
           ['Needs', 'All six main quests done'],
-          ['Reward', 'The Warden operator, Mister Peeks Mayhem relic'],
+          ['Reward', 'The Warden operator, a Memento Mori skin, Mister Peeks Mayhem relic'],
         ],
         video: SV,
         steps: [
@@ -70,6 +70,7 @@
           { w: 1724, any: 'These five toys can come in any order', t: 'Z-Rex toy (Kowakujō)', d: toyText('kowakujo', 'Kowakujō') + ' The quickest one.' },
           { w: 1902, t: 'Warden toy (Rex Infernus), last', d: `Steps: ${toy('rex-infernus', 'Rex Infernus, Side Quests')}. Every player places it on the shelf in Her House.` },
           { w: 2234, t: 'Get ready, then start the playdate from the toy shelf', d: 'Interact with the full shelf upstairs in Her House on Rex Infernus. The fights start straight away, so set your perks, loadout and GobbleGums first: there\'s no GobbleGum machine in the arena.', list: [
+            'The first four fights are in Veytharion\'s arena from Ashes of the Damned; the Warden has his own.',
             'Between fights you get Pack-a-Punch, Der Wunderfizz, an Arsenal station and a crafting table; during a fight they switch off.',
             'An ammo crate works during fights.',
             'Stay inside the purple ring: leaving it hurts.',

@@ -282,11 +282,81 @@ def video_info(vid, cache):
     return cache[vid]
 
 
+def js_string_problems(path):
+    """Cheap syntax guard for the data files (no Node here): a quote that closes a
+    string and is followed straight away by a letter, digit or another quote is
+    almost always an unescaped apostrophe, e.g. 'Once it's trapped'."""
+    text, out, i, n, line = path.read_text(encoding="utf-8"), [], 0, 0, 1
+    n = len(text)
+
+    def scan_string(i, q, line):
+        start = line
+        i += 1
+        while i < n:
+            c = text[i]
+            if c == "\\":
+                i += 2
+                continue
+            if c == "\n":
+                if q != "`":
+                    out.append(f"line {start}: string not closed before the end of the line")
+                    return i, line
+                line += 1
+            elif q == "`" and text.startswith("${", i):
+                depth, i = 1, i + 2
+                while i < n and depth:
+                    if text[i] in "'\"`":
+                        i, line = scan_string(i, text[i], line)
+                        continue
+                    depth += {"{": 1, "}": -1}.get(text[i], 0)
+                    line += text[i] == "\n"
+                    i += 1
+                continue
+            elif c == q:
+                j = i + 1
+                while j < n and text[j] in " \t":
+                    j += 1
+                if j < n and (text[j].isalnum() or text[j] in "_$'\"`"):
+                    out.append(f"line {line}: text runs on after a closing quote (unescaped apostrophe?)")
+                return i + 1, line
+            i += 1
+        out.append(f"line {start}: string never closed")
+        return i, line
+
+    while i < n:
+        c = text[i]
+        if text.startswith("//", i):
+            i = text.find("\n", i)
+            i = n if i < 0 else i
+        elif text.startswith("/*", i):
+            j = text.find("*/", i + 2)
+            j = n if j < 0 else j + 2
+            line += text.count("\n", i, j)
+            i = j
+        elif c in "'\"`":
+            i, line = scan_string(i, c, line)
+        else:
+            line += c == "\n"
+            i += 1
+    return out
+
+
 def audit(args):
     only = args[0] if args else None
     data = load_export()
     problems, videos, watch = [], {}, []
     bad = lambda m, msg: problems.append(f"[{m}] {msg}")
+    on_disk = set()
+    for f in sorted(ROOT.glob("data/*/*.js")):
+        key = f"{f.parent.name}/{f.stem}"
+        on_disk.add(key)
+        if only and not key.startswith(only):
+            continue
+        for msg in js_string_problems(f):
+            bad(key, f"syntax: {msg}")
+    for key in sorted(on_disk - {m["key"] for m in data["maps"]}):
+        if not only or key.startswith(only):
+            bad(key, "missing from the export: it failed to load, or the export is out of date")
     for m in data["maps"]:
         k = m["key"]
         if only and not k.startswith(only):

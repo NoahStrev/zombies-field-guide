@@ -101,7 +101,7 @@
           ], tip: 'If the device breaks, start it again after the round.' },
           { w: 280, t: 'Kill the boss inside the trap', d: 'Weaken it first, lure it onto the trap where the canister is, turn the trap on and kill it while it\'s stunned. Its energy fills the canister.' },
           { w: 297, t: 'Rush the canister back to the machine', d: 'The energy fades after about a minute and a half. You get a **Strauss Counter** (it replaces your tactical).', warn: 'If the boss dies elsewhere or time runs out, summon another from the LTG after the round.' },
-          { w: 327, anyList: 'Projectors in any order', t: 'Set the three projectors with the Strauss Counter', d: 'Turn each projector on, then hold out the Strauss Counter next to it and set the projector\'s light like this:', list: [
+          { w: 327, anyList: 'Projectors in any order', t: 'Set the three projectors with the Strauss Counter', d: 'One is by the Hilltop Stairway behind Fuller\'s Liberty Lanes, one in the Groundskeeper\'s Yard backyard near the drop to Hill Street, and one on the Yummy Freeze roof (drop from The Alamo). Turn each projector on, then hold out the Strauss Counter next to it and set the projector\'s light like this:', list: [
             'Counter shows green: set the projector to red.',
             'Counter shows yellow: set it to yellow.',
             'Counter shows red: set it to green.',

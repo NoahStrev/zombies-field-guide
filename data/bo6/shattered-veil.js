@@ -111,7 +111,7 @@
         summary: 'Open three liminal rooms behind paintings, one with each elemental Mark II. In each, place a ritual item and kill a shielded boss with that Mark II. Then give S.A.M. the Sentinel Artifact and fight the Z-Rex.',
         facts: [
           ['Players', 'Solo or co-op'],
-          ['Reward', 'Calling card'],
+          ['Reward', 'Calling card, Carver skin, weapon charm, 5,000 XP'],
           ['Boss', 'The Z-Rex'],
         ],
         prep: [
@@ -133,15 +133,15 @@
             'In spawn, on a bench under the bridge.',
             'In the T-Rex room, up the stairs opposite the T-Rex.',
           ] },
-          { w: 1280, t: 'Purple: read the three numbers and open the safe', d: 'Numbers appear on the walls of the elevator room (left, behind, right). Enter them left to right on the safe in the West Hallways and take the antler carving.' },
+          { w: 1280, t: 'Purple: read the three numbers and open the safe', d: 'Numbers appear on the walls of the Banquet Hall, the room with the top of the elevator (left, behind, right). Enter them left to right on the safe in the West Hallways and take the antler carving.' },
           ritual(1311, 'Mark II-P', 'Banquet Hall', 'Elder Disciple'),
           { w: 1341, t: 'Yellow: open the Library painting with Mark II-R kills', needs: ['mk2-r'] },
           { w: 1356, t: 'Yellow: find three items while in Aether Shroud', d: 'They\'re only visible during (or just after) Aether Shroud. One of each:', list: [
             'ID tag: in a fireplace in the East Foyer, the Study or the Banquet Hall.',
             'Audio log: on the briefcase outside the Library portal, or on the desk left of the bar in the T-Rex room.',
             'Ledger: on the desk by the Study fireplace, or at the top of a staircase next to a briefcase.',
-          ], tip: 'Solo: save, quit and reload if one won\'t show.' },
-          { w: 1498, t: 'Yellow: pull the three glowing books in order', d: 'In the real Library: first the book with a single circle (like a sideways 6), then the circle with a line through it, then the three dots. A secret door opens: take the inspection report.' },
+          ], tip: 'A free Aether Shroud charge appears in the Mainframe Chamber during this step. Solo: save, quit and reload if one won\'t show.' },
+          { w: 1498, t: 'Yellow: pull the three glowing books in order', d: 'In the real Library: first the book with a single circle (like a sideways 6), then the circle with a line through it, then the three dots. A secret door opens: take the inspection report.', tip: 'Too slow and the books reset: wait about 30 seconds and try again.' },
           ritual(1528, 'Mark II-R', 'Library', 'Amalgam'),
           { w: 1559, t: 'Get ready', d: 'Chopper Gunners, self-revives, Mark II-W, Kazimirs or decoys, Pack-a-Punch 3, Legendary rarity, Near-Death Experience.' },
           { w: 1576, t: 'Interact with the panel in front of S.A.M. to start the fight' },

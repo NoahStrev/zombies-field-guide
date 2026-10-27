@@ -18,7 +18,7 @@
       ['Main EE', 'Main quest (solo or co-op)'],
       ['Wonder weapon', 'Staff of Ice → Ull\'s Arrow (build required)'],
       ['Key items', 'Monocle, two staff parts, dark energy'],
-      ['Boss', 'The Sentinel Artifact (ten phases)'],
+      ['Boss', 'The Sentinel Artifact (nine phases)'],
     ],
     intro: {
       start: 'Pack-a-Punch is in the Dark Aether Nexus, through a door that opens after you place the amulet. Black Ops 6 rules are explained in the basics on Liberty Falls.',
@@ -63,7 +63,7 @@
         summary: 'Take dark energy from four creature pedestals in the Nexus, carry each to its statue in the catacombs and win that creature\'s challenge, bring the energy back, then cross the bridge and destroy the Sentinel Artifact.',
         facts: [
           ['Players', 'Solo or co-op'],
-          ['Reward', 'Calling card and rewards'],
+          ['Reward', 'Calling card, Staff of Ice skin, weapon charm, 5,000 XP'],
           ['Boss', 'The Sentinel Artifact'],
         ],
         prep: [
@@ -83,7 +83,7 @@
           { w: 783, t: 'Get ready', d: 'Pack-a-Punch 3, Legendary rarity, Aether Shroud, GobbleGums such as Shields Up, Kazimir grenades, Gold armour if you have it.' },
           { w: 879, t: 'Open the wall, cross the bridge and start the fight', d: 'Four beams hit a wall in the Nexus; hold interact and a bridge forms. Interact with the Sentinel Artifact and vote.' },
           { w: 894, t: 'Phases 1 to 4: dodge the orange beam, shoot it when it turns purple', d: 'It spins a stunning orange laser and moves between the upper and lower level: stand on the other level. When it turns ghostly purple, everyone pours damage into it. From phase 2 there are several artifacts; break one per phase. A Max Ammo follows each phase.' },
-          { w: 1021, t: 'Phases 5 to 9: kill the zombie carrying the artifact', d: 'A Heavy Zombie, then a red supercharged Doppelghast (it can down you in one hit), a Shock Mimic and an Amalgam each carry an artifact on their back. Kill it, then destroy the artifact it drops. Some later phases add a decoy with a white fake.' },
+          { w: 1021, key: 'phases-5-to-9-kill-the-zombie-carrying-the-artifact', t: 'Phases 5 to 8: kill the zombie carrying the artifact', d: 'A Heavy Zombie, then a red supercharged Doppelghast (it can down you in one hit), a Shock Mimic and an Amalgam each carry an artifact on their back. Kill it, then destroy the artifact it drops. Phases 6 to 8 can add a second carrier with a white fake you can\'t damage.' },
           { w: 1098, t: 'Final phase: focus the artifact in the middle', d: 'The artifacts line up in a semicircle and the middle one slowly backs away. Everyone shoots that one before it finishes its wipe attack. Then interact with the artifact in the middle of the arena.' },
         ],
       },

@@ -97,7 +97,7 @@
             'Under the Sea Tower by the docks, near the rope.',
           ] },
           { w: 437, t: 'Take the hacking device from Peck', d: 'It takes about 30 seconds of talk.' },
-          { w: 453, t: 'Hack the three buoys before the timer runs out', d: 'One player drives the boat while the hacker jumps out and holds interact at each buoy (about 10 seconds). Circle back to pick them up; the sea monster targets you. A timer starts after the first one.', list: [
+          { w: 453, t: 'Hack the three buoys before the timer runs out', d: 'One player drives the boat while the hacker jumps out and holds interact at each buoy (about 10 seconds). Circle back to pick them up; the sea monster targets you. A two-minute timer starts after the first one.', list: [
             'Off the east shore of Crab Island, south-east of the Sea Tower.',
             'Between Crab Island and the shipwreck.',
             'Straight east of Temple Island.',
