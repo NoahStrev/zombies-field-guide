@@ -398,21 +398,35 @@ def build_artifact(args):
     keep += re.findall(r"<script>.*?</script>", head, re.S)
     keep.append("<script>window.ZG_NO_EMBED = true; window.ZG_HOSTED = true;</script>")  # hosted pages can't embed YouTube
     page = re.sub(r'\?v=\d+"', '"', "\n".join(keep) + "\n" + body.strip() + "\n")
+    # One artifact version holds at most 511 files, so the map scripts go out as a single bundle
+    # (same load order as index.html). The GitHub Pages site keeps the separate files.
+    data_srcs = re.findall(r'<script src="(data/[^"]+\.js)"></script>', page)
+    page = re.sub(r'[ \t]*<script src="data/[^"]+\.js"></script>\n?', "", page)
+    page = page.replace('<script src="js/app.js"></script>', '<script src="data/bundle.js"></script>\n  <script src="js/app.js"></script>')
     out_dir = CACHE / "artifact"
-    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "data").mkdir(parents=True, exist_ok=True)
     (out_dir / "zombies-field-guide.html").write_text(page, encoding="utf-8")
-    files = ["css/styles.css", "js/core.js", "js/app.js", "data/games.js"]
-    files += sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "data").glob("*/*.js"))
-    files += sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "assets" / "img").glob("*/*/*.webp"))
+    missing = [s for s in data_srcs if not (ROOT / s).exists()]
+    bundle = "\n".join(f"/* ---- {s} ---- */\n" + (ROOT / s).read_text(encoding="utf-8").rstrip() + "\n;" for s in data_srcs if (ROOT / s).exists())
+    (out_dir / "data" / "bundle.js").write_text(bundle + "\n", encoding="utf-8")
+    sources = {"css/styles.css": ROOT / "css/styles.css", "js/core.js": ROOT / "js/core.js", "js/app.js": ROOT / "js/app.js",
+               "data/bundle.js": out_dir / "data" / "bundle.js"}
+    for p in sorted((ROOT / "assets" / "img").glob("*/*/*.webp")):
+        sources[p.relative_to(ROOT).as_posix()] = p
     refs = re.findall(r'(?:src|href)="((?:css|js|data)/[^"]+)"', page)
-    missing = [r for r in refs if r not in files]
+    missing += [r for r in refs if r not in sources]
     if "--since" in args:
         ref = args[args.index("--since") + 1]
         changed = set(subprocess.run(["git", "diff", "--name-only", ref], cwd=ROOT, capture_output=True, text=True).stdout.split())
         changed |= set(subprocess.run(["git", "ls-files", "--others", "--exclude-standard"], cwd=ROOT, capture_output=True, text=True).stdout.split())
-        files = [f for f in files if f in changed]
-    print(f"page: {(out_dir / 'zombies-field-guide.html').relative_to(ROOT)} | files: {len(files)} | missing refs: {missing}")
-    print(json.dumps({f: (ROOT / f).as_posix() for f in files}))
+        if any(c.startswith("data/") for c in changed):
+            changed.add("data/bundle.js")
+        sources = {k: v for k, v in sources.items() if k in changed}
+    out = {k: v.as_posix() for k, v in sources.items()}
+    if "--drop-split-data" in args:  # once, when switching an artifact over to the bundle
+        out.update({s: None for s in data_srcs})
+    print(f"page: {(out_dir / 'zombies-field-guide.html').relative_to(ROOT)} | files: {len(out)} | data scripts bundled: {len(data_srcs)} | missing refs: {missing}")
+    print(json.dumps(out))
 
 
 COMMANDS = {

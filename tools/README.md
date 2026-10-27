@@ -31,4 +31,4 @@ Run it with no command to see the full list. Image downloads need Pillow (`pip i
 ## Publishing
 
 - **GitHub Pages:** bump the `?v=` numbers in `index.html`, commit and push to `main`.
-- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish. One publish takes at most 255 files, so publish only what changed.
+- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish. One publish takes at most 255 files, so publish only what changed. One version can hold at most 511 files, so the hosted page loads every map script from a single `data/bundle.js` (built in the same order as `index.html`); only the images are separate files. (`--drop-split-data` adds removals for the old one-file-per-map scripts; it was needed once, when switching to the bundle.)
