@@ -72,7 +72,7 @@
           { w: 187, any: 'Parts in any order', t: 'Uniforms: wash them in the showers', d: 'Unlock the washing machine cage with the warden\'s key. In Afterlife, zap the voltmeter that powers the machine (across the room from it). Back in your body, start it: you\'re locked in with extra zombies until the wash finishes (about 30 seconds). Take the uniforms when it\'s done.', needs: ['wardens-key'] },
           { w: 265, any: 'Parts in any order', t: 'Rigging: drop the elevator in the Citadel tunnels', d: 'Go down the big spiral staircase and unlock the cage at the bottom with the key. Go into Afterlife at the top and walk back down: three blue numbers appear on the walls. Zap the number pad to enter them. The elevator drops for 60 seconds; open the gate and grab the rigging.', needs: ['wardens-key'] },
           { w: 330, any: 'Parts in any order', t: 'Engine: switch off the barrier in the warden\'s office', d: 'A cell in the warden\'s office holds it behind an electric barrier. In Afterlife, zap the two generators in Building 64 (follow the blue wires) and the hidden third one through the blue portal. Then open the cell with the key.', needs: ['wardens-key'] },
-          { w: 368, any: 'Parts in any order', t: 'Oxygen tanks: the double gate at the docks (2 players)', d: 'Unlock the gate left of the Tommy gun with the key. Both players go in; one enters Afterlife and zaps the voltmeter. The gate behind you locks and an inner gate opens; the other player grabs the tanks, then the ghost zaps again to let you out.', needs: ['wardens-key'], tip: 'While the ghost is out, run up the big white staircase and zap the gondola to power it.' },
+          { w: 368, any: 'Parts in any order', key: 'oxygen-tanks-the-double-gate-at-the-docks-2-players', t: 'Oxygen tanks: the double gate at the docks', d: 'Unlock the gate left of the Tommy gun with the key. Solo: go into Afterlife, zap the voltmeter and take the tanks. In co-op it needs two players: both go in and one enters Afterlife and zaps the voltmeter. The gate behind you locks and an inner gate opens; the other player grabs the tanks, then the ghost zaps again to let you out.', needs: ['wardens-key'], tip: 'While the ghost is out, run up the big white staircase and zap the gondola to power it.' },
           { w: 438, any: 'Parts in any order', t: 'Valves: in the infirmary, then open the roof', d: 'Unlock the glass case next to the infirmary\'s Cerberus head with the key and take the valves. For roof access: enter Afterlife at the infirmary box, go through the blue door in the corridor, jump onto the roof and zap the voltmeter by the roof door.', needs: ['wardens-key'] },
           { w: 470, t: 'Build each part onto the plane on the roof ramp' },
         ],
@@ -116,10 +116,10 @@
         ],
         upgrade: {
           name: 'Hell\'s Redeemer', img: I + 'hells-redeemer.webp',
-          summary: 'Blue, charges three times instead of two, and a charged throw is an instant kill. Each player has to do these steps for themselves.',
+          summary: 'Blue, charges three times instead of two, and a charged throw is an instant kill. Each player has to do these steps for themselves, and only on Original difficulty.',
           video: { id: 'vuaZW8sI2sA', title: 'Hell\'s Redeemer guide', ch: 'MrDalekJD', len: '3:52' },
           steps: [
-            { w: [A, 200], t: 'Get about 15 kills with the Hell\'s Retriever', d: 'You hear a sound when it\'s done.' },
+            { w: [A, 200], t: 'Get about 15 kills with the Hell\'s Retriever', d: 'Somewhere between 10 and 15. You hear a sound when it\'s done.' },
             { w: 43, t: 'On round 10 or later, survive a full round on the bridge using only the Retriever', d: 'At least 30 kills with it, and don\'t fire a gun that round. You hear the Afterlife sound when the round ends.' },
             { w: 122, t: 'Back on Alcatraz, throw it into the lava pit under the cell block\'s middle floor', d: 'Below the Cerberus head by the B23R. It doesn\'t come back.' },
             { w: 153, t: 'End the round, go into Afterlife and take the Redeemer', d: 'At the Retriever spot in the Citadel tunnels; it now glows blue.' },

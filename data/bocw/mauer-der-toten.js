@@ -181,7 +181,7 @@
       },
       {
         id: 'mister-peeks', tab: 'side', type: 'Free reward', name: 'Mister Peeks nightclub',
-        summary: 'Collect six bunny parts: a desk in Hotel Room 304, a tyre stack in the Alley, a couch near Juggernog in the bar, a cardboard box in the Sewer Access, a shelf in the department store, and a shelf in front of the Grocery Store counter. You\'re taken to a nightclub to fight three waves (with a Mangler, a Mimic and a Disciple). Win and pick one of three doors for a reward.',
+        summary: 'Collect six bunny parts: a desk in Hotel Room 304, a tyre stack in the Alley, a couch near Juggernog in the bar, a cardboard box in the Sewer Access, a shelf in the department store, and a shelf in front of the Grocery Store counter. You\'re taken to a nightclub to fight three waves (with a Mangler, a Mimic and a Disciple). Win and pick one of three doors for a reward. You can go back twice more: 15 rounds after each visit, shoot the Mister Peeks bunny that appears in a window of the Hasenbau building.',
       },
       {
         id: 'rooftop-targets', tab: 'side', type: 'Free reward', name: 'Rooftop shooting gallery',

@@ -189,8 +189,8 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'free-perk', tab: 'side', type: 'Free perk', name: 'Five wooden figurines: extra perk',
-        summary: 'Pick up a figurine next to each Pack-a-Punch spot while the machine is there, put them in the suitcase in spawn, and kill the electric zombies that come next round for a free perk.',
-        spots: ['Boathouse: a musk deer.', 'Beach: a bird (duck).', 'Lagoon: a squirrel (duck).', 'Sunken Path / Artifact Storage: an Apothicon.', 'Golden Pack-a-Punch island: a Margwa.'],
+        summary: 'Pick up a figurine next to each Pack-a-Punch spot while the machine is there, put them in the suitcase on the Beach, and kill the electric zombies that come next round for a free perk.',
+        spots: ['Boathouse: a musk deer.', 'Beach: a bird.', 'Lagoon: a squirrel.', 'Sunken Path / Artifact Storage: an Apothicon.', 'Golden Pack-a-Punch island: a Margwa.'],
       },
       {
         id: 'golden-snowballs', tab: 'side', type: 'Upgrade', name: 'Golden snowballs',

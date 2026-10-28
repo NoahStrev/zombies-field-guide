@@ -129,7 +129,7 @@
       },
       {
         id: 'bowling', tab: 'side', type: 'Free reward', name: 'Mister Peeks bowling',
-        summary: 'Shoot five bowling shoes: on the Pump & Pay counter, on a shelf in the hardware store opposite Olly\'s Comics, under a chair in the open window left of the AK-74 wall-buy on Hill Street, hanging from a tree right of the cemetery armour wall-buy, and on a casket in the funeral home. You\'re sent to the bowling alley to bowl at zombies for two minutes; the better your score, the better the prize.',
+        summary: 'Shoot five bowling shoes: on the Pump & Pay counter, on a shelf in the hardware store opposite Olly\'s Comics, under a chair in the open window left of the AK-74 wall-buy on Hill Street, hanging from a tree right of the cemetery armour wall-buy, and on a casket in the funeral home. You\'re sent to the bowling alley to bowl at zombies for two minutes; the better your score, the better the prize. Do it three times in one game to unlock the song "Echo".',
       },
       {
         id: 'deadshot', tab: 'side', type: 'Free perk', name: 'Free Deadshot Daiquiri',

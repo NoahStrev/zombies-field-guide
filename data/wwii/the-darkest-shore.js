@@ -55,7 +55,7 @@
           { w: 63, t: 'Take the saw blade in Bunker 3', d: 'On a corpse next to the Pack-a-Punch fuse machine, near the MP-40 locker.' },
           { w: 80, t: 'Build it at the table and buy it (2,500)', d: 'The table is in the hallway by the facility power switch.' },
           { w: 126, t: 'Harvest a charged spine from a normal zombie', d: 'Heavy melee a zombie and hold interact to rip out its spine. You want one that glows red. The U-Boat Pens are a good place to farm.' },
-          { w: 141, t: 'Put the spine on the table and kill about 30 zombies nearby' },
+          { w: 141, t: 'Put the spine on the table and kill about 30 zombies nearby', d: 'Somewhere between 20 and 30 kills.' },
           { w: 158, t: 'Take the upgraded Ripsaw', d: 'Infuse it, then pick it up (500 more). It now fires over 20 saw blades.', tip: 'From now on, harvest spines by sprinting into a zombie and charging it with the Ripsaw.' },
         ],
         upgrade: {

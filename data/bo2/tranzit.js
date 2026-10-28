@@ -210,9 +210,9 @@
         steps: [{ w: 75, t: 'Grab the navcard behind the dumpster at the back of the Bus Depot' }],
       },
       {
-        id: 'song', tab: 'side', type: 'Song', name: '"Carry On"',
+        id: 'song', tab: 'side', type: 'Song', name: '"Carrion"',
         summary: 'Interact with three teddy bears.',
-        spots: ['On a bench in the Bus Depot.', 'On a mattress upstairs in the farmhouse.', 'On a booth in the bar in Town.'],
+        spots: ['On a wooden bench just outside the Bus Depot, by a pool of lava.', 'On a mattress upstairs in the farmhouse.', 'On a cushioned chair next to the pool table in the bar in Town.'],
       },
     ],
   });

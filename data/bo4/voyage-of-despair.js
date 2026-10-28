@@ -84,7 +84,7 @@
       {
         id: 'distill-kit', tab: 'parts', type: 'Buildable · Upgrade station', name: 'Kraken Distillation Kit', img: I + 'distill.webp', color: 'aether',
         summary: 'A workbench that gives the Kraken an elemental upgrade. Kill a Catalyst zombie with the Kraken to make it drop a concentrated element, then pay 3,000 points (6,000 if the Kraken is Pack-a-Punched).',
-        facts: [['Parts', '3'], ['Build at', 'Provisions, right next to the Engine Room']],
+        facts: [['Parts', '3'], ['Build at', 'Engine Room, just past Provisions (first stairs down, on the right)']],
         video: { id: '8fwpLxvHcdQ', title: 'All elemental Kraken upgrades guide', ch: 'MrRoflWaffles', len: '11:04' },
         parts: [
           { w: 78, name: 'Part 1', area: 'Off the Upper Grand Staircase (door on the right after the stairs)', spots: ['On the sloped wooden table on the right side of the room.', 'On the left side of the same room.'] },
@@ -92,7 +92,7 @@
           { w: 156, name: 'Coiled spring', area: 'Cargo Hold (underwater)', spots: ['Swim to the Pack-a-Punch pedestal, turn around: on the right side of the room.', 'A bit further back, on the wooden boxes under the water.'] },
         ],
         blocks: [
-          { p: 'Build it at the table in Provisions (right around the corner from the Engine Room), not at the shield bench. Then:' },
+          { p: 'Build it at the table just past Provisions: go down the first stairs into the Engine Room and it\'s on your right (not the shield bench). Then:' },
           { table: { head: ['Kill this Catalyst with the Kraken', 'It drops', 'Kraken becomes'], rows: [
             ['Poison (green gas)', 'Concentrated Decay (heart)', 'Jörmungandr\'s Fang: projectile pierces every zombie in its path; survivors are disoriented'],
             ['Water', 'Concentrated Purity (foot)', 'Grip of Akkorokamui: a freezing cloud that slows zombies'],

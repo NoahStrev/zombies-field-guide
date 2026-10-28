@@ -110,7 +110,7 @@
       {
         id: 'smiley', tab: 'weapons', type: 'Wonder weapon', name: 'Smiley (chainsaw)', short: 'Smiley', img: I + 'smiley.webp', color: 'red',
         summary: 'A spinning saw blade. Fire to hold it out as a chainsaw; aim to throw the disc so it ricochets. Free in the Bear Lodge basement once the main easter egg is done in that game.',
-        facts: [['Unlock', 'Finish the main easter egg'], ['Where', 'Bear Lodge basement, by the stairs']],
+        facts: [['Unlock', 'Finish the main easter egg, or have someone with Director\'s Cut in the lobby'], ['Where', 'Bear Lodge basement, by the stairs']],
       },
 
       /* ------------------------------ EASTER EGG ------------------------------ */

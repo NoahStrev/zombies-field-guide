@@ -121,8 +121,8 @@
         video: { id: D, title: 'Ultimate guide to Blood of the Dead', ch: 'MrDalekJD', len: '36:22' },
         steps: [
           { t: 'Have the shield and the Retriever', needs: ['spectral-shield', 'hells-retriever'] },
-          { w: 703, t: 'Read three numbers in the Warden\'s Office', d: 'Use spectral vision: numbers appear on the pillars. They\'re random each game.' },
-          { w: 718, t: 'Enter them on the Citadel dials', d: 'Spirit blast the dials at the bottom of the Citadel Tunnels and enter the numbers. A cage drops; the skeleton\'s key falls into the water.' },
+          { w: 703, t: 'Read three numbers in the Warden\'s Office', d: 'Use spectral vision: numbers appear on the three pillars. Read them starting with the pillar nearest the perk machine (Tonic). They\'re random each game.' },
+          { w: 718, t: 'Enter them on the Citadel dials', d: 'Spirit blast the dials at the bottom of the Citadel Tunnels and enter the numbers. A cage drops; the skeleton\'s key falls into the water.', warn: 'Don\'t blast the Docks voltmeter before this step: the crane fishes up junk instead of the skeleton.' },
           { w: 814, t: 'Blast the Docks voltmeter and throw at the skeleton', d: 'The crane swings its net over the Docks. When it stops, throw the Retriever at the skeleton in the net. The Spoon falls onto the crate below.' },
         ],
         upgrade: {

@@ -252,12 +252,12 @@
       },
       {
         id: 'free-perks', tab: 'side', type: 'Free perk', name: 'Free perks from the ghosts',
-        summary: 'After you leave the mansion, kill the ghosts that follow you: the last one drops a free perk. Also: shoot the bullseye in the saloon with the Ballistic Knife from behind the chalk line, then put 10 points in the tip jar of the ghost playing the piano in the mansion for another perk.',
+        summary: 'After you leave the mansion, kill the ghosts that follow you: the last one drops a free perk. This works once every five rounds: lit windows on the front of the mansion mean it\'s ready (plant a Time Bomb before killing the last ghost to win it twice). Also: shoot the bullseye in the saloon with the Ballistic Knife from behind the chalk line, then put 10 points in the tip jar of the ghost playing the piano in the mansion for another perk.',
       },
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Always Running"',
         summary: 'Interact with three teddy bears.',
-        spots: ['In the mines.', 'In a barrel in the candy store.', 'Next to Double Tap in the mansion.'],
+        spots: ['In the mines by Quick Revive, against hay bales next to a hole in the wall.', 'In a barrel in the candy store.', 'Next to Double Tap in the mansion.'],
       },
     ],
   });

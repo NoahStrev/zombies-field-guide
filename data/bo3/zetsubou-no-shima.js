@@ -268,6 +268,11 @@
         ],
       },
       {
+        id: 'song-lullaby', tab: 'side', type: 'Song', name: '"Samantha\'s Lullaby (Magic Mix)"',
+        summary: 'Seven melody bulbs sit on the wall next to the purple water in the Living Quarters. Fill the first six with purple water to the amounts 1, 3, 5, 6, 7 and 5, then interact with the seventh bulb to play the song.',
+        blocks: [{ tip: 'These amounts come from the wiki; no guide video shows the step.' }],
+      },
+      {
         id: 'golden-bucket', tab: 'side', type: 'Upgrade', name: 'Golden Bucket', color: 'gold',
         video: { id: 'QFPvSqxbkPc', title: 'Golden Bucket upgrade', ch: 'MrDalekJD', len: '2:21' },
         summary: 'Never runs out of water and lets you switch between blue, green and purple (sprint + melee).',

@@ -54,7 +54,7 @@
           ] },
           { w: 79, t: 'Dive-to-prone under the hanging cage with PhD Flopper', d: 'In the back left corner of the Tenshu Entrance (facing the cherry blossom tree). The cage drops.' },
           { w: 95, t: 'Throw the cage into lava, then play to the next round' },
-          { w: 111, t: 'Find the cat\'s paw prints by a gateway', d: 'Kill zombies at the four possible gateways until glowing red paw prints appear. You must have the Maneki-Neko equipped (buy another at the bench if you used it).' },
+          { w: 111, t: 'Find the cat\'s paw prints by a gateway', d: 'When the cage melts, a fissure opens in one of four areas (Flower Garden, Central Courtyard, Staging Area or Training Area). Wait for it to close, then kill zombies at that area\'s doorway until glowing red paw prints appear. You must have the Maneki-Neko equipped (buy another at the bench if you used it).' },
           { w: 218, t: 'Follow the prints by killing zombies where they point', d: 'Each kill in front of the prints makes a new set. When they form a circle, throw the Maneki-Neko into the middle; the lava must be flowing, not cooled.' },
           { w: 281, t: 'Kill the Abomination that climbs out, then flip the round' },
           { w: 296, t: 'Sneak up on the sleeping cat', d: 'Somewhere near the Kitchens or the Training Area, surrounded by creaky floorboards. Crouch and avoid the boards (Death Perception highlights them); don\'t sprint, shoot or use a field upgrade nearby. Pick the cat up.' },

@@ -159,7 +159,7 @@
           ], tip: 'Two rides cover all three: Waterfront → Footlight looking out the side opposite the Bootlegger wall-buy, then Footlight → Canal looking out the Bootlegger side.' },
           { w: ['zz9m-MB725o', 513], t: 'Shock the matching symbols in the Rift', needs: ['beast-mode'], d: 'In the Rift, across from the Sacred Place, nine symbols surround a doorway next to the Mystery Box and GobbleGum spot. As the Beast, shock the three you saw. The wall dissolves and reveals a statue holding four swords and four eggs.', warn: 'A wrong combination hides the symbols until next round.' },
           { w: ['zz9m-MB725o', 534], t: 'Take an egg from the statue', d: 'Each player takes their own egg.' },
-          { w: ['zz9m-MB725o', 538], anyList: 'Statues in any order', t: 'Charge the egg at all four Apothicon statues', d: 'Smash the crate around each statue, place your egg, and kill zombies nearby until it has absorbed 12 souls and glows white. Pick it up and move to the next one. After the fourth it glows blue.', list: [
+          { w: ['zz9m-MB725o', 538], anyList: 'Statues in any order', t: 'Charge the egg at all four Apothicon statues', d: 'Smash the crate around each statue, place your egg, and kill zombies nearby until it has absorbed 10 to 12 souls and glows white. Pick it up and move to the next one. After the fourth it glows blue.', list: [
             'Footlight District alleyway, under the Perk-a-Cola spot.',
             'Canal District, behind the front stairs of the Ruby Rabbit.',
             'Waterfront District, in the wrecked building in the room past the Perk-a-Cola spot.',

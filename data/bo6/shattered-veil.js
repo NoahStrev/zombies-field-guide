@@ -52,7 +52,7 @@
         video: RV,
         steps: [
           { w: 0, t: 'Kill the lab technician underground for a floppy disk', d: 'From round 10, in the Mainframe Chamber area. A Nuke may already have killed him: check the floor.' },
-          { w: 33, t: 'Put the disk in the computer right of the T-Rex, then read the fax', d: 'Kill the zombies, parasites and bugs that spawn. The fax beside it shows a word in capitals: MOTH, CRAB, YETI or WORM.' },
+          { w: 33, t: 'Put the disk in the computer right of the T-Rex, then read the fax', d: 'The computer is in the corner of the room on your right as you face the T-Rex (the East Foyer). Kill the zombies, parasites and bugs that spawn. The fax beside it shows a word in capitals: MOTH, CRAB, YETI or WORM.' },
           { w: 64, t: 'Turn the word into a code on the Nursery chalkboard', d: 'For each letter, count how many letters are in its group on the board. Example: Y in a group of 5, E in 4, T in 8, I in 2 makes YETI 5482. The board changes every game.' },
           { w: 112, t: 'Open the Doppelghast\'s cell underground and kill it', d: 'Enter the code on the keypad. It drops a severed arm.' },
           { w: 128, t: 'Use the arm on the scanner in the Armory', d: 'Underground. Hold interact on the right side of the case to take the Mark II.' },
@@ -63,7 +63,7 @@
         summary: 'A blue SMG version. Its canister is charged by Abominations at Shem\'s Henge.',
         video: RV,
         steps: [
-          { w: 144, t: 'Get a canister: throw a Kazimir at the window behind Double Tap', d: 'There\'s a free Kazimir on a body in the Service Tunnel. It sucks the canister out; pick it up.' },
+          { w: 144, t: 'Get a canister: throw a Kazimir at the window behind Double Tap', d: 'There\'s a free Kazimir on a body in the Service Tunnel. It sucks the canister out; pick it up.', tip: 'Any of the three canister methods works for any colour of Mark II.' },
           { w: 175, t: 'Put it in the yellow box at Shem\'s Henge', d: 'Abominations spawn below the steps.' },
           { w: 191, t: 'Get the Abominations to zap, then charge, the three small rocks', d: 'Zapped rocks glow blue; a charge into a glowing rock makes it float. With all three floating, defend the middle from Vermin.' },
           { w: 221, t: 'Craft it at the bench in the Supply Depot (underground)', d: 'Put in the charged canister, then hold interact with the base Mark II.' },
@@ -74,7 +74,7 @@
         summary: 'A purple shotgun version. Bounce a beam with two reflectors to wake three Doppelghast statues.',
         video: RV,
         steps: [
-          { w: 253, t: 'Get a canister: send gas to the tank by the Mainframe Chamber', d: 'Note the letter (A or B) by the tank next to the Mainframe. Outside the Service Tunnel, hit the valve wheels with tomahawks so gas flows only to your letter (left, middle, then your letter on; the other letter off). Then blow the tank open with an explosive and take the canister.' },
+          { w: 253, t: 'Get a canister: send gas to the tank by the Mainframe Chamber', d: 'Note the letter (A or B) by the tank next to the Mainframe. Outside the Service Tunnel, hit the valve wheels with tomahawks so gas flows only to your letter (left, middle, then your letter on; the other letter off). Then blow the tank open with an explosive and take the canister.', tip: 'Any of the three canister methods works for any colour of Mark II.' },
           { w: 316, t: 'Find the Essence Bomb in a white Project Janus crate', d: 'Break white crates around the map (Armory, Service Tunnel, balconies, hallways, T-Rex room, Motor Court, Shem\'s Henge, Conservatory) until one has it.' },
           { w: 414, t: 'Take the two reflectors from the fountains', d: 'One by Quick Revive near the Conservatory, one on the South West Balcony.' },
           { w: 430, t: 'Blow open the rubble in the Service Tunnel and start the machine', d: 'Place the bomb, go through and put the canister in the machine. A beam comes down.' },
@@ -87,7 +87,7 @@
         summary: 'A yellow marksman rifle version. Grow four Aether plants in the Conservatory.',
         video: RV,
         steps: [
-          { w: 540, t: 'Get a canister: shoot the blue crystal pods with the base Mark II', d: 'Four spots: in the roof near Quick Revive in the Conservatory, up on the wall left inside the mansion, up the stairs right inside the mansion, and high up in the Service Tunnel. One drops it. A normal Ray Gun won\'t work.' },
+          { w: 540, t: 'Get a canister: shoot the blue crystal pods with the base Mark II', d: 'Four spots: in the roof near Quick Revive in the Conservatory, up on the wall left inside the mansion, up the stairs right inside the mansion, and high up in the Service Tunnel. One drops it. A normal Ray Gun won\'t work.', tip: 'Any of the three canister methods works for any colour of Mark II.' },
           { w: 604, t: 'Blow up four plants for Aether seeds', d: 'Use explosives, fire or the base Mark II. They grow on grassy spots: Shem\'s Henge, the fountain by Quick Revive, both sides of the Garden Pond bridge, the Conservatory, the South West Balcony, the Rear Patio, behind Double Tap.' },
           { w: 699, t: 'Put the canister in the Conservatory machine and grow all four seeds', d: 'Plant a seed in each planter and defend it while it grows. If a seed pops out, grab it quickly and try again.' },
           { w: 760, t: 'Craft it at the bench in the spawn area' },
@@ -100,8 +100,8 @@
         steps: [
           { w: 168, t: 'Finish any one ritual of the main quest', d: 'Richtofen starts talking to you.', needs: ['ee'] },
           { w: 429, t: 'Shoot the smelly laundry under the bed in the Nursery' },
-          { w: 461, t: 'Clear the three relics', d: 'A book on a chair, a ball in spawn and a family photo in the Grand Foyer. Hit one: it floats and pulls in debris. Shoot all the debris, then the relic; repeat until it vanishes in purple smoke. Fail and it resets next round.', tip: 'A shotgun with splash (Pack-a-Punched GS45s or Dragon\'s Breath ASG) or a War Machine works best.' },
-          { w: 556, t: 'Shoot the purple smoke at the bottom of the elevator', d: 'The Wunderwaffe pops out.' },
+          { w: 461, t: 'Clear the three relics', d: 'A book on a chair on the East Balcony, a basketball on the rocks in the Garden Pond (spawn) across from the Mark II bench, and the family portrait in the Grand Foyer. Hit one: it floats and pulls in debris. Shoot all the debris, then the relic; repeat until it vanishes in purple smoke. Fail and it resets next round.', tip: 'A shotgun with splash (Pack-a-Punched GS45s or Dragon\'s Breath ASG) or a War Machine works best.' },
+          { w: 556, t: 'Shoot the purple smoke at the bottom of the elevator', d: 'Drop down the elevator shaft and look straight up: purple smoke circles just above you. Shoot it and the Wunderwaffe pops out.' },
         ],
       },
 

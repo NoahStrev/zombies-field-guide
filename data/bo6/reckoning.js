@@ -42,14 +42,14 @@
       /* ------------------------------ WEAPONS ------------------------------ */
       {
         id: 'gorgofex', tab: 'weapons', type: 'Wonder weapon', name: 'Gorgofex', img: I + 'gorgofex.webp', color: 'green',
-        summary: 'A living weapon grown from a cyst. It has a charged shot that the quest uses several times. Two optional upgrades exist (Gorgofex N and C).',
+        summary: 'A living weapon grown from a cyst. It has a charged shot that the quest uses several times. It can\'t be Pack-a-Punched; instead there are two optional upgrades, Gorgofex N and C, and taking one locks you out of the other.',
         facts: [['Get it', 'Free build, or the Mystery Box'], ['Upgrades', 'Gorgofex N (green), Gorgofex C (blue)']],
         video: GV,
         steps: [
-          { w: 15, t: 'Read the words on the two static monitors in the Mutant Research Lab', d: 'One is between the Mangler tank and Deadshot Daiquiri, the other by the tank with Richtofen\'s wife and child. Each flashes a green word now and then; note the first letter of each. Sometimes only one screen works: then you have one letter.' },
+          { w: 15, t: 'Read the words on the two static monitors in the Mutant Research Lab', needs: ['power-pap'], d: 'Pack-a-Punch has to be on first. One is between the Mangler tank and Deadshot Daiquiri, the other by the tank with Richtofen\'s wife and child. Each flashes a green word now and then; note the first letter of each. Sometimes only one screen works: then you have one letter.' },
           { w: 47, t: 'Turn the letters into a code with the periodic table', d: 'Find the element with those letters (try them reversed if needed) and take its atomic number as three digits: hydrogen (H) is 001. You get two tries per round.' },
           { w: 174, t: 'Enter it on the keypad up the stairs to open the Bioweapons Lab' },
-          { w: 192, t: 'Feed the cyst three Vermin and three zombies', d: 'Weaken them right next to the open glass hood until they get sucked in. Damaging zombies there can make Vermin burst out. Then take the cyst.' },
+          { w: 192, t: 'Feed the cyst three Vermin and three zombies', d: 'Three Vermin (Parasites work too), then three zombies. Weaken them right next to the open glass hood until they get sucked in. Damaging zombies there can make Vermin burst out. Then take the cyst.' },
           { w: 240, t: 'Drain three yellow plants in the Quantum Computing Core', d: 'Stand near each plant while the cyst sucks it dry. Dodge the acid it spits.' },
           { w: 285, t: 'Start four power surges in Dark Entity Containment', d: 'In Tower 2 by the Forsaken. Hold interact on the computer saying "Initiate Power Surge", then quickly on the other active screens (listen for their sound).' },
           { w: 335, t: 'Break an Uber Klaus\'s shoulder pads and lead it onto the electric plate', d: 'The Forsaken fuses with it. Kill the result and take what it drops; combine it with the cyst for the Gorgofex.' },
@@ -115,6 +115,10 @@
       {
         id: 'song-peace', tab: 'side', type: 'Song', name: '"Samantha\'s Peace"',
         summary: 'After Pack-a-Punch, run through the metal detectors in reception in this order (looking from spawn): left, right, middle, four times over.',
+      },
+      {
+        id: 'song-soul', tab: 'side', type: 'Song', name: '"Samantha\'s Soul" (Leo Sartwell remix)',
+        summary: 'In the T1 Director\'s Office, shoot the pool balls on the wall in the order 1, 1, 5. The remix plays and you also get a free Self-Revive.',
       },
     ],
   });

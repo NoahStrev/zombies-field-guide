@@ -48,7 +48,7 @@
         video: JV,
         steps: [
           { w: 142, t: 'Take the chain links from the ship\'s bow', d: 'In the Dry Dock, press the button to lower a wooden wall for 30 seconds, wall-run off it and grab the chains at the tip of the ship.' },
-          { w: 174, t: 'Put the Chilly Chunks on the Market table', d: 'The can is behind the truck next to Deadshot Daiquiri on the Storm Bridge. The next special round brings a named Zursa (bear).' },
+          { w: 174, t: 'Put the Chilly Chunks on the Market table', d: 'The can is behind the truck next to Deadshot Daiquiri on the Storm Bridge. Place them before round 10 and the round-10 special round brings a named Zursa (bear); place them later and the very next round is a special round with the Zursa.' },
           { w: 207, t: 'Kill the Zursa for the lantern' },
           { w: 222, t: 'Open the Burial Grounds with the chains and place the lantern', d: 'The little building in the top right corner of the map. Put the lantern on the shrine downstairs.' },
           { w: 237, t: 'Match the four constellations', d: 'Facing the shrine from the stairs, take its symbols in this order: left side, right side, back, front. For each, wait for the same constellation to rotate past on the wall and interact with it.', tip: 'Wrong order: interact with the symbol on the shrine to reset.' },
