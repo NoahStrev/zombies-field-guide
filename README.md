@@ -44,7 +44,7 @@ To run it on your PC instead, double-click **`start-site.bat`**. It starts a sma
 - **Keep screen on** (phone icon in the top bar, on browsers that support it) stops the screen sleeping while you play.
 - **Home page** lists every map with your easter egg progress, an "In progress" list of quests you've started, and a Continue button back to the last page you had open.
 - **Previous / Next map** links at the bottom of every map page move through that game's maps.
-- **Offline:** on the live site, pages you open are kept on the device. "Save everything for offline" on the home page downloads all images too (about 22 MB). Videos still need internet. On a phone you can also add the site to your home screen.
+- **Offline:** on the live site, pages you open are kept on the device. "Save everything for offline" on the home page downloads all images too (about 20 MB). Videos still need internet. On a phone you can also add the site to your home screen.
 - **Search** (top bar) finds maps, items, upgrades and steps, including words inside step details and primers (shown as a highlighted snippet). Up and down arrows move through the results; Enter opens one.
 
 ## How the files are laid out
@@ -80,9 +80,9 @@ tools/                  research, checking and publishing scripts (see tools/REA
    - Map-level `players`: `'solo'`, `'four'`, `'coop'`, or `{ text: '<badge text>', warn: true }` for custom wording.
    - A quest with two sides (Black Ops II) is two `easter-egg` items whose `type` starts with `Main Easter Egg`; the map card and the Next step button follow whichever side has the most ticks.
 4. In any text, `**bold**` makes bold text and `{{item-id}}` (or `{{item-id|label}}`) makes a quick-look chip. `[[game/map/tab|label]]` (optionally `/item-<id>` after the tab) links to another page of the guide.
-5. Open the browser console after a change: the site warns about any `needs` or `{{...}}` that points to an item that doesn't exist, and about two steps in one list sharing a tick key.
+5. Open the browser console after a change: the site warns about any `needs` or `{{...}}` that points to an item that doesn't exist, and about two steps in one list sharing a tick key. Then run the checks in `tools/README.md`: `audit` also catches a data file that won't load (usually an apostrophe that needs a backslash, `it\'s`).
 6. After editing files, bump the `?v=` number on the `<link>`/`<script>` tags in `index.html` so browsers load the new version.
 
 ## Credits
 
-Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/). Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators (MrRoflWaffles, MrDalekJD, NoahJ456, TheSmithPlays, CrashPower, Ricktness, SBZ vSylent, CodeNamePizza, Pack A Puncher, GregFPS, Ch0pper, AceOfSpades, Rager6amer, LegoUnlocked, JokerAlex 21, TheGamingRevolution and others). Fan-made; not affiliated with Activision, Treyarch, Infinity Ward or Sledgehammer Games.
+Guides were written for this site from community research, mainly the [Call of Duty Wiki](https://callofduty.fandom.com/), and every guide was cross-checked against it step by step in October 2026, with the guide videos as the tiebreaker. Images come from that wiki (game screenshots © Activision). Embedded videos belong to their creators: MrRoflWaffles, MrDalekJD, TheGamingRevolution, AceOfSpades, CrashPower, GregFPS, Ch0pper, Pack A Puncher, SBZ vSylent, JokerAlex 21, MrWilliamThor, NoahJ456, TheSmithPlays, Ricktness, CodeNamePizza, Rager6amer, LegoUnlocked, ChadderManHD, Cragusmaximuss, DIG_DUG7, Fast Guides Glitch, JustGamingFella, Jimmxr, MJPW, Ray Pooperton III and THE BROS. Fan-made; not affiliated with Activision, Treyarch, Infinity Ward or Sledgehammer Games.

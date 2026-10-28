@@ -24,10 +24,18 @@ Run it with no command to see the full list. Image downloads need Pillow (`pip i
 
 1. Start the local site (`start-site.bat`) and, in another window, `receiver`.
 2. Open the site, paste `tools/browser/export.js` into the console. That writes `tools/.cache/export.json`.
-3. `audit`: every image exists, every video still plays and can be embedded, every timestamp is inside its video, and declared video lengths match.
+3. `audit`: every data file parses (an unescaped apostrophe such as `'it's'` would stop a whole map loading), every map made it into the export, every image exists, every video still plays and can be embedded, every timestamp is inside its video, and declared video lengths match. Export again first if you changed data, or the "missing from the export" check will be out of date.
 4. `verify <game>/<map> --all`: lists every "watch" timestamp next to what the video says at that moment, in `tools/.cache/verify_<...>.txt`. Without `--all`, only likely mismatches are listed.
-5. In the console, `new Function(text)` on each script catches syntax errors (for example an unescaped apostrophe) before they break a whole map.
-6. `retitled [REF]`: step titles that existed at git REF (default: the last commit) but are gone now. Ticks are saved under each step's title, so if a step was only reworded, add `key: '<old key>'` to it before publishing, or people lose that tick.
+5. `retitled [REF]`: step titles that existed at git REF (default: the last commit) but are gone now. Ticks are saved under each step's title, so if a step was only reworded, add `key: '<old key>'` to it before publishing, or people lose that tick.
+
+## Fact-checking
+
+Every guide was checked step by step against the Call of Duty Wiki in October 2026 (main quests, then weapons, side quests, parts and basics). To repeat it after big changes:
+
+1. With the site and `receiver` running, paste `tools/browser/dump.js` into the console, then run `dump`. Each map's full text lands in `tools/.cache/dump/<game>_<map>.txt`.
+2. Fetch the matching wiki pages (`wiki-fetch`, then `wiki-show`). Quest steps are usually on "<Map>/Main Quest"; weapons have their own pages; the "Pack-a-Punch Machine (Treyarch)" page has every Treyarch map's Pack-a-Punch steps.
+3. Where the wiki and the guide disagree, the guide video settles it: search its transcript in `tools/.cache/tx/`. If the video shows our version on screen, keep it. Otherwise look for a second written guide.
+4. Wording a step differently is fine; a wrong number, place or order is not. Missing locations, retry rules and solo/co-op differences are worth adding.
 
 ## Publishing
 

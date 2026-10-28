@@ -13,8 +13,11 @@ Research
 
 Checking (after exporting the site data with tools/browser/export.js)
   receiver                      Local server on 127.0.0.1:8099 that saves POSTs from the site to tools/.cache/<name>.json
-  audit [PREFIX]                Images exist, videos play and embed, timestamps fit, declared lengths match
+  audit [PREFIX]                Data files parse (catches unescaped apostrophes), every map made it into the
+                                export, images exist, videos play and embed, timestamps fit, lengths match
   verify PREFIX [--all]         Pair every "watch" timestamp with what the video says at that moment
+  dump                          Split tools/.cache/fulldump.json (from tools/browser/dump.js) into one
+                                readable text file per map in tools/.cache/dump/, for fact-checking
   retitled [REF]                Step titles in data/ that existed at git REF (default HEAD) but are gone now.
                                 Ticks are saved under the title, so a reworded step needs key: '<old slug>'
 
@@ -489,6 +492,18 @@ def retitled(args):
 
 
 # ---------------------------------------------------------------- publishing
+def dump(args):
+    f = CACHE / "fulldump.json"
+    if not f.exists():
+        sys.exit("No tools/.cache/fulldump.json yet: run `zg.py receiver`, then paste tools/browser/dump.js into the site's console.")
+    out = CACHE / "dump"
+    out.mkdir(parents=True, exist_ok=True)
+    data = json.loads(f.read_text(encoding="utf-8"))
+    for key, text in data.items():
+        (out / (key.replace("/", "_") + ".txt")).write_text(text, encoding="utf-8")
+    print(f"{len(data)} maps -> {out} ({sum(map(len, data.values())) // 1000}k characters)")
+
+
 def build_artifact(args):
     # One artifact version holds at most 511 files. So the hosted copy ships every image folder's
     # pictures (all but hero.webp, which home and game pages show) as one pack script,
@@ -568,7 +583,7 @@ def build_artifact(args):
 COMMANDS = {
     "wiki-fetch": lambda a: wiki_fetch(a), "wiki-show": wiki_show, "wiki-images": wiki_images, "get-images": get_images,
     "yt-search": yt_search, "yt-info": yt_info, "captions": lambda a: captions(),
-    "receiver": lambda a: receiver(), "audit": audit, "verify": verify, "retitled": retitled, "build-artifact": build_artifact,
+    "receiver": lambda a: receiver(), "audit": audit, "verify": verify, "retitled": retitled, "dump": dump, "build-artifact": build_artifact,
 }
 
 if __name__ == "__main__":

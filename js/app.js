@@ -977,7 +977,7 @@
     const saved = store.get('zg-offline');
     return `<section class="offline-box">
       <h2 class="group-h">Use it offline</h2>
-      <p>Pages you open are kept on this device automatically. To have every map ready with no signal, save everything once (${allImageUrls().length} images, about ${Math.max(1, Math.round(allImageUrls().length * 0.046))} MB). Videos still need internet.</p>
+      <p>Pages you open are kept on this device automatically. To have every map ready with no signal, save everything once (${allImageUrls().length} images, about ${Math.max(1, Math.round(allImageUrls().length * 0.042))} MB). Videos still need internet.</p>
       <p><button type="button" class="btn" id="save-offline">${saved ? 'Update the offline copy' : 'Save everything for offline'}</button></p>
       <p class="offline-status" id="offline-status" aria-live="polite">${saved ? `Last saved ${esc(saved)}.` : ''}</p>
     </section>`;
