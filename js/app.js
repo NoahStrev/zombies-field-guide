@@ -139,10 +139,12 @@
         for (const p of asArray(it.parts)) addTime(p.w, it.video || asArray(it.videos)[0]);
       }
       for (const vid of Object.keys(times)) times[vid] = [...new Set(times[vid])].sort((a, b) => a - b);
+      // Clips run 10 seconds into the next timestamp: the narrator often finishes the step
+      // just after it. "Keep watching" carries on past the end.
       map.clipEnd = (vid, t) => {
         const next = (times[vid] || []).find(x => x > t);
-        let end = next != null ? next + 2 : t + 60;
-        return Math.max(t + 10, Math.min(end, t + 120));
+        const end = next != null ? next + 10 : t + 120;
+        return Math.max(t + 20, Math.min(end, t + 180));
       };
 
       for (const m of JSON.stringify(map.items).matchAll(/\{\{([a-z0-9-]+)/g)) {
@@ -313,10 +315,15 @@
       `${ICON.play}<span class="watch-label">${esc(label)}</span><span class="watch-t">${fmtTime(t)}</span></a>`;
   }
 
+  function embedSrc(id, t, end) {
+    return `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?start=${t}${end ? `&end=${end}` : ''}&autoplay=1&rel=0&playsinline=1`;
+  }
+
   function clipHtml(id, t, end) {
-    const src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?start=${t}${end ? `&end=${end}` : ''}&autoplay=1&rel=0&playsinline=1`;
-    return `<div class="clip"><div class="clip-frame"><iframe src="${src}" title="Video clip" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>` +
-      `<div class="clip-bar"><span>${end ? `Clip ${fmtTime(t)}–${fmtTime(end)}` : `From ${fmtTime(t)}`}</span><a href="${ytUrl(id, t)}" target="_blank" rel="noopener">Open on YouTube ${ICON.out}</a></div></div>`;
+    return `<div class="clip"><div class="clip-frame"><iframe src="${embedSrc(id, t, end)}" title="Video clip" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>` +
+      `<div class="clip-bar"><span class="clip-range">${end ? `Clip ${fmtTime(t)}–${fmtTime(end)}` : `From ${fmtTime(t)}`}</span>` +
+      `${end ? `<button type="button" class="clip-more" data-yt="${esc(id)}" data-t="${end}">Keep watching ${ICON.play}</button>` : ''}` +
+      `<a href="${ytUrl(id, t)}" target="_blank" rel="noopener">Open on YouTube ${ICON.out}</a></div></div>`;
   }
 
   /* ---------- spots & parts ---------- */
@@ -1524,6 +1531,17 @@
 
       const ref = e.target.closest('.ref');
       if (ref) { e.preventDefault(); openItem(ref.dataset.ref); return; }
+
+      // "Keep watching": reload the clip from where it stopped, with no end.
+      const more = e.target.closest('.clip-more');
+      if (more) {
+        const clip = more.closest('.clip');
+        const t = Math.max(0, +more.dataset.t - 2);
+        clip.querySelector('iframe').src = embedSrc(more.dataset.yt, t, 0);
+        clip.querySelector('.clip-range').textContent = `From ${fmtTime(t)}`;
+        more.remove();
+        return;
+      }
 
       // Play clips inside the page where embeds work; otherwise the link opens YouTube.
       const watch = e.target.closest('.watch');

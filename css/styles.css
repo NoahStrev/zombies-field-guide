@@ -524,6 +524,8 @@ tr:last-child td { border-bottom: 0; }
 .clip-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; padding: 8px 12px; background: var(--panel-2); font-size: .82rem; color: var(--muted); }
 .clip-bar a { display: inline-flex; align-items: center; gap: 4px; }
 .clip-bar .icon { width: 14px; height: 14px; }
+.clip-more { display: inline-flex; align-items: center; gap: 4px; margin-right: auto; padding: 0; border: 0; background: none; font: inherit; font-weight: 600; color: var(--accent-2); cursor: pointer; }
+.clip-more .icon { fill: currentColor; stroke: none; }
 .content > .item > .clip, .upgrade > .clip { max-width: none; }
 .video.has-thumb { padding: 10px; }
 .video-thumb { position: relative; flex: none; width: 160px; max-width: 40%; aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: #000; }
