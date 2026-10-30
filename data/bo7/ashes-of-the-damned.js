@@ -212,7 +212,7 @@
         video: SE(292),
       },
       {
-        id: 'jump-pads', tab: 'side', type: 'Free reward', name: 'Jump pad tour',
+        id: 'jump-pads', tab: 'side', type: 'Free reward', name: 'Jump pad tour', img: I + 'jump-pad.webp',
         summary: 'First turn on every power pump, break every wooden gate between the areas with Ol\' Tessie and use every jump pad in both directions (14 jumps; nothing tracks them, so note them down). Four rounds later a skylight on the far left of the Janus Towers Plaza spawn room blinks a seven-number route, always starting with 3 or 7 (Ashwood): 1 Janus Towers, 2 Vandorn Farm, 3 or 7 Ashwood, 4 Blackwater Lake, 5 Exit 115, 6 Zarya Cosmodrome. Get to Ashwood on foot or in Ol\' Tessie (not by jump pad), follow the route by jump pad, ending back at Ashwood. A purple tear then opens in the sky on one pad route: fly through it before it fades. You land in Ashwood among loot: Salvage, equipment, Essence, perks, and in later rounds (after about 18) crystals and Ray Gun Mark IIs. Miss the tear and the skylight needs four more rounds for a new code; get the route wrong and try the next round\'s.',
         video: SE(15),
       },
@@ -222,7 +222,7 @@
         video: SE(532),
       },
       {
-        id: 'chompy', tab: 'side', type: 'Free weapon', name: 'Chompy (free Ray Gun)',
+        id: 'chompy', tab: 'side', type: 'Free weapon', name: 'Chompy (free Ray Gun)', img: I + 'chompy.webp',
         summary: 'Chompy is a trash can that sometimes rattles and puffs purple smoke. Melee it to open it, then feed it guns or equipment for Salvage and the odd prize. Feed it ten Monkey Bombs and it always gives back a Ray Gun.',
         video: SE(678),
       },
@@ -242,7 +242,7 @@
         video: SE(230),
       },
       {
-        id: 'zursa-summon', tab: 'side', type: 'Map tip', name: 'Summon a Zursa on any round',
+        id: 'zursa-summon', tab: 'side', type: 'Map tip', name: 'Summon a Zursa on any round', img: I + 'zursa.webp',
         summary: 'With the Necrofluid Gauntlet, shoot three skulls in the Zarya Cosmodrome: in Support Systems behind the DS20 Mirage wall-buy, on a construction panel in the window with the rappel rope behind PhD Flopper, and on the ground in the right corner of the zombie window right of the rocket. A purple-eyed Zursa spawns straight away, handy for the main quest before round 16.',
         needs: ['gauntlet'],
         video: SE(757),

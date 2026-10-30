@@ -145,7 +145,7 @@
         video: SE(124),
       },
       {
-        id: 'aetherella', tab: 'side', type: 'Free reward', name: 'Aetherella figures (invincible laser form)',
+        id: 'aetherella', tab: 'side', type: 'Free reward', name: 'Aetherella figures (invincible laser form)', img: I + 'aetherella-statue.webp',
         summary: 'Suck up all eight little Aetherella figures with the Jet Gun\'s main fire. The player who collects the last one can turn into the Aetherella statue for a while: you can\'t be hurt, and a laser fires itself at zombies\' heads.',
         video: SE(585),
         spots: [

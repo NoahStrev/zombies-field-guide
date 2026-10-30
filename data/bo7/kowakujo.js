@@ -174,7 +174,7 @@
         video: SE(592),
       },
       {
-        id: 'rifleman-upgrade', tab: 'side', type: 'Map tip', name: 'Ghostly Rifleman trap upgrades',
+        id: 'rifleman-upgrade', tab: 'side', type: 'Map tip', name: 'Ghostly Rifleman trap upgrades', img: I + 'rifleman-trap.webp',
         summary: 'The Ghostly Rifleman trap can be upgraded four times. Craft a Combat Bow, then get about 20 kills with each of the four rifleman traps. Turn on the Central Courtyard trap and look through a window for a glowing blue target. Shooting it with the bow puts you in Aether Shroud: shoot every target that appears before your arrows run out. Four masks then circle the wall: interact to send them into the trap. Repeat (more kills at all four traps, then the targets) for each upgrade: Fireworks ammo mod, then Cryo Freeze as well (plus a free Self-Revive), then Pack-a-Punched riflemen, then a fourth.',
         video: SE(779),
       },

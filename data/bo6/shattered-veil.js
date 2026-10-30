@@ -197,7 +197,7 @@
         video: SE(13),
       },
       {
-        id: 'marine-sp', tab: 'side', type: 'Free reward', name: 'Free Marine SP upgrades',
+        id: 'marine-sp', tab: 'side', type: 'Free reward', name: 'Free Marine SP upgrades', img: I + 'marine-sp.webp',
         summary: 'With Death Perception, put a Marine SP on the gun mount under the three deer heads in the Banquet Hall. Shoot the left deer head: the middle one shows a field upgrade. Switch to that field upgrade and kill zombies with it until a Mangler spawns; kill it and take the gun back a rarity higher. Repeat each round until it\'s Legendary, then once more for Pack-a-Punch tier 1.',
         video: SE(705),
       },

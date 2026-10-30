@@ -105,7 +105,7 @@
         summary: 'Quickly shoot the symbols I, I and V on both Staff of Ice murals.',
       },
       {
-        id: 'golden-armor', tab: 'side', type: 'Upgrade', name: 'Golden Armor (self-repairing)',
+        id: 'golden-armor', tab: 'side', type: 'Upgrade', name: 'Golden Armor (self-repairing)', img: I + 'golden-armor.webp',
         summary: 'Armour that keeps refilling its own plates, free for every player. You get a full tier 3 vest with it.',
         video: SE(279),
         steps: [

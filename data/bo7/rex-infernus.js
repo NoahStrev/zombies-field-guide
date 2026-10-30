@@ -170,7 +170,7 @@
         ],
       },
       {
-        id: 'anvil-gauntlet', tab: 'side', type: 'Free weapon', name: 'Necrofluid Gauntlet from the anvil',
+        id: 'anvil-gauntlet', tab: 'side', type: 'Free weapon', name: 'Necrofluid Gauntlet from the anvil', img: I + 'anvil.webp',
         summary: 'Break down one gun of every class at Dravakar\'s Anvil, each at least Pack-a-Punch level 1: assault rifle, SMG, pistol, shotgun, sniper, LMG, marksman rifle, and a launcher or special. The anvil then gives you the Necrofluid Gauntlet from Ashes of the Damned.',
         video: SE(882),
       },

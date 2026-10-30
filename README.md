@@ -39,6 +39,7 @@ To run it on your PC instead, double-click **`start-site.bat`**. It starts a sma
 - **"Needed for"** boxes on item guides link back to every easter egg step that uses the item.
 - **Order:** numbered steps go top to bottom. Steps inside a green **Any order** box, or marked with the shuffle icon, can be done in whatever order you like.
 - **Watch buttons** under steps and part spots play the exact moment from a guide video, right in the page. A clip runs about 10 seconds into the next step so the explanation isn't cut short, and **Keep watching** under the clip carries on from where it stopped.
+- **Notes:** the flag at the top right of every step and item saves a quick note during a run (quick picks like "Clip ends early" or "Can't find it", or your own words). Flagged steps show their note. **Your notes** at the bottom of each map page, and on the home page, lists them and copies them all as text that says exactly which step each one is about. Notes stay in that browser and aren't cleared by Start over.
 - **Next step** button (on easter egg pages) jumps to your first unticked step.
 - **Collapse done** (on every checklist) shrinks finished steps to just their title. It's one setting for the whole site.
 - **Keep screen on** (phone icon in the top bar, on browsers that support it) stops the screen sleeping while you play.

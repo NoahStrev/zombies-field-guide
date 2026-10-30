@@ -384,7 +384,7 @@ tr:last-child td { border-bottom: 0; }
 .step-title { font-family: var(--font-body); font-weight: 700; font-size: 1.04rem; letter-spacing: 0; margin: 4px 0 6px; line-height: 1.35; }
 .step-body > p { color: var(--text-2); }
 .step-body .bullets, .step-body .numbered { color: var(--text-2); }
-.step.done .step-body { opacity: .5; }
+.step.done .step-body > :not(.note-editor):not(.my-note) { opacity: .5; }
 .step.done .step-title { text-decoration: line-through; text-decoration-color: var(--muted); }
 .step.done .step-body .figs, .step.done .step-body .spots { display: none; }
 .flash { animation: flash 1.6s ease; }
@@ -589,6 +589,42 @@ tr:last-child td { border-bottom: 0; }
 .compact-steps .step-title::after { content: ''; display: inline-block; width: 6px; height: 6px; margin-left: 9px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(-45deg); vertical-align: 2px; transition: transform .15s ease; }
 .compact-steps .step.open .step-title::after { transform: rotate(45deg); vertical-align: 4px; }
 @media (prefers-reduced-motion: reduce) { .compact-steps .step-title::after { transition: none; } }
+
+/* Your notes: a flag on every step and item, the note itself, the editor and the notes list */
+.step { position: relative; }
+.step-title { padding-right: 34px; }
+.item-type, .item-name { padding-right: 38px; }
+.note-btn { position: absolute; top: 10px; right: 8px; z-index: 1; display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 1px solid transparent; border-radius: 10px; background: none; color: var(--muted); opacity: .55; cursor: pointer; }
+.item > .note-btn { top: 12px; right: 12px; }
+.item.in-drawer > .note-btn { display: none; }
+.note-btn .icon { width: 18px; height: 18px; }
+.note-btn:hover, .note-btn:focus-visible { opacity: 1; color: var(--text); background: var(--panel-2); border-color: var(--line); }
+.note-btn.has-note { opacity: 1; color: var(--accent-2); }
+.note-btn.has-note .icon { fill: currentColor; }
+.my-note { display: flex; gap: 10px; align-items: flex-start; margin-top: 8px; padding: 8px 6px 8px 12px; border: 1px dashed color-mix(in srgb, var(--accent) 60%, transparent); border-radius: 12px; background: color-mix(in srgb, var(--accent) 9%, transparent); font-size: .92rem; }
+.my-note[hidden] { display: none; }
+.my-note > .icon { width: 16px; height: 16px; margin-top: 3px; color: var(--accent-2); fill: currentColor; }
+.my-note > div { flex: 1; min-width: 0; }
+.my-note p { margin: 0; color: var(--text); white-space: pre-wrap; overflow-wrap: anywhere; }
+.my-note-label { display: block; font-family: var(--font-head); text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; color: var(--accent-2); }
+.note-editor { margin-top: 8px; padding: 10px; border: 1px solid var(--line-2); border-radius: 12px; background: var(--panel-2); }
+.collapse-done .step.done .step-body > .note-editor, .compact-steps .step:not(.open) .step-body > .note-editor { display: block; }
+.note-quick { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.note-chip { border: 1px solid var(--line-2); border-radius: 999px; background: var(--panel); color: var(--text-2); font: inherit; font-size: .8rem; padding: 5px 10px; min-height: 32px; cursor: pointer; }
+.note-chip:hover { color: var(--text); border-color: var(--accent); }
+.note-editor textarea { display: block; width: 100%; box-sizing: border-box; padding: 8px 10px; border: 1px solid var(--line-2); border-radius: 10px; background: var(--panel); color: var(--text); font: inherit; font-size: 16px; resize: vertical; }
+.note-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
+.note-actions .note-del { margin-left: auto; color: var(--danger); }
+.notes-panel { margin: 28px 0 8px; padding: 14px 16px; border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--line)); border-radius: var(--radius); background: var(--panel); }
+.notes-panel .group-h { display: flex; align-items: center; gap: 8px; margin-top: 0; }
+.notes-panel .group-h > .icon { color: var(--accent-2); fill: currentColor; }
+.notes-panel > p { color: var(--text-2); max-width: 70ch; margin: 0 0 6px; }
+.notes-list { margin: 8px 0; padding-left: 22px; }
+.notes-list li { margin: 8px 0; }
+.notes-list a { font-weight: 600; }
+.notes-list p { margin: 2px 0 0; color: var(--text-2); white-space: pre-wrap; overflow-wrap: anywhere; }
+.notes-copy[hidden] { display: none; }
+.home .notes-panel { margin-top: 0; }
 
 /* Move your progress (home page) */
 .transfer-box p { color: var(--text-2); max-width: 70ch; }

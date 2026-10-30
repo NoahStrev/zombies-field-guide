@@ -50,6 +50,7 @@
     out: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>',
     shuffle: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>',
     restart: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5"/></svg>',
+    flag: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h12l-2.5 4.5L17 13H5"/></svg>',
   };
 
   /* ---------- index: item lookups, "needed for" backlinks, search ---------- */
@@ -450,6 +451,126 @@
     $('.run-history', run).hidden = !hist;
   }
 
+  /* ---------- your notes: flag a step or an item mid-run, then copy them all ----------
+     Saved in this browser as zg-note:<game>/<map>:<item>[:<list>:<step key>] = {"text", "at"}.
+     A step's note uses the same key as its tick, so it stays with the step if steps move.
+     Start over and Reset leave notes alone. */
+  const NOTE = 'zg-note:';
+  const QUICK_NOTES = ['Clip ends early', 'Clip starts late', 'Wrong clip', 'Can\'t find it', 'Seems wrong', 'Unclear', 'Needs a picture'];
+  const noteWord = n => `${n} note${n === 1 ? '' : 's'}`;
+
+  function getNote(k) {
+    try { const n = JSON.parse(store.get(k) || 'null'); return n && n.text ? n : null; } catch (e) { return null; }
+  }
+  function setNote(k, text) {
+    text = String(text || '').trim();
+    if (text) store.set(k, JSON.stringify({ text, at: Date.now() })); else store.del(k);
+  }
+
+  // What a note points at: its map, item and (for a step note) list, position and step.
+  function noteInfo(k) {
+    const [mk, itemId, listKey, sk] = k.slice(NOTE.length).split(':');
+    const map = ZG.maps[mk];
+    const item = map && map.itemById && map.itemById[itemId];
+    const note = getNote(k);
+    if (!item || !note) return null;
+    const n = { k, map, item, note, listKey: listKey || null, i: -1, step: null };
+    if (listKey) {
+      n.i = stepKeys(map, item, listKey).indexOf(sk);
+      n.step = (((stepLists(item).find(([x]) => x === listKey) || [])[1]) || [])[n.i] || null;
+    }
+    n.href = hrefFor(map, item.tab, n.step ? `${item.id}-${listKey}-${n.i + 1}` : `item-${item.id}`);
+    return n;
+  }
+
+  function allNotes(mk) {
+    const pre = NOTE + (mk ? mk + ':' : '');
+    const order = n => [ZG.mapOrder.indexOf(mapKey(n.map)), n.map.items.indexOf(n.item), ['', 'prep', 'steps', 'upgrade'].indexOf(n.listKey || ''), n.i];
+    return store.keys().filter(k => k.startsWith(pre)).map(noteInfo).filter(Boolean).sort((a, b) => {
+      const x = order(a), y = order(b);
+      for (let j = 0; j < x.length; j++) if (x[j] !== y[j]) return x[j] - y[j];
+      return 0;
+    });
+  }
+
+  function noteWhere(n) {
+    if (!n.listKey) return n.item.name;
+    if (!n.step) return `${n.item.name} · a step that has since changed`;
+    const label = n.listKey === 'prep' ? 'Prep step' : n.listKey === 'upgrade' ? 'Upgrade step' : 'Step';
+    return `${n.item.name} · ${label} ${n.i + 1}: ${stripRefs(n.step.t)}`;
+  }
+
+  function notesText(list) {
+    const base = window.ZG_HOSTED ? '' : location.origin + location.pathname;
+    const lines = [`Zombies Field Guide: my notes (${list.length})`, ''];
+    list.forEach((n, j) => {
+      lines.push(`${j + 1}. ${n.map.name} (${gameName(n.map.game)}) · ${tabLabel(n.item.tab)} · ${noteWhere(n)}`);
+      lines.push(`   Note: ${n.note.text.replace(/\s*\n\s*/g, ' / ')}`);
+      lines.push(`   ${base}${n.href}`, '');
+    });
+    return lines.join('\n').trim();
+  }
+
+  // The flag button (top right of a step or item) and the saved note shown in the step or item.
+  function noteBtn(k, what) {
+    const has = !!getNote(k);
+    const label = has ? 'Edit your note' : `Flag this ${what} with a note`;
+    return `<button type="button" class="note-btn${has ? ' has-note' : ''}" data-note="${esc(k)}" data-what="${what}" aria-label="${label}" title="${label}">${ICON.flag}</button>`;
+  }
+  function noteShowHtml(k) {
+    const n = getNote(k);
+    return `<div class="my-note" data-note-show="${esc(k)}"${n ? '' : ' hidden'}>${ICON.flag}<div><span class="my-note-label">Your note</span><p>${n ? esc(n.text) : ''}</p></div>` +
+      `<button type="button" class="link-btn" data-note="${esc(k)}">Edit</button></div>`;
+  }
+  function noteEditorHtml(k) {
+    const n = getNote(k);
+    return `<div class="note-editor" data-note-editor="${esc(k)}">
+      <div class="note-quick" role="group" aria-label="Quick notes">${QUICK_NOTES.map(q => `<button type="button" class="note-chip" data-note-quick="${esc(q)}">${esc(q)}</button>`).join('')}</div>
+      <textarea rows="2" aria-label="Your note" placeholder="What went wrong? A few words is enough.">${n ? esc(n.text) : ''}</textarea>
+      <div class="note-actions">
+        <button type="button" class="btn btn-small" data-note-save>Save note</button>
+        <button type="button" class="link-btn" data-note-cancel>Cancel</button>
+        ${n ? '<button type="button" class="link-btn note-del" data-note-delete>Delete note</button>' : ''}
+      </div>
+    </div>`;
+  }
+
+  // "Your notes": this map's notes at the bottom of a map page, every note on the home page.
+  function notesPanelHtml(mk) {
+    const list = allNotes(mk);
+    const attr = `data-notes-panel="${esc(mk)}"`;
+    if (!list.length) return `<div ${attr} hidden></div>`;
+    return `<section class="notes-panel" ${attr}>
+      <h2 class="group-h">${ICON.flag}Your notes<span class="home-count">${noteWord(list.length)}</span></h2>
+      <p>${mk ? 'Everything you flagged on this map, on any tab.' : 'Everything you flagged during your runs.'} Copy them to send them on; each one says exactly which step it's about.</p>
+      <ol class="notes-list">${list.map(n => `<li><a href="${n.href}">${mk ? '' : `<strong>${esc(n.map.name)}</strong> · `}${esc(noteWhere(n))}</a><p>${esc(n.note.text)}</p></li>`).join('')}</ol>
+      <div class="transfer-actions">
+        <button type="button" class="btn btn-small" data-copy-notes="${esc(mk)}">${mk ? 'Copy these notes' : 'Copy all notes'}</button>
+        ${navigator.share && !window.ZG_HOSTED ? `<button type="button" class="btn btn-small btn-quiet" data-share-notes="${esc(mk)}">Share</button>` : ''}
+        <button type="button" class="btn btn-small btn-quiet" data-clear-notes="${esc(mk)}">${mk ? 'Delete these' : 'Delete all'}</button>
+      </div>
+      <textarea class="transfer-code notes-copy" readonly rows="6" hidden aria-label="Your notes as text"></textarea>
+      <p class="transfer-status" aria-live="polite"></p>
+    </section>`;
+  }
+
+  // After a note changes: update every flag, shown note and notes panel on the page.
+  function refreshNotes() {
+    $$('.note-btn[data-note]').forEach(b => {
+      const has = !!getNote(b.dataset.note);
+      b.classList.toggle('has-note', has);
+      const label = has ? 'Edit your note' : `Flag this ${b.dataset.what || 'step'} with a note`;
+      b.title = label;
+      b.setAttribute('aria-label', label);
+    });
+    $$('[data-note-show]').forEach(el => {
+      const n = getNote(el.dataset.noteShow);
+      el.hidden = !n;
+      if (n) $('p', el).textContent = n.text;
+    });
+    $$('[data-notes-panel]').forEach(el => { el.outerHTML = notesPanelHtml(el.dataset.notesPanel); });
+  }
+
   // Removes every tick saved under `prefix` and returns the ones that were ticked (for undo).
   function clearTicks(prefix) {
     const removed = store.keys().filter(k => k.startsWith(prefix) && isDone(k));
@@ -550,7 +671,9 @@
     const key = listPrefix(map, item, listKey) + stepKeys(map, item, listKey)[i];
     const done = isDone(key);
     const anchor = `${item.id}-${listKey}-${i + 1}`;
+    const nk = NOTE + key.slice(3);
     return `<li class="step${done ? ' done' : ''}"${opts.drawer ? '' : ` id="${anchor}"`} data-anchor="${anchor}">
+      ${noteBtn(nk, 'step')}
       <label class="step-check" title="Mark step ${i + 1} done">
         <input type="checkbox" data-key="${esc(key)}"${done ? ' checked' : ''}>
         <span class="box" aria-hidden="true"></span><span class="step-num">${i + 1}</span>
@@ -568,6 +691,7 @@
         ${callouts(st, map)}
         ${figures(st.imgs)}
         ${watchHtml(map, st.w, stepVideo(item, listKey), 'Watch this step')}
+        ${noteShowHtml(nk)}
       </div>
     </li>`;
   }
@@ -709,6 +833,7 @@
           ${item.summary ? `<p class="item-summary">${fmt(item.summary, map)}</p>` : ''}
         </div>
       </header>
+      ${opts.drawer ? '' : noteBtn(`${NOTE}${mapKey(map)}:${item.id}`, item.tab === 'side' ? 'side quest' : 'item') + noteShowHtml(`${NOTE}${mapKey(map)}:${item.id}`)}
       ${opts.drawer ? '' : backlinksHtml(map, item)}
       ${factsHtml(item.facts, map)}
       ${item.parts ? partsHtml(map, item) : ''}
@@ -834,6 +959,7 @@
       <div class="wrap home">
         ${inProgress.length ? `<section class="home-game home-progress"><h2 class="group-h">In progress<span class="home-count">${inProgress.length} quest${inProgress.length === 1 ? '' : 's'}</span></h2>
             <div class="home-maps">${inProgress.map(m => homeMapRow(m, true)).join('')}</div></section>` : ''}
+        ${notesPanelHtml('')}
         ${active.map(g => {
           const maps = ZG.mapsFor(g.id);
           return `<section class="home-game"><h2 class="group-h"><a href="#/${g.id}">${esc(g.name)}</a><span class="home-count">${mapCount(maps)} maps</span></h2>
@@ -1115,6 +1241,7 @@
           ${items.some(it => it.steps || it.prep || it.upgrade) ? `<div class="order-legend"><span>${ICON.shuffle}</span><p>Work through numbered steps top to bottom. Anything inside a green <strong>Any order</strong> box, or marked with this icon, can be done in whatever order suits you.${CAN_EMBED ? ' <strong>Watch</strong> buttons play the exact moment from a guide video right here.' : ''}</p></div>` : ''}
           ${hasPartVideos ? `<div class="callout note">${ICON.play}<div>${hasPartIcons ? 'The pictures show what each part looks like. ' : ''}<strong>Watch these spots</strong> ${CAN_EMBED ? 'plays the part of a guide video that walks through every spawn spot, right here on the page' : 'opens a guide video at the moment it walks through that part\'s spawn spots'}.</div></div>` : ''}
           ${items.map(it => itemHtml(map, it)).join('')}
+          ${notesPanelHtml(mapKey(map))}
           ${runResetHtml(map)}
         </div>
         ${toc ? `<aside class="toc" aria-label="On this page"><div class="toc-inner"><div class="toc-h">On this page</div>${toc}</div></aside>` : ''}
@@ -1531,6 +1658,73 @@
 
       const ref = e.target.closest('.ref');
       if (ref) { e.preventDefault(); openItem(ref.dataset.ref); return; }
+
+      // Notes: the flag (or Edit) opens a small editor under the step or item; tap again to close it.
+      const noteOpen = e.target.closest('[data-note]');
+      if (noteOpen) {
+        const k = noteOpen.dataset.note;
+        const box = noteOpen.closest('.step, .item');
+        const show = box && $$('[data-note-show]', box).find(el => el.dataset.noteShow === k);
+        if (!show) return;
+        const ed = show.nextElementSibling;
+        if (ed && ed.matches('.note-editor')) { ed.remove(); return; }
+        if (box.classList.contains('step') && compactSteps()) box.classList.add('open');
+        show.insertAdjacentHTML('afterend', noteEditorHtml(k));
+        const ta = $('textarea', show.nextElementSibling);
+        if (window.matchMedia('(pointer: fine)').matches) ta.focus();
+        return;
+      }
+      const quick = e.target.closest('[data-note-quick]');
+      if (quick) {
+        const ta = $('textarea', quick.closest('.note-editor'));
+        const was = ta.value.trim().replace(/[.\s]+$/, '');
+        ta.value = was ? `${was}. ${quick.dataset.noteQuick}` : quick.dataset.noteQuick;
+        return;
+      }
+      const noteAct = e.target.closest('[data-note-save], [data-note-delete], [data-note-cancel]');
+      if (noteAct) {
+        const ed = noteAct.closest('.note-editor');
+        const k = ed.dataset.noteEditor;
+        if (noteAct.matches('[data-note-cancel]')) { ed.remove(); return; }
+        const prev = store.get(k);
+        setNote(k, noteAct.matches('[data-note-delete]') ? '' : $('textarea', ed).value);
+        ed.remove();
+        refreshNotes();
+        const undo = () => { if (prev) store.set(k, prev); else store.del(k); refreshNotes(); };
+        if (getNote(k)) showToast('Note saved. Copy your notes from the bottom of the page.', undo, 5000);
+        else if (prev) showToast('Note deleted.', undo, 5000);
+        return;
+      }
+      const copyNotes = e.target.closest('[data-copy-notes], [data-share-notes]');
+      if (copyNotes) {
+        const mk = copyNotes.dataset.copyNotes ?? copyNotes.dataset.shareNotes;
+        const panel = copyNotes.closest('.notes-panel');
+        const list = allNotes(mk);
+        const text = notesText(list);
+        const status = $('.transfer-status', panel);
+        const showText = () => {
+          const ta = $('.notes-copy', panel);
+          ta.value = text;
+          ta.hidden = false;
+          ta.select();
+          status.textContent = 'Select the notes above and copy them.';
+        };
+        if ('shareNotes' in copyNotes.dataset) {
+          navigator.share({ title: 'Zombies Field Guide notes', text }).catch(err => { if (!err || err.name !== 'AbortError') showText(); });
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(() => { status.textContent = `Copied ${noteWord(list.length)}. Paste them wherever you like.`; }, showText);
+        } else showText();
+        return;
+      }
+      const clearNotes = e.target.closest('[data-clear-notes]');
+      if (clearNotes) {
+        if (!secondTap(clearNotes, 'Tap again to delete')) return;
+        const saved = allNotes(clearNotes.dataset.clearNotes).map(n => [n.k, store.get(n.k)]);
+        saved.forEach(([k]) => store.del(k));
+        refreshNotes();
+        showToast(`Deleted ${noteWord(saved.length)}.`, () => { saved.forEach(([k, v]) => store.set(k, v)); refreshNotes(); });
+        return;
+      }
 
       // "Keep watching": reload the clip from where it stopped, with no end.
       const more = e.target.closest('.clip-more');

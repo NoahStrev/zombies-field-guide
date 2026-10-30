@@ -167,7 +167,7 @@
         video: SE(64),
       },
       {
-        id: 'aether-blade', tab: 'side', type: 'Free weapon', name: 'Aether Blade (melee weapon)',
+        id: 'aether-blade', tab: 'side', type: 'Free weapon', name: 'Aether Blade (melee weapon)', img: I + 'aether-blade.webp',
         summary: 'Hang three missing paintings in the Director\'s Office, then open a hidden safe for the Aether Blade.',
         video: SE(508),
         steps: [
