@@ -41,7 +41,8 @@
       {
         id: 'annihilator', tab: 'weapons', type: 'Specialist weapon', name: 'Annihilator', img: I + 'annihilator.webp', color: 'gold',
         summary: 'A revolver specialist weapon that vaporises zombies. It is the reward for the Fly Trap easter egg.',
-        steps: [{ t: 'Finish the Fly Trap, then take it from the furnace in the Automobile Garage', needs: ['fly-trap'] }],
+        video: { id: 'ohgjh3Rpbjg', title: 'The Giant — Main Easter Egg Fly Trap Tutorial', ch: 'NoahJ456', len: '3:28', t: 131 },
+        steps: [{ w: 131, t: 'Finish the Fly Trap, then take it from the furnace in the Automobile Garage', needs: ['fly-trap'] }],
       },
       {
         id: 'fly-trap', tab: 'easter-egg', type: 'Main Easter Egg', name: 'Fly Trap', aka: 'Paradoxical Prologue', short: 'Fly Trap',
@@ -71,6 +72,7 @@
       {
         id: 'secret-perk', tab: 'side', type: 'Free perk machine', name: 'Hidden perk machine (Giant\'s eye beam)',
         summary: 'Unlock a sixth perk machine: Stamin-Up or Deadshot Daiquiri.',
+        video: { id: '1bf0fa6sxdk', title: 'The Giant secret perk machine', ch: 'MrDalekJD', len: '3:13' },
         steps: [
           { t: 'Get Monkey Bombs from the Mystery Box and link all teleporters', needs: ['power-pap'] },
           { anyList: 'Teleporters in any order', t: 'Teleport a Monkey Bomb from each teleporter', d: 'Throw a Monkey Bomb onto a teleporter pad and teleport with it. Back at the Mainframe, one of three lights on the panel beside it turns from red to green. Repeat for all three teleporters.' },

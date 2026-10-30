@@ -1,6 +1,7 @@
 /* The Tomb — Black Ops 6, Season Two */
 (() => {
   const I = 'assets/img/bo6/the-tomb/';
+  const SE = t => ({ id: '_00pt1__3Zk', title: 'Every side Easter egg in The Tomb', ch: 'MrDalekJD', len: '14:02', t }); // MrDalekJD side Easter eggs
   const E = 'XLqB2EQ9VNs'; // MrRoflWaffles easter egg guide
   const P = 'pFIPlZfogBo'; // MrRoflWaffles Pack-a-Punch guide
   const S = 'lsMEJ4MNHbc'; // MrRoflWaffles Ice Staff guide
@@ -92,6 +93,7 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Dig"',
         summary: 'Interact with three Mister Peeks headphones.',
+        video: SE(811),
         spots: [
           'In the Ossuary, on a ledge along the wall by the right-most stairs to the green portal.',
           'In the Shrine of the Hierophants, under a ledge left of Stamin-Up.',
@@ -101,6 +103,75 @@
       {
         id: 'song-aether', tab: 'side', type: 'Song', name: '"Aether" (Tomb mix)',
         summary: 'Quickly shoot the symbols I, I and V on both Staff of Ice murals.',
+      },
+      {
+        id: 'golden-armor', tab: 'side', type: 'Upgrade', name: 'Golden Armor (self-repairing)',
+        summary: 'Armour that keeps refilling its own plates, free for every player. You get a full tier 3 vest with it.',
+        video: SE(279),
+        steps: [
+          { w: 297, t: 'Break two crates in the Dark Aether Nexus and take the stone heads', d: 'Melee them open: one right of Juggernog, one under a bush left of the green portal.' },
+          { w: 312, t: 'Put the heads back on the two headless statues in the Dig Site' },
+          { w: 327, t: 'Start a Blood Sacrifice at one statue and win it', d: 'Your health drops to 1 and only armour takes damage. Kill the three elite Doppelghasts or Shock Mimics without leaving the Dig Site (leaving resets it). No scorestreaks while it runs.', tip: 'Buy armour first.' },
+          { w: 387, t: 'Do the second statue\'s Blood Sacrifice' },
+          { w: 403, t: 'Take the Golden Armor from the wall by the ox statues', d: 'They fire a beam that reveals the vest on the wall over the Pack-a-Punch spot. Everyone can take one.' },
+        ],
+      },
+      {
+        id: 'free-raygun', tab: 'side', type: 'Free weapon', name: 'Free Ray Gun (Ancient Gems)',
+        summary: 'With a shovel and Death Perception, dig the dig spots around the map: besides the usual loot, some throw out a green Ancient Gem. Bring all three to the leftmost statue facing the bull mural in the Tombs. An elite Doppelghast and a couple of normal ones spawn; kill them and interact with the statue again for 1,000 Essence and a Ray Gun.',
+        video: SE(160),
+      },
+      {
+        id: 'free-crystal', tab: 'side', type: 'Free reward', name: 'Free Aetherium Crystal and Cryo Freeze',
+        summary: 'In the Dark Aether Nexus, a floating rock sparks blue when you arrive. Shoot it, then shoot all five rocks that start moving: you get a Raw Aetherium Crystal (a free Pack-a-Punch tier) and the Cryo Freeze ammo mod.',
+        video: SE(10),
+      },
+      {
+        id: 'free-aether-tool', tab: 'side', type: 'Free reward', name: 'Free Aether Tool (frozen waterfalls)',
+        summary: 'With Cryo Freeze on a gun, shoot both waterfalls near the green door in the Dark Aether Nexus. An Aether Tool drops: Rare before round 12, Epic up to 21, Legendary from 22.',
+        video: SE(58),
+      },
+      {
+        id: 'generators', tab: 'side', type: 'Free reward', name: 'Free Essence and Full Power (generators)',
+        summary: 'With Dead Wire on a gun, shoot the two blue generators in the Dig Site: one under the tier 2 armour wall-buy, one left of the bottom stairs to the GobbleGum machine. A Full Power and two 500 Essence canisters appear on the fallen pillar.',
+        video: SE(542),
+      },
+      {
+        id: 'perk-braziers', tab: 'side', type: 'Free perk', name: 'Free perk: Ossuary braziers',
+        summary: 'In the Speed Cola room of the Ossuary, light all six stone braziers (two by each entrance) with Napalm Burst or Molotovs. A Random Perk appears in the middle of the room.',
+        video: SE(122),
+      },
+      {
+        id: 'vases', tab: 'side', type: 'Free reward', name: 'Ten vases (free Self-Revive and Light Mend)',
+        summary: 'Shoot all ten hidden vases for a free Self-Revive kit and the Light Mend ammo mod.',
+        spots: [
+          'Spawn: on the roof just above the blue teleporter door.',
+          'Spawn: high above the right-hand spawn door.',
+          'Spawn: on the scaffolding above the Rampage Inducer.',
+          'On the way into the tombs: high up on the right.',
+          'Stamin-Up room: on the ceiling on the right.',
+          'Subterranean Temple: high up left of the red teleporter.',
+          'Subterranean Temple: in the crevice right above the red teleporter.',
+          'Deep Excavation: on the rock face on the left.',
+          'Neolithic Catacombs: out of the window on the right by the Mystery Box spot.',
+          'Ossuary: right of the left-hand door.',
+        ],
+        video: SE(425),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale only appears once you have the other seven.',
+        video: SE(686),
+        spots: [
+          'Bonus Points: in a small hole in the wall left of the blue portal in the Dark Aether Nexus.',
+          'Max Ammo: on a ledge right above the foglight near the arrow trap, between the Shrine of the Hierophants and the Subterranean Temple.',
+          'Double Points: in the Nexus trench between the red and green portals, above a mushroom on the wall opposite the ammo cache.',
+          'Full Power: in the opening left of the Crafting Table in the Shrine of the Hierophants.',
+          'Insta-Kill: bottom right of the vase on the rocks in Deep Excavation.',
+          'Max Armor: in a small alcove right of Speed Cola in the Ossuary.',
+          'Nuke: on a rock out of the map behind the Mystery Box spot in the Neolithic Catacombs.',
+          'Fire Sale: in the fire above the red foglight between PhD Flopper and the Rampage Inducer in the Dig Site.',
+        ],
       },
     ],
   });

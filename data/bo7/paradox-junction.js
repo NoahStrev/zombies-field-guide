@@ -1,6 +1,7 @@
 /* Paradox Junction — Black Ops 7, Season Two Reloaded (Nuketown) */
 (() => {
   const I = 'assets/img/bo7/paradox-junction/';
+  const SE = t => ({ id: '3sXikcuVUqA', title: 'Every side Easter egg in Paradox Junction', ch: 'MrDalekJD', len: '17:23', t }); // MrDalekJD side Easter eggs
   const E = 'd55f7C4fXqA'; // MrRoflWaffles easter egg guide
   const P = '9phvTKt8OaA'; // TheGamingRevolution Pack-a-Punch guide
   const B = 'Vtg863fWQ9I'; // MrDalekJD Blundergat / Sundergat guide
@@ -121,6 +122,100 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Come Back Down"',
         summary: 'Interact with three Mister Peeks headphones: on a round table in the yellow house upstairs bedroom (the past), in the fence gap left of the perk spot on Trinity Ave (the past), and in the back of the wrecked truck by the exfil (destroyed town).',
+        video: SE(857),
+      },
+      {
+        id: 'clock-loot', tab: 'side', type: 'Free perk', name: 'Nuketown clock loot',
+        summary: 'In the destroyed town, stand on the red truck and shoot the clock on the green house until it reads 1:15. After the next Rad-Hound round you\'re sent to the past, and loot falls by the green house: a Raw Aetherium Crystal, a Rare Aether Tool, a scorestreak, a perk and a Legendary gun.',
+        video: SE(16),
+      },
+      {
+        id: 'mini-golf', tab: 'side', type: 'Free power-ups', name: 'Mini-golf hole in one',
+        summary: 'In the past, find the golf ball nearest the white-flag hole on the mini-golf course in the yellow house backyard. Shoot it into that hole for an Insta-Kill, Bonus Points and a Max Armor.',
+        video: SE(63),
+      },
+      {
+        id: 'mannequin-perk', tab: 'side', type: 'Free perk', name: 'Melted mannequins (free perk)',
+        summary: 'Once you have the acid vial from the Blundergat\'s hammer step, pour acid on every mannequin in the past (refill at the green house sink; it takes a few trips). After the last one, its spot in the destroyed town has a Random Perk.',
+        video: SE(93),
+        needs: ['blundergat'],
+      },
+      {
+        id: 'bunker-gift', tab: 'side', type: 'Free perk', name: 'Bunker door gift',
+        summary: 'Needs the Blundergat built. A mannequin story across both towns that ends with a gift box: a Rare gun, 2,000 Essence and a Mystery Perk.',
+        video: SE(190),
+        needs: ['blundergat'],
+        steps: [
+          { w: 214, t: 'Look at the white cooker in the destroyed yellow house kitchen, then go to the past and back' },
+          { w: 229, t: 'A mannequin now stands at the cooker: go to the past for the frying pan on the stove' },
+          { w: 244, t: 'Kill zombies by the pan until one\'s soul makes a steak, then throw a Molotov on it' },
+          { w: 260, t: 'Go back and forth: the mannequin eats it, then leaves a Bonus Points over the booth' },
+          { w: 285, t: 'In the past, have Brain Rot zombies knock on the green house bunker nine times', d: 'The mannequin stands at the bunker door. Turn three zombies (Psych Grenade or Brain Rot) three separate times; each knocks three times. A sound confirms it.' },
+          { w: 310, t: 'Open the gift box by the bunker in the destroyed town' },
+        ],
+      },
+      {
+        id: 'weeping-mannequin', tab: 'side', type: 'Free perk', name: 'Mannequin that moves when you look away',
+        summary: 'Needs the Blundergat built. In the destroyed town, look at the backwards-headed mannequin just over the fence on the right of Trinity Ave until it snaps into a new pose. It follows you when your back is turned (and can shock you). Go to the past and shoot it in its hiding spot for a Raw Aetherium Crystal, a Rare Aether Tool, a scorestreak, a perk and a Legendary gun.',
+        video: SE(327),
+        needs: ['blundergat'],
+        spots: [
+          'In the chimney of the green house next to the yellow house.',
+          'Left of Pack-a-Punch, behind the wooden fence.',
+          'In the driver\'s seat of the red truck in the cul-de-sac.',
+          'In the chimney of the blue house right of Pack-a-Punch.',
+          'In the shed in the green house backyard, behind a Mystery Box spot.',
+        ],
+      },
+      {
+        id: 'masked-head', tab: 'side', type: 'Free perk', name: 'Masked mannequin head',
+        summary: 'After the swing seat and chalk steps, interact with the masked mannequin head upstairs in the past green house. It floats to a headless mannequin by a Mystery Box spot: kill the purple-eyed zombies to fill it. It moves on twice more (the yellow house garage, then upstairs in the yellow house); fill it each time. It spins away and drops a Refined Aetherium Crystal, two Epic Aether Tools, Salvage and a Mystery Perk.',
+        video: SE(436),
+      },
+      {
+        id: 'purple-cyst', tab: 'side', type: 'Free perk', name: 'Purple cyst offering',
+        summary: 'Needs the Blundergat and the RC-XD step. Feed the purple cyst behind the shack in the destroyed green house backyard seven items, fill it with about 25 kills, then kill the four elites that come out (Rad-Hound, Shock Mimic, Doppelghast, armoured zombie). The last one drops 2,000 Salvage, a Flawless Aetherium Crystal and a perk.',
+        video: SE(670),
+        spots: [
+          'Destroyed town: a cracked skull on a table in the RC-XD garage.',
+          'Destroyed town: guts under the army truck nearest Pack-a-Punch, under a gas tank.',
+          'Destroyed town: a bone on the dirt mound in the green house backyard nearest an RC-XD remote spot.',
+          'Past: a car battery on the floor of the truck where the Blundergat is built.',
+          'Past: a bucket in the yellow house garage by the backyard door.',
+          'Past: a dog collar on the garden floor by the garage door that later explodes, on Trinity Ave.',
+          'Past: a chunk of meat on the green house kitchen counter.',
+        ],
+      },
+      {
+        id: 'briefcase', tab: 'side', type: 'Free reward', name: 'Lost key briefcase',
+        summary: 'With Death Perception, check the 14 flower pots in past Nuketown for the one with a key inside and shoot it. The key jumps to another pot: find it and shoot again, quickly. After five jumps it drops out of the last pot. Take the Lost Key to the briefcase in the green house\'s upstairs bedroom for some Salvage and Essence. If you lose track, teleport to the destroyed town and back to start over.',
+        spots: [
+          'Three under the stairs in the green house backyard.',
+          'One behind the shed in the green house backyard.',
+          'One on a table upstairs in the green house.',
+          'Three hanging on the house behind the yellow car.',
+          'One above the yellow house\'s front door.',
+          'One behind the white fence right of the GobbleGum machine.',
+          'One by the red house door, past the parked truck.',
+          'Three under the stairs in the yellow house backyard.',
+        ],
+        video: SE(576),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale and the Random Perk only appear once you have the other seven.',
+        video: SE(933),
+        spots: [
+          'Bonus Points: in the house rubble left of Pack-a-Punch on destroyed Trinity Ave.',
+          'Max Ammo: on a generator by the yellow house in the past.',
+          'Double Points: behind fences right of the houses at the back of the destroyed cul-de-sac.',
+          'Full Power: by the drawers opposite the TV in the past green house.',
+          'Insta-Kill: on the barbecue outside the past green house backyard.',
+          'Max Armor: on a bench in the yellow bus in the destroyed cul-de-sac.',
+          'Nuke: on top of the clock tower in the past, seen from the green house backyard.',
+          'Fire Sale: in the top room of the destroyed yellow house, seen from the back of the cul-de-sac.',
+          'Random Perk: on the cabinet behind the bunk bed upstairs in the past yellow house.',
+        ],
       },
     ],
   });

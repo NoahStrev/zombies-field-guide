@@ -185,7 +185,7 @@
           { w: 1027, t: 'Listen to the audio logs', d: 'The screen goes black and white while Stanley Ferguson narrates. Then headphone drops appear one at a time: up the stairs towards the Citadel tunnels, near Double Tap, on the cell block catwalk, up the stairs from the cafeteria, and in the doorway to the roof. Grab each and wait for the colour to return before the next.' },
           { w: 1088, t: 'End the round, then everyone enters Afterlife and boards the plane', d: 'No refuel needed. The plane flies to the bridge one last time.' },
           { w: 1118, t: 'Revive yourselves in the electric chairs: the final fight starts', d: 'Weasel now fights the other players, and zombies ignore him. The achievement unlocks at this point.', imgs: [{ src: I + 'broken-cycle.webp', cap: 'The "cycle is broken" ending' }] },
-          { t: 'Pick your ending', d: 'Weasel kills the others: the cycle is broken (the canon ending). The others kill Weasel: the cycle continues. Either way the game ends.', note: 'The wiki says the achievement unlocks as soon as this fight starts, so either ending counts. One video guide claims only the broken-cycle ending gives it; if you want to be safe, let Weasel win.' },
+          { w: 1126, t: 'Pick your ending', d: 'Weasel kills the others: the cycle is broken (the canon ending). The others kill Weasel: the cycle continues. Either way the game ends.', note: 'The wiki says the achievement unlocks as soon as this fight starts, so either ending counts. One video guide claims only the broken-cycle ending gives it; if you want to be safe, let Weasel win.' },
         ],
       },
 

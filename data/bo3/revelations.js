@@ -102,6 +102,7 @@
         summary: 'Black-hole launcher from the Mystery Box (only one in the game at a time). Needed for the easter egg, upgraded.',
         upgrade: {
           name: 'Estoom-oth', summary: 'The Pack-a-Punched Servant: more ammo, longer black holes, bigger blast. You must unlock it first.',
+          video: { id: 'MvIuwsb0HlM', title: 'Upgraded Apothicon Servant', ch: 'MrDalekJD', len: '3:13' },
           steps: [
             { anyList: 'Tablets in any order', t: 'Shoot five blue floating tablets with the Servant', d: 'Hit each tablet directly; it disappears when hit (no sound). Aim between the two middle barbs on top of the gun.', list: [
               'Above the jump pad at the House (spawn) that leads to Shangri-La.',
@@ -123,6 +124,7 @@
         summary: 'Mystery Box tactical. Needed for the second audio reel.',
         upgrade: {
           name: 'Upgraded Li\'l Arnie', summary: 'Lasts longer and kills faster.',
+          video: { id: 'XSGuiyqVVTQ', title: 'Upgraded Li\'l Arnie', ch: 'MrDalekJD', len: '1:38' },
           steps: [
             { t: 'Get 150 kills with Li\'l Arnies (whole team combined)' },
             { t: 'Throw one into the church bell-tower window', d: 'Samantha giggles and everyone holding Li\'l Arnies gets upgraded ones.' },
@@ -201,6 +203,7 @@
       {
         id: 'chalk-table', tab: 'side', type: 'Utility', name: 'Weapon table (pink chalk)',
         summary: 'Unlocks the table downstairs in Nacht for storing or passing weapons, and adds an M1927 wall-buy.',
+        video: { id: '4EzCjmpIKHw', title: 'Tommy Gun chalk wall-buy and weapon table', ch: 'GregFPS', len: '3:10' },
         steps: [
           { t: 'Pick up the pink chalk', d: 'During Anti-Gravity in Der Eisendrache, on top of a narrow carved pillar in the hallway between the VMP wall-buy and the Pyramid (slightly above and left of a Fafnir part spot).' },
           { t: 'Use the chalk at each spot, in this order', ol: [
@@ -217,6 +220,20 @@
       {
         id: 'path-of-sorrows', tab: 'side', type: 'Reward', name: 'Path of Sorrows (A Better Tomorrow bonus)',
         summary: 'Only if someone in the lobby completed A Better Tomorrow. Grab the "spark" from the headlight of the broken truck in the spawn room (don\'t take any damage while carrying it). During the Kronorium step, place it on the wooden crate with a white "?" in Samantha\'s room. Afterwards, the Path of Sorrows sword is a 500-point wall-buy at the top of the Shangri-La staircase, and every wall and box weapon comes Pack-a-Punched.',
+      },
+      {
+        id: 'hats', tab: 'side', type: 'Wearables', name: 'Hats and helmets',
+        summary: 'Seven wearables, each earned with a challenge. When one unlocks you hear a cue, and it waits on a mannequin on the Kino der Toten stage. Progress is shared in co-op and everyone can wear the same one. Health and sprint bonuses show as purple Juggernog/Stamin-Up icons and stack with the real perks without using a perk slot. (Al\'s hat, in a cell on the Mob of the Dead cell block\'s second floor, is just for looks.)',
+        video: { id: 'BA87HyIVmvw', title: 'All Revelations masks', ch: 'SBZ vSylent', len: '5:00' },
+        steps: [
+          { w: 3, t: 'Dire Wolf Head: longer sprint', d: 'During Anti-Gravity in the Der Eisendrache Undercroft, throw a grenade into the big hole high on the wall near the Kuda wall-buy (where the Wolf Bow\'s arrow was). A wolf skull drops; while Anti-Gravity is on, kill 15 zombies near it. Bonus: it lets you skip the Corruption Turret step of the Keeper Skull Head.' },
+          { w: 36, t: 'Helmet of Siegfried: one extra hit', d: 'By the Der Eisendrache Corruption Engine, shoot the numerals IX, III and V (935) on the clock floating above the Pyramid. Then fill four sparking urns with six headshot kills each: the Der Eisendrache hallway to the room with four Primis statues, the small room by the Pharo wall-buy in Origins, upstairs in the Verrückt kitchen by the bloody table, and the Kino projector room.' },
+          { w: 176, t: 'Margwa Head: tougher against Margwas, longer sprint', d: 'Kill a normal, a fire and a void Margwa each with exactly one hit per head (a Pack-a-Punched shotgun or sniper works; any wonder weapon damage voids that Margwa). The first natural Margwa comes around round 11 to 13; the Easter egg\'s reel step also spawns plenty.' },
+          { w: 153, t: 'Fury Head: tougher against Furies, one extra hit', d: 'Kill about 15 Furies with headshots (not the ones from Corruption Engines). They come mostly on Parasite rounds from the second one on.' },
+          { w: 87, t: 'Keeper Skull Head: one extra hit, Keeper Protector lasts 30 seconds longer', needs: ['keeper-protector'], d: 'Let the Keeper Protector kill about 30 zombies, then kill about seven Enslaved Keepers with the Corruption Turret (skip that part if you already have the Dire Wolf Head).' },
+          { w: 114, t: 'Helmet of the King: tougher against Panzers and Margwas, longer sprint', d: 'On Panzersoldats, break the power core on the chest (keep shooting until the cue) and the face armour; one Panzer can do both. Also get about 50 trap kills (Verrückt\'s electric trap, the Origins flogger). Either order. The first natural Panzer comes around round 18 to 20.' },
+          { w: 224, t: 'Apothicon Mask: the best one (extra hit, longer sprint, more damage, less damage taken)', d: 'Inside the Giant Apothicon, standing in the green stomach acid while the thick green smoke is there, kill 15 Parasites, 5 Enslaved Keepers, 15 spiders, 10 Furies, 50 zombies and 3 Margwas (at least two kinds). Li\'l Arnies and the Apothicon Servant help.', tip: 'Guides give different counts for some of these. A sound plays as each kind is done, so keep going until you hear it.' },
+        ],
       },
     ],
   });

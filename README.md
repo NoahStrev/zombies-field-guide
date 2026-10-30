@@ -76,7 +76,7 @@ tools/                  research, checking and publishing scripts (see tools/REA
    - `upgrade`: a second checklist for the upgraded version
    - `blocks`: free content (`p`, `list`, `table`, `tip`, `warn`, `note`, `imgs`, `video`, `lookup`)
    - `lookup` (on a step or block): a picker. With `a` and `b` it shows two dropdowns and looks up `answers['A>B']`; with only `a` it shows one dropdown and looks up `answers['A']`. Answers are `[name, number]` pairs or plain lines of text.
-   - `video`: `{ id: '<YouTube id>', title, ch, len }`
+   - `video`: `{ id: '<YouTube id>', title, ch, len }`, plus an optional `t: <seconds>` to open the video at that moment (used when one long video covers many side quests; steps' `w` still count from the start of the video)
    - Map-level `players`: `'solo'`, `'four'`, `'coop'`, or `{ text: '<badge text>', warn: true }` for custom wording.
    - A quest with two sides (Black Ops II) is two `easter-egg` items whose `type` starts with `Main Easter Egg`; the map card and the Next step button follow whichever side has the most ticks.
 4. In any text, `**bold**` makes bold text and `{{item-id}}` (or `{{item-id|label}}`) makes a quick-look chip. `[[game/map/tab|label]]` (optionally `/item-<id>` after the tab) links to another page of the guide.

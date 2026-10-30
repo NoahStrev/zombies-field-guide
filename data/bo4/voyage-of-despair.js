@@ -214,6 +214,7 @@
       {
         id: 'specialist-sale', tab: 'side', type: 'Fire Sale', name: 'Piano sheets: specialist Fire Sale',
         summary: 'Collect three music sheets and put them on three pianos, then hit each piano with your specialist weapon. For a while the box offers specialist weapons, so you can switch yours mid-game.',
+        video: { id: 'Pq61Ubr3K9I', title: 'Specialist weapon Fire Sale', ch: 'SBZ vSylent', len: '1:28' },
         steps: [
           { anyList: 'Sheets in any order', t: 'Collect three music sheets', list: ['Promenade Starboard Deck: on the tiled floor in the revolving door.', 'Dining Hall: on a table near the Lower Grand Staircase.', 'Promenade Port Deck: on a bench near two windows.'] },
           { anyList: 'Pianos in any order', t: 'Place them on three pianos and melee each with your specialist', d: 'They glow blue when it works:', list: ['Upper Grand Staircase: by the door to the Bridge.', 'Lower Grand Staircase: near the SwordFish wall-buy.', 'Dining Hall: near the doorways to the Lower Grand Staircase.'] },

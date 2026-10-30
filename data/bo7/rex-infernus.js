@@ -1,6 +1,8 @@
 /* Rex Infernus — Black Ops 7, Season Five Reloaded (final map) */
 (() => {
   const I = 'assets/img/bo7/rex-infernus/';
+  const SE = t => ({ id: 'Jx5m4QMFL6o', title: 'Every side Easter egg in Rex Infernus', ch: 'MrDalekJD', len: '20:51', t }); // MrDalekJD side Easter eggs
+  const MV = { id: 'gEWR7Cl9WJo', title: 'All four masks', ch: 'MrDalekJD', len: '12:54' };
   const E = 'KIPa6aiv1Ig'; // MrRoflWaffles easter egg guide
   const P = '8ilTCElwezM'; // TheGamingRevolution Pack-a-Punch guide
   const B = '-dpW7R1EcJs'; // MrRoflWaffles Warden's Blight guide
@@ -139,10 +141,85 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"All We Are"',
         summary: 'Interact with three Mister Peeks headphones: on top of a pillar in Nyxara\'s main chamber (wall-jump), at a window in Ruinas Insula, and around a skull between a rock and a low wall in Araena Insula.',
+        video: SE(1034),
       },
       {
         id: 'song-dream', tab: 'side', type: 'Song', name: '"Samantha\'s Dream"',
         summary: 'Play the phonograph in the bedroom above Quick Revive in Her House. Only audible close by.',
+      },
+      {
+        id: 'masks', tab: 'side', type: 'Wearable', name: 'The four masks',
+        summary: 'Four wearables, all usable in one game. Each has a pedestal (in its Shadowsmith temple) where you can leave it and swap.',
+        video: MV,
+        steps: [
+          { w: 18, t: 'Horned Skull Mask: stay in Her House for nine rounds, then melee the painting right of the chimney', d: 'Standing still makes a damaging ring and boosts damage and armour (1-minute cooldown). Hitting the painting earlier gives smaller prizes instead (600 Essence or ammo after 5 to 6 rounds, a perk can or Rare Aether Tool after 7 to 8) and no mask.', tip: 'Finished the main quest? From then on every exfil round opens a rift that takes you straight back to Her House.' },
+          { w: 610, t: 'Cowboy Hat: ride a Web Mother next to Pack-a-Punch and get about 50 kills', d: 'It then jumps into Pack-a-Punch and drops the hat. Gives some protection from Deathspinners and Web Mothers. The ride is timed, so it can take a few tries.' },
+          { w: 453, t: 'Astronaut Helmet: win Mister Peeks\'s grapple race in 50 seconds', d: 'Collect six Mister Peeks pieces (the head on a shelf in Her House above Quick Revive; the rest need the Void Claw: outside Caltheris\'s Passage on the right, across the cliff from the Mystery Box spot in Ruinas Insula, floating off an edge in Aranea Insula, on a pillar above Juggernog in Spira Insula, and outside the Nexus Forge between Veytharion\'s and Dravakar\'s temples). With every door open, interact with him on the ledge above the Mystery Box in Caltheris\'s Main Chamber and grapple through his circles to the Nyxara Entrance. The helmet adds 30 seconds to the Void Claw and Talon; the race also drops a crystal, a Mystery Perk and a Ray Gun, and can be rerun for more loot.' },
+          { w: 173, t: 'Spiked Skull Mask: beat the Twins\' three games twice in the forest', d: 'In the forest (from Nyxara\'s Inner Sanctum, once a round), use the music box under the fallen tree, leave, come back and use the blue toy box between two trees. Win the teddy bear (collect plushies while enemies move only when you look away), mask (find the Twins in time) and rope (skipping) games, then the harder versions. The mask adds an effect that drops the Twins like lightning onto nearby zombies.' },
+        ],
+      },
+      {
+        id: 'corrupted', tab: 'side', type: 'Free weapon', name: 'Corrupted wall weapons',
+        summary: 'Turn a wall-buy into an Ultra-rarity wonder gun: the M34 Novaline (Dravakar\'s temple, second room) becomes The Miserable Bastille, the M10 Breacher (left of Caltheris\'s entrance, opposite Wisp Tea) becomes the Stormwrought Pantheon.',
+        video: SE(715),
+        steps: [
+          { w: 715, t: 'Buy the M34 Novaline or M10 Breacher off the wall' },
+          { w: 732, t: 'Pack-a-Punch three other weapons' },
+          { w: 749, t: 'On a rain round, hit the glowing wall-buy with an Astral Flame', d: 'Veytharion\'s pool can make it rain. An elite Web Mother spawns: kill it.' },
+          { w: 783, t: 'Buy the corrupted gun and Pack-a-Punch it before you go down', d: 'It drains your health and you can\'t switch weapons until it\'s upgraded. Go down and you lose it (retry on the next rain round). A trophy at the Nexus Forge then drops loot.' },
+        ],
+      },
+      {
+        id: 'anvil-gauntlet', tab: 'side', type: 'Free weapon', name: 'Necrofluid Gauntlet from the anvil',
+        summary: 'Break down one gun of every class at Dravakar\'s Anvil, each at least Pack-a-Punch level 1: assault rifle, SMG, pistol, shotgun, sniper, LMG, marksman rifle, and a launcher or special. The anvil then gives you the Necrofluid Gauntlet from Ashes of the Damned.',
+        video: SE(882),
+      },
+      {
+        id: 'dance-off', tab: 'side', type: 'Free reward', name: 'Mister Peeks dance-off',
+        summary: 'Dig up dig spots with the Void Claw until one gives a cassette tape. Put it in the tape player in a zombie window in Aranea Insula, near Widow\'s Wine (in co-op everyone votes). You\'re sent to Her House: for 1:15, press the button combos as they appear, left to right (in co-op, highest score wins). Back at the Nexus Forge Mister Peeks dances and leaves a trophy with loot: Salvage, Mystery Perks, ammo mods, even Ray Guns. Repeatable every five rounds.',
+        needs: ['void-claw'],
+        video: SE(635),
+      },
+      {
+        id: 'conduit-rift', tab: 'side', type: 'Free reward', name: 'Temporal conduit rift (special rounds)',
+        summary: 'On every special (spider) round a rift opens in one of the four Shadowsmith temples; the mini-map shows it as a tear. Walk in for a short scene with the Entity, then loot when you come out: points, a Legendary Aether Tool, a Mystery Perk, sometimes a Pack-a-Punch crystal or a wonder weapon.',
+        video: SE(926),
+      },
+      {
+        id: 'dig-orbs', tab: 'side', type: 'Map tip', name: 'Better dig spot loot',
+        summary: 'Before you dig a dig spot with the Void Claw, grapple one of the purple orbs into the pile. It gives a chance of better loot: perks, Aether Tools, crystals, even a Ray Gun (or a spider jump scare).',
+        needs: ['void-claw'],
+        video: SE(969),
+      },
+      {
+        id: 'piano', tab: 'side', type: 'Free reward', name: 'Her House piano tunes',
+        summary: 'Play one tune a round on the piano in Her House. Each pays 300 points plus 100 for every right key in a row. The fifth also gives an Intel the first time; the seventh pays 1,000 points and a random drop this round and next.',
+        spots: [
+          { label: 'Tune 1', text: '8 4 1 8 4 1 8 4 8 4 1 8 4 1 8 4' },
+          { label: 'Tune 2', text: '5 5 5 8 5 5 4 4 4 8 5 5 5 5 5 6 7 6 5' },
+          { label: 'Tune 3', text: '1 1 3 5 6 5 4 3 5 5 6 5 3 5 5 6 5' },
+          { label: 'Tune 4', text: '4 5 6 5 5 4 5 6 5 3 7 3 7 3 4 4 5 6 5' },
+          { label: 'Tune 5', text: '8 6 7 5 6 5 3 5 4' },
+          { label: 'Tune 6', text: '5 3 6 5 3 5 5 3 6 5 3 4 3 2 3 1 2 2 3 2 3 1' },
+          { label: 'Tune 7', text: '1 1 1 1 1 1 1 2 3 2 2 1 2 2 2 3 4' },
+        ],
+        video: SE(15),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale and the Random Perk only appear once you have the other seven.',
+        video: SE(1119),
+        spots: [
+          'Bonus Points: inside the structure out of the map right of Her House, seen from Nyxara\'s Passage.',
+          'Max Ammo: behind the interactable painting in Her House.',
+          'Double Points: in the structure out of the map behind Her House, seen from Caltheris\'s Passage.',
+          'Full Power: at the very top of the left pillar in Veytharion\'s Main Chamber, seen from the temple entrance.',
+          'Insta-Kill: in the arch on the right of the pit under the Nyxara Entrance.',
+          'Max Armor: on the floor of the left window at the Dravakar Entrance (jump to see it).',
+          'Nuke: on the flat roof of a structure out of the map, seen from Caltheris\'s Main Chamber.',
+          'Fire Sale: inside the structure out of the map behind the Mystery Box spot in Spira Insula.',
+          'Random Perk: on the bridge out of the map below Aranea Insula.',
+        ],
       },
     ],
   });

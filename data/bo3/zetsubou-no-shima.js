@@ -194,6 +194,7 @@
       {
         id: 'skull', tab: 'weapons', type: 'Specialist weapon', name: 'Skull of Nan Sapwe', img: I + 'skull.webp', color: 'gold',
         summary: 'Its beam stuns and eventually vaporises zombies. Its "mesmerise" ability also reveals hidden walls and planters for quests.',
+        video: { id: '6pxC9-9LzTo', title: 'Easy Skull of Nan Sapwe guide', ch: 'MrRoflWaffles', len: '5:53' },
         stepsTitle: 'How to get it',
         steps: [
           { imgs: [{ src: I + 'skull-altar.webp', cap: 'The four skulls on the Trials altar' }], anyList: 'Skulls in any order', t: 'Cleanse the four bloody skulls', d: 'Take one skull at a time from the Trials altar to the pedestal with the matching symbol (pedestal symbols are random). Placing it starts a defence: green-glowing zombies go for the skull. Protect it until it\'s clean (+500 points each), then bring it back to the altar.', list: [

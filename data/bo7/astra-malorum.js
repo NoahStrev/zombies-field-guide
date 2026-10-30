@@ -1,6 +1,7 @@
 /* Astra Malorum — Black Ops 7, Season One */
 (() => {
   const I = 'assets/img/bo7/astra-malorum/';
+  const SE = t => ({ id: 'Di3Y3xND288', title: 'Every side Easter egg in Astra Malorum', ch: 'MrDalekJD', len: '16:48', t }); // MrDalekJD side Easter eggs
   const E = 'MxgEVlnU85s'; // MrRoflWaffles easter egg guide
   const P = 'Gp7Jzdw_F-E'; // MrRoflWaffles Pack-a-Punch guide
   const L = '7a9xNqh6Pq4'; // MrRoflWaffles LGM-1 guide
@@ -119,6 +120,77 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Magic"',
         summary: 'Interact with three Mister Peeks headphones: on the bottom shelf left of the exit door in the Luminarium, in a display case in Machina Astralis, and on a table in the Observatory Dome.',
+        video: SE(708),
+      },
+      {
+        id: 'wisps', tab: 'side', type: 'Free weapon', name: 'Upgraded wisps (and a free Ray Gun)',
+        summary: 'Aim at a lantern glowing with a white wisp to take it; melee throws it at zombies. Put a wisp into all nine wall lanterns (throw it in, aim to take it back) and end the round: wisps turn yellow-orange, kill about five zombies each, and any lantern gives them (up to five at once). From round 16, throw an upgraded wisp at the Ashes of the Damned rocket floating in front of Saturn: it comes back with a Ray Gun.',
+        video: SE(567),
+        spots: ['Two in the Crash Site.', 'Three in the courtyard in front of the Luminarium.', 'Two at the back of the Luminarium.', 'Two on Scholar\'s Way.'],
+      },
+      {
+        id: 'gramophones', tab: 'side', type: 'Free perk', name: 'Gramophone trials (three free perks)',
+        summary: 'Put each record on its gramophone and, while the music plays, kill five zombies the way it asks. Each trial gives a Mystery Perk plus Essence and Salvage.',
+        video: SE(288),
+        steps: [
+          { w: 298, t: 'Melee kills', d: 'Gramophone on a cabinet across from Speed Cola in Museum Infinitum. Its record is on a pillar left of a painting, left of the Crafting Table.' },
+          { w: 325, t: 'Field upgrade kills', d: 'Gramophone in the Luminarium room with the Energy Rock case, in the corner between two sofas. Its record is on a bookshelf left of the grandfather clock.' },
+          { w: 357, t: 'Equipment kills', d: 'Gramophone on a table right of Stamin-Up in the Archive of Orbis. Its record is in a wooden box in Machina Astralis, above the armour wall-buy left of the grandfather clock.' },
+        ],
+      },
+      {
+        id: 'skull-game', tab: 'side', type: 'Free perk', name: 'Skull memory game',
+        summary: 'Shoot five skulls with a Pack-a-Punched gun and pick them up. On the upper floor of Machina Astralis, place them on the table with the empty frame and candles. They rise one at a time: shoot them in the same order and they fuse into a Random Perk.',
+        video: SE(384),
+        spots: [
+          'In a floor crevice left of the leftmost first buyable door.',
+          'Stargazer\'s Courtyard: left of the wooden bench between the Mystery Box spot and the ammo crate.',
+          'Museum Infinitum: in a glass display behind Speed Cola.',
+          'The Veilwalk: by the door to the Archive of Orbis, against a wall across from a ruined red brick wall.',
+          'Machina Astralis: in a glass case opposite the Arsenal.',
+        ],
+      },
+      {
+        id: 'bongo', tab: 'side', type: 'Helper', name: 'Bongo the friendly Ravager',
+        summary: 'Killing O.S.C.A.R. drops a toy robot (the Shiny Trinket) that takes your tactical slot. Open the tac-map and find a white dot out of bounds: an idle, green-eyed Ravager is there. Throw the trinket at it and it runs off. Do it on two more rounds and Bongo joins you, attacking enemies for several rounds.',
+        video: SE(483),
+      },
+      {
+        id: 'ghost-twins', tab: 'side', type: 'Free reward', name: 'Ghost Twins',
+        summary: 'On a special round, interact with the leftmost empty cabinet in Museum Infinitum. For the next four rounds one cabinet makes a noise each round: interact with it. The Twins then appear somewhere new each round; walk up to them for Salvage, ammo mods and equipment.',
+        video: SE(207),
+      },
+      {
+        id: 'echoes', tab: 'side', type: 'Side quest', name: 'Echoes of the Damned (play as Nikolai)',
+        summary: 'As Nikolai, throw a Molotov on the footprints at the bottom of the Abyssal Rim. Keep throwing Molotovs where the burning trail ends, up the stairs, until it reaches a cave you can\'t enter. Pick up the toy on a rock outside: after a cutscene you\'re in a cave. Interact with the altar and survive the looping Ravager waves until the final cutscene. Back on the map you get a Legendary Echo 12, Molotovs, loot and a calling card.',
+        video: SE(11),
+      },
+      {
+        id: 'songs-more', tab: 'side', type: 'Songs', name: 'More songs',
+        summary: 'A few extra tracks besides "Magic".',
+        video: SE(758),
+        spots: [
+          'Alpha Omega\'s game-over music: take three records to the gramophone in the Luminarium (a wooden box on the middle floor of Machina Astralis, the top of a Luminarium bookshelf, a ledge above a zombie window in the museum).',
+          'Pareidolia remix: wall-jump off the left side of the floating rock by Wisp Tea and drift through space.',
+          'The original Pareidolia: aim at the giant statue head on Mars for a few seconds.',
+          '"Once In A Blown Up Moon": from round 16, aim at the floating rocket in front of Saturn for a while.',
+        ],
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale and the Random Perk only appear once you have the other seven.',
+        video: SE(790),
+        spots: [
+          'Bonus Points: outside the Crash Site, near a lamp post.',
+          'Max Ammo: on top of the wall out of the map, left of the Luminarium trap room as you come from the Crash Site.',
+          'Double Points: under a cabinet on the top floor of Machina Astralis, by the stairs.',
+          'Full Power: on the telescope platform, seen from Stargazer\'s Courtyard.',
+          'Insta-Kill: on top of a pillar on the right of Scholar\'s Way, looking towards Machina Astralis.',
+          'Max Armor: in a rock on the left of Stargazer\'s Courtyard as you come from the Observatory Dome.',
+          'Nuke: right of the balcony at the top of Machina Astralis, seen from the Veilwalk.',
+          'Fire Sale: in a zombie window in Museum Infinitum, on the left coming from Stargazer\'s Courtyard.',
+          'Random Perk: next to the ball on the right stair pillar, looking at the Luminarium from the Abyssal Rim.',
+        ],
       },
     ],
   });

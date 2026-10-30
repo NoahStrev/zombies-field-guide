@@ -1,6 +1,7 @@
 /* Ashes of the Damned — Black Ops 7 launch map */
 (() => {
   const I = 'assets/img/bo7/ashes-of-the-damned/';
+  const SE = t => ({ id: 'T2NwtMJj2A8', title: 'Every side Easter egg in Ashes of the Damned', ch: 'MrDalekJD', len: '21:10', t }); // MrDalekJD side Easter eggs
   const E = 'XGc-_4sT9dE'; // MrRoflWaffles easter egg guide
   const P = 'OkOnwkWtiSk'; // MrRoflWaffles Pack-a-Punch / Ol' Tessie guide
   const G = '82cQY5NEma4'; // MrRoflWaffles Necrofluid Gauntlet guide
@@ -119,7 +120,7 @@
             'Widow\'s Lantern: take the jar of spores from under the Blackwater cabin kitchen cabinet, use it on the mushroom-covered horse by the farm gate towards Ashwood, and come back 3 rounds later.',
             'Ravager Eyes: kill a Ravager with a saw trap (farm or elsewhere).',
             'Hoard Hunk Chunks: hit a purple Aether plant at ground level by a fog road with Tessie\'s Abomination Beam.',
-            'Mysterious Limb: kill a Zursa (bear, from round 16) with the Abomination Beam as the final blow.',
+            'Mysterious Limb: kill a Zursa (bear, from round 16, or {{zursa-summon|summon one early}}) with the Abomination Beam as the final blow.',
             'Human Bones: in the farm barn, hit the foot of the hanging body with a combat axe, then burn the fallen foot with a Molotov.',
           ], tip: 'Free combat axes: the Exit 115 diner, or the trophy in the Blackwater Lake toolshed.' },
           { w: 373, t: 'Serum: get the Powder of the Forgotten', d: 'With Wisp Tea and the Gauntlet, bring your wisp into the Ashwood tailor shop: it goes into the mirror. Shoot the mirror with the Gauntlet and the powder drops.', needs: ['gauntlet'] },
@@ -177,6 +178,7 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Turn to Ashes"',
         summary: 'Interact with three Mister Peeks headphones.',
+        video: SE(1112),
         spots: [
           'Server room in front of spawn, on the servers nearest Quick Revive.',
           'Ashwood, in the Double Tap area, right above the VS Recon wall-buy.',
@@ -186,6 +188,79 @@
       {
         id: 'good-soldiers', tab: 'side', type: 'Side quest', name: '"Good Soldiers" (play as Dempsey)',
         summary: 'As Dempsey, go to the crashed rocket and interact with the dog tags in its nose, between two halves where bodies lie. A cinematic takes you somewhere else; kill zombies until you come back for a Legendary weapon and loot.',
+        video: SE(359),
+      },
+      {
+        id: 'claw-talisman', tab: 'side', type: 'Wearable', name: 'Claw Talisman (double melee points)',
+        summary: 'With Death Perception, look for a golden-outlined Zursa footprint at the gate from Ashwood to the Zarya Cosmodrome. Stand on it for a moment, then walk the way it points to the next print; after six prints a Zursa attacks and you\'re pulled into a forest with only your melee weapon. Kill the elite Zursa by melee alone for the Claw Talisman: double points from melee kills for the rest of the game.',
+        video: SE(480),
+      },
+      {
+        id: 'mixologist', tab: 'side', type: 'Free perk', name: 'Mixologist: four free perks',
+        summary: 'Collect three ingredients for a perk, then interact with the cup at the soda machine in Reba\'s Diner at Exit 115 to get it. All four earns the "Mixologist" achievement.',
+        video: SE(863),
+        steps: [
+          { w: 863, t: 'Quick Revive', d: 'A fish at Blackwater Lake, a toilet cleaner bottle on a table in the Server Room (Janus Towers), a stim shot on a shelf in the Zarya Cosmodrome Control Room.' },
+          { w: 961, t: 'Stamin-Up', d: 'A box of potatoes in the Vandorn Farm cellar, a bag of beans in Hargrove\'s Mercantile (Ashwood), a jerrycan by a dumpster at Exit 115.' },
+          { w: 934, t: 'Speed Cola', d: 'A plant under a truck at Blackwater Lake, a box of cut tomatoes in a crate by the door of Hargrove\'s Mercantile, a box of sugar on the counter in Reba\'s Diner.' },
+          { w: 904, t: 'Juggernog', d: 'A weed on the pavement at Janus Towers Plaza, a jar of milk by the barn entrance to the Vandorn Farm cellar, a box of eggs on a shelf in Reba\'s Diner.' },
+        ],
+      },
+      {
+        id: 'ghost-twins', tab: 'side', type: 'Free perk', name: 'Ghost Twins (free Wisp Tea and loot)',
+        summary: 'With the Vandorn Farm power on, keep using the static TV on the farmhouse ground floor until two girls appear, then one. Find that girl playing tic-tac-toe by the Vault of Flesh in the cellar and walk up to her. Back at the TV, keep going until both appear and then vanish. Find them dancing right of the Mystery Box shed: walk up for a Wisp Tea can and loot. They come back every other round with more (only you can see them).',
+        video: SE(292),
+      },
+      {
+        id: 'jump-pads', tab: 'side', type: 'Free reward', name: 'Jump pad tour',
+        summary: 'First turn on every power pump, break every wooden gate between the areas with Ol\' Tessie and use every jump pad in both directions (14 jumps; nothing tracks them, so note them down). Four rounds later a skylight on the far left of the Janus Towers Plaza spawn room blinks a seven-number route, always starting with 3 or 7 (Ashwood): 1 Janus Towers, 2 Vandorn Farm, 3 or 7 Ashwood, 4 Blackwater Lake, 5 Exit 115, 6 Zarya Cosmodrome. Get to Ashwood on foot or in Ol\' Tessie (not by jump pad), follow the route by jump pad, ending back at Ashwood. A purple tear then opens in the sky on one pad route: fly through it before it fades. You land in Ashwood among loot: Salvage, equipment, Essence, perks, and in later rounds (after about 18) crystals and Ray Gun Mark IIs. Miss the tear and the skylight needs four more rounds for a new code; get the route wrong and try the next round\'s.',
+        video: SE(15),
+      },
+      {
+        id: 'vending', tab: 'side', type: 'Free reward', name: 'Vending machine punch',
+        summary: 'Crouch and punch a vending machine once a round for a random prize, up to a free perk or a Ray Gun. There\'s one right behind spawn at Janus Towers Plaza and one at the Exit 115 gas station. A Melee Macchiato punch breaks it for one big payout (perks, even a wonder weapon) but it\'s gone after that.',
+        video: SE(532),
+      },
+      {
+        id: 'chompy', tab: 'side', type: 'Free weapon', name: 'Chompy (free Ray Gun)',
+        summary: 'Chompy is a trash can that sometimes rattles and puffs purple smoke. Melee it to open it, then feed it guns or equipment for Salvage and the odd prize. Feed it ten Monkey Bombs and it always gives back a Ray Gun.',
+        video: SE(678),
+      },
+      {
+        id: 'arc-race', tab: 'side', type: 'Free reward', name: 'RC-XD race',
+        summary: 'Leaving Blackwater Lake towards Ashwood, go upstairs in the first hut on the left and pick up the RC-XD controller by the suitcase. Everyone races RC cars round the Zarya Cosmodrome; Mister Peeks hands out trophies with prizes by finishing place.',
+        video: SE(560),
+      },
+      {
+        id: 'axe-target', tab: 'side', type: 'Free reward', name: 'Axe throwing target',
+        summary: 'Interact with Dean Roth\'s trophy in the Blackwater Lake toolshed (as one of the eight crew) and a combat axe appears outside. Hit the floating target right of the exfil booth with it, again and again as it changes; on the last hit Mister Peeks dances and drops loot. Only once per game, so later rounds give better prizes.',
+        video: SE(702),
+      },
+      {
+        id: 'flora-loot', tab: 'side', type: 'Free reward', name: 'Loot from the purple plants',
+        summary: 'The purple plants around the map hide good loot (Pack-a-Punch crystals, Aether Tools, weapons, even Ray Guns). From the start, bring the Toxic Growth field upgrade: take the fumigator part found in each area, spray a plant and drop Toxic Growth on it for much better rewards. Later, blast the purple plants in the fog with Ol\' Tessie\'s Abomination laser as you drive; most players stop after the main quest part they need.',
+        video: SE(230),
+      },
+      {
+        id: 'zursa-summon', tab: 'side', type: 'Map tip', name: 'Summon a Zursa on any round',
+        summary: 'With the Necrofluid Gauntlet, shoot three skulls in the Zarya Cosmodrome: in Support Systems behind the DS20 Mirage wall-buy, on a construction panel in the window with the rappel rope behind PhD Flopper, and on the ground in the right corner of the zombie window right of the rocket. A purple-eyed Zursa spawns straight away, handy for the main quest before round 16.',
+        needs: ['gauntlet'],
+        video: SE(757),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale only appears once you have the other seven.',
+        video: SE(994),
+        spots: [
+          'Bonus Points: under a car on the collapsed middle of the highway bridge at Exit 115.',
+          'Max Ammo: in an open ceiling tile by Quick Revive in the Server Room.',
+          'Double Points: on a hill out of the map, seen from the opening on the second floor of the north Lost Cabin, looking towards Vandorn Farm.',
+          'Full Power: in an open doorway behind the railing of the north-east flame trench ramp under the rocket at the Zarya Cosmodrome.',
+          'Insta-Kill: in the opening at the top of the Vandorn Farm silo.',
+          'Max Armor: behind two stacked crates in an open container on the Grounded Ship deck, at the top of the ramp from Vandorn Farm.',
+          'Nuke: in the Ashwood church steeple.',
+          'Fire Sale: in the rafters above the Arsenal at Blackwater Lake.',
+        ],
       },
     ],
   });

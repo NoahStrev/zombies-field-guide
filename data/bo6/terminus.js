@@ -1,6 +1,7 @@
 /* Terminus — Black Ops 6 launch map */
 (() => {
   const I = 'assets/img/bo6/terminus/';
+  const SE = t => ({ id: 'WpINur8LRH0', title: 'Every side Easter egg in Terminus', ch: 'MrDalekJD', len: '19:39', t }); // MrDalekJD side Easter eggs
   const E = 'tI9dwinLua0'; // MrRoflWaffles easter egg guide
   const P = 'OJccbSoQtBc'; // MrRoflWaffles power and Pack-a-Punch
   const B = 'wNrHOq7sSqw'; // MrRoflWaffles Beamsmasher guide
@@ -117,10 +118,88 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Can You Hear Me? (Come In)"',
         summary: 'Interact with three Mister Peeks headphones.',
+        video: SE(824),
         spots: [
           'Just before the Juggernog room (from the left side), on a big wooden spool next to a lamp.',
           'In the mining tunnels, on a red barrel across from PhD Flopper.',
           'In the Bio Lab, in the upstairs office on top of some white cabinets.',
+        ],
+      },
+      {
+        id: 'treasure-hunter', tab: 'side', type: 'Side quest', name: 'Treasure Hunter (Cursed Talisman)',
+        summary: 'Help a pirate ghost for the Cursed Talisman: extra points for every kill while you wear it (double, says the wiki), but a zombie hit takes Essence (about 1,500) instead of health. Unlocks the "Treasure Hunter" achievement.',
+        video: SE(542),
+        steps: [
+          { w: 546, t: 'Bring Melee Macchiato and three Molotovs' },
+          { w: 561, t: 'Punch through the rocks in the Speed Cola sea cave', d: 'Leaving the Bio Lab through the caves, hug the easternmost wall until you see a hole blocked by rocks. Behind it are a pirate skeleton and a map with an X.' },
+          { w: 576, t: 'Fetch the watch from the X and bring it to the skeleton', d: 'Take a raft to the X and pick the watch up from underwater.' },
+          { w: 607, t: 'Burn three crewmen with Molotovs and kill the Manglers', d: 'Captain Thomas Gregg marks their bones on his map: the Shipwreck, Castle Rock and Temple Island, in any order. A Molotov on each skeleton spawns an elite Mangler that drops a Cursed Coin: take every coin back to Gregg. After the third he gives you three Legendary guns.' },
+          { w: 653, t: 'Hold out on Crab Island for three full rounds', d: 'A chest appears in the middle of the island: open it to put the talisman on.' },
+        ],
+      },
+      {
+        id: 'perk-cells', tab: 'side', type: 'Free perk', name: 'Free perk: the Bio Lab cells',
+        summary: 'In the Bio Lab jail by the glass vats, kill every zombie locked in the cells and end the round. Next round Vermin are in the cells: kill them and end the round. Then Manglers: kill them and a Random Perk appears.',
+        video: SE(61),
+      },
+      {
+        id: 'perk-spores', tab: 'side', type: 'Free perk', name: 'Free perk: spore islands',
+        summary: 'Take a raft and find a small island covered in green spores; shoot them all and end the round. Do the same at a second and a third island, one per round. Then shoot the spores that appear in the Speed Cola sea cave for a Random Perk.',
+        video: SE(134),
+      },
+      {
+        id: 'mega-stuffy', tab: 'side', type: 'Helper', name: 'Mega-Stuffy pet',
+        summary: 'Collect six stuffed toys, then hand them to the blue elephant on the bunk bed next to Juggernog in the Living Quarters. They drop some tactical equipment, float to the middle of the room and merge into the Mega-Stuffy: a pet that kills zombies and revives you if you go down in solo.',
+        video: SE(185),
+        spots: [
+          'Unicorn: in a green locker left of Stamin-Up.',
+          'Monkey: in a corner outside the bridge grating between the Sea Tower and Engineering.',
+          'Elephant: in the Mining Tunnels, behind a pallet left of the GobbleGum machine.',
+          'Bear: in the Bio Lab, under a trolley next to the Crafting Table.',
+          'Duck: on the Shipwreck, in a red container right of the Mystery Box.',
+          'Giraffe: on Crab Island, right of the Crafting Table.',
+        ],
+      },
+      {
+        id: 'meteor', tab: 'side', type: 'Free reward', name: 'Meteor loot',
+        summary: 'With Dead Wire on your gun, shoot the satellite tower above the prison (left of the Quick Revive building) until its light turns red, then the one outside Engineering by the Living Quarters. Next round, turn on the Void Cannon trap: a meteor crashes on Castle Rock. Raft over for scorestreaks, ammo mods, Salvage, armour plates and sometimes a Ray Gun.',
+        video: SE(266),
+      },
+      {
+        id: 'whack-a-crab', tab: 'side', type: 'Free perk', name: 'Whack-a-crab',
+        summary: 'On Crab Island, throw a Molotov at the leftmost tree above the small zombie window in the middle of the island. You get a baseball bat and 30 seconds to whack the crabs as they pop up. Do well and a perk can appears.',
+        video: SE(409),
+      },
+      {
+        id: 'slam-dunk', tab: 'side', type: 'Free reward', name: 'Slam dunk (2,000 Essence)',
+        summary: 'With a Pack-a-Punched gun, climb the wooden box in Engineering outside the Living Quarters and shoot the basketball stuck where the Living Quarters roof meets the upper level. It drops through the hoop in the courtyard and pays out 2,000 Essence (double it with Double Points).',
+        video: SE(461),
+      },
+      {
+        id: 'oxygen-tank', tab: 'side', type: 'Map tip', name: 'Spare oxygen tank',
+        summary: 'Once Pack-a-Punch has risen, dive below its spot to the bottom. Throw a grenade at the slightly clearer rock: an oxygen tank appears under it. Take it to stay underwater twice as long.',
+        video: SE(498),
+      },
+      {
+        id: 'perkaholic', tab: 'side', type: 'Free perk', name: 'Free Perkaholic (50 fish)',
+        summary: 'Kill 50 fish with explosive ammo or explosive equipment. Look for bubbles or splashes: around Crab Island, in and around the Shipwreck, under the Sea Tower and docks, and in the water under the Bio Lab.',
+      },
+      {
+        id: 'culinary', tab: 'side', type: 'Fun', name: 'Culinary Delight (achievement)',
+        summary: 'Cook a terrible fish dinner for the achievement. Kill a fish in the Bio Lab water with a grenade and take it. Collect batteries (Engineering tables by the Crafting Table), salt (above the white fridge upstairs in the Living Quarters), beans (between fruit crates in the Mess Hall), oil (by the Mess Hall stoves) and a brain (Bio Lab table by the Crafting Table). At the Mess Hall frying pan add the oil, the fish, then the rest, and end the round.',
+        video: SE(738),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each.',
+        video: SE(16),
+        spots: [
+          'Bonus Points: in the top right window of the Shipwreck, seen from the front.',
+          'Max Ammo: throw a grenade or shoot an explosive into a watchtower outside spawn.',
+          'Double Points: in the Bio Lab, behind a shelf.',
+          'Full Power: under the Sea Tower; hit it from a raft or the Sea Tower balcony.',
+          'Insta-Kill: on Temple Island, above a zombie window.',
+          'Nuke: inside a barrier on Crab Island.',
         ],
       },
     ],

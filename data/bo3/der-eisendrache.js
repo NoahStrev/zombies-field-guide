@@ -347,6 +347,18 @@
         id: 'free-gum', tab: 'side', type: 'Free item', name: 'Free Mega GobbleGum (plant pot)',
         summary: 'In the Undercroft teleporter room, pick up the plant pot. Take it with you on a trip to the past (main easter egg step 3), and put it back where it belongs in the past. Back in the present the plant has grown — interact with it for a free GobbleGum.',
       },
+      {
+        id: 'plunger', tab: 'weapons', type: 'Melee weapon', name: 'The Plunger',
+        summary: 'A melee weapon that hits like a knife, but kill a Panzersoldat and it catches fire for a minute, killing anything in one strike (Panzers included). The fire relights every time you kill another Panzer.',
+        video: { id: 'CPkf2RSGpuI', title: 'Getting and upgrading the Plunger', ch: 'MrDalekJD', len: '4:33', t: 33 },
+        steps: [
+          { w: 48, t: 'Set a Ragnarok trap behind the clock in the Clock Tower', needs: ['ragnarok'] },
+          { w: 64, t: 'Start the clock with the switch inside the tower and stop it at 9:35', d: 'It starts at 1:15.' },
+          { w: 96, t: 'Wall-run onto the circle right of the Pyramid room entrance during Anti-Gravity', needs: ['anti-gravity'], d: 'An orb hangs over the Pyramid. You\'re sent back in time.' },
+          { w: 113, t: 'Take the Plunger from beside the desk in the past', d: 'Opposite the safe, left of the teleporter. You only get about five seconds in the past, and you keep it when you come back.', tip: 'While you\'re in the past you can also do the free GobbleGum plant pot (see Side Quests).' },
+        ],
+        blocks: [{ tip: 'Kill zombies with the burning Plunger next to the newspaper on the Control Room table and its headline slowly changes to the outbreak.' }],
+      },
     ],
   });
 })();

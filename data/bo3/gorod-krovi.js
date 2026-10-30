@@ -227,6 +227,7 @@
       {
         id: 'dragon-wings', tab: 'side', type: 'Wearable', name: 'Dragon Wings', color: 'fire',
         summary: '30% less fire and explosive damage, free dragon rides for everyone, and instant teleport to the Hatchery from the small post with wings at each dragon platform.',
+        video: { id: '3SuZgaePBzM', title: 'All helmets and the Dragon Wings', ch: 'SBZ vSylent', len: '1:11', t: 4 },
         steps: [
           { any: 'Do these three in any order', t: 'Ride the dragon from all three platforms', needs: ['power-pap'], d: 'Dragon Command, Tank Factory and Supply Depot (any order; shared in co-op).' },
           { any: 'Do these three in any order', t: 'Get the Dragon Strike', needs: ['dragon-strike'] },
@@ -255,6 +256,15 @@
       {
         id: 'song-sorrow', tab: 'side', type: 'Song', name: '"Samantha\'s Sorrow" (hide and seek)',
         summary: 'Throw Monkey Bombs into three different areas while a dragon is burning them. A Samantha doll appears by the tombstone near the Trials boards in Belinski Square; interact to start the game. Five dolls hide in random spots playing a lullaby — shoot each before time runs out. Finish, and the last doll is dragged into the grave as the song plays.',
+      },
+      {
+        id: 'helmets', tab: 'side', type: 'Wearables', name: 'Mangler Helmet and Valkyrie Drone Hat',
+        summary: 'Two more wearables besides the Dragon Wings (you can wear one at a time and swap freely). Progress is shared in co-op.',
+        video: { id: '3SuZgaePBzM', title: 'All helmets and the Dragon Wings', ch: 'SBZ vSylent', len: '1:11' },
+        steps: [
+          { w: 27, t: 'Mangler Helmet: tougher against Manglers', d: 'Shoot the helmet off five Manglers and the arm cannon off five Manglers (both can happen on the same one: cannon first, then the head). The Dragon Strike lockdown is a great place to do it. It hangs on a mannequin on the Department Store\'s second floor, left of the L-CAR 9 wall-buy.', tip: 'Very useful in Love and War: lots of Manglers come during the Hatchery download, and their cannon shots can down you in one hit.' },
+          { w: 43, t: 'Valkyrie Drone Hat: tougher against drones and electricity', d: 'On six Valkyrie Drones, shoot off all three arms, and on six, shoot the small red camera underneath (arms first, then the camera, before it self-destructs). It takes the drone rounds and the Dragon Strike lockdown. It\'s on the headless mannequin in front of Juggernog in the Department Store, by the lamp-lit desk.' },
+        ],
       },
     ],
   });

@@ -39,7 +39,7 @@
         summary: 'Needed for every ritual. It is locked in a crate on the back of the truck in the starting alley (Easy Street).',
         steps: [
           { w: ['zz9m-MB725o', 61], t: 'Become the Beast and smash the crate on the truck', needs: ['beast-mode'], imgs: [{ src: I + 'key-crate.webp', cap: 'The crate holding the Summoning Key' }] },
-          { t: 'Leave Beast Mode and pick up the Key as a human' },
+          { w: ['zz9m-MB725o', 85], t: 'Leave Beast Mode and pick up the Key as a human' },
         ],
       },
       {
@@ -119,6 +119,7 @@
       {
         id: 'civil-protector', tab: 'parts', type: 'Buildable · Bodyguard', name: 'Civil Protector', img: I + 'civil-protector.webp',
         summary: 'A robot bodyguard with a KN-44 that defends the district it\'s called to and revives downed players. Needs three fuses first.',
+        video: { id: 'wrnBbBT3liY', title: 'Civil Protector guide', ch: 'MrDalekJD', len: '5:38' },
         facts: [['Parts', '3 fuses'], ['Cost per call', '2,000 (can be paid in chunks)'], ['After main EE', 'Gold, with a PaP\'d gun']],
         parts: [
           { name: 'Fuse 1', area: 'Canal District', spots: ['In the walkway behind the 1,250-point door near the train station (by the district\'s perk spot).'] },

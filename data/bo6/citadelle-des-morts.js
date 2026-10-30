@@ -1,6 +1,7 @@
 /* Citadelle des Morts — Black Ops 6, Season One Reloaded */
 (() => {
   const I = 'assets/img/bo6/citadelle-des-morts/';
+  const SE = t => ({ id: 'O34bCZtHqIY', title: 'Every side Easter egg in Citadelle des Morts', ch: 'MrDalekJD', len: '15:56', t }); // MrDalekJD side Easter eggs
   const E = 'Qy8OU0A9aLo'; // MrRoflWaffles easter egg guide
   const P = 'CbkYTci0VBw'; // MrRoflWaffles Pack-a-Punch guide
   const S = 'BCltoJb7zec'; // MrRoflWaffles all swords guide
@@ -165,6 +166,7 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Slave"',
         summary: 'Interact with three Mister Peeks headphones.',
+        video: SE(878),
         spots: [
           'In the Tavern, on a round table between the workbench and the armour wall-buy.',
           'In the Courtyard just past Speed Cola: turn right, then right again.',
@@ -174,6 +176,100 @@
       {
         id: 'song-caliburn', tab: 'side', type: 'Song', name: '"Caliburn"',
         summary: 'Melee the three unlit dragon braziers with the upgraded Caliburn: on the Village Ramparts, on the Nature Path next to the gate to the Town Square, and in the Town Square near the Rampage Inducer.',
+        video: SE(915),
+      },
+      {
+        id: 'mayas-revenge', tab: 'side', type: 'Side quest', name: 'Maya\'s Revenge (play as Maya)',
+        summary: 'Standard mode only. Playing as Maya Aguinaldo, from round 13 interact with the radio near Vulture Aid in the Dining Hall. You\'re taken somewhere else to kill zombies, then a cutscene with Franco plays. Back in the Dining Hall you get a Legendary GS45 and other loot.',
+        video: SE(708),
+      },
+      {
+        id: 'bartender', tab: 'side', type: 'Free perk', name: 'Bartender: free PhD Flopper and 7,000 Essence',
+        summary: 'Collect three bottles and put them on the drink tray on the Tavern bar. Your guns go away and zombies walk up to order: hand each one the drink of the matching colour (100 Essence each). Serve enough and you get 7,000 Essence and PhD Flopper.',
+        video: SE(106),
+        spots: [
+          'Undercroft: under the fold-up table left of the red couch.',
+          'Sitting Rooms: bottom shelf of the rack right of the couch facing the TV.',
+          'Dining Room: under the fold-up table right of the red couch.',
+        ],
+      },
+      {
+        id: 'rat-king', tab: 'side', type: 'Free reward', name: 'Rat King',
+        summary: 'Break the cheese display in the Town Square and take the wheel at the bottom. Find the hiding mice, then put the cheese on the empty plate the mice gather round in the north-east corner of the Pack-a-Punch room (Oubliette). They eat it and hand out points, ammo mods, random perks, weapons or Monkey Bombs/Kazimirs, plus a crown you can wear.',
+        video: SE(271),
+        spots: [
+          'Town Square: under a flower pot right of the door to the Nature Path.',
+          'Nature Path: by a hole under the round stone structure in front of Deadshot Daiquiri.',
+          'Village Ascent: under the pizza truck with road-work signs.',
+          'Under a broken step on the south-easternmost wooden stairs by the Lion Cannon.',
+          'Dining Hall: under a pallet opposite the ammo crate.',
+          'Sitting Rooms: under a small bench between the bunks.',
+          'Alchemical Lab: behind the stone tablet under the table.',
+          'Undercroft: by a hole in the middle of the westernmost wall.',
+          'Dungeon: on the floor of the cell left of the KSV wall-buy.',
+        ],
+      },
+      {
+        id: 'floating-peeks', tab: 'side', type: 'Free perk', name: 'Floating Mister Peeks (perk for everyone)',
+        summary: 'Shoot four Mister Peeks dolls (a scope helps). The last one gives every player a random perk.',
+        video: SE(13),
+        spots: [
+          'Elemental Pop room: through the south-easternmost window, just above a tree (only visible through that window).',
+          'In the barn with Deadshot Daiquiri outside: through the hole above the Mystery Box spot, dancing in a broken castle wall.',
+          'Dining Hall upper floor, south-east corner: look up at the red-roofed tower; he\'s in the small window under the roof.',
+          'Dungeon: on the bed in the cell left of the ammo crate.',
+        ],
+      },
+      {
+        id: 'lockdown', tab: 'side', type: 'Free perk', name: 'Undercroft incantation lockdown',
+        summary: 'After the main quest\'s swords, incantations and symbol steps, the symbols on the Undercroft wall disappear. Cast a different incantation on the wall four times to light each row. The Undercroft locks down for three waves; survive for a Random Perk and four ammo mods (better loot in co-op).',
+        video: SE(210),
+      },
+      {
+        id: 'chess-knight', tab: 'side', type: 'Helper', name: 'Chess knight protector',
+        summary: 'Collect four chess pieces, then interact with the chess board in the Sitting Rooms and kill zombies inside the purple circle. When it\'s full, a life-size blue knight hologram follows you and attacks zombies for a few minutes.',
+        video: SE(363),
+        spots: [
+          'On the table next to the Dragon statue where the sword goes.',
+          'Tavern basement: low shelves opposite the Crafting Table.',
+          'Elemental Pop room: on a table right of the door to the castle entrance.',
+          'Dungeon: on a table next to the Point of Power trap.',
+        ],
+      },
+      {
+        id: 'cannon-travel', tab: 'side', type: 'Map tip', name: 'Lion Cannon to the Dining Hall',
+        summary: 'Firing the Lion Cannon to open the castle shoots its crank wheel towards the Town Square. Take it from the empty fruit box under the rubble there, and the blowtorch from the north-east corner of the Dining Hall (under Vulture Aid). Put the wheel back and turn it all the way: the cannon can now fire you to the Dining Hall too. Facing spawn, its 100th launch (yes, 100) fires you into the bell tower instead: the bell rings for 30 seconds and pulls every zombie on the map to it like a Monkey Bomb.',
+        video: SE(424),
+      },
+      {
+        id: 'wishing-well', tab: 'side', type: 'Free reward', name: 'Wishing well (Essence bank)',
+        summary: 'With Vulture Aid, wait on a special round for a Vermin to climb out of the well in the Village Ascent and throw a cooked frag in. It spits out up to 1,000 Essence. Throw Essence back in (up to 10,000), then on the next Max Ammo round throw another frag in to get it all back for the whole team. Double Points or Profit Sharing at that moment boosts it.',
+        video: SE(578),
+      },
+      {
+        id: 'fireplaces', tab: 'side', type: 'Map tip', name: 'Fireplace protector',
+        summary: 'Light four fireplaces quickly with Molotovs or a charged Caliburn swing. The last one you light shoots fireballs at zombies for a while. You can do it again after a few rounds.',
+        video: SE(655),
+        spots: [
+          'Dining Hall: north wall.',
+          'Sitting Rooms: left of Stamin-Up.',
+          'Alchemical Lab: under a table in the south-west corner.',
+          'Tavern: right of the Arsenal.',
+        ],
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each.',
+        video: SE(787),
+        spots: [
+          'Bonus Points: behind a couch in the Undercroft.',
+          'Max Ammo: on a window sill in the Upper Village.',
+          'Double Points: inside a zombie window in the Alchemical Lab.',
+          'Full Power: on the Dining Hall roof.',
+          'Insta-Kill: on the scaffolding above the Tavern, over the end of the cave slide.',
+          'Max Armor: on the roof inside the Entrance Hall.',
+          'Nuke: above the Elemental Pop room on the Hillside Ramparts.',
+        ],
       },
     ],
   });

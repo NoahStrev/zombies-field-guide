@@ -246,14 +246,15 @@
       {
         id: 'one-inch-punch', tab: 'weapons', type: 'Wonder weapon · Melee', name: 'One Inch Punch', img: I + 'one-inch-punch.webp', color: 'gold',
         summary: 'Replaces your knife with a punch that one-hits zombies until about round 19. Every player needs it (and its Iron Fist upgrade) for the easter egg.',
+        video: { id: 'yuXhb7kVKJc', title: 'Ultimate Origins Easter Egg Guide (Zombies Chronicles)', ch: 'MrRoflWaffles', len: '15:42', t: 584 },
         steps: [
-          { anyList: 'Chests in any order', t: 'Fill the four soul chests (30 kills each)', d: 'Each sits in a giant footprint. If a robot steps on an unfinished chest, it resets.', list: [
+          { anyList: 'Chests in any order', w: 595, t: 'Fill the four soul chests (30 kills each)', d: 'Each sits in a giant footprint. If a robot steps on an unfinished chest, it resets.', list: [
             'Footprint near Generator 5 and Stamin-Up.',
             'Footprint on the path from the Excavation Site to the church (the only one Odin never steps on).',
             'Footprint on the path from the No Man\'s Land entrance to Generator 4 and Juggernog.',
             'Footprint in the corner by Generator 4, Juggernog and the MP40 wall-buy.',
           ] },
-          { imgs: [{ src: I + 'punch-pickup.webp', cap: 'The One Inch Punch at the board' }], t: 'Claim it at a Rituals of the Ancients board', d: 'At Generator 1 or 6, aim at the bottom medal and interact. Anyone who bleeds out can claim it again here.' },
+          { imgs: [{ src: I + 'punch-pickup.webp', cap: 'The One Inch Punch at the board' }], w: 625, t: 'Claim it at a Rituals of the Ancients board', d: 'At Generator 1 or 6, aim at the bottom medal and interact. Anyone who bleeds out can claim it again here.' },
         ],
         blocks: [{ note: 'The Iron Fist upgrade is part of the easter egg (step 6).' }],
       },

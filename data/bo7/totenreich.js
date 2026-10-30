@@ -1,6 +1,7 @@
 /* Totenreich — Black Ops 7, Season Three Reloaded */
 (() => {
   const I = 'assets/img/bo7/totenreich/';
+  const SE = t => ({ id: 'JCCKKJfKYR0', title: 'Every side Easter egg in Totenreich', ch: 'MrDalekJD', len: '17:49', t }); // MrDalekJD side Easter eggs
   const E = 't4nfWhaLiDs'; // MrRoflWaffles easter egg guide
   const P = 'oOKTzpBOa1A'; // TheGamingRevolution power and Pack-a-Punch
   const J = 'jbauO_oTN1c'; // MrRoflWaffles Jotunn Star guide
@@ -115,6 +116,54 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"No One There"',
         summary: 'Interact with three Mister Peeks headphones: on boxes near PhD Flopper in the Dry Dock, near Double Tap in the Core Foundry, and at the bottom of a shelf next to a plate in Loven\'s Antiquities.',
+        video: SE(921),
+      },
+      {
+        id: 'echoes', tab: 'side', type: 'Side quest', name: 'Echoes of the Damned (play as Richtofen)',
+        summary: 'As Richtofen with Melee Macchiato, on round 15 or any later round ending in 0 or 5, punch the barrel in the Core Foundry outside the room with the stairs and zipline. Dig inside and take the Ritterkreuz: you\'re taken to a corridor. Pick up the intel to move along, use the radio, put the three Element 115 fragments and figurines on the scale and the sword on the statue, then open the smoking door and fight through the burning corridor. Back on the map: loot including Glocke Drop Controllers, and a calling card.',
+        video: SE(765),
+      },
+      {
+        id: 'helmets', tab: 'side', type: 'Wearable', name: 'Viking helmets',
+        summary: 'Four wearable helmets, each with its own power. Wear one at a time and swap whenever you like.',
+        video: SE(280),
+        steps: [
+          { w: 280, t: 'Kneehigh Helmet: turn into an invulnerable gnome', d: 'With Shadow Rift on a gun and the Machine Workshop open, shoot four hidden gnomes: on a bunker roof by a floodlight in front of Tyr\'s Foot (over the barricade), on the shrine table under the big painting in the Stave Church, on a guard rail at the top of the lighthouse on Beacon Island, and on the top walkway of the Machine Workshop behind building materials. The Tyr\'s Foot and lighthouse gnomes wear armour and take several shots. Then take the helmet in Loven\'s Antiquities: whenever you crouch you become a gnome for about 30 seconds who can\'t be hurt and fires your lantern.', tip: 'After the first use you can rebuy it in Blodheim Hall for 6,000 (the guide video found it free again in Loven\'s Antiquities too).' },
+          { w: 498, t: 'Golden Tide Helm: better fishing', d: 'Fish a lot. Boots you reel in usually spawn a purple-eyed zombie, but eventually one brings "Olaf, Cranker of Cod" wearing it. Kill him and pick it up: catches come faster and are better, and can include power-ups such as Random Perks. If you take it off, it\'s free again in Blodheim Hall.' },
+          { w: 561, t: 'Cointoss Helmet: some rounds rain power-ups', needs: ['tyr-challenge'], d: 'Finish the kill challenge in Tyr\'s head ten times (one a round). The tenth time the helmet waits there instead of a power-up. Every so often a round then drops far more power-ups than normal.' },
+          { w: 638, t: 'Icebane Helmet: freezing slides and no cold', d: 'Get about 250 kills with the flamethrower of a Flammenfalle trap (nothing tells you when you\'re done). Then, on a special round, stand in the same trap\'s heat zone and kill 50 frozen zombies with bullets or the Jotunn Star (no explosives). A frozen zombie drops the helmet. Every third slide freezes zombies, and the cold of special rounds no longer hurts or slows you (except in the boss fight).' },
+        ],
+      },
+      {
+        id: 'tyr-challenge', tab: 'side', type: 'Free power-ups', name: 'Tyr\'s head kill challenge (a power-up every round)',
+        summary: 'Inside the robot Tyr\'s head, the Nixie tubes above the console show a tac-map grid square (a letter and a number, like F5) and a kill count (usually 74 or 75). Get that many kills inside that square: two green lights come on in Tyr\'s head. Go back in and a free power-up waits on the first floor (anything from a Max Ammo to a Random Perk). There is a new challenge every round, and the tenth one gives the Cointoss Helmet.',
+        video: SE(185),
+      },
+      {
+        id: 'glocke-wonder', tab: 'side', type: 'Free weapon', name: 'Free wonder weapon from Glocke Drops',
+        summary: 'A Glocke Drop Controller scorestreak lifts nearby zombies into the air for a while. Kill 15 to 20 of them before it ends for the best loot. Do that with three Glocke Drops in one game and the third always gives a wonder weapon: an easy way for a second player to get a Jotunn Star.',
+        video: SE(876),
+      },
+      {
+        id: 'fishbot', tab: 'side', type: 'Map tip', name: 'Fishy Fishbot (singing T.E.D.D. trap)',
+        summary: 'Take the fish from the bucket on the wall of the Arsenal shed on Beacon Island and craft a Shock Charge. When a T.E.D.D. trial appears, start it, put the fish on the right side of the machine and throw the Shock Charge in front so it stays electrified, then win the trial at Legendary. The chest holds the fish and a panel: mount them on the podium at the bar at the back of Eidskallen Square. T.E.D.D. sings, pulling zombies in, and when he stops the ones nearby become an army of 15 to 20 Brain Rot zombies. Afterwards it\'s a trap you can buy for 2,000 (a different verse each time).',
+        video: SE(61),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale and the Random Perk only appear once you have the other seven.',
+        video: SE(967),
+        spots: [
+          'Bonus Points: on a crate behind the fence where Der Wunderfizz spawns on Beacon Island.',
+          'Max Ammo: on top of the tall wooden structure facing Juggernog on Fishery Island.',
+          'Double Points: on a rock under Tyr\'s left claw; easiest to see from the Storm Bridge.',
+          'Full Power: on the stern of the ship opposite Speed Cola in the Dry Dock.',
+          'Insta-Kill: on a gravestone in the cemetery by the Burial Grounds.',
+          'Max Armor: on a basket opposite the broken generator in Lief\'s Boat Repair.',
+          'Nuke: in the War Factory, behind the giant robot head, on a round structure.',
+          'Fire Sale: top floor of the house above Loven\'s Antiquities, by a wooden chair.',
+          'Random Perk: on a shelf against the back wall of the red house right behind spawn in Eidskallen Landing.',
+        ],
       },
     ],
   });

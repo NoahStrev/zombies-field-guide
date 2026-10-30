@@ -1,6 +1,7 @@
 /* Shattered Veil — Black Ops 6, Season Three */
 (() => {
   const I = 'assets/img/bo6/shattered-veil/';
+  const SE = t => ({ id: 'SzMHsM40SxA', title: 'Every side Easter egg in The Shattered Veil', ch: 'MrDalekJD', len: '16:45', t }); // MrDalekJD side Easter eggs
   const E = '2pROUb-ECHU'; // MrRoflWaffles easter egg guide
   const P = 'dlI_9pyjiWY'; // TheGamingRevolution Pack-a-Punch guide
   const R = 'kGj2kFb7lvY'; // MrRoflWaffles Ray Gun Mark II build and upgrades
@@ -153,10 +154,83 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Falling To Pieces"',
         summary: 'Interact with three Mister Peeks headphones.',
+        video: SE(832),
         spots: [
           'In the Conservatory, under the stairs in the room with the covered statue, on a wooden crate.',
           'In the Banquet Hall, in the right corner behind the elevator, on a shelf.',
           'In the Service Tunnel, on a cardboard box next to a burnt body right of the tier 3 armour.',
+        ],
+      },
+      {
+        id: 'donut', tab: 'side', type: 'Helper', name: 'Donut, the friendly Doppelghast',
+        summary: 'Collect six Mister Peeks pieces and fix him on the sandbags in the Motor Court. He runs into the dog house and out comes Donut, a friendly Vermin. As Donut kills, he grows into a Parasite, then a Doppelghast, and fights for you until he despawns or dies.',
+        video: SE(195),
+        spots: [
+          'On a wine rack in the Bottlery.',
+          'Between a tree and the end of the bridge in the Garden Pond.',
+          'Against a wall in front of Quick Revive in the Conservatory.',
+          'Near the way between the Lower Terrace and Shem\'s Henge.',
+          'On the floor behind a frame in the Library.',
+          'In a bucket next to the ammo box on the Rear Patio.',
+        ],
+      },
+      {
+        id: 'sam-laser', tab: 'side', type: 'Map tip', name: 'S.A.M. laser trap',
+        summary: 'Turn on four computers in this order, one per round: Security Overlook, the Study, the Overlook, the West Hallways. The last screen turns red: take the floppy disk from the computer case on the floor and put it in the case in the Security Overlook. Next round interact with the screen ("Cleaning"), and the round after that ("S.A.M. Infected"). From then on you can pay 2,000 each round to have S.A.M. laser zombies in the Mainframe Chamber.',
+        video: SE(97),
+      },
+      {
+        id: 'ghost-mirror', tab: 'side', type: 'Free perk', name: 'Ghost lady and the Nursery mirror',
+        summary: 'From round 13, with a thermal scope, find the red-eyed ghost lady in a window and look at her through the scope until she vanishes. Do it four times, then interact with the antique mirror by the bed in the Nursery. After a jump scare it opens with up to four rewards, always including a Random Perk.',
+        video: SE(278),
+        spots: [
+          'Motor Court: behind the statue of the boy.',
+          'Motor Court: above the balcony of the main entrance.',
+          'Rear Patio: above the right-hand way into the elevator room.',
+          'West Balcony: the southernmost window.',
+          'South West Balcony: next to a blue crystal.',
+        ],
+      },
+      {
+        id: 'sleepwalk', tab: 'side', type: 'Free perk', name: 'Sleepwalking chest',
+        summary: 'On round 11, interact with the grandfather clock in the Study, then go prone on the bed in the Director\'s Quarters and end the round. When the screen comes back, crouch along the white footprints without waking the sleeping zombies. Before opening the chest at the end, take the keys from the zombie with coloured Zs above its head for the better haul (up to four rewards, always a Random Perk).',
+        video: SE(13),
+      },
+      {
+        id: 'marine-sp', tab: 'side', type: 'Free reward', name: 'Free Marine SP upgrades',
+        summary: 'With Death Perception, put a Marine SP on the gun mount under the three deer heads in the Banquet Hall. Shoot the left deer head: the middle one shows a field upgrade. Switch to that field upgrade and kill zombies with it until a Mangler spawns; kill it and take the gun back a rarity higher. Repeat each round until it\'s Legendary, then once more for Pack-a-Punch tier 1.',
+        video: SE(705),
+      },
+      {
+        id: 'fog', tab: 'side', type: 'Free reward', name: '"Fog rolling in" (free Aetherium crystals)',
+        summary: 'A long one that covers the map in fog for a minute and scatters Aetherium crystals around it.',
+        steps: [
+          { t: 'Bring the Wunderwaffe DG-2 and a Chopper Gunner' },
+          { t: 'Grab the baby Vermin in the Supply Depot', d: 'Just inside on the left, behind a grate under some machines.' },
+          { t: 'Read the chemical sign by the stairs to Pack-a-Punch', d: 'Behind the zombie window at the bottom of the left stairs: three coloured chemicals with a number of drops under each. Fewest drops goes first.' },
+          { t: 'Put the Vermin on the tray by the Mainframe Crafting Table and shoot the bottles in that order', d: 'Blue-capped white bottles = orange, the white bottle nearest the pill bottle = green, the pill bottle = pink. It starts oozing yellow.' },
+          { t: 'Microwave it until it turns red', d: 'Two microwaves in the West Hallways, one by the coffee machine in the Overlook.' },
+          { t: 'Put it in the blood halfway up the right stairs to Pack-a-Punch and shoot the fan above with the DG-2', d: 'Red smoke now comes out of every chimney.' },
+          { t: 'From the Motor Court, shoot every smoking chimney with the Chopper Gunner', d: 'Fireworks go off, then fog and crystals fill the map for a minute.' },
+        ],
+      },
+      {
+        id: 'bell-perk', tab: 'side', type: 'Free perk', name: 'Free perk: ring the bell 115 times',
+        summary: 'Once you have the main quest\'s metal hip flask, ring the bell on the Overlook bar 115 times for a Random Perk.',
+        video: SE(456),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale only appears once you have the others.',
+        video: SE(907),
+        spots: [
+          'Bonus Points and Double Points: in the opening above the stairs in the East Foyer.',
+          'Max Ammo: on a balcony seen from Shem\'s Henge.',
+          'Full Power: inside a panel in the Study.',
+          'Insta-Kill: in the elevator shaft.',
+          'Max Armor: behind the shed in the Motor Court.',
+          'Nuke: on the white trailer with the blue tarp in the Service Tunnel.',
+          'Fire Sale: on the lower ring of the Grand Foyer chandelier.',
         ],
       },
     ],

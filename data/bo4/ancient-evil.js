@@ -108,7 +108,7 @@
         video: { id: U, title: 'Ultimate guide to Ancient Evil', ch: 'MrDalekJD', len: '37:23' },
         steps: [
           { w: 849, t: 'Get a clue from the Oracle and melee the matching spot', d: 'Her clue points to one of these:', list: HINTS },
-          { t: 'Place it at a shrine and survive', d: 'Gaia (Spartan Monument, green circle), Charon (Python Pass, red), Hemera (Monument of Craterus by the Amphitheater, orange) or Ouranos (Center of the World in front of Pack-a-Punch, blue). You\'re held in a small circle until a short lockdown ends; then take the Fallen Hand.', needs: ['hand-gaia', 'hand-charon', 'hand-hemera', 'hand-ouranos'] },
+          { w: 974, t: 'Place it at a shrine and survive', d: 'Gaia (Spartan Monument, green circle), Charon (Python Pass, red), Hemera (Monument of Craterus by the Amphitheater, orange) or Ouranos (Center of the World in front of Pack-a-Punch, blue). You\'re held in a small circle until a short lockdown ends; then take the Fallen Hand.', needs: ['hand-gaia', 'hand-charon', 'hand-hemera', 'hand-ouranos'] },
         ],
       },
       {
@@ -176,7 +176,7 @@
         summary: 'The last upgrade for every Hand: more damage and ammo. It needs all four Redeemed Hands to exist in the game, the Eternal Flame and four god challenges. Not needed for the easter egg.',
         video: { id: U, title: 'Ultimate guide to Ancient Evil', ch: 'MrDalekJD', len: '37:23' },
         steps: [
-          { t: 'Light the Eternal Flame', needs: ['tributes'] },
+          { w: 406, t: 'Light the Eternal Flame', needs: ['tributes'] },
           { w: 1509, t: 'Light the bowl on the pillar outside the temple', d: 'Melee the Eternal Flame with Apollo\'s Will to set the spear on fire. Go outside to the left, look up at the bowl on top of the pillar and throw the spear slightly above it.', needs: ['apollos-will'] },
           { w: 1572, anyList: 'Shrines in any order', t: 'Kill a Catalyst at each shrine, then 10 zombies there', list: ['Fire Catalyst at Gaia.', 'Electric Catalyst at Hemera.', 'Poison Catalyst at Charon.', 'Water Catalyst at Ouranos.'] },
           { w: 1633, t: 'Interact with Pack-a-Punch with a Hand to start the god challenges', d: 'Four challenges, one at a time (no infinite ammo, no elixirs): Gaia (Catalyst lockdown), Ouranos (skeleton lockdown), Hemera (kill three Gegenees), Charon (kill three Blightfathers).' },

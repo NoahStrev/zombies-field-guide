@@ -1,6 +1,7 @@
 /* Liberty Falls — Black Ops 6 launch map */
 (() => {
   const I = 'assets/img/bo6/liberty-falls/';
+  const SE = t => ({ id: 'zerbyzpOakM', title: 'Every side Easter egg in Liberty Falls', ch: 'MrDalekJD', len: '14:03', t }); // MrDalekJD side Easter eggs
   const E = 'iNSPFb5AIz8'; // MrRoflWaffles easter egg guide
   const J = '6giOql4srfQ'; // MrRoflWaffles Jet Gun guide
   const EV = { id: E, title: 'Liberty Falls easter egg guide', ch: 'MrRoflWaffles', len: '8:24' };
@@ -121,6 +122,7 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Destroy Something Beautiful"',
         summary: 'Interact with three Mister Peeks headphones.',
+        video: SE(732),
         spots: [
           'Between the bowling alley and the motel, on the ground by the fence and railing.',
           'In the church, on the end of a wooden bench.',
@@ -130,10 +132,89 @@
       {
         id: 'bowling', tab: 'side', type: 'Free reward', name: 'Mister Peeks bowling',
         summary: 'Shoot five bowling shoes: on the Pump & Pay counter, on a shelf in the hardware store opposite Olly\'s Comics, under a chair in the open window left of the AK-74 wall-buy on Hill Street, hanging from a tree right of the cemetery armour wall-buy, and on a casket in the funeral home. You\'re sent to the bowling alley to bowl at zombies for two minutes; the better your score, the better the prize. Do it three times in one game to unlock the song "Echo".',
+        video: SE(210),
       },
       {
         id: 'deadshot', tab: 'side', type: 'Free perk', name: 'Free Deadshot Daiquiri',
         summary: 'Past the north end of the cemetery, five soda cans sit on a fence out of the map. Shoot all five without missing for a free Deadshot Daiquiri.',
+        video: SE(160),
+      },
+      {
+        id: 'zombie-head', tab: 'side', type: 'Free reward', name: 'Zombie head on the church steeple',
+        summary: 'A zombie head sits on the tip of the church steeple right above Melee Macchiato. Blow it up with an explosive or a Molotov: zombies rain from the sky and die on landing, dropping Essence, Salvage and scorestreaks. When it stops, an Aether Tool appears: Uncommon before round 10, Rare up to 29, Epic up to 49, Legendary from 50.',
+        video: SE(124),
+      },
+      {
+        id: 'aetherella', tab: 'side', type: 'Free reward', name: 'Aetherella figures (invincible laser form)',
+        summary: 'Suck up all eight little Aetherella figures with the Jet Gun\'s main fire. The player who collects the last one can turn into the Aetherella statue for a while: you can\'t be hurt, and a laser fires itself at zombies\' heads.',
+        video: SE(585),
+        spots: [
+          'Four inside Olly\'s Comics.',
+          'On the neon Motel sign, behind the Office sign on East Main Street.',
+          'On an air conditioning unit across from the Dark Aether Field Generator on Hill Street.',
+          'Drop from The Alamo onto the Yummy Freeze roof: behind the right-hand of the two air vents on the building opposite.',
+          'On the window ledge of the church, on the side opposite Melee Macchiato.',
+          'Lying flat under the "L" of "Lanes" on the Liberty Lanes sign on West Main Street, nearest the old bus.',
+        ],
+        needs: ['jet-gun'],
+      },
+      {
+        id: 'vending', tab: 'side', type: 'Free reward', name: 'Vending machine punch',
+        summary: 'Crouch and punch the vending machine in the Motor Lodge (next to the barrier into the Motor Lodge Alley) once a round for a random prize: a snack you can\'t use, Essence, a free perk or even a Ray Gun. A punch with Melee Macchiato breaks it for good, spraying out Essence and Salvage.',
+        video: SE(19),
+      },
+      {
+        id: 'car-trunk', tab: 'side', type: 'Free reward', name: 'Mister Peeks in a car boot',
+        summary: 'Mister Peeks sits in the back seat of one of three cars. Blow that car up with a Mangler Cannon (or a Mutant Injection) and something flies out of the boot. Five rounds later he moves to another of the cars, so you can do it three times.',
+        video: SE(650),
+        spots: [
+          'In front of the Crafting Table in the Groundskeeper\'s Yard.',
+          'Right of the GobbleGum machine on Hill Street.',
+          'In a parking spot in Backstreet Parking, next to Olly\'s Comics.',
+        ],
+      },
+      {
+        id: 'blood-pool', tab: 'side', type: 'Free reward', name: 'Blood pool',
+        summary: 'Throw three Semtex into the swimming pool of blood left of the GobbleGum machine on West Main Street. A red orb flies out with Salvage and equipment. You can repeat it every five rounds, twice more; the third time also gives a Fire Sale.',
+      },
+      {
+        id: 'dance-party', tab: 'side', type: 'Fun', name: 'Zombie dance party',
+        summary: 'Use both telescopes on Riverside (50 Essence each) and point them at the lone zombie dancing on a cliff. A party starts on the nearby bus: every zombie around it dances and ignores you for a full minute.',
+        video: SE(338),
+      },
+      {
+        id: 'graves', tab: 'side', type: 'Free reward', name: 'Grave digging',
+        summary: 'A barrel sits on an unreachable ledge west of the Washington Ave rooftops. Destroy it with a scorestreak and a shovel drops down for you. Dig up the cemetery graves for prizes; digging them all gives Essence.',
+      },
+      {
+        id: 'napalm-church', tab: 'side', type: 'Map tip', name: 'Church napalm trap',
+        summary: 'Shoot the two candle stands either side of Pack-a-Punch with a Napalm Burst gun. Purple fire pools spread around the Dark Aether church and a fire trap appears in the middle, burning zombies (and you) that walk through. Handy during the boss fight, which happens in the church.',
+        video: SE(698),
+      },
+      {
+        id: 'bank-vault', tab: 'side', type: 'Free reward', name: 'Bank vault',
+        summary: 'Three Post-it notes each give two digits of the six-digit vault code in Savings and Loan. Enter it and the vault opens for 45 seconds: use the Loot Keys that elite enemies (Manglers, Abominations) drop on the deposit boxes. Better keys mean better loot, from Aether Tools and Pack-a-Punch crystals up to wonder weapons.',
+        spots: [
+          'Savings and Loan: on the counter right behind the vault.',
+          'Olly\'s Comics: under the desk in the middle, on the left.',
+          'Liberty Lanes: shoot the bucket of bottles on the snack counter to reveal it.',
+        ],
+        video: SE(762),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale only appears once you have the other seven.',
+        video: SE(60),
+        spots: [
+          'Bonus Points: on the air conditioner outside Olly\'s Comics, in the alley left of the ammo cache and Arsenal.',
+          'Max Ammo: at the base of the yellow arch bridge behind the exfil radio by Pump & Pay.',
+          'Double Points: on a support beam of the Washington Ave water tower.',
+          'Full Power: out of the map between a wrecked van and a Project Janus truck, behind the bus by Liberty Lanes.',
+          'Insta-Kill: next to the brick chimney behind the church, left of the armour wall-buy.',
+          'Max Armor: under a service cart in an open window of The Grease Trap on Washington Ave, left of the barrier to the patio.',
+          'Nuke: in the big chandelier in the Savings & Loan, seen through the rooftop skylights.',
+          'Fire Sale: in a bin left of the park benches next to PhD Flopper on the Hilltop Stairs.',
+        ],
       },
     ],
   });

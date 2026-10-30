@@ -1,6 +1,7 @@
 /* Kowakujō — Black Ops 7, Season Four Reloaded */
 (() => {
   const I = 'assets/img/bo7/kowakujo/';
+  const SE = t => ({ id: 'OXtaOb8gBfM', title: 'Every side Easter egg in Kowakujo', ch: 'MrDalekJD', len: '17:48', t }); // MrDalekJD side Easter eggs
   const E = 'cQovwK9NcSk'; // MrRoflWaffles easter egg guide
   const P = '4GSQJSYaLiI'; // TheGamingRevolution power and Pack-a-Punch
   const N = 'tBU2804pKeQ'; // MrRoflWaffles Nekomancer guide
@@ -124,10 +125,79 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Evencry"',
         summary: 'Interact with three Mister Peeks headphones: in the Stables, the Kitchens and the Onsen Baths.',
+        video: SE(949),
       },
       {
         id: 'song-tk', tab: 'side', type: 'Song', name: '"When The Stars Go Dark" (Tom Kane tribute)',
         summary: 'In the Central Courtyard, face the "TK" carved into the cherry blossom tree, crouch and look up the tree for a few seconds.',
+        video: SE(529),
+      },
+      {
+        id: 'cat-cafe', tab: 'side', type: 'Free perk', name: 'Cat Cafe',
+        summary: 'Find five cats and five toy mice, then look up at the cats on the north building\'s roof in the Tea Garden. The door opens into the Cat Cafe: a Random Perk, two Mystery Perks and a calling card. Cats show up one every 1 to 3 rounds in one of eight spots (aim at one and interact; shoot it if it won\'t run). The mice are there from the start in eight spots; any five of each will do.',
+        video: SE(15),
+        spots: [
+          'Gatehouse: cat on the floor by a basket in the zombie window opposite the wall-buy; mouse on the floor facing that window.',
+          'Flower Garden: cat in the zombie window between the GobbleGum machine and Mystery Box; mouse in the right-hand corner by a tall shrub.',
+          'Kitchens: cat facing the south wall (Ghostly Rifleman trap) at the top of the stairs from the Flower Garden; mouse under the weapon rack on that wall.',
+          'Stables: cat in the ceiling of the building left of Death Perception; mouse in a zombie hole in the south wall below it.',
+          'Training Area: cat on a beam above the ammo box; mouse behind the ammo crate by the wooden pillar.',
+          'Tenshu Entrance: cat on the small rooftop west of the exfil phone booth; mouse in the fallen tiles left of the booth.',
+          'Onsen Baths: cat on a beam above the stairs to Elemental Pop; mouse on the towel on a stool right of Elemental Pop.',
+          'Central Courtyard: cat in the zombie window behind Juggernog, looking right (jump to see it); mouse in the small lava vein by the big tree, opposite Juggernog.',
+        ],
+      },
+      {
+        id: 'echoes', tab: 'side', type: 'Side quest', name: 'Echoes of the Damned (play as Takeo)',
+        summary: 'As Takeo, after Pack-a-Punch, throw a Psych Grenade in the War Room and step into the gas. Walk up to Takeo\'s illusion and take the Path of Sorrows katana. In the forest you only have the katana: fight through three waves (Hellhounds, scorched zombies, heavy zombies) and kill the Oni at the end. Back on the map: loot and a calling card.',
+        video: SE(390),
+      },
+      {
+        id: 'obstacle-course', tab: 'side', type: 'Helper', name: 'Origami horse obstacle course',
+        summary: 'Find four carrots and open every door, then interact with the floating origami horse at the bucket left of the Mystery Box in the Stables. You get three minutes to run a course: dodge rolling boulders, hop across sushi over the lava (each piece sinks if you stand on it too long), get past the leaping koi in the Kitchens, then round behind Double Tap and through the koi rain in the Flower Garden. Finish with over 1:40 left for the gold trophy (the best loot: Salvage, a Mystery Perk, a scorestreak) and an origami horse that follows you for about a round and a half, firing sushi at zombies whenever you shoot. You can run it again every five or six rounds.',
+        spots: [
+          'Spawn: in a bucket next to Quick Revive.',
+          'Kitchens: in the pile of vegetables at the back.',
+          'Flower Garden: in the plants right of the exfil booth (crouch; very hard to see).',
+          'Workshop: in a bucket in the castle doorway.',
+        ],
+        video: SE(156),
+      },
+      {
+        id: 'raygun-parkour', tab: 'side', type: 'Free weapon', name: 'Lava parkour (free Ray Gun)',
+        summary: 'In the Training Area, wait for a floating rock to appear in the lava. Ride it across to the wrecked house and climb onto the roof to start a 45-second parkour run (each section adds a little time): stepping stones, a wall-jump onto a rock, floating windows that vanish after a few seconds (or climb the pole and jump to the door), then three sinking tables (just run and jump straight to the second). Wall-jump off the last pole back to land: four statues appear, one with a Ray Gun in its mouth. Every player can do it on their own rock, and the first time also gives a calling card. You can repeat it, but without more rewards.',
+        video: SE(297),
+      },
+      {
+        id: 'mech-suit', tab: 'side', type: 'Free reward', name: 'Klaus robot mech suit',
+        summary: 'Shoot the floating lava rocks in the Flower Garden: they always give Salvage and sometimes a Klaus robot part. After four parts, the fifth appears in the lava when you get close. Picking it up spawns an Uber Klaus: kill it and the robot lands in the Flower Garden opposite Wisp Tea. Interact with it for a short scene where you pilot a mech against an Abomination and a Zursa. Back on the map you get a Dark Ops challenge and a mech-suit scorestreak, which you can buy again from the robot.',
+        video: SE(592),
+      },
+      {
+        id: 'rifleman-upgrade', tab: 'side', type: 'Map tip', name: 'Ghostly Rifleman trap upgrades',
+        summary: 'The Ghostly Rifleman trap can be upgraded four times. Craft a Combat Bow, then get about 20 kills with each of the four rifleman traps. Turn on the Central Courtyard trap and look through a window for a glowing blue target. Shooting it with the bow puts you in Aether Shroud: shoot every target that appears before your arrows run out. Four masks then circle the wall: interact to send them into the trap. Repeat (more kills at all four traps, then the targets) for each upgrade: Fireworks ammo mod, then Cryo Freeze as well (plus a free Self-Revive), then Pack-a-Punched riflemen, then a fourth.',
+        video: SE(779),
+      },
+      {
+        id: 'maneki-upgrade', tab: 'side', type: 'Map tip', name: 'Upgraded Maneki-Neko (bubble shield)',
+        summary: 'During the first {{rifleman-upgrade|rifleman trap upgrade}}, once you\'ve shot all the targets, the riflemen leave a white powder where they appear: take it. Add the charcoal under the pot in the Kitchens and the matches on the bottom shelf in the Double Tap room, then craft at the bench where you made the Maneki-Neko. The upgraded cat throws up a bubble shield zombies can\'t get into: great for the boss fight.',
+        video: SE(900),
+      },
+      {
+        id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',
+        summary: 'Small hidden power-ups you can pick up once each. The Fire Sale and the Random Perk only appear once you have the other seven.',
+        video: SE(981),
+        spots: [
+          'Bonus Points: on the outside corner of the Kitchens, behind the M34 Novaline wall-buy.',
+          'Max Ammo: at the bottom of a shelf by a lamp in the out-of-bounds room in the Training Area.',
+          'Double Points: between the two big branches of the Central Courtyard cherry tree; best seen from the Collapsed Study.',
+          'Full Power: in the roof of a sunken house outside the Flower Garden, behind the exfil phone booth.',
+          'Insta-Kill: in a half-open drawer in the Storage Rooms, under a white lantern right of the door across from the MK.78.',
+          'Max Armor: on the floor between a crate and a chest in an out-of-bounds room near Vulture Aid in the Workshop (jump to see it).',
+          'Nuke: in the lava against the cliff opposite Melee Macchiato in the Training Area.',
+          'Fire Sale: underwater in the Onsen Baths, under the tiles.',
+          'Random Perk: in a golden vase on a shelf by the Kitchens fire pit.',
+        ],
       },
     ],
   });
