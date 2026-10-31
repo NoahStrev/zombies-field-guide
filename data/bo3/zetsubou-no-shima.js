@@ -261,10 +261,11 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song-dead-flowers', tab: 'side', type: 'Song', name: '"Dead Flowers"',
+        video: { id: 'eLUmIgZxQ5E', title: 'Dead Flowers: the three sock monkeys', ch: 'JokerAlex 21', len: '6:24' },
         summary: 'Hold interact on three sock monkeys.',
         spots: [
           'On a power generator, left of a perk machine by the blue 115 water.',
-          'Top floor of Lab B, on a table left of a floodlight, in front of zombie diagrams.',
+          { text: 'Top floor of Lab B, on a table left of a floodlight, in front of zombie diagrams.', imgs: [{ src: I + 'spot-song-dead-flowers-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           'On a table in the bunker, right of the KT-4 bench and left of the Masamune bench.',
         ],
       },

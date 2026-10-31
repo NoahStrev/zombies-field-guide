@@ -172,11 +172,12 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Amoeba"',
+        video: { id: 'wNBmPxb9g-M', title: 'Amoeba: the three tapes', ch: 'JokerAlex 21', len: '1:40' },
         summary: 'Interact with three cassette tapes.',
         spots: [
-          'Garment Factory: on top of a mannequin.',
-          'East Berlin Streets: on a shelf in the electronics store.',
-          'Blasted Suite: next to a vase on a cabinet.',
+          { text: 'Garment Factory: on top of a mannequin.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Garment Factory, still from JokerAlex 21\'s guide video' }] },
+          { text: 'East Berlin Streets: on a shelf in the electronics store.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'East Berlin Streets, still from JokerAlex 21\'s guide video' }] },
+          { text: 'Blasted Suite: next to a vase on a cabinet.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Blasted Suite, still from JokerAlex 21\'s guide video' }] },
         ],
       },
       {

@@ -189,8 +189,13 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song', tab: 'side', type: 'Song', name: '"I Am The Well"',
+        video: { id: 'xew2SDNPn34', title: 'I Am The Well: the three heads', ch: 'Fast Guides Glitch', len: '0:38' },
         summary: 'Enter 7664 (SONG) at Rushmore, or interact with three A.D.A.M. heads:',
-        spots: ['Green House upstairs: under the side of the bed nearest the wall.', 'Solitary: in the corner of the small office before APD Control, in front of the open barrier.', 'Lounge: on a red chair left of the pool table.'],
+        spots: [
+          { text: 'Green House upstairs: under the side of the bed nearest the wall.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Green House upstairs, still from Fast Guides Glitch\'s guide video' }] },
+          { text: 'Solitary: in the corner of the small office before APD Control, in front of the open barrier.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Solitary, still from Fast Guides Glitch\'s guide video' }] },
+          { text: 'Lounge: on a red chair left of the pool table.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Lounge, still from Fast Guides Glitch\'s guide video' }] },
+        ],
       },
       {
         id: 'rushmore-codes', tab: 'side', type: 'Cheat codes', name: 'Rushmore keypad codes',

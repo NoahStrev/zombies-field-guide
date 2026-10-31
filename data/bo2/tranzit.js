@@ -211,8 +211,13 @@
       },
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Carrion"',
+        video: { id: 'Yn8VC_vg8-s', title: 'Carrion: the three teddy bears', ch: 'JokerAlex 21', len: '5:32' },
         summary: 'Interact with three teddy bears.',
-        spots: ['On a wooden bench just outside the Bus Depot, by a pool of lava.', 'On a mattress upstairs in the farmhouse.', 'On a cushioned chair next to the pool table in the bar in Town.'],
+        spots: [
+          { text: 'On a wooden bench just outside the Bus Depot, by a pool of lava.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'On a mattress upstairs in the farmhouse.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'On a cushioned chair next to the pool table in the bar in Town.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+        ],
       },
     ],
   });

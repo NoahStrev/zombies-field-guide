@@ -309,20 +309,22 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song-dead-again', tab: 'side', type: 'Song', name: '"Dead Again"',
+        video: { id: 'J3S6yhRNGdo', title: 'Dead Again: the three teddy bears', ch: 'JokerAlex 21', len: '6:25' },
         summary: 'Hold interact on three teddy bears.',
         spots: [
-          'Samantha\'s Room, sitting on a chair.',
+          { text: 'Samantha\'s Room, sitting on a chair.', imgs: [{ src: I + 'spot-song-dead-again-1.webp', cap: 'Still from Jedi98\'s guide video' }] },
           'In the cell opposite the Juggernog cell, sitting on a crate.',
           'Right of the rocket launch pad (looking from the blast doors), in the passenger seat of a truck.',
         ],
       },
       {
         id: 'song-dies-irae', tab: 'side', type: 'Song', name: '"Dies Irae" (gramophones)',
+        video: { id: 'nQnhufakTkQ', title: 'All three gramophones', ch: 'Jedi98', len: '0:57' },
         summary: 'Hold interact on three gramophones.',
         spots: [
-          'Samantha\'s Room, on top of a shelf facing away from the teddy bear.',
-          'Control Room, sitting on a chair.',
-          'Pyramid room, facing the stairs to the crypt.',
+          { text: 'Samantha\'s Room, on top of a shelf facing away from the teddy bear.', imgs: [{ src: I + 'spot-song-dies-irae-1.webp', cap: 'Still from Jedi98\'s guide video' }] },
+          { text: 'Control Room, sitting on a chair.', imgs: [{ src: I + 'spot-song-dies-irae-2.webp', cap: 'Still from Jedi98\'s guide video' }] },
+          { text: 'Pyramid room, facing the stairs to the crypt.', imgs: [{ src: I + 'spot-song-dies-irae-3.webp', cap: 'Still from Jedi98\'s guide video' }] },
         ],
       },
       {

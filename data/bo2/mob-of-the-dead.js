@@ -192,8 +192,13 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'songs', tab: 'side', type: 'Songs', name: '"Rusty Cage" and "Where Are We Going"',
+        video: { id: 'T87KDgQOAUE', title: 'Rusty Cage: the three bottles', ch: 'JokerAlex 21', len: '1:26' },
         summary: '"Rusty Cage": interact with three bottles. "Where Are We Going": in Afterlife, enter 935 on the number pad at the bottom of the spiral staircase once it\'s unlocked.',
-        spots: ['On a bookshelf in the library (spawn).', 'On a cart in the infirmary, by the blood baths.', 'At the docks, tucked between a crate and a fence.'],
+        spots: [
+          { text: 'On a bookshelf in the library (spawn).', imgs: [{ src: I + 'spot-songs-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          'On a cart in the infirmary, by the blood baths.',
+          { text: 'At the docks, tucked between a crate and a fence.', imgs: [{ src: I + 'spot-songs-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+        ],
       },
       {
         id: 'lullaby', tab: 'side', type: 'Secret ending', name: 'Samantha\'s Lullaby ending',

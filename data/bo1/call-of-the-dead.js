@@ -168,10 +168,11 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Not Ready to Die"',
+        video: { id: 'AbqwJ4KiOUs', title: 'Not Ready to Die: the three rocks', ch: 'JokerAlex 21', len: '1:37' },
         summary: 'Interact with three hidden rocks.',
         spots: [
-          'In spawn, on a barrel near the boat that leads to the lighthouse.',
-          'On the ship, in the diner.',
+          { text: 'In spawn, on a barrel near the boat that leads to the lighthouse.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'On the ship, in the diner.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           'In the PhD Flopper room, under a small table.',
         ],
       },

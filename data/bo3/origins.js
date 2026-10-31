@@ -297,11 +297,12 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song-archangel', tab: 'side', type: 'Song', name: '"Archangel"',
+        video: { id: 'n3pisLHWNfA', title: 'Archangel: the three Divinium rocks', ch: 'Doughnuts', len: '1:12' },
         summary: 'Hold interact on three green blocks of raw Divinium.',
         spots: [
-          'Spawn room, right of the Rituals of the Ancients chest, on the other side of the bunk bed.',
-          'Workshop second floor, across from the stairway, under a bed.',
-          'On the scaffolding left of the Excavation Site entrance facing spawn, next to a crate.',
+          { text: 'Spawn room, right of the Rituals of the Ancients chest, on the other side of the bunk bed.', imgs: [{ src: I + 'spot-song-archangel-1.webp', cap: 'Still from Doughnuts\'s guide video' }] },
+          { text: 'Workshop second floor, across from the stairway, under a bed.', imgs: [{ src: I + 'spot-song-archangel-2.webp', cap: 'Still from Doughnuts\'s guide video' }] },
+          { text: 'On the scaffolding left of the Excavation Site entrance facing spawn, next to a crate.', imgs: [{ src: I + 'spot-song-archangel-3.webp', cap: 'Still from Doughnuts\'s guide video' }] },
         ],
       },
       {
@@ -323,9 +324,10 @@
       },
       {
         id: 'magna-collider', tab: 'side', type: 'Free weapon', name: 'Free Magna Collider (upgraded MG08)',
+        video: { id: '7H4Ki0gIZV4', title: 'Free Magna Collider, quick guide', ch: 'SBZ vSylent', len: '0:59' },
         summary: 'Take the Maxis Drone near four small yellow discs so it collects them. It then drops a Pack-a-Punched MG08/15 in front of Pack-a-Punch.',
         spots: [
-          'On the destroyed roof beside Generator 5.',
+          { text: 'On the destroyed roof beside Generator 5.', imgs: [{ src: I + 'spot-magna-collider-1.webp', cap: 'Still from SBZ vSylent\'s guide video' }] },
           'Outside the spawn room door to Generator 2: a hole in the trenches with burning debris; the disc is at the end.',
           'On the roof of the broken church, along the tank path toward Generator 4.',
           'On the scaffold above the Excavation Site entrance closest to the church.',

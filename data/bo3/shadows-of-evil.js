@@ -239,11 +239,12 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song-snakeskin', tab: 'side', type: 'Song', name: '"Snakeskin Boots"',
+        video: { id: '9CXpP43iXdE', title: 'All three radios for Snakeskin Boots', ch: 'Jedi98', len: '1:05' },
         summary: 'Hold interact on three small wooden radios.',
         spots: [
-          'Waterfront: the boxing gym, on a desk on the upper level.',
-          'Canal: entrance of the Ruby Rabbit, on a table to the left.',
-          'Footlight: the train station, on a bench.',
+          { text: 'Waterfront: the boxing gym, on a desk on the upper level.', imgs: [{ src: I + 'spot-song-snakeskin-1.webp', cap: 'Waterfront, still from Jedi98\'s guide video' }] },
+          { text: 'Canal: entrance of the Ruby Rabbit, on a table to the left.', imgs: [{ src: I + 'spot-song-snakeskin-2.webp', cap: 'Canal, still from Jedi98\'s guide video' }] },
+          { text: 'Footlight: the train station, on a bench.', imgs: [{ src: I + 'spot-song-snakeskin-3.webp', cap: 'Footlight, still from Jedi98\'s guide video' }] },
         ],
         blocks: [{ tip: 'For the instrumental version, use one radio twice, then the other two once each.' }],
       },
@@ -252,7 +253,7 @@
         summary: 'Collect three microphone parts, then interact with the stage of the Black Lace in Footlight.',
         spots: [
           { label: 'Wire', text: 'Under the stairs from the Ruby Rabbit down into the canals, opposite the power box behind the Beast-only wall.' },
-          { label: 'Stand', text: 'Nero\'s lair, to the left of a bloody knife-throwing target.' },
+          { label: 'Stand', text: 'Nero\'s lair, to the left of a bloody knife-throwing target.', imgs: [{ src: I + 'spot-song-cold-hard-cash-2.webp', cap: 'Stand, still from JokerAlex 21\'s guide video' }] },
           { label: 'Mic', text: 'In the Rift by a trash can, near the portal to the Waterfront.' },
         ],
         video: { id: 'CxjCh4f-WWE', title: 'Secret song in Shadows of Evil (Cold Hard Cash)', ch: 'MrRoflWaffles', len: '5:40' },

@@ -114,11 +114,12 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Lost"',
+        video: { id: 'tvtwS4IIVuE', title: 'Lost: the three tapes', ch: 'JokerAlex 21', len: '6:01' },
         summary: 'Interact with three cassette tapes.',
         spots: [
-          'Scientist Quarters: on a wooden shelf by the stairs down to the Arsenal.',
-          'Equipment Storage: on a shelf left of the locked metal cabinet.',
-          'Motor Pool Office: on the floor between a desk and a green filing cabinet.',
+          { text: 'Scientist Quarters: on a wooden shelf by the stairs down to the Arsenal.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Scientist Quarters, still from JokerAlex 21\'s guide video' }] },
+          { text: 'Equipment Storage: on a shelf left of the locked metal cabinet.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Equipment Storage, still from JokerAlex 21\'s guide video' }] },
+          { text: 'Motor Pool Office: on the floor between a desk and a green filing cabinet.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Motor Pool Office, still from JokerAlex 21\'s guide video' }] },
         ],
       },
       {

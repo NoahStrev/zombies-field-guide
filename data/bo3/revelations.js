@@ -193,11 +193,12 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song-the-gift', tab: 'side', type: 'Song', name: '"The Gift"',
+        video: { id: '3vBBtjluzKk', title: 'The Gift: the three teddy bears', ch: 'JokerAlex 21', len: '1:20' },
         summary: 'Hold interact on three teddy bears.',
         spots: [
-          'Entrance to Mob of the Dead from the mound, on a chair left of a surgery patient.',
-          'Kino theatre, on a chair in front of the podium.',
-          'Verrückt, on a chair at the start of the hallway to the jump pad.',
+          { text: 'Entrance to Mob of the Dead from the mound, on a chair left of a surgery patient.', imgs: [{ src: I + 'spot-song-the-gift-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'Kino theatre, on a chair in front of the podium.', imgs: [{ src: I + 'spot-song-the-gift-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'Verrückt, on a chair at the start of the hallway to the jump pad.', imgs: [{ src: I + 'spot-song-the-gift-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
       },
       {

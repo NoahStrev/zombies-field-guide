@@ -179,11 +179,12 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Alone"',
+        video: { id: 'JG8OVW7GG7Q', title: 'Alone: the three tapes', ch: 'JokerAlex 21', len: '7:13' },
         summary: 'Interact with three cassette tapes.',
         spots: [
-          'Living Room (Nacht bunker): in the broken fridge right of the sofa.',
+          { text: 'Living Room (Nacht bunker): in the broken fridge right of the sofa.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Living Room (Nacht bunker), still from JokerAlex 21\'s guide video' }] },
           'Particle Accelerator: below Pack-a-Punch, far right, on top of a machine next to a bloody tower.',
-          'Medical Bay: on the shelf right of the pill cabinets, opposite the terminal.',
+          { text: 'Medical Bay: on the shelf right of the pill cabinets, opposite the terminal.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Medical Bay, still from JokerAlex 21\'s guide video' }] },
         ],
       },
       {

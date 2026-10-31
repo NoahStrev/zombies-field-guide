@@ -189,8 +189,15 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'free-perk', tab: 'side', type: 'Free perk', name: 'Five wooden figurines: extra perk',
+        video: { id: 'UZIMxmqnKKU', title: 'The five wooden figurines', ch: 'JokerAlex 21', len: '4:08' },
         summary: 'Pick up a figurine next to each Pack-a-Punch spot while the machine is there, put them in the suitcase on the Beach, and kill the electric zombies that come next round for a free perk.',
-        spots: ['Boathouse: a musk deer.', 'Beach: a bird.', 'Lagoon: a squirrel.', 'Sunken Path / Artifact Storage: an Apothicon.', 'Golden Pack-a-Punch island: a Margwa.'],
+        spots: [
+          { text: 'Boathouse: a musk deer.', imgs: [{ src: I + 'spot-free-perk-1.webp', cap: 'Boathouse, still from JokerAlex 21\'s guide video' }] },
+          { text: 'Beach: a bird.', imgs: [{ src: I + 'spot-free-perk-2.webp', cap: 'Beach, still from JokerAlex 21\'s guide video' }] },
+          { text: 'Lagoon: a squirrel.', imgs: [{ src: I + 'spot-free-perk-3.webp', cap: 'Lagoon, still from JokerAlex 21\'s guide video' }] },
+          { text: 'Sunken Path / Artifact Storage: an Apothicon.', imgs: [{ src: I + 'spot-free-perk-4.webp', cap: 'Sunken Path / Artifact Storage, still from JokerAlex 21\'s guide video' }] },
+          { text: 'Golden Pack-a-Punch island: a Margwa.', imgs: [{ src: I + 'spot-free-perk-5.webp', cap: 'Golden Pack-a-Punch island, still from JokerAlex 21\'s guide video' }] },
+        ],
       },
       {
         id: 'golden-snowballs', tab: 'side', type: 'Upgrade', name: 'Golden snowballs',
@@ -210,8 +217,13 @@
       },
       {
         id: 'songs', tab: 'side', type: 'Songs', name: '"A Light from the Shore" and "Reflections"',
+        video: { id: 'Ofn65SLWUks', title: 'A Light from the Shore: the three weapons', ch: 'JokerAlex 21', len: '8:43' },
         summary: '"A Light from the Shore": interact with three weapons from the Call of the Dead intro. "Reflections": interact three times with the metal door where Ultimis were trapped.',
-        spots: ['A sickle in the Ice Grotto.', 'A machete at the end of the Hidden Path near the Beach.', 'A pitchfork on the Loading Platform at the Facility.'],
+        spots: [
+          { text: 'A sickle in the Ice Grotto.', imgs: [{ src: I + 'spot-songs-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'A machete at the end of the Hidden Path near the Beach.', imgs: [{ src: I + 'spot-songs-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'A pitchfork on the Loading Platform at the Facility.', imgs: [{ src: I + 'spot-songs-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+        ],
       },
     ],
   });

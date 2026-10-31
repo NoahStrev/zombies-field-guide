@@ -237,11 +237,12 @@
       },
       {
         id: 'song-dead-ended', tab: 'side', type: 'Song', name: '"Dead Ended"',
+        video: { id: 'aMu5AmSbnaU', title: 'Dead Ended: the three vodka bottles', ch: 'JokerAlex 21', len: '5:05' },
         summary: 'Hold interact on three vodka bottles.',
         spots: [
           'On a couch in the Department Store, right after the first door you buy.',
           'Between the Department Store and the Operations Bunker, on the floor by a crashed truck with corpses and rubble.',
-          'Supply Depot, on a shelf next to a crate with a white Iron Cross.',
+          { text: 'Supply Depot, on a shelf next to a crate with a white Iron Cross.', imgs: [{ src: I + 'spot-song-dead-ended-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
       },
       {

@@ -95,10 +95,11 @@
       },
       {
         id: 'song-coming-home', tab: 'side', type: 'Song', name: '"Coming Home"',
+        video: { id: '_ZeWCSFmAa8', title: 'Coming Home: the three teddy bears', ch: 'JokerAlex 21', len: '4:40' },
         summary: 'Hold interact on three teddy bears wearing P.E.S. helmets.',
         spots: [
-          'Outside the Receiving Bay, on a pile of crates just below the building, by the launch pad.',
-          'On the wall opposite the P.E.S. suit in the airlock between Tunnel 6 and the power switch area.',
+          { text: 'Outside the Receiving Bay, on a pile of crates just below the building, by the launch pad.', imgs: [{ src: I + 'spot-song-coming-home-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'On the wall opposite the P.E.S. suit in the airlock between Tunnel 6 and the power switch area.', imgs: [{ src: I + 'spot-song-coming-home-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           'Near Stamin-Up in Tunnel 11, in a hole in the wall (the helmet sticks out).',
         ],
       },

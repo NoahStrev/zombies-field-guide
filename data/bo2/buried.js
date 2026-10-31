@@ -256,8 +256,13 @@
       },
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Always Running"',
+        video: { id: 'fVH4kGTAYyo', title: 'Always Running: the three teddy bears', ch: 'JokerAlex 21', len: '7:24' },
         summary: 'Interact with three teddy bears.',
-        spots: ['In the mines by Quick Revive, against hay bales next to a hole in the wall.', 'In a barrel in the candy store.', 'Next to Double Tap in the mansion.'],
+        spots: [
+          { text: 'In the mines by Quick Revive, against hay bales next to a hole in the wall.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'In a barrel in the candy store.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'Next to Double Tap in the mansion.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+        ],
       },
     ],
   });

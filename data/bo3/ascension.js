@@ -84,19 +84,21 @@
       },
       {
         id: 'song-abracadavre', tab: 'side', type: 'Song', name: '"Abracadavre"',
+        video: { id: 'XUBitFJNSpM', title: 'Abracadavre: the three teddy bears', ch: 'JokerAlex 21', len: '7:30' },
         summary: 'Hold interact on three teddy bears holding sickles.',
         spots: [
           'Centrifuge room: go up the stairs, turn right — at the end of the walkway.',
-          'By the lunar lander nearest Stamin-Up there\'s a gate: under the red star.',
-          'Near the lunar lander past Speed Cola, sitting on top of a wall.',
+          { text: 'By the lunar lander nearest Stamin-Up there\'s a gate: under the red star.', imgs: [{ src: I + 'spot-song-abracadavre-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'Near the lunar lander past Speed Cola, sitting on top of a wall.', imgs: [{ src: I + 'spot-song-abracadavre-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
       },
       {
         id: 'song-not-ready', tab: 'side', type: 'Song', name: '"Not Ready to Die" (BO3 only)',
+        video: { id: 'ovMYpgj1dk4', title: 'Not Ready to Die: the three red phones', ch: 'JokerAlex 21', len: '1:35' },
         summary: 'Every 1½–4 minutes one of three red phones rings for 10 seconds. Melee it while it rings (you hear a cord being cut). Do all three.',
         spots: [
-          'Just right of Widow\'s Wine.',
-          'In the Mule Kick room, left of a Mystery Box spot.',
+          { text: 'Just right of Widow\'s Wine.', imgs: [{ src: I + 'spot-song-not-ready-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          { text: 'In the Mule Kick room, left of a Mystery Box spot.', imgs: [{ src: I + 'spot-song-not-ready-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           'In the centrifuge room near the lunar lander, behind a fuse box.',
         ],
       },

@@ -177,8 +177,13 @@
       },
       {
         id: 'song', tab: 'side', type: 'Song', name: '"We All Fall Down"',
+        video: { id: 'bVdAvCOeJuM', title: 'We All Fall Down: the three teddy bears', ch: 'JokerAlex 21', len: '4:21' },
         summary: 'Interact with three teddy bears.',
-        spots: ['On a shelf in the clothing shop.', 'On a ledge in the temple (Buddha) building.', 'In the sewing room (power room).'],
+        spots: [
+          { text: 'On a shelf in the clothing shop.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          'On a ledge in the temple (Buddha) building.',
+          { text: 'In the sewing room (power room).', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+        ],
       },
     ],
   });
