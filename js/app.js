@@ -1124,6 +1124,7 @@
     add(m.hero);
     for (const it of m.items) {
       add(it.img);
+      addSpots(it.spots);
       if (it.upgrade) add(it.upgrade.img);
       for (const p of asArray(it.parts)) { add(p.icon); addSpots(p.spots); }
       for (const b of asArray(it.blocks)) { asArray(b.imgs).forEach(add); addSpots(b.spots); }

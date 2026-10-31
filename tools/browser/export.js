@@ -23,6 +23,7 @@
       for (const p of arr(it.parts)) rec.parts.push({ name: p.name, w: p.w ?? null, icon: p.icon || null, area: p.area || '', spots: p.spots });
       for (const b of arr(it.blocks)) rec.blocksImgs.push(...arr(b.imgs).map(src), ...spotImgs(b.spots));
       for (const p of arr(it.parts)) rec.blocksImgs.push(...spotImgs(p.spots));
+      rec.blocksImgs.push(...spotImgs(it.spots));
       mm.items.push(rec);
     }
     out.maps.push(mm);

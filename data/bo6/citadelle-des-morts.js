@@ -168,9 +168,9 @@
         summary: 'Interact with three Mister Peeks headphones.',
         video: SE(878),
         spots: [
-          'In the Tavern, on a round table between the workbench and the armour wall-buy.',
-          'In the Courtyard just past Speed Cola: turn right, then right again.',
-          'In the Undercroft stairway, right of the red sofa.',
+          { text: 'In the Tavern, on a round table between the workbench and the armour wall-buy.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          { text: 'In the Courtyard just past Speed Cola: turn right, then right again.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'In the Courtyard just past Speed Cola, still from MrDalekJD\'s guide video' }] },
+          { text: 'In the Undercroft stairway, right of the red sofa.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
         ],
       },
       {
@@ -190,7 +190,7 @@
         spots: [
           'Undercroft: under the fold-up table left of the red couch.',
           'Sitting Rooms: bottom shelf of the rack right of the couch facing the TV.',
-          'Dining Room: under the fold-up table right of the red couch.',
+          { text: 'Dining Room: under the fold-up table right of the red couch.', imgs: [{ src: I + 'spot-bartender-3.webp', cap: 'Dining Room, still from MrDalekJD\'s guide video' }] },
         ],
       },
       {
@@ -199,14 +199,14 @@
         video: SE(271),
         spots: [
           'Town Square: under a flower pot right of the door to the Nature Path.',
-          'Nature Path: by a hole under the round stone structure in front of Deadshot Daiquiri.',
-          'Village Ascent: under the pizza truck with road-work signs.',
-          'Under a broken step on the south-easternmost wooden stairs by the Lion Cannon.',
-          'Dining Hall: under a pallet opposite the ammo crate.',
-          'Sitting Rooms: under a small bench between the bunks.',
-          'Alchemical Lab: behind the stone tablet under the table.',
-          'Undercroft: by a hole in the middle of the westernmost wall.',
-          'Dungeon: on the floor of the cell left of the KSV wall-buy.',
+          { text: 'Nature Path: by a hole under the round stone structure in front of Deadshot Daiquiri.', imgs: [{ src: I + 'spot-rat-king-2.webp', cap: 'Nature Path, still from MrDalekJD\'s guide video' }] },
+          { text: 'Village Ascent: under the pizza truck with road-work signs.', imgs: [{ src: I + 'spot-rat-king-3.webp', cap: 'Village Ascent, still from MrDalekJD\'s guide video' }] },
+          { text: 'Under a broken step on the south-easternmost wooden stairs by the Lion Cannon.', imgs: [{ src: I + 'spot-rat-king-4.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          { text: 'Dining Hall: under a pallet opposite the ammo crate.', imgs: [{ src: I + 'spot-rat-king-5.webp', cap: 'Dining Hall, still from MrDalekJD\'s guide video' }] },
+          { text: 'Sitting Rooms: under a small bench between the bunks.', imgs: [{ src: I + 'spot-rat-king-6.webp', cap: 'Sitting Rooms, still from MrDalekJD\'s guide video' }] },
+          { text: 'Alchemical Lab: behind the stone tablet under the table.', imgs: [{ src: I + 'spot-rat-king-7.webp', cap: 'Alchemical Lab, still from MrDalekJD\'s guide video' }] },
+          { text: 'Undercroft: by a hole in the middle of the westernmost wall.', imgs: [{ src: I + 'spot-rat-king-8.webp', cap: 'Undercroft, still from MrDalekJD\'s guide video' }] },
+          { text: 'Dungeon: on the floor of the cell left of the KSV wall-buy.', imgs: [{ src: I + 'spot-rat-king-9.webp', cap: 'Dungeon, still from MrDalekJD\'s guide video' }] },
         ],
       },
       {
@@ -214,10 +214,10 @@
         summary: 'Shoot four Mister Peeks dolls (a scope helps). The last one gives every player a random perk.',
         video: SE(13),
         spots: [
-          'Elemental Pop room: through the south-easternmost window, just above a tree (only visible through that window).',
+          { text: 'Elemental Pop room: through the south-easternmost window, just above a tree (only visible through that window).', imgs: [{ src: I + 'spot-floating-peeks-1.webp', cap: 'Elemental Pop room, still from MrDalekJD\'s guide video' }] },
           'In the barn with Deadshot Daiquiri outside: through the hole above the Mystery Box spot, dancing in a broken castle wall.',
-          'Dining Hall upper floor, south-east corner: look up at the red-roofed tower; he\'s in the small window under the roof.',
-          'Dungeon: on the bed in the cell left of the ammo crate.',
+          { text: 'Dining Hall upper floor, south-east corner: look up at the red-roofed tower; he\'s in the small window under the roof.', imgs: [{ src: I + 'spot-floating-peeks-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          { text: 'Dungeon: on the bed in the cell left of the ammo crate.', imgs: [{ src: I + 'spot-floating-peeks-4.webp', cap: 'Dungeon, still from MrDalekJD\'s guide video' }] },
         ],
       },
       {
@@ -232,8 +232,8 @@
         spots: [
           'On the table next to the Dragon statue where the sword goes.',
           'Tavern basement: low shelves opposite the Crafting Table.',
-          'Elemental Pop room: on a table right of the door to the castle entrance.',
-          'Dungeon: on a table next to the Point of Power trap.',
+          { text: 'Elemental Pop room: on a table right of the door to the castle entrance.', imgs: [{ src: I + 'spot-chess-knight-3.webp', cap: 'Elemental Pop room, still from MrDalekJD\'s guide video' }] },
+          { text: 'Dungeon: on a table next to the Point of Power trap.', imgs: [{ src: I + 'spot-chess-knight-4.webp', cap: 'Dungeon, still from MrDalekJD\'s guide video' }] },
         ],
       },
       {
@@ -252,9 +252,9 @@
         video: SE(655),
         spots: [
           'Dining Hall: north wall.',
-          'Sitting Rooms: left of Stamin-Up.',
+          { text: 'Sitting Rooms: left of Stamin-Up.', imgs: [{ src: I + 'spot-fireplaces-2.webp', cap: 'Sitting Rooms, still from MrDalekJD\'s guide video' }] },
           'Alchemical Lab: under a table in the south-west corner.',
-          'Tavern: right of the Arsenal.',
+          { text: 'Tavern: right of the Arsenal.', imgs: [{ src: I + 'spot-fireplaces-4.webp', cap: 'Tavern, still from MrDalekJD\'s guide video' }] },
         ],
       },
       {
@@ -262,11 +262,11 @@
         summary: 'Small hidden power-ups you can pick up once each.',
         video: SE(787),
         spots: [
-          'Bonus Points: behind a couch in the Undercroft.',
-          'Max Ammo: on a window sill in the Upper Village.',
+          { text: 'Bonus Points: behind a couch in the Undercroft.', imgs: [{ src: I + 'spot-powerups-1.webp', cap: 'Bonus Points, still from MrDalekJD\'s guide video' }] },
+          { text: 'Max Ammo: on a window sill in the Upper Village.', imgs: [{ src: I + 'spot-powerups-2.webp', cap: 'Max Ammo, still from MrDalekJD\'s guide video' }] },
           'Double Points: inside a zombie window in the Alchemical Lab.',
           'Full Power: on the Dining Hall roof.',
-          'Insta-Kill: on the scaffolding above the Tavern, over the end of the cave slide.',
+          { text: 'Insta-Kill: on the scaffolding above the Tavern, over the end of the cave slide.', imgs: [{ src: I + 'spot-powerups-5.webp', cap: 'Insta-Kill, still from MrDalekJD\'s guide video' }] },
           'Max Armor: on the roof inside the Entrance Hall.',
           'Nuke: above the Elemental Pop room on the Hillside Ramparts.',
         ],
