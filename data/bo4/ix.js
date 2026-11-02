@@ -55,19 +55,19 @@
         facts: [['Parts', '3'], ['Build at', 'Workbench in The Pit'], ['Repair', '1,500 points at the workbench'], ['Upgrade', 'Iron Bull']],
         parts: [
           { w: 49, name: 'Bull head', icon: I + 'part-bull.webp', area: 'Ra Tower: altar room', spots: [
-            'To the right of the gong.',
-            'Lying on the pillar next to the wall-buy (under the shotgun).',
-            'Around the corner, just right of a pot between two pillars.',
+            { text: 'To the right of the gong.', imgs: [{ src: I + 'part-brazen-bull-1-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Lying on the pillar next to the wall-buy (under the shotgun).', imgs: [{ src: I + 'part-brazen-bull-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Around the corner, just right of a pot between two pillars.', imgs: [{ src: I + 'part-brazen-bull-1-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           ] },
           { w: 0, name: 'Katar blade', icon: I + 'part-spear.webp', area: 'Zeus Tower', spots: [
             'Zeus altar room: in the hand of the statue near the top of the stairs.',
-            'Zeus Tower entrance level: on the statue facing you at the bottom of the stairs.',
-            'Bath room (bottom floor, red blood bath): on the shelf/table with the portrait above it.',
+            { text: 'Zeus Tower entrance level: on the statue facing you at the bottom of the stairs.', imgs: [{ src: I + 'part-brazen-bull-2-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Bath room (bottom floor, red blood bath): on the shelf/table with the portrait above it.', imgs: [{ src: I + 'part-brazen-bull-2-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           ] },
           { w: 98, name: 'Grille plate', icon: I + 'part-plate.webp', area: 'Odin Tower', spots: [
-            'Entrance level: in the shield rack in the bottom-left corner.',
+            { text: 'Entrance level: in the shield rack in the bottom-left corner.', imgs: [{ src: I + 'part-brazen-bull-3-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
             'Up the stairs (altar room): leaning against a barrel of spears.',
-            'Cauldron room (bottom): resting against a wooden pillar, left of the shields on the wall.',
+            { text: 'Cauldron room (bottom): resting against a wooden pillar, left of the shields on the wall.', imgs: [{ src: I + 'part-brazen-bull-3-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           ] },
         ],
         blocks: [{ note: 'Build it at the workbench just past The Pit, underground.' }, { imgs: [{ src: I + 'bull-gun.webp', cap: 'Aiming slots the katar in and turns the shield into a gun' }] }],
@@ -91,9 +91,15 @@
         summary: 'A cauldron trap that pours acid on the zombies below. You need it to melt a stone head for the free Death of Orion.',
         facts: [['Parts', '3'], ['Build at', 'Trap spot in the walkway between the Arena and Ra Tower']],
         parts: [
-          { w: ['YfyJk2TEf2c', 77], name: 'Cauldron (pot)', area: 'Arena', spots: ['Appears on the middle podium of the Arena after the first three trials are done (by anyone).'] },
-          { w: ['YfyJk2TEf2c', 187], name: 'Metal chain', area: 'Temple (Pack-a-Punch room)', spots: ['Facing Pack-a-Punch, turn sharp left and go around the corner: hanging over a burning torch.'] },
-          { w: ['YfyJk2TEf2c', 205], name: 'Wooden cog', area: 'Temple (Pack-a-Punch room)', spots: ['Diagonally across the room from the chain, under a metal brazier in the corner.'] },
+          { w: ['YfyJk2TEf2c', 77], name: 'Cauldron (pot)', area: 'Arena', spots: [
+            { text: 'Appears on the middle podium of the Arena after the first three trials are done (by anyone).', imgs: [{ src: I + 'part-acid-trap-1-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+          ] },
+          { w: ['YfyJk2TEf2c', 187], name: 'Metal chain', area: 'Temple (Pack-a-Punch room)', spots: [
+            { text: 'Facing Pack-a-Punch, turn sharp left and go around the corner: hanging over a burning torch.', imgs: [{ src: I + 'part-acid-trap-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+          ] },
+          { w: ['YfyJk2TEf2c', 205], name: 'Wooden cog', area: 'Temple (Pack-a-Punch room)', spots: [
+            { text: 'Diagonally across the room from the chain, under a metal brazier in the corner.', imgs: [{ src: I + 'part-acid-trap-3-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+          ] },
         ],
         blocks: [{ note: 'The chain and cog only appear once Pack-a-Punch is open.' }],
       },

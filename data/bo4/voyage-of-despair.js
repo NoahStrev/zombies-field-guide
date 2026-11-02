@@ -44,19 +44,19 @@
         video: { id: 'f8yDvbMDLGI', title: 'Voyage of Despair: how to build the shield', ch: 'MrRoflWaffles', len: '4:59' },
         parts: [
           { w: 61, name: 'Part 1', area: 'Forecastle / Bridge (up the stairs from spawn)', spots: [
-            'Turn around at the top of the stairs from spawn: on the wooden bench (plank).',
-            'Through the doorway in the Bridge area, on a wooden box.',
-            'On a small banister against the back wall.',
+            { text: 'Turn around at the top of the stairs from spawn: on the wooden bench (plank).', imgs: [{ src: I + 'part-ballistic-shield-1-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Through the doorway in the Bridge area, on a wooden box.', imgs: [{ src: I + 'part-ballistic-shield-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On a small banister against the back wall.', imgs: [{ src: I + 'part-ballistic-shield-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 92, name: 'Part 2', area: 'State Rooms (ground-floor doors from spawn)', spots: [
-            'On a shelf in the laundry-looking room.',
-            'Sitting on the seat of a wooden chair in the next room.',
-            'On the cushion of a chair in a broken room on the other side.',
+            { text: 'On a shelf in the laundry-looking room.', imgs: [{ src: I + 'part-ballistic-shield-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Sitting on the seat of a wooden chair in the next room.', imgs: [{ src: I + 'part-ballistic-shield-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On the cushion of a chair in a broken room on the other side.', imgs: [{ src: I + 'part-ballistic-shield-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 155, name: 'Part 3', area: 'Below decks on the aft side (down the stairs past the wall-buy on the way to the Poop Deck)', spots: [
-            'At the bottom of the stairs, turn hard left: on a pipe.',
-            'At the end of the red-lit corridor, on the side of a box.',
-            'On a box next to a crate of apples among the wooden crates.',
+            { text: 'At the bottom of the stairs, turn hard left: on a pipe.', imgs: [{ src: I + 'part-ballistic-shield-3-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'At the end of the red-lit corridor, on the side of a box.', imgs: [{ src: I + 'part-ballistic-shield-3-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On a box next to a crate of apples among the wooden crates.', imgs: [{ src: I + 'part-ballistic-shield-3-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
         ],
         blocks: [{ note: 'Build it at the workbench right in front of you when you come back up those stairs (near the Poop Deck). Repairs cost points at the bench.' }],
@@ -88,7 +88,10 @@
         video: { id: '8fwpLxvHcdQ', title: 'All elemental Kraken upgrades guide', ch: 'MrRoflWaffles', len: '11:04' },
         parts: [
           { w: 78, name: 'Part 1', area: 'Off the Upper Grand Staircase (door on the right after the stairs)', spots: ['On the sloped wooden table on the right side of the room.', 'On the left side of the same room.'] },
-          { w: 125, name: 'Tube', area: 'Galley (kitchen, down the stairs halfway to the Poop Deck)', spots: ['On the kitchen countertop.', 'Through the corridor on a set of shelves (looks like a funnel going into metal tubing).'] },
+          { w: 125, name: 'Tube', area: 'Galley (kitchen, down the stairs halfway to the Poop Deck)', spots: [
+            { text: 'On the kitchen countertop.', imgs: [{ src: I + 'part-distill-kit-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Through the corridor on a set of shelves (looks like a funnel going into metal tubing).', imgs: [{ src: I + 'part-distill-kit-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+          ] },
           { w: 156, name: 'Coiled spring', area: 'Cargo Hold (underwater)', spots: ['Swim to the Pack-a-Punch pedestal, turn around: on the right side of the room.', 'A bit further back, on the wooden boxes under the water.'] },
         ],
         blocks: [

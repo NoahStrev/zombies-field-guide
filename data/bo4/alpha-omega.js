@@ -56,9 +56,21 @@
         facts: [['Parts', '3'], ['Build at', 'Any bench: Green House upstairs, APD Control or Operations']],
         video: { id: D, title: 'Ultimate guide to Alpha Omega', ch: 'MrDalekJD', len: '25:55' },
         parts: [
-          { w: 342, name: 'Part 1', area: 'The house to the right of spawn', spots: ['On a table downstairs.', 'On another table.', 'Upstairs, on a filing cabinet.'] },
-          { w: 357, name: 'Part 2', area: 'Nuketown street', spots: ['Next to a car.', 'Against the bus.', 'A third spot on the street nearby.'] },
-          { w: 372, name: 'Part 3', area: 'Beds (bunker)', spots: ['On a shelf.', 'Lying on the floor.', 'On a chair.'] },
+          { w: 342, name: 'Part 1', area: 'The house to the right of spawn', spots: [
+            { text: 'On a table downstairs.', imgs: [{ src: I + 'part-riot-shield-1-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'On another table.', imgs: [{ src: I + 'part-riot-shield-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Upstairs, on a filing cabinet.', imgs: [{ src: I + 'part-riot-shield-1-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
+          { w: 357, name: 'Part 2', area: 'Nuketown street', spots: [
+            { text: 'Next to a car.', imgs: [{ src: I + 'part-riot-shield-2-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Against the bus.', imgs: [{ src: I + 'part-riot-shield-2-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'A third spot on the street nearby.', imgs: [{ src: I + 'part-riot-shield-2-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
+          { w: 372, name: 'Part 3', area: 'Beds (bunker)', spots: [
+            { text: 'On a shelf.', imgs: [{ src: I + 'part-riot-shield-3-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Lying on the floor.', imgs: [{ src: I + 'part-riot-shield-3-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'On a chair.', imgs: [{ src: I + 'part-riot-shield-3-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
         ],
       },
       {
@@ -67,9 +79,21 @@
         facts: [['Parts', '3'], ['Build at', 'Any bench (Green House upstairs is handy)']],
         video: { id: D, title: 'Ultimate guide to Alpha Omega', ch: 'MrDalekJD', len: '25:55' },
         parts: [
-          { w: 388, name: 'Part 1', area: 'Transfusion Facility', spots: ['In a locker.', 'Under the operating table.', 'On cardboard boxes (behind a barrier at the back).'] },
-          { w: 404, name: 'Part 2', area: 'Green House', spots: ['Right as you come in.', 'Downstairs kitchen, next to the barrier.', 'Upstairs, on the balcony.'] },
-          { w: 419, name: 'Part 3', area: 'Generators (bunker)', spots: ['Right as you come in from Beds.', 'Up by the generator button.', 'By the yellow buckets.'] },
+          { w: 388, name: 'Part 1', area: 'Transfusion Facility', spots: [
+            { text: 'In a locker.', imgs: [{ src: I + 'part-telepads-1-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Under the operating table.', imgs: [{ src: I + 'part-telepads-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'On cardboard boxes (behind a barrier at the back).', imgs: [{ src: I + 'part-telepads-1-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
+          { w: 404, name: 'Part 2', area: 'Green House', spots: [
+            'Right as you come in.',
+            { text: 'Downstairs kitchen, next to the barrier.', imgs: [{ src: I + 'part-telepads-2-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Upstairs, on the balcony.', imgs: [{ src: I + 'part-telepads-2-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
+          { w: 419, name: 'Part 3', area: 'Generators (bunker)', spots: [
+            'Right as you come in from Beds.',
+            { text: 'Up by the generator button.', imgs: [{ src: I + 'part-telepads-3-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            'By the yellow buckets.',
+          ] },
         ],
       },
       {
@@ -78,8 +102,16 @@
         facts: [['Parts', '3'], ['Build at', 'The table upstairs in Operations']],
         video: { id: D, title: 'Ultimate guide to Alpha Omega', ch: 'MrDalekJD', len: '25:55' },
         parts: [
-          { w: 604, name: 'Part 1', area: 'Yellow House', spots: ['Downstairs kitchen table.', 'On a bench downstairs.', 'Upstairs on a shelf, or on a small table.'] },
-          { w: 619, name: 'Part 2', area: 'Storage (bunker)', spots: ['On a shelf.', 'On a barrel.', 'On a small tank on the way back to the Generators.'] },
+          { w: 604, name: 'Part 1', area: 'Yellow House', spots: [
+            'Downstairs kitchen table.',
+            { text: 'On a bench downstairs.', imgs: [{ src: I + 'part-assembly-kit-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            'Upstairs on a shelf, or on a small table.',
+          ] },
+          { w: 619, name: 'Part 2', area: 'Storage (bunker)', spots: [
+            { text: 'On a shelf.', imgs: [{ src: I + 'part-assembly-kit-2-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'On a barrel.', imgs: [{ src: I + 'part-assembly-kit-2-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            'On a small tank on the way back to the Generators.',
+          ] },
           { w: 635, name: 'Part 3', area: 'Bunker, by the mannequin', spots: ['On the table with the mannequin.', 'On a trolley.', 'On a chair by the workbench.'] },
         ],
         steps: [

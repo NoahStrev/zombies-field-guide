@@ -80,7 +80,11 @@
         video: { id: U, title: 'Ultimate guide to Ancient Evil', ch: 'MrDalekJD', len: '37:23' },
         parts: [
           { w: 536, name: 'Handle (strap)', icon: I + 'part-strap.webp', area: 'Upper Road', spots: ['On a rock before the bridge.', 'On a rock under the bridge.', 'On a rock after the bridge.'] },
-          { w: 521, name: 'Spear', icon: I + 'part-spear.webp', area: 'Intersection of Treasuries / Stoa of the Athenians', spots: ['Intersection of Treasuries: against a statue.', 'Intersection of Treasuries: stuck in a low wall.', 'Stoa of the Athenians: against a pillar.'] },
+          { w: 521, name: 'Spear', icon: I + 'part-spear.webp', area: 'Intersection of Treasuries / Stoa of the Athenians', spots: [
+            { text: 'Intersection of Treasuries: against a statue.', imgs: [{ src: I + 'part-apollos-will-2-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            'Intersection of Treasuries: stuck in a low wall.',
+            'Stoa of the Athenians: against a pillar.',
+          ] },
           { w: 504, name: 'Shield (cover)', icon: I + 'part-cover.webp', area: 'Gegenees drop', spots: ['Dropped by the six-armed giant that spawns when you take the Golden Bridle.'] },
         ],
         blocks: [{ imgs: [

@@ -69,9 +69,21 @@
         facts: [['Parts', '3'], ['Build at', 'Smoking Room bench (next to the Billiards Room)']],
         video: { id: 'm6LRjVyZNu4', title: 'Dead of the Night: how to build the shield', ch: 'MrRoflWaffles', len: '2:20' },
         parts: [
-          { w: 0, name: 'Part 1', area: 'Balconies', spots: ['East Balcony, against a pillar (near the Sentinel Artifact).', 'Through the Music Room, next to the Saug wall-buy.', 'West Balcony (through the Tea Room).'] },
-          { w: 30, name: 'Part 2', area: 'Library & Study', spots: ['On the sofa in the Library.', 'On the broken bookshelf in the Library.', 'Upstairs in the Study, on the table in front of the swirly painting.'] },
-          { w: 47, name: 'Part 3', area: 'East Hallway & Dining Room', spots: ['On or next to a chair in the East Hallway.', 'On the counter just ahead, entering the Dining Room.', 'Next to a marble pillar in the main Dining Room.'] },
+          { w: 0, name: 'Part 1', area: 'Balconies', spots: [
+            'East Balcony, against a pillar (near the Sentinel Artifact).',
+            'Through the Music Room, next to the Saug wall-buy.',
+            { text: 'West Balcony (through the Tea Room).', imgs: [{ src: I + 'part-ballistic-shield-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+          ] },
+          { w: 30, name: 'Part 2', area: 'Library & Study', spots: [
+            { text: 'On the sofa in the Library.', imgs: [{ src: I + 'part-ballistic-shield-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On the broken bookshelf in the Library.', imgs: [{ src: I + 'part-ballistic-shield-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Upstairs in the Study, on the table in front of the swirly painting.', imgs: [{ src: I + 'part-ballistic-shield-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+          ] },
+          { w: 47, name: 'Part 3', area: 'East Hallway & Dining Room', spots: [
+            { text: 'On or next to a chair in the East Hallway.', imgs: [{ src: I + 'part-ballistic-shield-3-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            'On the counter just ahead, entering the Dining Room.',
+            'Next to a marble pillar in the main Dining Room.',
+          ] },
         ],
       },
 

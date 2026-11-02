@@ -86,9 +86,15 @@
         facts: [['Parts', '3 (fixed spots)'], ['Build at', 'Any buildable bench'], ['Needs', 'Warden\'s Key']],
         video: { id: D, title: 'Ultimate guide to Blood of the Dead', ch: 'MrDalekJD', len: '36:22' },
         parts: [
-          { w: 956, name: 'Case', icon: I + 'acid-case.webp', area: 'Transverse Tunnel', spots: ['On the floor next to the Vapr-XKG wall chalk (tunnel between the Power House and New Industries).'] },
-          { w: 987, name: 'Motor', area: 'Sally Port', spots: ['On a desk in a small locked room (open it with the Warden\'s Key).'] },
-          { w: 995, name: 'Acid bottle', area: 'Infirmary', spots: ['In a locked cabinet near the room that leads to the roof (Warden\'s Key).'] },
+          { w: 956, name: 'Case', icon: I + 'acid-case.webp', area: 'Transverse Tunnel', spots: [
+            { text: 'On the floor next to the Vapr-XKG wall chalk (tunnel between the Power House and New Industries).', imgs: [{ src: I + 'part-acidgat-kit-1-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
+          { w: 987, name: 'Motor', area: 'Sally Port', spots: [
+            { text: 'On a desk in a small locked room (open it with the Warden\'s Key).', imgs: [{ src: I + 'part-acidgat-kit-2-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
+          { w: 995, name: 'Acid bottle', area: 'Infirmary', spots: [
+            { text: 'In a locked cabinet near the room that leads to the roof (Warden\'s Key).', imgs: [{ src: I + 'part-acidgat-kit-3-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
         ],
         blocks: [{ note: 'Build the kit at any bench, then put a Blundergat in it. A few seconds later take out the Acidgat.' }],
       },
