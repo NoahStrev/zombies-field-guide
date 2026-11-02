@@ -65,8 +65,12 @@
         facts: [['Parts', '3 (always the same spots)'], ['Build at', 'The table in the corner of the Bus Depot']],
         video: AV,
         parts: [
-          { w: 0, name: 'Fan', area: 'Bus Depot', spots: ['On the bench next to the buildable table.'] },
-          { w: 0, name: 'Mannequin', area: 'Bus Depot', spots: ['Leaning on the map in the middle of the room.'] },
+          { w: 0, name: 'Fan', area: 'Bus Depot', spots: [
+            { text: 'On the bench next to the buildable table.', imgs: [{ src: I + 'part-turbine-1-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 0, name: 'Mannequin', area: 'Bus Depot', spots: [
+            { text: 'Leaning on the map in the middle of the room.', imgs: [{ src: I + 'part-turbine-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
           { w: 0, name: 'Rudder', area: 'Bus Depot', spots: ['Next to the M14 wall-buy.'] },
         ],
       },
@@ -76,8 +80,16 @@
         facts: [['Parts', '3'], ['Build at', 'The power room table']],
         video: { id: E, title: 'TranZit easter egg guide (Maxis and Richtofen)', ch: 'MrDalekJD', len: '14:04' },
         parts: [
-          { w: 152, name: 'Panel', area: 'Power Station', spots: ['Against the wall on the left as soon as you drop in.', 'On the walkway in the middle.', 'In the corner of the power room where you build the switch.'] },
-          { w: 182, name: 'Handle', area: 'Power Station', spots: ['Wedged between crates.', 'On the desk on the right.', 'On the desk on the left, next to the buildable table.'] },
+          { w: 152, name: 'Panel', area: 'Power Station', spots: [
+            'Against the wall on the left as soon as you drop in.',
+            'On the walkway in the middle.',
+            { text: 'In the corner of the power room where you build the switch.', imgs: [{ src: I + 'part-power-switch-1-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 182, name: 'Handle', area: 'Power Station', spots: [
+            { text: 'Wedged between crates.', imgs: [{ src: I + 'part-power-switch-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On the desk on the right.', imgs: [{ src: I + 'part-power-switch-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On the desk on the left, next to the buildable table.', imgs: [{ src: I + 'part-power-switch-2-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
           { w: 198, name: 'Hand', area: 'Power Station', spots: ['On the floor in front of the staircase.', 'On the floor at the end of the walkway to the left.', 'To the right of the stairs down into the power room.'] },
         ],
       },
@@ -110,8 +122,16 @@
         facts: [['Parts', '2'], ['Build at', 'The table in the gas station']],
         video: AV,
         parts: [
-          { w: 154, name: 'Dolly', area: 'Diner', spots: ['Behind the counter, left side.', 'Behind the counter, right side.', 'On a booth along the back wall.'] },
-          { w: 169, name: 'Car door', area: 'Gas station garage', spots: ['On the car.', 'On the workbench on the back wall.', 'On the floor in the restroom.'] },
+          { w: 154, name: 'Dolly', area: 'Diner', spots: [
+            'Behind the counter, left side.',
+            'Behind the counter, right side.',
+            { text: 'On a booth along the back wall.', imgs: [{ src: I + 'part-zombie-shield-1-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 169, name: 'Car door', area: 'Gas station garage', spots: [
+            { text: 'On the car.', imgs: [{ src: I + 'part-zombie-shield-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On the workbench on the back wall.', imgs: [{ src: I + 'part-zombie-shield-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On the floor in the restroom.', imgs: [{ src: I + 'part-zombie-shield-2-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
       {
@@ -120,9 +140,21 @@
         facts: [['Parts', '3'], ['Build at', 'The table in the farmhouse']],
         video: AV,
         parts: [
-          { w: 187, name: 'Ammo', area: 'Farmhouse', spots: ['On a table.', 'On a shelf downstairs.', 'On a shelf upstairs.'] },
-          { w: 198, name: 'Lawnmower', area: 'Farm', spots: ['In the barn.', 'Outside the farmhouse back door.', 'Along the fence between the house and the shed.'] },
-          { w: 202, name: 'RPD', area: 'Farm', spots: ['Upstairs in the barn.', 'On a couch upstairs in the farmhouse.', 'On the farmhouse balcony.'] },
+          { w: 187, name: 'Ammo', area: 'Farmhouse', spots: [
+            { text: 'On a table.', imgs: [{ src: I + 'part-turret-1-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            'On a shelf downstairs.',
+            'On a shelf upstairs.',
+          ] },
+          { w: 198, name: 'Lawnmower', area: 'Farm', spots: [
+            { text: 'In the barn.', imgs: [{ src: I + 'part-turret-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'Outside the farmhouse back door.', imgs: [{ src: I + 'part-turret-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'Along the fence between the house and the shed.', imgs: [{ src: I + 'part-turret-2-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 202, name: 'RPD', area: 'Farm', spots: [
+            'Upstairs in the barn.',
+            { text: 'On a couch upstairs in the farmhouse.', imgs: [{ src: I + 'part-turret-3-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On the farmhouse balcony.', imgs: [{ src: I + 'part-turret-3-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
       {
@@ -131,9 +163,21 @@
         facts: [['Parts', '3'], ['Build at', 'The Power Station table']],
         video: AV,
         parts: [
-          { w: 217, name: 'Coil', area: 'Power Station', spots: ['Near the stairs.', 'In the corner by the broken wall.', 'On the crates above the lava pit.'] },
-          { w: 233, name: 'Battery', area: 'Power Station', spots: ['Near the buildable table.', 'On a barrel across the broken walkway.', 'On barrels near the broken wall.'] },
-          { w: 241, name: 'TV screen', area: 'Power Station', spots: ['In the window above the stairs.', 'In the window across the broken walkway.', 'On a barrel next to the broken wall.'] },
+          { w: 217, name: 'Coil', area: 'Power Station', spots: [
+            'Near the stairs.',
+            'In the corner by the broken wall.',
+            { text: 'On the crates above the lava pit.', imgs: [{ src: I + 'part-electric-trap-1-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 233, name: 'Battery', area: 'Power Station', spots: [
+            { text: 'Near the buildable table.', imgs: [{ src: I + 'part-electric-trap-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On a barrel across the broken walkway.', imgs: [{ src: I + 'part-electric-trap-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On barrels near the broken wall.', imgs: [{ src: I + 'part-electric-trap-2-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 241, name: 'TV screen', area: 'Power Station', spots: [
+            { text: 'In the window above the stairs.', imgs: [{ src: I + 'part-electric-trap-3-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'In the window across the broken walkway.', imgs: [{ src: I + 'part-electric-trap-3-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            'On a barrel next to the broken wall.',
+          ] },
         ],
       },
 

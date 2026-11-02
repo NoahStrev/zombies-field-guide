@@ -59,9 +59,18 @@
         video: EV,
         parts: [
           { w: 436, name: 'Chicken wire', area: 'Spawn building', spots: ['Left of the dragon statue in spawn.', 'Through the first door out of spawn, against the wall on the left.'] },
-          { w: 451, name: 'Motor', area: 'Spawn building', spots: ['On the lobby desk.', 'Out of the first spawn door, left then right: in the corner before the drop.'] },
-          { w: 466, name: 'Bellows', area: 'Spawn building', spots: ['Halfway up the spawn stairs, against the wall.', 'Just through the doors, on the floor.'] },
-          { w: 482, name: 'Flag', area: 'Spawn building', spots: ['By the broken chair at the bottom right of the spawn stairs.', 'Out of the spawn door, on the right against the railing.'] },
+          { w: 451, name: 'Motor', area: 'Spawn building', spots: [
+            { text: 'On the lobby desk.', imgs: [{ src: I + 'part-trample-steam-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'Out of the first spawn door, left then right: in the corner before the drop.', imgs: [{ src: I + 'part-trample-steam-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 466, name: 'Bellows', area: 'Spawn building', spots: [
+            { text: 'Halfway up the spawn stairs, against the wall.', imgs: [{ src: I + 'part-trample-steam-3-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'Just through the doors, on the floor.', imgs: [{ src: I + 'part-trample-steam-3-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 482, name: 'Flag', area: 'Spawn building', spots: [
+            { text: 'By the broken chair at the bottom right of the spawn stairs.', imgs: [{ src: I + 'part-trample-steam-4-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'Out of the spawn door, on the right against the railing.', imgs: [{ src: I + 'part-trample-steam-4-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
       {
