@@ -58,19 +58,21 @@
         video: { id: P, title: 'All Pack-a-Punch part locations', ch: 'MrRoflWaffles', len: '4:20' },
         parts: [
           { w: 10, name: 'Pink Cat flyer', area: 'Four possible spots', spots: [
-            'On a pile of rubbish in the alley between the barber shop and the Black Cat Dojo.',
-            'On a folding chair on the rooftops, across from the breakable wooden door by Racin\' Stripes.',
-            'On the pavement in front of the Pink Cat.',
-            'On a stool on the Inferno Club roof.',
+            { text: 'On a pile of rubbish in the alley between the barber shop and the Black Cat Dojo.', imgs: [{ src: I + 'part-pap-parts-1-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On a folding chair on the rooftops, across from the breakable wooden door by Racin\' Stripes.', imgs: [{ src: I + 'part-pap-parts-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On the pavement in front of the Pink Cat.', imgs: [{ src: I + 'part-pap-parts-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On a stool on the Inferno Club roof.', imgs: [{ src: I + 'part-pap-parts-1-4.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 79, name: 'Film reel', area: 'Five possible spots', spots: [
-            'On a couch by the Skullbuster arcade machine in the Inferno Club.',
-            'On a crate in the sewer passage just before Tuff \'Nuff.',
-            'In one of the sewer pipes in the Rat King\'s lair.',
+            { text: 'On a couch by the Skullbuster arcade machine in the Inferno Club.', imgs: [{ src: I + 'part-pap-parts-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On a crate in the sewer passage just before Tuff \'Nuff.', imgs: [{ src: I + 'part-pap-parts-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'In one of the sewer pipes in the Rat King\'s lair.', imgs: [{ src: I + 'part-pap-parts-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             'On a pile of boxes by the lockers in the second subway.',
             'On a chair inside the Pink Cat.',
           ] },
-          { w: 110, name: 'Token', area: 'Sewers', spots: ['Under the Tuff \'Nuff machine. Go prone to reach it.'] },
+          { w: 110, name: 'Token', area: 'Sewers', spots: [
+            { text: 'Under the Tuff \'Nuff machine. Go prone to reach it.', imgs: [{ src: I + 'part-pap-parts-3-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+          ] },
         ],
       },
 

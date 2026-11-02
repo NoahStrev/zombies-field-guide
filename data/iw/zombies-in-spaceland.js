@@ -92,19 +92,19 @@
         video: EV,
         parts: [
           { w: 206, name: 'Umbrella', area: 'Cosmic Way, Polar Peak or Journey into Space', spots: [
-            'Cosmic Way: on a red bench right of the bottom of the slides, by the bridge to Polar Peak.',
-            'Polar Peak: on the gift shop counter, right of the stairs up towards the power switch.',
-            'Journey into Space: in a shadowy corner by the Star Mission trap switch nearest Tuff \'Nuff.',
+            { text: 'Cosmic Way: on a red bench right of the bottom of the slides, by the bridge to Polar Peak.', imgs: [{ src: I + 'part-seti-com-1-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Polar Peak: on the gift shop counter, right of the stairs up towards the power switch.', imgs: [{ src: I + 'part-seti-com-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Journey into Space: in a shadowy corner by the Star Mission trap switch nearest Tuff \'Nuff.', imgs: [{ src: I + 'part-seti-com-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 235, name: 'Boom box', area: 'Cosmic Way, Kepler System or Underground', spots: [
-            'Cosmic Way: on the lower bridge from spawn to the central portal, by a popcorn machine.',
-            'Kepler System: on the counter of the bar (Moonlight Cafe), right of the area\'s power switch.',
-            'Underground: on the counter in the coffee break room, left of Racin\' Stripes.',
+            { text: 'Cosmic Way: on the lower bridge from spawn to the central portal, by a popcorn machine.', imgs: [{ src: I + 'part-seti-com-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Kepler System: on the counter of the bar (Moonlight Cafe), right of the area\'s power switch.', imgs: [{ src: I + 'part-seti-com-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Underground: on the counter in the coffee break room, left of Racin\' Stripes.', imgs: [{ src: I + 'part-seti-com-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 257, name: 'Calculator', area: 'Cosmic Way, Kepler System or Astrocade', spots: [
-            'Cosmic Way: on a bench in front of the central portal.',
-            'Kepler System: on the side of a yellow picnic table on the balcony by the Chromosphere trap switch.',
-            'Astrocade: on top of a blue bin on the raised upper floor, between two arcade machines.',
+            { text: 'Cosmic Way: on a bench in front of the central portal.', imgs: [{ src: I + 'part-seti-com-3-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Kepler System: on the side of a yellow picnic table on the balcony by the Chromosphere trap switch.', imgs: [{ src: I + 'part-seti-com-3-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Astrocade: on top of a blue bin on the raised upper floor, between two arcade machines.', imgs: [{ src: I + 'part-seti-com-3-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
         ],
       },
