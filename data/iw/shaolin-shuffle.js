@@ -167,7 +167,7 @@
         summary: 'Collect seven radios. Each game they appear in seven of these sixteen spots, so check them all. The song plays when you pick up the seventh and is added to your lobby music.',
         spots: [
           { text: 'In some rubbish right of the toy robot mahjong table.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from Cragusmaximuss\'s guide video' }] },
-          'Behind a wooden pallet by the main entrance to the Heebie Jeebies.',
+          { text: 'Behind a wooden pallet by the main entrance to the Heebie Jeebies.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Still from MrUkGamer\'s guide video' }] },
           { text: 'Behind a speaker inside the Heebie Jeebies.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Still from Cragusmaximuss\'s guide video' }] },
           { text: 'In a red crate in the small hallway of the Heebie Jeebies.', imgs: [{ src: I + 'spot-song-4.webp', cap: 'Still from Cragusmaximuss\'s guide video' }] },
           { text: 'In a tyre on the roof by the scaffolding up to the rooftops.', imgs: [{ src: I + 'spot-song-5.webp', cap: 'Still from Cragusmaximuss\'s guide video' }] },

@@ -250,7 +250,7 @@
         summary: 'Interact with three ace of spades cards. (During the boss fight you can also trigger it by hitting the three sparking telephone poles with explosives.)',
         spots: [
           'Bottom-left corner of the blackboard in the Double Tap room, Tank Factory.',
-          'On S.O.P.H.I.A.\'s desk in Dragon Command.',
+          { text: 'On S.O.P.H.I.A.\'s desk in Dragon Command.', imgs: [{ src: I + 'spot-song-ace-2.webp', cap: 'Still from Jedi98\'s guide video' }] },
           'Hatchery, right of Pack-a-Punch on a desk, tucked in a book.',
         ],
       },
