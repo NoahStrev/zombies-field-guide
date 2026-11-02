@@ -52,18 +52,18 @@
         facts: [['Parts', '3'], ['Special', 'Fireball attack · fire immunity'], ['Upgrade', 'Tiamat\'s Maw']],
         parts: [
           { w: 33, name: 'Dragon Visage', icon: I + 'fafnir-visage.webp', area: 'Infirmary', spots: [
-            'At the top of the Operations Bunker stairs, look slightly left: on the floor between two small crates by the big broken bookshelf.',
-            'On the right-hand bunk bed of the two touching the side of the stairs up to Stamin-Up.',
+            { text: 'At the top of the Operations Bunker stairs, look slightly left: on the floor between two small crates by the big broken bookshelf.', imgs: [{ src: I + 'part-fafnir-1-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On the right-hand bunk bed of the two touching the side of the stairs up to Stamin-Up.', imgs: [{ src: I + 'part-fafnir-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             'Facing Stamin-Up, look left: on debris under the leftmost of three broken windows on the green wall.',
           ] },
           { w: 8, name: 'Core', icon: I + 'fafnir-core.webp', area: 'Department Store & Operations Bunker', spots: [
-            'On a wooden chair in the Juggernog room, by the desk lit by a lamp.',
-            'On the door of the truck carrying blue barrels, downstairs from the Department Store before the Operations Bunker (left side, across from the GobbleGum machine).',
-            'On a shelf in the Operations Bunker, right of the Electric Trap switch, before the stairs up to the Infirmary.',
+            { text: 'On a wooden chair in the Juggernog room, by the desk lit by a lamp.', imgs: [{ src: I + 'part-fafnir-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On the door of the truck carrying blue barrels, downstairs from the Department Store before the Operations Bunker (left side, across from the GobbleGum machine).', imgs: [{ src: I + 'part-fafnir-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On a shelf in the Operations Bunker, right of the Electric Trap switch, before the stairs up to the Infirmary.', imgs: [{ src: I + 'part-fafnir-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 60, name: 'Maw', icon: I + 'fafnir-maw.webp', area: 'Armory', spots: [
-            'Lowest level, next to the Wunderfizz, hanging on a big piece of wooden floor debris.',
-            'Upstairs, just past the doorway by the GobbleGum machine, on the wall next to the metal doorway to the Supply Depot.',
+            { text: 'Lowest level, next to the Wunderfizz, hanging on a big piece of wooden floor debris.', imgs: [{ src: I + 'part-fafnir-3-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Upstairs, just past the doorway by the GobbleGum machine, on the wall next to the metal doorway to the Supply Depot.', imgs: [{ src: I + 'part-fafnir-3-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             'Top level, on the side of a crate straight ahead as you come up the stairs (far right, same wall as the Bridge switch).',
           ] },
         ],

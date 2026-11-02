@@ -81,18 +81,18 @@
         parts: [
           { w: 68, name: 'Eagle Plate', icon: I + 'shield-eagle.webp', area: 'Upper Courtyard', spots: [
             'Leaning on a stack of large crates next to a window, to the right of the ground-floor entrance to Mission Control (the Church).',
-            'On the floor beside the corpse sitting at the desk on the ground floor of the Clock Tower (Radio Room).',
-            'Against some wooden barrels on the left of the staircase that leads up to the Clock Tower and the Wundersphere landing pad.',
+            { text: 'On the floor beside the corpse sitting at the desk on the ground floor of the Clock Tower (Radio Room).', imgs: [{ src: I + 'part-rocket-shield-1-2.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
+            { text: 'Against some wooden barrels on the left of the staircase that leads up to the Clock Tower and the Wundersphere landing pad.', imgs: [{ src: I + 'part-rocket-shield-1-3.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
           ] },
           { w: 113, name: 'Window', icon: I + 'shield-screen.webp', area: 'Undercroft · needs {{anti-gravity}}', note: 'All three spots are high up. Wait for Anti-Gravity, then double-jump or wall-run to them.', spots: [
             'High on the wall directly above the Pack-a-Punch teleporter platform.',
-            'Above the doorway to the Rocket Test teleporter, just under the glowing "eye" glyph.',
+            { text: 'Above the doorway to the Rocket Test teleporter, just under the glowing "eye" glyph.', imgs: [{ src: I + 'part-rocket-shield-2-2.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
             'Hanging on the metal rings that join the four Keeper statues around the Pyramid. From the workbench by the Pyramid, turn to face it and look up and slightly left.',
           ] },
           { w: 27, name: 'Fuel Canisters', icon: 'assets/img/bo3/soe/shield-fuel.webp', area: 'Lower Courtyard', spots: [
-            'Coming uphill into the Lower Courtyard from Double Tap: on top of the crates immediately on your right, beside a window.',
-            'Same entrance, turn left and climb the short stairs. At the bottom right of the other small staircase (the one that only leads to a window), leaning on small crates.',
-            'From the second-floor landing pad, take the stairs toward the Death Ray. At the base of the second set of stairs, on the left against the stone wall.',
+            { text: 'Coming uphill into the Lower Courtyard from Double Tap: on top of the crates immediately on your right, beside a window.', imgs: [{ src: I + 'part-rocket-shield-3-1.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
+            { text: 'Same entrance, turn left and climb the short stairs. At the bottom right of the other small staircase (the one that only leads to a window), leaning on small crates.', imgs: [{ src: I + 'part-rocket-shield-3-2.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
+            { text: 'From the second-floor landing pad, take the stairs toward the Death Ray. At the base of the second set of stairs, on the left against the stone wall.', imgs: [{ src: I + 'part-rocket-shield-3-3.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
           ] },
         ],
         upgrade: {

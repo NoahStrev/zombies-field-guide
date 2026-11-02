@@ -95,7 +95,7 @@
           { w: 11, name: 'Handles', icon: I + 'shield-handles.webp', area: 'Around Generator 2', spots: [
             'Right of the first area leading from spawn to Generator 2, in the trench room.',
             'At the end of the trenches past Generator 2 and the workshop.',
-            'On top of the tank station near Generator 2, by some broken piping.',
+            { text: 'On top of the tank station near Generator 2, by some broken piping.', imgs: [{ src: I + 'part-zombie-shield-2-3.webp', cap: 'Still from Ricktness\'s guide video' }] },
           ] },
           { w: 101, name: 'Frame', icon: I + 'shield-frame.webp', area: 'Around Generator 4', spots: [
             'Near Generator 4, left of the nearby MP40 wall-buy.',

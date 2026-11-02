@@ -122,9 +122,15 @@
         video: { id: 'wrnBbBT3liY', title: 'Civil Protector guide', ch: 'MrDalekJD', len: '5:38' },
         facts: [['Parts', '3 fuses'], ['Cost per call', '2,000 (can be paid in chunks)'], ['After main EE', 'Gold, with a PaP\'d gun']],
         parts: [
-          { name: 'Fuse 1', area: 'Canal District', spots: ['In the walkway behind the 1,250-point door near the train station (by the district\'s perk spot).'] },
-          { name: 'Fuse 2', area: 'Waterfront District', spots: ['In the walkway behind the 1,250-point door near the train station (by the district\'s perk spot).'] },
-          { name: 'Fuse 3', area: 'Footlight District', spots: ['In the walkway behind the 1,250-point door near the train station (by the district\'s perk spot).'] },
+          { w: 99, name: 'Fuse 1', area: 'Canal District', spots: [
+            { text: 'In the walkway behind the 1,250-point door near the train station (by the district\'s perk spot).', imgs: [{ src: I + 'part-civil-protector-1-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
+          { w: 127, name: 'Fuse 2', area: 'Waterfront District', spots: [
+            { text: 'In the walkway behind the 1,250-point door near the train station (by the district\'s perk spot).', imgs: [{ src: I + 'part-civil-protector-2-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
+          { w: 60, name: 'Fuse 3', area: 'Footlight District', spots: [
+            { text: 'In the walkway behind the 1,250-point door near the train station (by the district\'s perk spot).', imgs: [{ src: I + 'part-civil-protector-3-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+          ] },
         ],
         steps: [
           { t: 'Put the three fuses in the Master Switch', d: 'The fuse box is down below Morg City in the Rift.' },

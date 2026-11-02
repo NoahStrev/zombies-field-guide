@@ -118,9 +118,9 @@
         facts: [['Parts', '3'], ['Upgrade', 'Electric Shield']],
         parts: [
           { w: 13, name: 'Handles', area: 'Directly under Lab A', spots: [
-            'Hanging on the pillar with the Kuda wall-buy.',
+            { text: 'Hanging on the pillar with the Kuda wall-buy.', imgs: [{ src: I + 'part-zombie-shield-1-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             'Hanging on the pillar nearest the bottom of the staircase.',
-            'Hanging on the pillar closest to the window.',
+            { text: 'Hanging on the pillar closest to the window.', imgs: [{ src: I + 'part-zombie-shield-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 40, name: 'Frame', area: 'In front of Lab B (outside)', spots: [
             'On a tree on the hill facing the lab (big boulder and a lit lamp post lead up to it).',
@@ -153,14 +153,14 @@
             'On a boulder just left of the Mystery Box spot, behind the Pharo wall-buy.',
           ] },
           { w: 6, name: 'Visor', area: 'Green pool behind Lab B', spots: [
-            'On a wooden crate on the right-hand path as you come from under Lab B, next to a boulder.',
+            { text: 'On a wooden crate on the right-hand path as you come from under Lab B, next to a boulder.', imgs: [{ src: I + 'part-gas-mask-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             'On a wooden crate right of the wheelbarrow, next to the giant meteorite.',
-            'On a wooden crate against the railing next to the perk machine spot on the iron catwalk.',
+            { text: 'On a wooden crate against the railing next to the perk machine spot on the iron catwalk.', imgs: [{ src: I + 'part-gas-mask-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 71, name: 'Breathing Tube', area: 'Cleansing pedestal area by the Docks (reached from the bunker power room)', spots: [
             'On a boulder just left of the VMP wall-buy.',
-            'On a wooden crate next to the pedestal in the middle of the area.',
-            'On a wooden crate by the end of the zipline, before the metal floor plating.',
+            { text: 'On a wooden crate next to the pedestal in the middle of the area.', imgs: [{ src: I + 'part-gas-mask-3-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On a wooden crate by the end of the zipline, before the metal floor plating.', imgs: [{ src: I + 'part-gas-mask-3-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
         ],
         video: { id: 'JsTuAlJuQ2A', title: 'All Gas Mask Part Locations (Zetsubou No Shima)', ch: 'MrRoflWaffles', len: '2:09' },
