@@ -56,13 +56,13 @@
         parts: [
           { w: 97, name: 'Skull of Nan Sapwe', area: 'Verrückt section', spots: [
             'On the shelves just right of Speed Cola.',
-            'At the top of the stairs right of the Corruption Engine, straight to the left in a wheelchair.',
-            'In another wheelchair at a desk with a bloody mattress, across from the Wunderfizz spot near the jump pad to Mob of the Dead (down the hall from the Zetsubou test-tube room).',
+            { text: 'At the top of the stairs right of the Corruption Engine, straight to the left in a wheelchair.', imgs: [{ src: I + 'part-keeper-protector-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'In another wheelchair at a desk with a bloody mattress, across from the Wunderfizz spot near the jump pad to Mob of the Dead (down the hall from the Zetsubou test-tube room).', imgs: [{ src: I + 'part-keeper-protector-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 11, name: 'Purple Crystal', area: 'Der Eisendrache / Kino der Toten sections', spots: [
-            'Der Eisendrache: in the round room with four Primis statues, on a barrel covered with a white cloth.',
-            'Der Eisendrache: in the concrete rubble touching the Pyramid.',
-            'Kino: on a small table with a red cloth near the jump pad to Verrückt (up the ramp from the Bowie Knife, through the doorway left of the GobbleGum machine).',
+            { text: 'Der Eisendrache: in the round room with four Primis statues, on a barrel covered with a white cloth.', imgs: [{ src: I + 'part-keeper-protector-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Der Eisendrache: in the concrete rubble touching the Pyramid.', imgs: [{ src: I + 'part-keeper-protector-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Kino: on a small table with a red cloth near the jump pad to Verrückt (up the ramp from the Bowie Knife, through the doorway left of the GobbleGum machine).', imgs: [{ src: I + 'part-keeper-protector-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 51, name: 'Keeper Flag', area: 'Origins / Mob of the Dead sections', spots: [
             'Origins: on the sandbags near where Speed Cola was in Origins, right of the VMP wall-buy (across from Double Tap).',
@@ -79,13 +79,13 @@
         parts: [
           { w: 6, name: 'Dragon Visage', icon: GK + 'fafnir-visage.webp', area: 'Origins section', spots: [
             'Entering Origins from the House (spawn): left of the wooden crates just left of the GobbleGum machine.',
-            'Past the GobbleGum machine on the left path: right before the Pharo wall-buy, hanging on a big Group 935 crate lit by a broken truck.',
-            'Past the Pharo wall-buy, turn right and drop toward the Wunderfizz spot: on a chair across from it, by some shelves.',
+            { text: 'Past the GobbleGum machine on the left path: right before the Pharo wall-buy, hanging on a big Group 935 crate lit by a broken truck.', imgs: [{ src: I + 'part-fafnir-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Past the Pharo wall-buy, turn right and drop toward the Wunderfizz spot: on a chair across from it, by some shelves.', imgs: [{ src: I + 'part-fafnir-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 96, name: 'Core', icon: GK + 'fafnir-core.webp', area: 'Verrückt section', spots: [
-            'On a column right as you land from the Kino → Verrückt jump pad.',
-            'Up the stairs next to Speed Cola: walk to the hole in the wall, turn left — on a tipped-over wheelchair in the corner.',
-            'On the table in the middle of the kitchen upstairs.',
+            { text: 'On a column right as you land from the Kino → Verrückt jump pad.', imgs: [{ src: I + 'part-fafnir-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'Up the stairs next to Speed Cola: walk to the hole in the wall, turn left — on a tipped-over wheelchair in the corner.', imgs: [{ src: I + 'part-fafnir-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+            { text: 'On the table in the middle of the kitchen upstairs.', imgs: [{ src: I + 'part-fafnir-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 30, name: 'Maw', icon: GK + 'fafnir-maw.webp', area: 'Der Eisendrache section · needs Anti-Gravity', note: 'All three are high up: stand on the four tiles around the Pyramid for a few seconds each to start Anti-Gravity, then double-jump to them.', spots: [
             'High on the wall close to the VMP wall-buy: turn around to the metal plate showing Der Eisendrache locations and look straight up.',
