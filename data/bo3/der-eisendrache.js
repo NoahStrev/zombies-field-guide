@@ -87,7 +87,7 @@
           { w: 113, name: 'Window', icon: I + 'shield-screen.webp', area: 'Undercroft · needs {{anti-gravity}}', note: 'All three spots are high up. Wait for Anti-Gravity, then double-jump or wall-run to them.', spots: [
             'High on the wall directly above the Pack-a-Punch teleporter platform.',
             { text: 'Above the doorway to the Rocket Test teleporter, just under the glowing "eye" glyph.', imgs: [{ src: I + 'part-rocket-shield-2-2.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
-            'Hanging on the metal rings that join the four Keeper statues around the Pyramid. From the workbench by the Pyramid, turn to face it and look up and slightly left.',
+            { text: 'Hanging on the metal rings that join the four Keeper statues around the Pyramid. From the workbench by the Pyramid, turn to face it and look up and slightly left.', imgs: [{ src: I + 'part-rocket-shield-2-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           ] },
           { w: 27, name: 'Fuel Canisters', icon: 'assets/img/bo3/soe/shield-fuel.webp', area: 'Lower Courtyard', spots: [
             { text: 'Coming uphill into the Lower Courtyard from Double Tap: on top of the crates immediately on your right, beside a window.', imgs: [{ src: I + 'part-rocket-shield-3-1.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },

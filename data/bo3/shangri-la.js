@@ -78,7 +78,9 @@
       },
       {
         id: 'song-pareidolia', tab: 'side', type: 'Song', name: '"Pareidolia"',
+        video: { id: 'DDVC9SxCN4M', title: 'The three meteorites (original Black Ops)', ch: 'GameFront', len: '2:23' },
         summary: 'Hold interact on three small meteor pieces.',
+        blocks: [{ note: 'Videos titled "Shangri-La Remastered" show a newer version of the map where two of the rocks have moved. The spots below are for Black Ops and Black Ops III.' }],
         spots: [
           'Starting room behind Quick Revive: left of the window, in the rubble behind the fallen pillar.',
           'By the bridge near spawn and the moving walls, next to the perk machine.',

@@ -78,7 +78,7 @@
         facts: [['Parts', '3']],
         parts: [
           { w: 6, name: 'Dragon Visage', icon: GK + 'fafnir-visage.webp', area: 'Origins section', spots: [
-            'Entering Origins from the House (spawn): left of the wooden crates just left of the GobbleGum machine.',
+            { text: 'Entering Origins from the House (spawn): left of the wooden crates just left of the GobbleGum machine.', imgs: [{ src: I + 'part-fafnir-1-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
             { text: 'Past the GobbleGum machine on the left path: right before the Pharo wall-buy, hanging on a big Group 935 crate lit by a broken truck.', imgs: [{ src: I + 'part-fafnir-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             { text: 'Past the Pharo wall-buy, turn right and drop toward the Wunderfizz spot: on a chair across from it, by some shelves.', imgs: [{ src: I + 'part-fafnir-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },

@@ -208,11 +208,17 @@
       /* ------------------------------ SIDE ------------------------------ */
       {
         id: 'free-perk', tab: 'side', type: 'Free perk', name: 'Six fish: free perk',
+        video: { id: 'CNkWVNB3F2g', title: 'Free fifth perk: where the six fish hide', ch: 'MrDalekJD', len: '6:49' },
         summary: 'Shoot six fish hanging around the ship, pick them up and drop them in the collection box on the Sun Deck for a free perk.',
         spots: [
-          'Poop Deck: on the center rope.', 'Forecastle: below the white canopy.', 'Mid Deck: right side of an exhaust pipe.',
-          'Promenade Starboard Deck: below the catwalk.', 'Boiler Room: on top of the blue pipe right of the portal.', 'Aft Decks: on the ropes on the left side.',
+          { text: 'Poop Deck: on the center rope.', imgs: [{ src: I + 'spot-free-perk-1.webp', cap: 'Poop Deck, still from MrDalekJD\'s guide video' }] },
+          { text: 'Forecastle: below the white canopy.', imgs: [{ src: I + 'spot-free-perk-2.webp', cap: 'Forecastle, still from MrDalekJD\'s guide video' }] },
+          { text: 'Mid Deck: right side of an exhaust pipe.', imgs: [{ src: I + 'spot-free-perk-3.webp', cap: 'Mid Deck, still from MrDalekJD\'s guide video' }] },
+          'Promenade Starboard Deck: below the catwalk.',
+          { text: 'Boiler Room: on top of the blue pipe right of the portal.', imgs: [{ src: I + 'spot-free-perk-5.webp', cap: 'Boiler Room, still from MrDalekJD\'s guide video' }] },
+          'Aft Decks: on the ropes on the left side.',
         ],
+        blocks: [{ tip: 'A sniper scope makes the fish much easier to spot. Only one fish is out at a time; after you pick one up, the next appears elsewhere. In the Watch video the last fish turns up under the Galley floor grates instead of below the Promenade catwalk: enter the Galley by the right-hand door, look down, shoot it, then pick it up in front of the Zeus perk in the Engine Room.' }],
       },
       {
         id: 'specialist-sale', tab: 'side', type: 'Fire Sale', name: 'Piano sheets: specialist Fire Sale',
