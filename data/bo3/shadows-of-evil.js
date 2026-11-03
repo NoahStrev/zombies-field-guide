@@ -96,10 +96,10 @@
           { w: 26, name: 'Eagle Plate', icon: I + 'shield-eagle.webp', area: 'Canal District', spots: [
             'Inside the Smoke Lounge, leaning against the window.',
             'Inside the Smoke Lounge, against the wall opposite the window.',
+            'On the railing of the bridge just outside the Smoke Lounge.',
           ] },
           { w: 75, name: 'Fuel Canisters', icon: I + 'shield-fuel.webp', area: 'Waterfront District', spots: [
             'Leaning against the window across from the Perk-a-Cola machine.',
-            'On the bridge that leads to the lounge.',
             'Inside the lounge, left of the paid gate to the Waterfront train station, leaning on an overturned coffee table.',
           ] },
           { w: 120, name: 'Window', icon: I + 'shield-screen.webp', area: 'Footlight District', spots: [
