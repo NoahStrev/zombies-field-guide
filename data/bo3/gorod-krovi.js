@@ -54,7 +54,7 @@
           { w: 33, name: 'Dragon Visage', icon: I + 'fafnir-visage.webp', area: 'Infirmary', spots: [
             { text: 'At the top of the Operations Bunker stairs, look slightly left: on the floor between two small crates by the big broken bookshelf.', imgs: [{ src: I + 'part-fafnir-1-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             { text: 'On the right-hand bunk bed of the two touching the side of the stairs up to Stamin-Up.', imgs: [{ src: I + 'part-fafnir-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
-            'Facing Stamin-Up, look left: on debris under the leftmost of three broken windows on the green wall.',
+            { text: 'Facing Stamin-Up, look left: on debris under the leftmost of three broken windows on the green wall.', imgs: [{ src: I + 'part-fafnir-1-3.webp', cap: 'Picture from Zombified\'s guide' }] },
           ] },
           { w: 8, name: 'Core', icon: I + 'fafnir-core.webp', area: 'Department Store & Operations Bunker', spots: [
             { text: 'On a wooden chair in the Juggernog room, by the desk lit by a lamp.', imgs: [{ src: I + 'part-fafnir-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
@@ -240,8 +240,8 @@
         video: { id: 'aMu5AmSbnaU', title: 'Dead Ended: the three vodka bottles', ch: 'JokerAlex 21', len: '5:05' },
         summary: 'Hold interact on three vodka bottles.',
         spots: [
-          'On a couch in the Department Store, right after the first door you buy.',
-          'Between the Department Store and the Operations Bunker, on the floor by a crashed truck with corpses and rubble.',
+          { text: 'On a couch in the Department Store, right after the first door you buy.', imgs: [{ src: I + 'spot-song-dead-ended-1.webp', cap: 'Picture from Zombified\'s guide' }] },
+          { text: 'Between the Department Store and the Operations Bunker, on the floor by a crashed truck with corpses and rubble.', imgs: [{ src: I + 'spot-song-dead-ended-2.webp', cap: 'Picture from Zombified\'s guide' }] },
           { text: 'Supply Depot, on a shelf next to a crate with a white Iron Cross.', imgs: [{ src: I + 'spot-song-dead-ended-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
       },
@@ -249,9 +249,9 @@
         id: 'song-ace', tab: 'side', type: 'Song', name: '"Ace of Spades"',
         summary: 'Interact with three ace of spades cards. (During the boss fight you can also trigger it by hitting the three sparking telephone poles with explosives.)',
         spots: [
-          'Bottom-left corner of the blackboard in the Double Tap room, Tank Factory.',
+          { text: 'Bottom-left corner of the blackboard in the Double Tap room, Tank Factory.', imgs: [{ src: I + 'spot-song-ace-1.webp', cap: 'Picture from Zombified\'s guide' }] },
           { text: 'On S.O.P.H.I.A.\'s desk in Dragon Command.', imgs: [{ src: I + 'spot-song-ace-2.webp', cap: 'Still from Jedi98\'s guide video' }] },
-          'Hatchery, right of Pack-a-Punch on a desk, tucked in a book.',
+          { text: 'Hatchery, right of Pack-a-Punch on a desk, tucked in a book.', imgs: [{ src: I + 'spot-song-ace-3.webp', cap: 'Picture from Zombified\'s guide' }] },
         ],
       },
       {

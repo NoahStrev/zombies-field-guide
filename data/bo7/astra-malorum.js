@@ -126,7 +126,12 @@
         id: 'wisps', tab: 'side', type: 'Free weapon', name: 'Upgraded wisps (and a free Ray Gun)',
         summary: 'Aim at a lantern glowing with a white wisp to take it; melee throws it at zombies. Put a wisp into all nine wall lanterns (throw it in, aim to take it back) and end the round: wisps turn yellow-orange, kill about five zombies each, and any lantern gives them (up to five at once). From round 16, throw an upgraded wisp at the Ashes of the Damned rocket floating in front of Saturn: it comes back with a Ray Gun.',
         video: SE(567),
-        spots: ['Two in the Crash Site.', 'Three in the courtyard in front of the Luminarium.', 'Two at the back of the Luminarium.', 'Two on Scholar\'s Way.'],
+        spots: [
+          { text: 'Two in the Crash Site.', imgs: [{ src: I + 'spot-wisps-1.webp', cap: 'Picture from Game8\'s guide' }, { src: I + 'spot-wisps-1b.webp', cap: 'Picture from Game8\'s guide' }] },
+          { text: 'Three in the courtyard in front of the Luminarium.', imgs: [{ src: I + 'spot-wisps-2.webp', cap: 'Picture from Game8\'s guide' }, { src: I + 'spot-wisps-2b.webp', cap: 'Picture from Game8\'s guide' }, { src: I + 'spot-wisps-2c.webp', cap: 'Picture from Game8\'s guide' }] },
+          { text: 'Two at the back of the Luminarium.', imgs: [{ src: I + 'spot-wisps-3.webp', cap: 'Picture from Game8\'s guide' }, { src: I + 'spot-wisps-3b.webp', cap: 'Picture from Game8\'s guide' }] },
+          { text: 'Two on Scholar\'s Way.', imgs: [{ src: I + 'spot-wisps-4.webp', cap: 'Picture from Game8\'s guide' }, { src: I + 'spot-wisps-4b.webp', cap: 'Picture from Game8\'s guide' }] },
+        ],
       },
       {
         id: 'gramophones', tab: 'side', type: 'Free perk', name: 'Gramophone trials (three free perks)',
@@ -145,7 +150,7 @@
         spots: [
           { text: 'In a floor crevice left of the leftmost first buyable door.', imgs: [{ src: I + 'spot-skull-game-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           { text: 'Stargazer\'s Courtyard: left of the wooden bench between the Mystery Box spot and the ammo crate.', imgs: [{ src: I + 'spot-skull-game-2.webp', cap: 'Stargazer\'s Courtyard, still from MrDalekJD\'s guide video' }] },
-          'Museum Infinitum: in a glass display behind Speed Cola.',
+          { text: 'Museum Infinitum: in a glass display behind Speed Cola.', imgs: [{ src: I + 'spot-skull-game-3.webp', cap: 'Museum Infinitum, picture from Game8\'s guide' }] },
           { text: 'The Veilwalk: by the door to the Archive of Orbis, against a wall across from a ruined red brick wall.', imgs: [{ src: I + 'spot-skull-game-4.webp', cap: 'The Veilwalk, still from MrDalekJD\'s guide video' }] },
           { text: 'Machina Astralis: in a glass case opposite the Arsenal.', imgs: [{ src: I + 'spot-skull-game-5.webp', cap: 'Machina Astralis, still from MrDalekJD\'s guide video' }] },
         ],

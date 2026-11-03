@@ -123,14 +123,14 @@
             { text: 'Hanging on the pillar closest to the window.', imgs: [{ src: I + 'part-zombie-shield-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 40, name: 'Frame', area: 'In front of Lab B (outside)', spots: [
-            'On a tree on the hill facing the lab (big boulder and a lit lamp post lead up to it).',
-            'On a tree at the water\'s edge on the path from Lab B toward the altar and spawn.',
-            'On a tree in the far right corner in front of Lab B, below the one-way drop near the Trip Mine wall-buy.',
+            { text: 'On a tree on the hill facing the lab (big boulder and a lit lamp post lead up to it).', imgs: [{ src: I + 'part-zombie-shield-2-1.webp', cap: 'Picture from Zombified\'s guide' }] },
+            { text: 'On a tree at the water\'s edge on the path from Lab B toward the altar and spawn.', imgs: [{ src: I + 'part-zombie-shield-2-2.webp', cap: 'Picture from Zombified\'s guide' }] },
+            { text: 'On a tree in the far right corner in front of Lab B, below the one-way drop near the Trip Mine wall-buy.', imgs: [{ src: I + 'part-zombie-shield-2-3.webp', cap: 'Picture from Zombified\'s guide' }] },
           ] },
           { w: 64, name: 'Visor', area: 'Anti-air platform', spots: [
-            'By a window with a seed planter.',
-            'Near the window in the machine-gun nest.',
-            'Up the stairs on the right, in a pile of rubble.',
+            { text: 'By a window with a seed planter.', imgs: [{ src: I + 'part-zombie-shield-3-1.webp', cap: 'Picture from Zombified\'s guide' }] },
+            { text: 'Near the window in the machine-gun nest.', imgs: [{ src: I + 'part-zombie-shield-3-2.webp', cap: 'Picture from Zombified\'s guide' }] },
+            { text: 'Up the stairs on the right, in a pile of rubble.', imgs: [{ src: I + 'part-zombie-shield-3-3.webp', cap: 'Picture from Zombified\'s guide' }] },
           ] },
         ],
         upgrade: {
@@ -150,15 +150,15 @@
           { w: 39, name: 'Strap', area: 'Crashed plane (Propeller Trap), between spawn and Lab A', spots: [
             'On metal rebar at the back entrance of the crashed plane.',
             'On metal rebar at the front entrance of the crashed plane.',
-            'On a boulder just left of the Mystery Box spot, behind the Pharo wall-buy.',
+            { text: 'On a boulder just left of the Mystery Box spot, behind the Pharo wall-buy.', imgs: [{ src: I + 'part-gas-mask-1-3.webp', cap: 'Picture from Zombified\'s guide' }] },
           ] },
           { w: 6, name: 'Visor', area: 'Green pool behind Lab B', spots: [
             { text: 'On a wooden crate on the right-hand path as you come from under Lab B, next to a boulder.', imgs: [{ src: I + 'part-gas-mask-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
-            'On a wooden crate right of the wheelbarrow, next to the giant meteorite.',
+            { text: 'On a wooden crate right of the wheelbarrow, next to the giant meteorite.', imgs: [{ src: I + 'part-gas-mask-2-2.webp', cap: 'Picture from Zombified\'s guide' }] },
             { text: 'On a wooden crate against the railing next to the perk machine spot on the iron catwalk.', imgs: [{ src: I + 'part-gas-mask-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 71, name: 'Breathing Tube', area: 'Cleansing pedestal area by the Docks (reached from the bunker power room)', spots: [
-            'On a boulder just left of the VMP wall-buy.',
+            { text: 'On a boulder just left of the VMP wall-buy.', imgs: [{ src: I + 'part-gas-mask-3-1.webp', cap: 'Picture from Zombified\'s guide' }] },
             { text: 'On a wooden crate next to the pedestal in the middle of the area.', imgs: [{ src: I + 'part-gas-mask-3-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             { text: 'On a wooden crate by the end of the zipline, before the metal floor plating.', imgs: [{ src: I + 'part-gas-mask-3-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
@@ -264,7 +264,7 @@
         video: { id: 'eLUmIgZxQ5E', title: 'Dead Flowers: the three sock monkeys', ch: 'JokerAlex 21', len: '6:24' },
         summary: 'Hold interact on three sock monkeys.',
         spots: [
-          'On a power generator, left of a perk machine by the blue 115 water.',
+          { text: 'On a power generator, left of a perk machine by the blue 115 water.', imgs: [{ src: I + 'spot-song-dead-flowers-1.webp', cap: 'Picture from Zombified\'s guide' }] },
           { text: 'Top floor of Lab B, on a table left of a floodlight, in front of zombie diagrams.', imgs: [{ src: I + 'spot-song-dead-flowers-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           'On a table in the bunker, right of the KT-4 bench and left of the Masamune bench.',
         ],

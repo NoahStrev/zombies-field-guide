@@ -188,7 +188,7 @@
         summary: 'Small hidden power-ups you can pick up once each. The Fire Sale and the Random Perk only appear once you have the other seven.',
         video: SE(981),
         spots: [
-          'Bonus Points: on the outside corner of the Kitchens, behind the M34 Novaline wall-buy.',
+          { text: 'Bonus Points: on the outside corner of the Kitchens, behind the M34 Novaline wall-buy.', imgs: [{ src: I + 'spot-powerups-1.webp', cap: 'Bonus Points, picture from Game8\'s guide' }] },
           { text: 'Max Ammo: at the bottom of a shelf by a lamp in the out-of-bounds room in the Training Area.', imgs: [{ src: I + 'spot-powerups-2.webp', cap: 'Max Ammo, still from MrDalekJD\'s guide video' }] },
           { text: 'Double Points: between the two big branches of the Central Courtyard cherry tree; best seen from the Collapsed Study.', imgs: [{ src: I + 'spot-powerups-3.webp', cap: 'Double Points, still from MrDalekJD\'s guide video' }] },
           { text: 'Full Power: in the roof of a sunken house outside the Flower Garden, behind the exfil phone booth.', imgs: [{ src: I + 'spot-powerups-4.webp', cap: 'Full Power, still from MrDalekJD\'s guide video' }] },

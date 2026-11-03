@@ -80,7 +80,7 @@
         facts: [['Parts', '3'], ['Recharge', 'Max Ammo or red-valve canisters'], ['Upgrade', 'Goddard Apparatus']],
         parts: [
           { w: 68, name: 'Eagle Plate', icon: I + 'shield-eagle.webp', area: 'Upper Courtyard', spots: [
-            'Leaning on a stack of large crates next to a window, to the right of the ground-floor entrance to Mission Control (the Church).',
+            { text: 'Leaning on a stack of large crates next to a window, to the right of the ground-floor entrance to Mission Control (the Church).', imgs: [{ src: I + 'part-rocket-shield-1-1.webp', cap: 'Picture from Zombified\'s guide' }] },
             { text: 'On the floor beside the corpse sitting at the desk on the ground floor of the Clock Tower (Radio Room).', imgs: [{ src: I + 'part-rocket-shield-1-2.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
             { text: 'Against some wooden barrels on the left of the staircase that leads up to the Clock Tower and the Wundersphere landing pad.', imgs: [{ src: I + 'part-rocket-shield-1-3.webp', cap: 'Still from TheSmithPlays\'s guide video' }] },
           ] },
@@ -151,7 +151,7 @@
           { w: 22, anyList: 'Bonfires in any order', t: 'Light three bonfires out of bounds', d: 'Shoot each with the bow until it catches fire.', spots: [
             { label: 'Fire 1', text: 'Leave the Clock Tower toward the computer terminal and look over the wall to the right: a turret in the distance. You can also shoot it from the Mule Kick room below.' },
             { label: 'Fire 2', text: 'Stand at the outdoor KRM-262 wall-buy by Double Tap, turn about 45° right and look at the far right edge of the ridge above the rocket test site.' },
-            { label: 'Fire 3', text: 'At the Rocket Launch Pad, coming out of the teleporter tunnel: high up on the cliff on your right, looking back at the castle.' },
+            { label: 'Fire 3', text: 'At the Rocket Launch Pad, coming out of the teleporter tunnel: high up on the cliff on your right, looking back at the castle.', imgs: [{ src: I + 'step-storm-bow-2-3.webp', cap: 'Fire 3, picture from Zombified\'s guide' }] },
           ] },
           { w: 61, t: 'Wall-run across the five wind symbols', needs: ['anti-gravity'], d: 'In the Undercroft, five long hexagon-shaped wind etchings sit on the walls. During Anti-Gravity, run across all five in one go without touching the ground.', tip: 'Different sounds play when you touch a panel, finish, or fail. If you start right as Anti-Gravity begins, you usually have time for a second try.' },
           { w: 124, anyList: 'Urns in any order', t: 'Fill three lightning urns with 5 kills each', d: 'The urns spark with lightning now.', spots: [
@@ -314,7 +314,7 @@
         spots: [
           { text: 'Samantha\'s Room, sitting on a chair.', imgs: [{ src: I + 'spot-song-dead-again-1.webp', cap: 'Still from Jedi98\'s guide video' }] },
           'In the cell opposite the Juggernog cell, sitting on a crate.',
-          'Right of the rocket launch pad (looking from the blast doors), in the passenger seat of a truck.',
+          { text: 'Right of the rocket launch pad (looking from the blast doors), in the passenger seat of a truck.', imgs: [{ src: I + 'spot-song-dead-again-3.webp', cap: 'Picture from Zombified\'s guide' }, { src: I + 'spot-song-dead-again-3b.webp', cap: 'Picture from Zombified\'s guide' }] },
         ],
       },
       {
@@ -339,9 +339,9 @@
         id: 'skeletons', tab: 'side', type: 'Fun', name: 'Turn zombies into skeletons',
         summary: 'Three invisible skulls float around the map. They only show up with the In Plain Sight GobbleGum. Hit them with the bow\'s splash damage.',
         spots: [
-          'On the ledge near Double Tap.',
-          'On the ledge near Mule Kick.',
-          'Upper Courtyard, above the door to the Control Room.',
+          { text: 'On the ledge near Double Tap.', imgs: [{ src: I + 'spot-skeletons-1.webp', cap: 'Picture from Zombified\'s guide' }] },
+          { text: 'On the ledge near Mule Kick.', imgs: [{ src: I + 'spot-skeletons-2.webp', cap: 'Picture from Zombified\'s guide' }, { src: I + 'spot-skeletons-2b.webp', cap: 'Picture from Zombified\'s guide' }] },
+          { text: 'Upper Courtyard, above the door to the Control Room.', imgs: [{ src: I + 'spot-skeletons-3.webp', cap: 'Picture from Zombified\'s guide' }] },
         ],
         blocks: [{ p: 'Each skull you hit reappears on a chair by the Control Room fireplace. After all three, new zombies spawn as skeletons. Interact with the skulls on the chair to turn it off.' }],
       },

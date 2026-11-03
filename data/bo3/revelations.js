@@ -65,7 +65,7 @@
             { text: 'Kino: on a small table with a red cloth near the jump pad to Verrückt (up the ramp from the Bowie Knife, through the doorway left of the GobbleGum machine).', imgs: [{ src: I + 'part-keeper-protector-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 51, name: 'Keeper Flag', area: 'Origins / Mob of the Dead sections', spots: [
-            'Origins: on the sandbags near where Speed Cola was in Origins, right of the VMP wall-buy (across from Double Tap).',
+            { text: 'Origins: on the sandbags near where Speed Cola was in Origins, right of the VMP wall-buy (across from Double Tap).', imgs: [{ src: I + 'part-keeper-protector-3-1.webp', cap: 'Picture from Zombified\'s guide' }] },
             'Origins: on top of the central dig-site mound where Origins\' Pack-a-Punch was, in a corner.',
             'Mob of the Dead: in the cafeteria, right of Mule Kick.',
           ] },

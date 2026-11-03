@@ -105,7 +105,7 @@
           { w: 604, name: 'Part 1', area: 'Yellow House', spots: [
             'Downstairs kitchen table.',
             { text: 'On a bench downstairs.', imgs: [{ src: I + 'part-assembly-kit-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
-            'Upstairs on a shelf, or on a small table.',
+            { text: 'Upstairs on a shelf, or on a small table.', imgs: [{ src: I + 'part-assembly-kit-1-3.webp', cap: 'Upstairs bookshelf' }, { src: I + 'part-assembly-kit-1-3b.webp', cap: 'Upstairs lamp table' }] },
           ] },
           { w: 619, name: 'Part 2', area: 'Storage (bunker)', spots: [
             { text: 'On a shelf.', imgs: [{ src: I + 'part-assembly-kit-2-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },

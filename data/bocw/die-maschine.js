@@ -183,7 +183,7 @@
         summary: 'Interact with three cassette tapes.',
         spots: [
           { text: 'Living Room (Nacht bunker): in the broken fridge right of the sofa.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Living Room (Nacht bunker), still from JokerAlex 21\'s guide video' }] },
-          'Particle Accelerator: below Pack-a-Punch, far right, on top of a machine next to a bloody tower.',
+          { text: 'Particle Accelerator: below Pack-a-Punch, far right, on top of a machine next to a bloody tower.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Particle Accelerator, picture from Zombified\'s guide' }] },
           { text: 'Medical Bay: on the shelf right of the pill cabinets, opposite the terminal.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Medical Bay, still from JokerAlex 21\'s guide video' }] },
         ],
       },

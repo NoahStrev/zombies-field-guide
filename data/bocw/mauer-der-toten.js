@@ -64,8 +64,8 @@
         facts: [['Parts', '2'], ['Build at', 'His chair in the Safe House'], ['Recall', '2,000 essence']],
         video: KV,
         parts: [
-          { w: 16, name: 'Robotic hands', area: 'Hotel Room 305', spots: ['Put Brain Rot on any gun at Pack-a-Punch (no upgrade needed) and turn a zombie by the barricaded door: it tears the barricade down. The hands are around the neck of the body on the bed.'] },
-          { w: 32, name: 'Battery', area: 'Anywhere', spots: ['Dropped by the first Krasny Soldat (the armoured flamethrower soldier) you kill. They start around round 10.'] },
+          { w: 16, name: 'Robotic hands', area: 'Hotel Room 305', spots: [{ text: 'Put Brain Rot on any gun at Pack-a-Punch (no upgrade needed) and turn a zombie by the barricaded door: it tears the barricade down. The hands are around the neck of the body on the bed.', imgs: [{ src: I + 'part-klaus-1-1.webp', cap: 'Picture from Zombified\'s guide' }] }] },
+          { w: 32, name: 'Battery', area: 'Anywhere', spots: [{ text: 'Dropped by the first Krasny Soldat (the armoured flamethrower soldier) you kill. They start around round 10.', imgs: [{ src: I + 'part-klaus-2-1.webp', cap: 'Picture from Zombified\'s guide' }] }] },
         ],
         blocks: [{ warn: 'Skip the Mister Peeks bunny side quest around round 10: it can mess up the Krasny Soldat spawns.' }],
       },
@@ -96,9 +96,9 @@
         facts: [['Parts', '3 (shot loose with the CRBR-S)'], ['Build at', 'On Klaus while he sits in his chair']],
         video: EV,
         parts: [
-          { w: 188, name: 'Antenna', area: 'Apartment Rooftop', spots: ['Shoot the metal electrical pylon with the CRBR-S to knock it over.'] },
-          { w: 203, name: 'Electronic boards', area: 'Ghost Station', spots: ['A metal box above the ticket window sign, on the platform with the stairs. Shoot it with the CRBR-S.'] },
-          { w: 218, name: 'Transistor', area: 'Electronics store', spots: ['Shoot the radios and cassette players with the CRBR-S until one drops it.'] },
+          { w: 188, name: 'Antenna', area: 'Apartment Rooftop', spots: [{ text: 'Shoot the metal electrical pylon with the CRBR-S to knock it over.', imgs: [{ src: I + 'part-helm-1-1.webp', cap: 'Picture from Zombified\'s guide' }] }] },
+          { w: 203, name: 'Electronic boards', area: 'Ghost Station', spots: [{ text: 'A metal box above the ticket window sign, on the platform with the stairs. Shoot it with the CRBR-S.', imgs: [{ src: I + 'part-helm-2-1.webp', cap: 'Picture from Zombified\'s guide' }] }] },
+          { w: 218, name: 'Transistor', area: 'Electronics store', spots: [{ text: 'Shoot the radios and cassette players with the CRBR-S until one drops it.', imgs: [{ src: I + 'part-helm-3-1.webp', cap: 'Picture from Zombified\'s guide' }] }] },
         ],
       },
 

@@ -125,8 +125,8 @@
         video: SE(732),
         spots: [
           { text: 'Between the bowling alley and the motel, on the ground by the fence and railing.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
-          'In the church, on the end of a wooden bench.',
-          'Washington Avenue, under a wooden bench along the iron fence.',
+          { text: 'In the church, on the end of a wooden bench.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Picture from Zombified\'s guide' }] },
+          { text: 'Washington Avenue, under a wooden bench along the iron fence.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Picture from Zombified\'s guide' }, { src: I + 'spot-song-3b.webp', cap: 'Picture from Zombified\'s guide' }] },
         ],
       },
       {
@@ -151,8 +151,8 @@
         spots: [
           { text: 'Four inside Olly\'s Comics.', imgs: [{ src: I + 'spot-aetherella-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           { text: 'On the neon Motel sign, behind the Office sign on East Main Street.', imgs: [{ src: I + 'spot-aetherella-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
-          'On an air conditioning unit across from the Dark Aether Field Generator on Hill Street.',
-          'Drop from The Alamo onto the Yummy Freeze roof: behind the right-hand of the two air vents on the building opposite.',
+          { text: 'On an air conditioning unit across from the Dark Aether Field Generator on Hill Street.', imgs: [{ src: I + 'spot-aetherella-3.webp', cap: 'Picture from Game8\'s guide' }] },
+          { text: 'Drop from The Alamo onto the Yummy Freeze roof: behind the right-hand of the two air vents on the building opposite.', imgs: [{ src: I + 'spot-aetherella-4.webp', cap: 'Picture from Game8\'s guide' }] },
           { text: 'On the window ledge of the church, on the side opposite Melee Macchiato.', imgs: [{ src: I + 'spot-aetherella-5.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           { text: 'Lying flat under the "L" of "Lanes" on the Liberty Lanes sign on West Main Street, nearest the old bus.', imgs: [{ src: I + 'spot-aetherella-6.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
         ],
@@ -208,10 +208,10 @@
         spots: [
           { text: 'Bonus Points: on the air conditioner outside Olly\'s Comics, in the alley left of the ammo cache and Arsenal.', imgs: [{ src: I + 'spot-powerups-1.webp', cap: 'Bonus Points, still from MrDalekJD\'s guide video' }] },
           { text: 'Max Ammo: at the base of the yellow arch bridge behind the exfil radio by Pump & Pay.', imgs: [{ src: I + 'spot-powerups-2.webp', cap: 'Max Ammo, still from MrDalekJD\'s guide video' }] },
-          'Double Points: on a support beam of the Washington Ave water tower.',
-          'Full Power: out of the map between a wrecked van and a Project Janus truck, behind the bus by Liberty Lanes.',
+          { text: 'Double Points: on a support beam of the Washington Ave water tower.', imgs: [{ src: I + 'spot-powerups-3.webp', cap: 'Double Points, picture from Zombified\'s guide' }, { src: I + 'spot-powerups-3b.webp', cap: 'Double Points, picture from Zombified\'s guide' }] },
+          { text: 'Full Power: out of the map between a wrecked van and a Project Janus truck, behind the bus by Liberty Lanes.', imgs: [{ src: I + 'spot-powerups-4.webp', cap: 'Full Power, picture from Game8\'s guide' }] },
           { text: 'Insta-Kill: next to the brick chimney behind the church, left of the armour wall-buy.', imgs: [{ src: I + 'spot-powerups-5.webp', cap: 'Insta-Kill, still from MrDalekJD\'s guide video' }] },
-          'Max Armor: under a service cart in an open window of The Grease Trap on Washington Ave, left of the barrier to the patio.',
+          { text: 'Max Armor: under a service cart in an open window of The Grease Trap on Washington Ave, left of the barrier to the patio.', imgs: [{ src: I + 'spot-powerups-6.webp', cap: 'Max Armor, picture from Zombified\'s guide' }, { src: I + 'spot-powerups-6b.webp', cap: 'Max Armor, picture from Zombified\'s guide' }] },
           { text: 'Nuke: in the big chandelier in the Savings & Loan, seen through the rooftop skylights.', imgs: [{ src: I + 'spot-powerups-7.webp', cap: 'Nuke, still from MrDalekJD\'s guide video' }] },
           'Fire Sale: in a bin left of the park benches next to PhD Flopper on the Hilltop Stairs.',
         ],

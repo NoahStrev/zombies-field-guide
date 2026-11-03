@@ -58,9 +58,9 @@
         facts: [['Parts', '3 (same spots every game)'], ['Use at', 'Boat launch, Trading Post docks']],
         video: RV,
         parts: [
-          { w: 17, name: 'Part 1', area: 'Bear Lodge, upstairs bunk room (needs power)', spots: ['On the right side of the bunk room with Tuff \'Nuff.'] },
-          { w: 32, name: 'Part 2', area: 'Recreation Area', spots: ['Leaning against the booth below the camper, near the entrance to the Old Marvin Mine.'] },
-          { w: 48, name: 'Part 3', area: 'Mess Hall', spots: ['Leaning on the pillar in the middle of the room, by a bin.'] },
+          { w: 17, name: 'Part 1', area: 'Bear Lodge, upstairs bunk room (needs power)', spots: [{ text: 'On the right side of the bunk room with Tuff \'Nuff.', imgs: [{ src: I + 'part-boat-engine-1-1.webp', cap: 'Picture from Zombified\'s guide' }, { src: I + 'part-boat-engine-1-1b.webp', cap: 'Picture from Zombified\'s guide' }] }] },
+          { w: 32, name: 'Part 2', area: 'Recreation Area', spots: [{ text: 'Leaning against the booth below the camper, near the entrance to the Old Marvin Mine.', imgs: [{ src: I + 'part-boat-engine-2-1.webp', cap: 'Picture from Zombified\'s guide' }, { src: I + 'part-boat-engine-2-1b.webp', cap: 'Picture from Zombified\'s guide' }] }] },
+          { w: 48, name: 'Part 3', area: 'Mess Hall', spots: [{ text: 'Leaning on the pillar in the middle of the room, by a bin.', imgs: [{ src: I + 'part-boat-engine-3-1.webp', cap: 'Picture from Zombified\'s guide' }, { src: I + 'part-boat-engine-3-1b.webp', cap: 'Picture from Zombified\'s guide' }] }] },
         ],
       },
 
@@ -163,14 +163,14 @@
         spots: [
           { text: 'In the rafters above the fireplace.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           'On a wooden pallet left of the M1 wall buy.',
-          'Under the pool table upstairs.',
-          'Behind the bar upstairs.',
+          { text: 'Under the pool table upstairs.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Picture from Zombified\'s guide' }] },
+          { text: 'Behind the bar upstairs.', imgs: [{ src: I + 'spot-song-4.webp', cap: 'Picture from Zombified\'s guide' }] },
           'Above the doorway to the Banshee wall buy on the balcony.',
           { text: 'Under the table with the computer used for the alien fuses.', imgs: [{ src: I + 'spot-song-6.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           'On the sloped roof below and right of the Magic Wheel on the balcony.',
-          'Under a shelf near one of the boat engine parts.',
-          'Behind some boxes left of a barrier in the bunk room.',
-          'In an open locker left of Tuff \'Nuff.',
+          { text: 'Under a shelf near one of the boat engine parts.', imgs: [{ src: I + 'spot-song-8.webp', cap: 'Picture from Zombified\'s guide' }] },
+          { text: 'Behind some boxes left of a barrier in the bunk room.', imgs: [{ src: I + 'spot-song-9.webp', cap: 'Picture from Zombified\'s guide' }] },
+          { text: 'In an open locker left of Tuff \'Nuff.', imgs: [{ src: I + 'spot-song-10.webp', cap: 'Picture from Zombified\'s guide' }] },
         ],
       },
       {
