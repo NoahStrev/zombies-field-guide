@@ -87,8 +87,12 @@
         video: AV,
         parts: [
           { w: 211, name: 'Fan', area: 'General Store', spots: ['On a shelf upstairs.'] },
-          { w: 211, name: 'Mannequin', area: 'General Store', spots: ['In the back room.'] },
-          { w: 211, name: 'Rudder', area: 'General Store', spots: ['On a shelf along the wall.'] },
+          { w: 211, name: 'Mannequin', area: 'General Store', spots: [
+            { text: 'In the back room.', imgs: [{ src: I + 'part-turbine-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 211, name: 'Rudder', area: 'General Store', spots: [
+            { text: 'On a shelf along the wall.', imgs: [{ src: I + 'part-turbine-3-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
       {
@@ -110,10 +114,18 @@
         facts: [['Parts', '4 (General Store)'], ['Build at', 'Any table']],
         video: AV,
         parts: [
-          { w: 227, name: 'Bellows', area: 'General Store', spots: ['On a desk upstairs.'] },
-          { w: 242, name: 'Chicken wire', area: 'General Store', spots: ['Leaning on the stair banister.'] },
-          { w: 242, name: 'Flag', area: 'General Store', spots: ['In a barrel under the stairs.'] },
-          { w: 242, name: 'Motor', area: 'General Store', spots: ['On a shelf in the middle of the room.'] },
+          { w: 227, name: 'Bellows', area: 'General Store', spots: [
+            { text: 'On a desk upstairs.', imgs: [{ src: I + 'part-trample-steam-1-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 242, name: 'Chicken wire', area: 'General Store', spots: [
+            { text: 'Leaning on the stair banister.', imgs: [{ src: I + 'part-trample-steam-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 242, name: 'Flag', area: 'General Store', spots: [
+            { text: 'In a barrel under the stairs.', imgs: [{ src: I + 'part-trample-steam-3-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 242, name: 'Motor', area: 'General Store', spots: [
+            { text: 'On a shelf in the middle of the room.', imgs: [{ src: I + 'part-trample-steam-4-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
       {
@@ -122,10 +134,18 @@
         facts: [['Parts', '4 (General Store)'], ['Build at', 'Any table']],
         video: AV,
         parts: [
-          { w: 275, name: 'Crank', area: 'General Store', spots: ['On a shelf in the middle of the room.'] },
-          { w: 291, name: 'Gear', area: 'General Store', spots: ['On the front counter.'] },
-          { w: 291, name: 'Blade', area: 'General Store', spots: ['In a barrel behind the counter.'] },
-          { w: 291, name: 'Frame', area: 'General Store', spots: ['In the back room.'] },
+          { w: 275, name: 'Crank', area: 'General Store', spots: [
+            { text: 'On a shelf in the middle of the room.', imgs: [{ src: I + 'part-head-chopper-1-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 291, name: 'Gear', area: 'General Store', spots: [
+            { text: 'On the front counter.', imgs: [{ src: I + 'part-head-chopper-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 291, name: 'Blade', area: 'General Store', spots: [
+            { text: 'In a barrel behind the counter.', imgs: [{ src: I + 'part-head-chopper-3-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 291, name: 'Frame', area: 'General Store', spots: [
+            { text: 'In the back room.', imgs: [{ src: I + 'part-head-chopper-4-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
       {

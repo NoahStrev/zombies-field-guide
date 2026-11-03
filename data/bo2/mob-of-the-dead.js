@@ -83,8 +83,16 @@
         facts: [['Parts', '3'], ['Build at', 'Any workbench']],
         video: AV,
         parts: [
-          { w: 255, name: 'Cell door', area: 'Citadel tunnels / Building 64', spots: ['On the Citadel tunnel stairs (third wall on the left going down).', 'In the hallway towards the elevator, on the left through the doorway.', 'In the corner just outside Building 64.'] },
-          { w: 264, name: 'Handle', area: 'Building 64 (generator room)', spots: ['On a shelf by the entrance (either side).', 'In a corner of the room.', 'Next to one of the generators.'] },
+          { w: 255, name: 'Cell door', area: 'Citadel tunnels / Building 64', spots: [
+            { text: 'On the Citadel tunnel stairs (third wall on the left going down).', imgs: [{ src: I + 'part-zombie-shield-1-1.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
+            'In the hallway towards the elevator, on the left through the doorway.',
+            'In the corner just outside Building 64.',
+          ] },
+          { w: 264, name: 'Handle', area: 'Building 64 (generator room)', spots: [
+            { text: 'On a shelf by the entrance (either side).', imgs: [{ src: I + 'part-zombie-shield-2-1.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
+            { text: 'In a corner of the room.', imgs: [{ src: I + 'part-zombie-shield-2-2.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
+            { text: 'Next to one of the generators.', imgs: [{ src: I + 'part-zombie-shield-2-3.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
+          ] },
           { w: 280, name: 'Dolly', area: 'The docks', spots: ['Near the crane.', 'Among the cargo.', 'Beneath the tower trap.'] },
         ],
       },
@@ -94,9 +102,21 @@
         facts: [['Parts', '3'], ['Build at', 'Any workbench']],
         video: AV,
         parts: [
-          { w: 325, name: 'Case', area: 'Cell block', spots: ['On a shelf outside the library, in the cell with the toilet.', 'Under the stairs to the middle floor (warden\'s office side).', 'In the corner by the power box at the showers entrance.'] },
-          { w: 342, name: 'Acid vial', area: 'Infirmary', spots: ['In the infirmary hallway.', 'Next to the bathtubs.', 'On a desk near the Mystery Box spot.'] },
-          { w: 352, name: 'Motor', area: 'Warden\'s office', spots: ['Next to the administration desk / the cell with the plane part.', 'In the corner next to the Mystery Box spot.', 'Next to the fireplace by Speed Cola.'] },
+          { w: 325, name: 'Case', area: 'Cell block', spots: [
+            { text: 'On a shelf outside the library, in the cell with the toilet.', imgs: [{ src: I + 'part-acid-gat-kit-1-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            'Under the stairs to the middle floor (warden\'s office side).',
+            'In the corner by the power box at the showers entrance.',
+          ] },
+          { w: 342, name: 'Acid vial', area: 'Infirmary', spots: [
+            { text: 'In the infirmary hallway.', imgs: [{ src: I + 'part-acid-gat-kit-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'Next to the bathtubs.', imgs: [{ src: I + 'part-acid-gat-kit-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On a desk near the Mystery Box spot.', imgs: [{ src: I + 'part-acid-gat-kit-2-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 352, name: 'Motor', area: 'Warden\'s office', spots: [
+            'Next to the administration desk / the cell with the plane part.',
+            { text: 'In the corner next to the Mystery Box spot.', imgs: [{ src: I + 'part-acid-gat-kit-3-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'Next to the fireplace by Speed Cola.', imgs: [{ src: I + 'part-acid-gat-kit-3-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
 

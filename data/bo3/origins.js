@@ -89,12 +89,12 @@
         parts: [
           { w: 60, name: 'Visor', icon: I + 'shield-face.webp', area: 'Fire tunnel / trenches', spots: [
             'In the Fire tunnel, on a table right of the gateway.',
-            'Right of the Fire tunnel, in the trench room.',
+            { text: 'Right of the Fire tunnel, in the trench room.', imgs: [{ src: I + 'part-zombie-shield-1-2.webp', cap: 'Still from SlickJoe\'s guide video' }] },
             'In the trench tunnel near Speed Cola, behind the crate heading to the workshop.',
           ] },
           { w: 11, name: 'Handles', icon: I + 'shield-handles.webp', area: 'Around Generator 2', spots: [
-            'Right of the first area leading from spawn to Generator 2, in the trench room.',
-            'At the end of the trenches past Generator 2 and the workshop.',
+            { text: 'Right of the first area leading from spawn to Generator 2, in the trench room.', imgs: [{ src: I + 'part-zombie-shield-2-1.webp', cap: 'Still from SlickJoe\'s guide video' }] },
+            { text: 'At the end of the trenches past Generator 2 and the workshop.', imgs: [{ src: I + 'part-zombie-shield-2-2.webp', cap: 'Still from SlickJoe\'s guide video' }] },
             { text: 'On top of the tank station near Generator 2, by some broken piping.', imgs: [{ src: I + 'part-zombie-shield-2-3.webp', cap: 'Still from Ricktness\'s guide video' }] },
           ] },
           { w: 101, name: 'Frame', icon: I + 'shield-frame.webp', area: 'Around Generator 4', spots: [
@@ -112,13 +112,13 @@
         parts: [
           { w: 47, name: 'Brain', icon: I + 'drone-brain.webp', area: 'Starting room', spots: [{ label: 'Fixed', text: 'On a table on the lower floor of the starting room, next to the stairs up to Generator 1.' }] },
           { w: 67, name: 'Frame', icon: I + 'drone-frame.webp', area: 'Ice tunnel / tank path', spots: [
-            'In the Ice tunnel near Generator 6, in front of the Crazy Place portal.',
+            { text: 'In the Ice tunnel near Generator 6, in front of the Crazy Place portal.', imgs: [{ src: I + 'part-maxis-drone-2-1.webp', cap: 'Still from SlickJoe\'s guide video' }] },
             'By the crossbones sign on the tank\'s muddy path toward Generator 4.',
             'By the crossbones sign on the tank\'s muddy path toward Generator 5.',
           ] },
           { w: 107, name: 'Rotors', icon: I + 'drone-rotors.webp', area: 'Excavation Site', spots: [
             'At the very bottom, on a box on a scaffold next to a lever.',
-            'At the top, near Pack-a-Punch.',
+            { text: 'At the top, near Pack-a-Punch.', imgs: [{ src: I + 'part-maxis-drone-3-2.webp', cap: 'Still from SlickJoe\'s guide video' }] },
             'Around the secret entrance.',
           ] },
         ],

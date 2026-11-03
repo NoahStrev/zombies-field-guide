@@ -94,9 +94,18 @@
         video: EV,
         parts: [
           { w: 312, name: 'Mannequin foot', area: 'Next to the power room', spots: ['Always in the side room to the right of the power room.'] },
-          { w: 328, name: 'Handbrake', area: 'Power room or kitchen', spots: ['On the table right of the power switch, opposite the sewing machine.', 'In the kitchen to the left of the build room.'] },
-          { w: 349, name: 'Air tank', area: 'Build room or power room', spots: ['In the cage right of the buildable table.', 'On the table in front of the power switch.'] },
-          { w: 362, name: 'Ammo cartridge', area: 'Near the bank', spots: ['On a side table in the showers, left before the power room, opposite the bank.', 'On the barrel at the bottom of the stairs opposite the buildable table.'] },
+          { w: 328, name: 'Handbrake', area: 'Power room or kitchen', spots: [
+            'On the table right of the power switch, opposite the sewing machine.',
+            { text: 'In the kitchen to the left of the build room.', imgs: [{ src: I + 'part-sliquifier-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 349, name: 'Air tank', area: 'Build room or power room', spots: [
+            { text: 'In the cage right of the buildable table.', imgs: [{ src: I + 'part-sliquifier-3-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On the table in front of the power switch.', imgs: [{ src: I + 'part-sliquifier-3-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 362, name: 'Ammo cartridge', area: 'Near the bank', spots: [
+            { text: 'On a side table in the showers, left before the power room, opposite the bank.', imgs: [{ src: I + 'part-sliquifier-4-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'On the barrel at the bottom of the stairs opposite the buildable table.', imgs: [{ src: I + 'part-sliquifier-4-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
 

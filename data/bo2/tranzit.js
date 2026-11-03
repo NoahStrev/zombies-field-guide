@@ -188,10 +188,26 @@
         facts: [['Parts', '4'], ['Build at', 'Ground floor of the bar in Town'], ['Slot', 'Equipment (D-pad), not a gun slot']],
         video: EV,
         parts: [
-          { w: 527, name: 'Pressure gauge', area: 'Hunter\'s Cabin (in the fog between the Power Station and Town)', spots: ['On the table.', 'In the fireplace.', 'On the other table (or the end of the bed frame).'] },
-          { w: 560, name: 'Wires', area: 'Power Station (appears once the power is on)', spots: ['Drop down onto the catwalk: against the barrier.', 'Further along, right on the edge.', 'On a barrel in the back room.'] },
-          { w: 585, name: 'Engine', area: 'Tunnel (Bus Depot to Diner), near the M16 wall-buy', spots: ['By a zombie window.', 'Further down on the right, against the wall.', 'Between two cars near the M16.'] },
-          { w: 615, name: 'Handbrake', area: 'Nacht der Untoten (cornfields opposite the pylon)', spots: ['On the shelf.', 'On top of the cabinet at the top of the stairs.', 'On the filing cabinet at the back by the light.'] },
+          { w: 527, name: 'Pressure gauge', area: 'Hunter\'s Cabin (in the fog between the Power Station and Town)', spots: [
+            { text: 'On the table.', imgs: [{ src: I + 'part-jet-gun-1-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            { text: 'In the fireplace.', imgs: [{ src: I + 'part-jet-gun-1-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            'On the other table (or the end of the bed frame).',
+          ] },
+          { w: 560, name: 'Wires', area: 'Power Station (appears once the power is on)', spots: [
+            'Drop down onto the catwalk: against the barrier.',
+            { text: 'Further along, right on the edge.', imgs: [{ src: I + 'part-jet-gun-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            'On a barrel in the back room.',
+          ] },
+          { w: 585, name: 'Engine', area: 'Tunnel (Bus Depot to Diner), near the M16 wall-buy', spots: [
+            { text: 'By a zombie window.', imgs: [{ src: I + 'part-jet-gun-3-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+            'Further down on the right, against the wall.',
+            { text: 'Between two cars near the M16.', imgs: [{ src: I + 'part-jet-gun-3-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
+          { w: 615, name: 'Handbrake', area: 'Nacht der Untoten (cornfields opposite the pylon)', spots: [
+            'On the shelf.',
+            'On top of the cabinet at the top of the stairs.',
+            { text: 'On the filing cabinet at the back by the light.', imgs: [{ src: I + 'part-jet-gun-4-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
+          ] },
         ],
       },
 
