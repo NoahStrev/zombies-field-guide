@@ -90,7 +90,7 @@
           { w: 60, name: 'Visor', icon: I + 'shield-face.webp', area: 'Fire tunnel / trenches', spots: [
             'In the Fire tunnel, on a table right of the gateway.',
             { text: 'Right of the Fire tunnel, in the trench room.', imgs: [{ src: I + 'part-zombie-shield-1-2.webp', cap: 'Still from SlickJoe\'s guide video' }] },
-            'In the trench tunnel near Speed Cola, behind the crate heading to the workshop.',
+            { text: 'Below Generator 3, near Speed Cola: against a dead zombie sitting by the sandbags next to a Mystery Box spot, on the way to the workshop.', imgs: [{ src: I + 'part-zombie-shield-1-3.webp', cap: 'Still from Ricktness\'s guide video' }] },
           ] },
           { w: 11, name: 'Handles', icon: I + 'shield-handles.webp', area: 'Around Generator 2', spots: [
             { text: 'Right of the first area leading from spawn to Generator 2, in the trench room.', imgs: [{ src: I + 'part-zombie-shield-2-1.webp', cap: 'Still from SlickJoe\'s guide video' }] },

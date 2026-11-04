@@ -224,8 +224,9 @@
         summary: 'Small hidden power-ups you can pick up once each. The Fire Sale only appears once you have the others.',
         video: SE(907),
         spots: [
-          { text: 'Bonus Points and Double Points: in the opening above the stairs in the East Foyer.', imgs: [{ src: I + 'spot-powerups-1.webp', cap: 'Bonus Points and Double Points, still from MrDalekJD\'s guide video' }] },
-          'Max Ammo: on a balcony seen from Shem\'s Henge.',
+          { text: 'Bonus Points: in the zombie window above the stairs up to the Overlook in the East Foyer.', imgs: [{ src: I + 'spot-powerups-1.webp', cap: 'Bonus Points, still from MrDalekJD\'s guide video' }] },
+          { text: 'Double Points: from the West Balcony, look across at the cliff left of the Mystery Box spot: propped against a fallen tree log on the grass (a scope helps).', imgs: [{ src: I + 'spot-powerups-2.webp', cap: 'Double Points, picture from Zombified\'s guide' }, { src: I + 'spot-powerups-2b.webp', cap: 'Double Points, picture from Zombified\'s guide' }] },
+          { text: 'Max Ammo: on the Lower Terrace by the Garden Pond, on the stone balustrade right of the winged statue (you can also shoot it from the bridge, looking east).', imgs: [{ src: I + 'spot-powerups-3b.webp', cap: 'Max Ammo, picture from Sportskeeda\'s guide' }] },
           { text: 'Full Power: inside a panel in the Study.', imgs: [{ src: I + 'spot-powerups-3.webp', cap: 'Full Power, still from MrDalekJD\'s guide video' }] },
           { text: 'Insta-Kill: in the elevator shaft.', imgs: [{ src: I + 'spot-powerups-4.webp', cap: 'Insta-Kill, picture from Sportskeeda\'s guide' }] },
           { text: 'Max Armor: behind the shed in the Motor Court.', imgs: [{ src: I + 'spot-powerups-5.webp', cap: 'Max Armor, still from MrDalekJD\'s guide video' }] },

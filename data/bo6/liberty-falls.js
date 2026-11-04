@@ -213,7 +213,7 @@
           { text: 'Insta-Kill: next to the brick chimney behind the church, left of the armour wall-buy.', imgs: [{ src: I + 'spot-powerups-5.webp', cap: 'Insta-Kill, still from MrDalekJD\'s guide video' }] },
           { text: 'Max Armor: under a service cart in an open window of The Grease Trap on Washington Ave, left of the barrier to the patio.', imgs: [{ src: I + 'spot-powerups-6.webp', cap: 'Max Armor, picture from Zombified\'s guide' }, { src: I + 'spot-powerups-6b.webp', cap: 'Max Armor, picture from Zombified\'s guide' }] },
           { text: 'Nuke: in the big chandelier in the Savings & Loan, seen through the rooftop skylights.', imgs: [{ src: I + 'spot-powerups-7.webp', cap: 'Nuke, still from MrDalekJD\'s guide video' }] },
-          'Fire Sale: in a bin left of the park benches next to PhD Flopper on the Hilltop Stairs.',
+          'Fire Sale: in a bin left of the park benches next to PhD Flopper on the Hilltop Stairs. (The Blood Pool\'s third orb is a separate Fire Sale.)',
         ],
       },
     ],

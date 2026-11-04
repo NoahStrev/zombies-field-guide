@@ -96,7 +96,7 @@
           { w: 26, name: 'Eagle Plate', icon: I + 'shield-eagle.webp', area: 'Canal District', spots: [
             'Inside the Smoke Lounge, leaning against the window.',
             'Inside the Smoke Lounge, against the wall opposite the window.',
-            'On the railing of the bridge just outside the Smoke Lounge.',
+            { text: 'On the railing of the bridge just outside the Smoke Lounge.', imgs: [{ src: I + 'part-rocket-shield-1-3.webp', cap: 'Still from Resaliate\'s guide video' }] },
           ] },
           { w: 75, name: 'Fuel Canisters', icon: I + 'shield-fuel.webp', area: 'Waterfront District', spots: [
             'Leaning against the window across from the Perk-a-Cola machine.',
