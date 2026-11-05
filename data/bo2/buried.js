@@ -35,6 +35,7 @@
     game: 'bo2', id: 'buried', order: 4,
     name: 'Buried', dlc: 'Vengeance · DLC 3', eeName: 'Mined Games',
     hero: I + 'hero.webp', players: 'four',
+    layout: [{ src: I + 'layout.webp', cap: 'General layout of the town and what\'s in each building. Picture from Zombified\'s guide' }],
     tags: ['Paralyzer', 'Arthur (Leroy)', 'Time Bomb'],
     blurb: 'An old western town buried deep underground, with a giant called Arthur locked in the jail. Build the gallows for Maxis or the guillotine for Richtofen, and finish the story that started in TranZit.',
     quick: [

@@ -8,7 +8,7 @@
   const out = { games: ZG.games, maps: [] };
   for (const key of ZG.mapOrder) {
     const m = ZG.maps[key];
-    const mm = { key, game: m.game, id: m.id, name: m.name, hero: m.hero, items: [] };
+    const mm = { key, game: m.game, id: m.id, name: m.name, hero: m.hero, layout: arr(m.layout).map(src), items: [] };
     for (const it of m.items) {
       const vid = it.video ? it.video.id : (arr(it.videos)[0] || {}).id;
       const rec = { id: it.id, tab: it.tab, name: it.name, img: it.img || null, video: it.video || null, videos: it.videos || null, lists: [], parts: [], blocksImgs: [] };

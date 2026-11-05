@@ -5,6 +5,7 @@
     game: 'bo3', id: 'zetsubou-no-shima', order: 4, group: 'original',
     name: 'Zetsubou No Shima', dlc: 'Eclipse · DLC 2', eeName: 'Seeds of Doubt',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'The wall map near spawn: Lab A on the left, Lab B on the right, the Bunker at the top and the Docks top left' }],
     tags: ['Zombie Shield', 'KT-4 → Masamune', 'Skull of Nan Sapwe'],
     blurb: 'A Division 9 jungle island full of spiders, spores and Thrashers. Grow plants with buckets of 115 water, build the KT-4, earn the Skull of Nan Sapwe and fight the giant Thrasher.',
     quick: [

@@ -8,6 +8,7 @@
     game: 'vg', id: 'shi-no-numa', order: 1,
     name: 'Shi No Numa', dlc: 'Season Four', eeName: 'Heads Up!',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'Map of the huts: Storage Hut, Dig Site, Comm Room, Doctor\'s Quarters, Fishing Hut and the Flogger by the main hut' }],
     tags: ['Wunderwaffe DG-2', 'Relic Mirror', 'Echo of Saraxis'],
     blurb: 'The World at War swamp, rebuilt for the Dark Aether story with a new dig site. Build the Wunderwaffe, wake an ancient monolith and piece together a broken mirror that restores Saraxis\'s memories.',
     quick: [

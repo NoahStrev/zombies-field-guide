@@ -62,11 +62,12 @@
       },
       {
         id: 'song-beauty', tab: 'side', type: 'Song', name: '"Beauty of Annihilation" (remix)',
+        video: { id: 'RONClLk2yx8', title: 'Beauty of Annihilation: the three jars', ch: 'Doughnuts', len: '1:12', t: 12 },
         summary: 'Hold interact on three glowing green jars with spines in them.',
         spots: [
-          'Animal Testing Lab (first jar).',
-          'Animal Testing Lab (second jar).',
-          'Near Teleporter B, in the side room.',
+          'Animal Testing Lab, at the bottom of the stairs: on a table.',
+          'Animal Testing Lab, at the bottom of the stairs: on top of a tall shelf.',
+          'Near Teleporter B: on the back table of a small side room.',
         ],
       },
       {

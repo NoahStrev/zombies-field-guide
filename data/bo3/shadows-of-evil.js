@@ -5,6 +5,7 @@
     game: 'bo3', id: 'shadows-of-evil', order: 1, group: 'original',
     name: 'Shadows of Evil', dlc: 'Base game', eeName: 'Apocalypse Averted',
     hero: I + 'hero.webp', players: 'coop',
+    layout: [{ src: I + 'layout.webp', cap: 'Morg City wall map: the Junction in the middle, the Footlight District at the top, the Canal District on the left and the Waterfront District on the right' }],
     tags: ['Rocket Shield', 'Apothicon Servant', 'Swords'],
     blurb: 'Four cursed sinners in 1940s Morg City. Use Beast Mode to dig up the ritual items, sacrifice your past to open Pack-a-Punch, then forge Apothicon Swords and turn on the Shadowman.',
     quick: [

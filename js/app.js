@@ -51,6 +51,7 @@
     shuffle: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>',
     restart: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5"/></svg>',
     flag: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4M5 4h12l-2.5 4.5L17 13H5"/></svg>',
+    map: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>',
   };
 
   /* ---------- index: item lookups, "needed for" backlinks, search ---------- */
@@ -1122,6 +1123,7 @@
     // Parts, steps and blocks can all hold a spots list, and each spot can carry its own pictures.
     const addSpots = spots => { for (const s of asArray(spots)) if (s && s.imgs) asArray(s.imgs).forEach(add); };
     add(m.hero);
+    asArray(m.layout).forEach(add);
     for (const it of m.items) {
       add(it.img);
       addSpots(it.spots);
@@ -1233,7 +1235,8 @@
         </div>
       </section>
       <nav class="maptabs" aria-label="${esc(map.name)} sections"><div class="wrap maptabs-inner">
-        ${tabs.map(t => `<a class="maptab${t.id === tabId ? ' active' : ''}" href="${hrefFor(map, t.id)}"${t.id === tabId ? ' aria-current="page"' : ''}>${esc(t.label)}</a>`).join('')}
+        <div class="maptabs-list">${tabs.map(t => `<a class="maptab${t.id === tabId ? ' active' : ''}" href="${hrefFor(map, t.id)}"${t.id === tabId ? ' aria-current="page"' : ''}>${esc(t.label)}</a>`).join('')}</div>
+        ${asArray(map.layout).length ? `<button type="button" class="map-btn" data-map="${esc(mapKey(map))}" aria-label="Map of ${esc(map.name)}">${ICON.map}<span>Map</span></button>` : ''}
       </div></nav>
       <div class="wrap map-body${toc ? '' : ' no-toc'}">
         <div class="content" data-tab="${tabId}">
@@ -1264,6 +1267,73 @@
       <a class="pager-all" href="#/${game.id}">All ${esc(game.name)} maps</a>
       ${next ? link(next, 'next') : '<span></span>'}
     </nav>`;
+  }
+
+  /* ---------- lightbox ----------
+     Shows one picture, or a set you can step through (a map with two layouts).
+     A picture bigger than it looks on screen zooms to full size on tap; drag or
+     scroll to look around, tap it again to fit it back. */
+  let lbSet = [], lbIdx = 0;
+
+  function openLightbox(set, idx = 0) {
+    lbSet = set;
+    lbIdx = idx;
+    $('#lightbox').hidden = false;
+    showLightboxPicture();
+  }
+
+  function showLightboxPicture() {
+    const box = $('#lightbox'), img = $('#lightbox-img'), { src, cap } = lbSet[lbIdx];
+    box.classList.remove('zoomed', 'can-zoom');
+    box.scrollTo(0, 0);
+    img.onload = checkLightboxZoom;
+    img.src = src;
+    img.alt = cap || '';
+    $('#lightbox-cap').textContent = cap || '';
+    $$('.lightbox-step').forEach(b => { b.hidden = lbSet.length < 2; });
+    if (img.complete && img.naturalWidth) checkLightboxZoom();
+    else lightboxMeta();
+  }
+
+  function checkLightboxZoom() {
+    const box = $('#lightbox'), img = $('#lightbox-img');
+    if (box.hidden || box.classList.contains('zoomed')) return;
+    box.classList.toggle('can-zoom', img.naturalWidth > img.clientWidth * 1.25);
+    lightboxMeta();
+  }
+
+  function lightboxMeta() {
+    const box = $('#lightbox');
+    const bits = [];
+    if (lbSet.length > 1) bits.push(`${lbIdx + 1} of ${lbSet.length}`);
+    if (box.classList.contains('can-zoom')) bits.push('Tap the picture to zoom in');
+    $('#lightbox-meta').textContent = bits.join(' · ');
+  }
+
+  function stepLightbox(d) {
+    if (lbSet.length < 2) return;
+    lbIdx = (lbIdx + d + lbSet.length) % lbSet.length;
+    showLightboxPicture();
+  }
+
+  function zoomLightbox(e) {
+    const box = $('#lightbox'), img = $('#lightbox-img');
+    if (box.classList.contains('zoomed')) {
+      box.classList.remove('zoomed');
+      box.scrollTo(0, 0);
+      return;
+    }
+    // Zoom in around the spot that was tapped.
+    const r = img.getBoundingClientRect();
+    const fx = (e.clientX - r.left) / r.width, fy = (e.clientY - r.top) / r.height;
+    box.classList.add('zoomed');
+    box.scrollTo(fx * img.offsetWidth - box.clientWidth / 2, fy * img.offsetHeight - box.clientHeight / 2);
+  }
+
+  function closeLightbox() {
+    const box = $('#lightbox');
+    box.hidden = true;
+    box.classList.remove('zoomed', 'can-zoom');
   }
 
   function renderNotFound() {
@@ -1336,6 +1406,7 @@
       }
       renderedKey = key;
       updateFab();
+      showActiveTab();
       const sameMap = map && prevMap === `${g}/${m}`;
       setTimeout(() => {
         if (anchor) scrollToAnchor(anchor);
@@ -1349,6 +1420,14 @@
       scrollToAnchor(anchor);
     }
     syncDrawer(params.get('item'));
+  }
+
+  // On a phone the map's tab bar scrolls sideways: bring the open tab into the middle of it.
+  function showActiveTab() {
+    const list = $('.maptabs-list'), tab = list && $('.maptab.active', list);
+    if (!tab) return;
+    const l = list.getBoundingClientRect(), t = tab.getBoundingClientRect();
+    list.scrollLeft += (t.left + t.width / 2) - (l.left + l.width / 2);
   }
 
   function headerHeight() {
@@ -1761,15 +1840,21 @@
 
       if (e.target.closest('[data-close]')) { closeDrawer(); return; }
 
-      const zoom = e.target.closest('.zoom');
-      if (zoom) {
-        $('#lightbox-img').src = zoom.dataset.full;
-        $('#lightbox-img').alt = zoom.dataset.cap || '';
-        $('#lightbox-cap').textContent = zoom.dataset.cap || '';
-        $('#lightbox').hidden = false;
+      if (e.target.closest('#lightbox')) {
+        const step = e.target.closest('.lightbox-step');
+        if (step) stepLightbox(step.classList.contains('lightbox-next') ? 1 : -1);
+        else if (e.target.id === 'lightbox-img' && $('#lightbox').classList.contains('can-zoom')) zoomLightbox(e);
+        else closeLightbox();
         return;
       }
-      if (e.target.closest('#lightbox')) { $('#lightbox').hidden = true; return; }
+      const zoom = e.target.closest('.zoom');
+      if (zoom) { openLightbox([{ src: zoom.dataset.full, cap: zoom.dataset.cap }]); return; }
+      const mapBtn = e.target.closest('.map-btn');
+      if (mapBtn) {
+        const m = ZG.maps[mapBtn.dataset.map];
+        if (m) openLightbox(asArray(m.layout).map(l => ({ src: imgUrl(l.src), cap: l.cap })));
+        return;
+      }
 
       if (e.target.closest('[data-undo]')) {
         const undo = toastUndo;
@@ -1932,12 +2017,16 @@
     });
 
     document.addEventListener('keydown', e => {
+      if (!$('#lightbox').hidden && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) { stepLightbox(e.key === 'ArrowRight' ? 1 : -1); return; }
       if (e.key !== 'Escape') return;
-      if (!$('#lightbox').hidden) { $('#lightbox').hidden = true; return; }
+      if (!$('#lightbox').hidden) { closeLightbox(); return; }
       if (!$('#drawer').hidden) { closeDrawer(); return; }
       if (!$('#search-results').hidden) { $('#search-results').hidden = true; return; }
       document.documentElement.classList.remove('search-open');
     });
+
+    // Turning a phone changes whether the open picture can zoom.
+    window.addEventListener('resize', () => { if (!$('#lightbox').hidden) checkLightboxZoom(); });
 
     const input = $('#search-input');
     input.addEventListener('input', () => runSearch(input.value));

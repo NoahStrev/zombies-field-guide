@@ -364,7 +364,7 @@ def audit(args):
         k = m["key"]
         if only and not k.startswith(only):
             continue
-        imgs = [m["hero"]]
+        imgs = [m["hero"]] + m.get("layout", [])
         ids = [it["id"] for it in m["items"]]
         for d in {i for i in ids if ids.count(i) > 1}:
             bad(k, f"duplicate item id {d}")

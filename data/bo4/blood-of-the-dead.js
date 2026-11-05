@@ -6,6 +6,7 @@
     game: 'bo4', id: 'blood-of-the-dead', order: 3, group: 'aether',
     name: 'Blood of the Dead', dlc: 'Launch map', eeName: 'Most Escape Alive',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'Fan-made layout: Pack-a-Punch spots, power switches, shield and Acid Gat parts, the three dogs and the Blundergat skulls' }],
     tags: ['Spectral Shield', 'Hell\'s Retriever', 'Blundergat / Magmagat'],
     blurb: 'Primis return to Alcatraz, now trapped in a pocket dimension guarded by the Warden. The Spectral Shield replaces Afterlife: its key drains souls and its spirit blast powers voltmeters and ghosts.',
     quick: [

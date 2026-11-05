@@ -10,6 +10,7 @@
     game: 'iw', id: 'rave-in-the-redwoods', order: 2,
     name: 'Rave in the Redwoods', dlc: 'Sabotage · DLC 1', eeName: 'Locksmith',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'Camp map with every area named (Turtle Island is bottom right)' }],
     tags: ['Vlad crossbow', 'Rave Mode', 'Kevin Smith'],
     blurb: 'A 90s summer camp hosting a rave. Fix the boat to reach Turtle Island and Pack-a-Punch, help Kevin Smith remember what happened to his friend, then fight the giant Slasher for the second piece of the Soul Key.',
     quick: [

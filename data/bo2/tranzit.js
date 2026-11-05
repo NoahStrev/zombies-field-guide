@@ -19,6 +19,10 @@
     game: 'bo2', id: 'tranzit', order: 1,
     name: 'TranZit', dlc: 'Base game', eeName: 'Tower of Babble',
     hero: I + 'hero.webp', players: { text: 'Maxis side needs 2+ players', warn: true },
+    layout: [
+      { src: I + 'layout.webp', cap: 'Overview: Bus Depot, the tunnel, Diner, Farm, Power Station, Town and the cornfield' },
+      { src: I + 'layout-route.webp', cap: 'Bus route with every stop. On this map the Bus Depot is "Bus Stop", the pylon is "Obelisk Tower" and Nacht der Untoten is "Proto-type"' },
+    ],
     tags: ['Jet Gun', 'Turbine', 'Bus'],
     blurb: 'A bus route through a ruined countryside, with deadly fog between the stops. Power the pylon in the cornfields for either Maxis or Richtofen.',
     quick: [

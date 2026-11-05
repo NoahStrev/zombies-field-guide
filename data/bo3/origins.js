@@ -9,6 +9,10 @@
     game: 'bo3', id: 'origins', order: 10, group: 'chronicles',
     name: 'Origins', dlc: 'Zombies Chronicles', eeName: 'Little Lost Girl',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [
+      { src: I + 'layout.webp', cap: 'Every generator, the workshop, Pack-a-Punch in the middle and the four elemental tunnels (marked as caves). Picture from Zombified\'s guide' },
+      { src: I + 'layout-2.webp', cap: 'The game\'s own map of the six generators' },
+    ],
     tags: ['4 elemental staffs', 'Zombie Shield', 'Maxis Drone'],
     blurb: 'Primis\'s first appearance: a muddy World War I dig site in northern France, giant robots overhead, and four elemental staffs that unlock Agartha.',
     quick: [
@@ -307,6 +311,7 @@
       },
       {
         id: 'song-shepherd', tab: 'side', type: 'Song', name: '"Shepherd of Fire"',
+        video: { id: 'gVz7uXDOOO4', title: 'Shepherd of Fire: the three radios', ch: 'MrDalekJD', len: '1:28', t: 10 },
         summary: 'Hold interact on three red radios.',
         spots: [
           'On the scaffolding inside the Excavation Site, above a Maxis Drone part spot.',

@@ -5,6 +5,7 @@
     game: 'bo4', id: 'ix', order: 1, group: 'chaos',
     name: 'IX', dlc: 'Launch map', eeName: 'Venerated Warrior',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'Layout by u/DownieHoofd on Reddit: the Arena in the middle, a god tower in each corner, the Temple (Pack-a-Punch) underground' }],
     tags: ['Brazen Bull', 'Death of Orion', 'Crowd affinity'],
     blurb: 'A gladiator arena in ancient Egypt with four god towers (Danu, Ra, Odin and Zeus). Win over the crowd, appease all four gods and slay two war elephants.',
     quick: [

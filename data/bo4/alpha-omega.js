@@ -7,6 +7,7 @@
     game: 'bo4', id: 'alpha-omega', order: 6, group: 'aether',
     name: 'Alpha Omega', dlc: 'Black Ops Pass · DLC 3', eeName: 'Electromagnetic Awakening Party',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'Camp Edward wall map: the Town on the left, the Bunker on the right' }],
     tags: ['Rushmore', 'Ray Gun Mark II variants', 'Telepads'],
     blurb: 'Nuketown above a Broken Arrow bunker, with Ultimis and Primis together. Earn the trust of Rushmore, the facility AI, by proving the five Broken Arrow core values, then trap the Avogadro.',
     quick: [

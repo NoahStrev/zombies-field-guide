@@ -26,6 +26,7 @@
     game: 'bo1', id: 'call-of-the-dead', order: 2,
     name: 'Call of the Dead', dlc: 'Escalation · DLC 2', eeName: 'Stand-in / Ensemble Cast',
     hero: I + 'hero.webp', players: { text: 'Solo and co-op versions', warn: false },
+    layout: [{ src: I + 'layout.webp', cap: 'Fan-made map of the lighthouse and ship levels: wall-buys, perks, zip lines, Pack-a-Punch spots and the Ensemble Cast parts' }],
     tags: ['V-R11', 'Scavenger', 'George A. Romero'],
     blurb: 'A frozen Siberian shipwreck and lighthouse, with four film stars and an undead George A. Romero who hunts you all game. The original four characters are trapped behind a door: get Richtofen the Golden Rod and they reward you with the Wunderwaffe DG-2.',
     quick: [

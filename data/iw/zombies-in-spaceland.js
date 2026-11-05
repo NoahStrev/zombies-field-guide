@@ -11,6 +11,7 @@
     game: 'iw', id: 'zombies-in-spaceland', order: 1,
     name: 'Zombies in Spaceland', dlc: 'Base game', eeName: 'Sooooul Key',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'Park map: Cosmic Way in the middle, with Journey into Space, Polar Peak and the Kepler System around it' }],
     tags: ['Weapons of Rock', 'Seti-Com', 'Alien boss'],
     blurb: 'An 80s theme park. Link the four portals to reach Pack-a-Punch, build the Seti-Com with David Hasselhoff, then beat the alien and blow up the UFO for the first piece of the Soul Key.',
     quick: [
