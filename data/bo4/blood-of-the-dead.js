@@ -69,12 +69,12 @@
         video: { id: D, title: 'Ultimate guide to Blood of the Dead', ch: 'MrDalekJD', len: '36:22' },
         parts: [
           { w: 250, name: 'Spectral Essence', icon: I + 'part-essence.webp', area: 'A glowing blue power box (old Afterlife box)', spots: [
-            'Michigan Avenue.',
-            { text: 'Library.', imgs: [{ src: I + 'part-spectral-shield-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
-            { text: 'Times Square (outside the Warden\'s Office).', imgs: [{ src: I + 'part-spectral-shield-1-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Michigan Avenue, right outside the Warden\'s Office.', imgs: [{ src: I + 'part-spectral-shield-1-1.webp', cap: 'Picture from PowerPyx\'s guide' }] },
+            { text: 'Library, by the entrance.', imgs: [{ src: I + 'part-spectral-shield-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Times Square: outside the cafeteria, by the stairs down to the showers (next to the Auger DMR wall-buy).', imgs: [{ src: I + 'part-spectral-shield-1-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           ] },
           { w: 296, name: 'Metal door', icon: I + 'part-door.webp', area: 'Leaning on a wall', spots: [
-            'China Alley, by a repairable barrier.',
+            { text: 'China Alley, just outside the Citadel Tunnels exit: leaning on the wall by a repairable barrier.', imgs: [{ src: I + 'part-spectral-shield-2-1.webp', cap: 'Picture from PowerPyx\'s guide (the circle marks the spot)' }] },
             { text: 'Citadel Tunnels, by the doorway to the old elevator room.', imgs: [{ src: I + 'part-spectral-shield-2-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
             { text: 'Citadel Tunnels, a second spot further down.', imgs: [{ src: I + 'part-spectral-shield-2-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           ] },

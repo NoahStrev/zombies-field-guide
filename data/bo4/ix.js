@@ -61,8 +61,8 @@
             { text: 'Around the corner, just right of a pot between two pillars.', imgs: [{ src: I + 'part-brazen-bull-1-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           ] },
           { w: 0, name: 'Katar blade', icon: I + 'part-spear.webp', area: 'Zeus Tower', spots: [
-            'Zeus altar room: in the hand of the statue near the top of the stairs.',
-            { text: 'Zeus Tower entrance level: on the statue facing you at the bottom of the stairs.', imgs: [{ src: I + 'part-brazen-bull-2-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
+            { text: 'Zeus altar room (top floor, near the Zeus perk): on the floor at the feet of a statue.', imgs: [{ src: I + 'part-brazen-bull-2-1.webp', cap: 'Picture from PowerPyx\'s guide' }] },
+            { text: 'Zeus Tower entrance level: in the hand of the statue facing you at the bottom of the stairs.', imgs: [{ src: I + 'part-brazen-bull-2-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
             { text: 'Bath room (bottom floor, red blood bath): on the shelf/table with the portrait above it.', imgs: [{ src: I + 'part-brazen-bull-2-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           ] },
           { w: 98, name: 'Grille plate', icon: I + 'part-plate.webp', area: 'Odin Tower', spots: [
