@@ -504,6 +504,13 @@ def dump(args):
     print(f"{len(data)} maps -> {out} ({sum(map(len, data.values())) // 1000}k characters)")
 
 
+ARTIFACT_SKELETON = (
+    '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">'
+    '<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}'
+    'html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}'
+    'img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>')
+
+
 def build_artifact(args):
     # One artifact version holds at most 511 files. So the hosted copy ships every image folder's
     # pictures (all but hero.webp, which home and game pages show) as one pack script,
@@ -544,6 +551,9 @@ def build_artifact(args):
     page = re.sub(r'[ \t]*<script src="data/[^"]+\.js"></script>\n?', "", page)
     page = page.replace('<script src="js/app.js"></script>', '<script src="data/bundle.js"></script>\n  <script src="js/app.js"></script>')
     (out_dir / "zombies-field-guide.html").write_text(page, encoding="utf-8")
+    # The publishing tool serves index.html exactly as sent, so it gets its own document
+    # skeleton (doctype, UTF-8, viewport), the same one earlier versions were published with.
+    (out_dir / "index.html").write_text(ARTIFACT_SKELETON + "\n" + page.rstrip("\n") + "\n\n</body></html>", encoding="utf-8")
     missing = [s for s in data_srcs if not (ROOT / s).exists()]
     bundle = "\n".join(f"/* ---- {s} ---- */\n" + (ROOT / s).read_text(encoding="utf-8").rstrip() + "\n;" for s in data_srcs if (ROOT / s).exists())
     (out_dir / "data" / "bundle.js").write_text(bundle + "\n", encoding="utf-8")
@@ -573,7 +583,7 @@ def build_artifact(args):
             elif c.startswith("assets/img/") and c not in heroes:
                 drops[c] = None  # hero banner deleted
         sources = {k: v for k, v in sources.items() if k in changed}
-    out = {k: v.as_posix() for k, v in sources.items()}
+    out = {"index.html": (out_dir / "index.html").as_posix(), **{k: v.as_posix() for k, v in sources.items()}}
     out.update(drops)
     print(f"page: {(out_dir / 'zombies-field-guide.html').relative_to(ROOT)} | files: {len(out)} | data scripts bundled: {len(data_srcs)}"
           f" | picture packs: {len(packs)} | hero banners: {len(heroes)} | missing refs: {missing}")

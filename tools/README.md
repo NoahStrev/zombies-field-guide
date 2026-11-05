@@ -40,9 +40,9 @@ Every guide was checked step by step against the Call of Duty Wiki in October 20
 ## Publishing
 
 - **GitHub Pages:** bump the `?v=` numbers in `index.html`, commit and push to `main`.
-- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish. One publish takes at most 255 files, so publish only what changed. One version can hold at most 511 files, so the hosted copy packs things up:
+- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish (served path: local file), always including `index.html`, the page wrapped in its own document skeleton because the publishing tool serves it exactly as sent. One publish takes at most 255 files, so publish only what changed. One version can hold at most 511 files, so the hosted copy packs things up:
   - every map script goes into a single `data/bundle.js` (built in the same order as `index.html`);
   - every image folder's pictures, except `hero.webp`, go into one pack, `img/<game>-<folder>.js`, which the page loads when a map opens. Hero banners stay separate files because the home and game pages show them.
 
-  That's about 105 files in all. A new or changed picture republishes its folder's pack. To test the hosted copy before publishing, run `build-artifact --mirror` (it also copies css, js and banners into `tools/.cache/artifact/`), start the `artifact-mirror` preview (port 8081) and open `/zombies-field-guide.html`.
+  That's about 105 files in all. A new or changed picture republishes its folder's pack. To test the hosted copy before publishing, run `build-artifact --mirror` (it also copies css, js and banners into `tools/.cache/artifact/`), start the `artifact-mirror` preview (port 8081) and open `/index.html` (the unwrapped `zombies-field-guide.html` has no UTF-8 declaration, so its scripts fail to load locally).
 - **One copy per picture:** when a map reuses another map's picture (Revelations' Guard of Fafnir and Gorod Krovi's, for example), point at the original's path instead of saving a second copy.
