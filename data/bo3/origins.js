@@ -114,7 +114,7 @@
         summary: 'A flying drone with Maxis\'s brain that shoots zombies, grabs power-ups and revives you for about 90 seconds before recharging. Essential for the easter egg.',
         facts: [['Parts', '3'], ['Note (BO3)', 'You can carry the drone or Trip Mines, not both']],
         parts: [
-          { w: 47, name: 'Brain', icon: I + 'drone-brain.webp', area: 'Starting room', spots: [{ label: 'Fixed', text: 'On a table on the lower floor of the starting room, next to the stairs up to Generator 1.' }] },
+          { w: 47, name: 'Brain', icon: I + 'drone-brain.webp', area: 'Starting room', spots: [{ label: 'Fixed', text: 'On a table on the lower floor of the starting room, next to the stairs up to Generator 1.', imgs: [{ src: I + 'part-maxis-drone-1-1.webp', cap: 'Still from GregFPS\'s guide video' }] }] },
           { w: 67, name: 'Frame', icon: I + 'drone-frame.webp', area: 'Ice tunnel / tank path', spots: [
             { text: 'In the Ice tunnel near Generator 6, in front of the Crazy Place portal.', imgs: [{ src: I + 'part-maxis-drone-2-1.webp', cap: 'Still from SlickJoe\'s guide video' }] },
             'By the crossbones sign on the tank\'s muddy path toward Generator 4.',

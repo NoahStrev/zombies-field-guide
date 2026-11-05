@@ -94,21 +94,23 @@
         summary: 'Blocks hits from the front while you hold it and from behind while it is on your back. Its rocket burst throws you forward through zombies. Build it at any workbench.',
         facts: [['Parts', '3'], ['Recharge', 'Max Ammo, gas canisters or Harvest Pods'], ['Upgrade', 'Goddard Apparatus']],
         parts: [
-          { w: 26, name: 'Eagle Plate', icon: I + 'shield-eagle.webp', area: 'Canal District', spots: [
-            'Inside the Smoke Lounge, leaning against the window.',
-            'Inside the Smoke Lounge, against the wall opposite the window.',
-            { text: 'On the railing of the bridge just outside the Smoke Lounge.', imgs: [{ src: I + 'part-rocket-shield-1-3.webp', cap: 'Still from Resaliate\'s guide video' }] },
+          { w: 1, name: 'Eagle Plate', icon: I + 'shield-eagle.webp', area: 'Canal District, upstairs (Beast Mode opens the stairs)', spots: [
+            { text: 'In the room with the arched windows, leaning against a window across from the Perk-a-Cola machine.', imgs: [{ src: I + 'part-rocket-shield-1-1.webp', cap: 'Picture from zombies-web\'s guide' }] },
+            { text: 'In the room with the lion heads, in the corner between a lion head and the stairs.', imgs: [{ src: I + 'part-rocket-shield-1-2.webp', cap: 'Picture from zombies-web\'s guide' }] },
+            { text: 'On the railing of the bridge between those two rooms.', imgs: [{ src: I + 'part-rocket-shield-1-3.webp', cap: 'Still from Resaliate\'s guide video' }] },
           ] },
-          { w: 75, name: 'Fuel Canisters', icon: I + 'shield-fuel.webp', area: 'Waterfront District', spots: [
-            'Leaning against the window across from the Perk-a-Cola machine.',
+          { w: 29, name: 'Fuel Canisters', icon: I + 'shield-fuel.webp', area: 'Waterfront District, upstairs (Beast Mode opens the stairs)', spots: [
+            { text: 'Leaning against the window across from the Perk-a-Cola machine.', imgs: [{ src: I + 'part-rocket-shield-2-1.webp', cap: 'Picture from zombies-web\'s guide' }] },
             'Inside the lounge, left of the paid gate to the Waterfront train station, leaning on an overturned coffee table.',
+            { text: 'Outside at the top of the stairs: on the crates by the "Waterfront District" sign.', imgs: [{ src: I + 'part-rocket-shield-2-3.webp', cap: 'Picture from zombies-web\'s guide' }] },
           ] },
-          { w: 120, name: 'Window', icon: I + 'shield-screen.webp', area: 'Footlight District', spots: [
-            'Next to the Perk-a-Cola machine.',
-            'In the tunnel to the train station, on a bench on the left.',
+          { w: 14, name: 'Window', icon: I + 'shield-screen.webp', area: 'Footlight District, upstairs (Beast Mode opens the stairs)', spots: [
+            'On the railing left of the Perk-a-Cola machine.',
+            { text: 'Out on the terrace by the telephone booths: on the bench next to the red bar stools.', imgs: [{ src: I + 'part-rocket-shield-3-2.webp', cap: 'Still from Resaliate\'s guide video' }] },
+            { text: 'On the red couch near the Kuda wall-buy.', imgs: [{ src: I + 'part-rocket-shield-3-3.webp', cap: 'Still from Resaliate\'s guide video' }] },
           ] },
         ],
-        video: { id: '2nAu_0iOqQU', title: 'Shadows of Evil: How to Find the Shield Parts & Workbenches', ch: 'ChadderManHD', len: '3:53' },
+        video: { id: '03k_5s-KTNU', title: 'Shadows of Evil shield fast guide: all nine part spots', ch: 'Schleyerz', len: '0:49' },
         upgrade: {
           name: 'Goddard Apparatus', summary: 'Takes more hits and holds four charges instead of three.',
           steps: [

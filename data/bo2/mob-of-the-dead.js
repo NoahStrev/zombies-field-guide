@@ -86,7 +86,7 @@
           { w: 255, name: 'Cell door', area: 'Citadel tunnels / Building 64', spots: [
             { text: 'On the Citadel tunnel stairs (third wall on the left going down).', imgs: [{ src: I + 'part-zombie-shield-1-1.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
             'In the hallway towards the elevator, on the left through the doorway.',
-            'In the corner just outside Building 64.',
+            { text: 'In the corner just outside Building 64, leaning on the wall.', imgs: [{ src: I + 'part-zombie-shield-1-3.webp', cap: 'Picture from zombies-web\'s guide' }] },
           ] },
           { w: 264, name: 'Handle', area: 'Building 64 (generator room)', spots: [
             { text: 'On a shelf by the entrance (either side).', imgs: [{ src: I + 'part-zombie-shield-2-1.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
@@ -104,8 +104,8 @@
         parts: [
           { w: 325, name: 'Case', area: 'Cell block', spots: [
             { text: 'On a shelf outside the library, in the cell with the toilet.', imgs: [{ src: I + 'part-acid-gat-kit-1-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
-            'Under the stairs to the middle floor (warden\'s office side).',
-            'In the corner by the power box at the showers entrance.',
+            { text: 'Under the stairs to the middle floor (warden\'s office side).', imgs: [{ src: I + 'part-acid-gat-kit-1-2.webp', cap: 'Picture from zombies-web\'s guide' }] },
+            { text: 'On the floor near the Afterlife power box by the cafeteria.', imgs: [{ src: I + 'part-acid-gat-kit-1-3.webp', cap: 'Picture from zombies-web\'s guide' }] },
           ] },
           { w: 342, name: 'Acid vial', area: 'Infirmary', spots: [
             { text: 'In the infirmary hallway.', imgs: [{ src: I + 'part-acid-gat-kit-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
@@ -113,7 +113,7 @@
             { text: 'On a desk near the Mystery Box spot.', imgs: [{ src: I + 'part-acid-gat-kit-2-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           ] },
           { w: 352, name: 'Motor', area: 'Warden\'s office', spots: [
-            'Next to the administration desk / the cell with the plane part.',
+            { text: 'On the floor against the wall near the Uzi wall-buy (by the administration desk).', imgs: [{ src: I + 'part-acid-gat-kit-3-1.webp', cap: 'Picture from zombies-web\'s guide' }] },
             { text: 'In the corner next to the Mystery Box spot.', imgs: [{ src: I + 'part-acid-gat-kit-3-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
             { text: 'Next to the fireplace by Speed Cola.', imgs: [{ src: I + 'part-acid-gat-kit-3-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           ] },

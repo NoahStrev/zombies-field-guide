@@ -67,7 +67,7 @@
           ] },
           { w: 98, name: 'Grille plate', icon: I + 'part-plate.webp', area: 'Odin Tower', spots: [
             { text: 'Entrance level: in the shield rack in the bottom-left corner.', imgs: [{ src: I + 'part-brazen-bull-3-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
-            'Up the stairs (altar room): leaning against a barrel of spears.',
+            { text: 'Up the stairs (altar room): leaning against a barrel of spears.', imgs: [{ src: I + 'part-brazen-bull-3-2.webp', cap: 'Picture from zombies-web\'s guide' }] },
             { text: 'Cauldron room (bottom): resting against a wooden pillar, left of the shields on the wall.', imgs: [{ src: I + 'part-brazen-bull-3-3.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
           ] },
         ],
