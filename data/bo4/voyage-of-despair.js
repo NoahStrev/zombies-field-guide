@@ -87,12 +87,18 @@
         facts: [['Parts', '3'], ['Build at', 'Engine Room, just past Provisions (first stairs down, on the right)']],
         video: { id: '8fwpLxvHcdQ', title: 'All elemental Kraken upgrades guide', ch: 'MrRoflWaffles', len: '11:04' },
         parts: [
-          { w: 78, name: 'Part 1', area: 'Off the Upper Grand Staircase (door on the right after the stairs)', spots: ['On the sloped wooden table on the right side of the room.', 'On the left side of the same room.'] },
+          { w: 78, name: 'Part 1', area: '1st Class Lounge (off the Upper Grand Staircase: the door on the right after the stairs)', spots: [
+            { text: 'On the table by the window on the right, where a broken wooden door slopes up to it.', imgs: [{ src: I + 'part-distill-kit-1-1.webp', cap: 'Picture from Zombified\'s guide' }] },
+            { text: 'On the round table in the corner on the left side of the same room.', imgs: [{ src: I + 'part-distill-kit-1-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
+          ] },
           { w: 125, name: 'Tube', area: 'Galley (kitchen, down the stairs halfway to the Poop Deck)', spots: [
             { text: 'On the kitchen countertop.', imgs: [{ src: I + 'part-distill-kit-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             { text: 'Through the corridor on a set of shelves (looks like a funnel going into metal tubing).', imgs: [{ src: I + 'part-distill-kit-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
-          { w: 156, name: 'Coiled spring', area: 'Cargo Hold (underwater)', spots: ['Swim to the Pack-a-Punch pedestal, turn around: on the right side of the room.', 'A bit further back, on the wooden boxes under the water.'] },
+          { w: 156, name: 'Coiled spring', area: 'Cargo Hold (underwater)', spots: [
+            { text: 'Swim to the Pack-a-Punch pedestal, turn around: on the right side of the room, on boxes in the corner just past the old car.', imgs: [{ src: I + 'part-distill-kit-3-1.webp', cap: 'Picture from Zombified\'s guide (water drained)' }] },
+            'A bit further back, on the wooden boxes under the water where a light shines from the wall.',
+          ] },
         ],
         blocks: [
           { p: 'Build it at the table just past Provisions: go down the first stairs into the Engine Room and it\'s on your right (not the shield bench). Then:' },
@@ -214,11 +220,11 @@
           { text: 'Poop Deck: on the center rope.', imgs: [{ src: I + 'spot-free-perk-1.webp', cap: 'Poop Deck, still from MrDalekJD\'s guide video' }] },
           { text: 'Forecastle: below the white canopy.', imgs: [{ src: I + 'spot-free-perk-2.webp', cap: 'Forecastle, still from MrDalekJD\'s guide video' }] },
           { text: 'Mid Deck: right side of an exhaust pipe.', imgs: [{ src: I + 'spot-free-perk-3.webp', cap: 'Mid Deck, still from MrDalekJD\'s guide video' }] },
-          { text: 'Promenade Starboard Deck: below the catwalk.', imgs: [{ src: I + 'spot-free-perk-4.webp', cap: 'Promenade Starboard Deck, picture from Zombified\'s guide' }] },
+          { text: 'Promenade Starboard Deck: hanging under the floor grate just inside the Galley\'s right-hand door. Look down through the grate to shoot it; it drops into the Engine Room, in front of the Zeus perk.', imgs: [{ src: I + 'spot-free-perk-4.webp', cap: 'Promenade Starboard Deck, picture from Zombified\'s guide' }] },
           { text: 'Boiler Room: on top of the blue pipe right of the portal.', imgs: [{ src: I + 'spot-free-perk-5.webp', cap: 'Boiler Room, still from MrDalekJD\'s guide video' }] },
           { text: 'Aft Decks: on the ropes on the left side.', imgs: [{ src: I + 'spot-free-perk-6.webp', cap: 'Aft Decks, picture from Zombified\'s guide' }] },
         ],
-        blocks: [{ tip: 'A sniper scope makes the fish much easier to spot. Only one fish is out at a time; after you pick one up, the next appears elsewhere. In the Watch video the last fish turns up under the Galley floor grates instead of below the Promenade catwalk: enter the Galley by the right-hand door, look down, shoot it, then pick it up in front of the Zeus perk in the Engine Room.' }],
+        blocks: [{ tip: 'A sniper scope makes the fish much easier to spot. Only one fish is out at a time; after you pick one up, the next appears elsewhere. The grate fish is almost impossible to see from the Engine Room below, so shoot it from above.' }],
       },
       {
         id: 'specialist-sale', tab: 'side', type: 'Fire Sale', name: 'Piano sheets: specialist Fire Sale',

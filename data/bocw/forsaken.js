@@ -55,17 +55,11 @@
         facts: [['Parts', '3 + 3 crystal shards'], ['Build at', 'Workbench in Main Street, facing the collapsed walkway'], ['Unlocks', 'Two rounds after the cutscene']],
         video: EV,
         parts: [
-          { w: 199, name: 'Fuel tank', area: 'Fuel Processing', spots: ['Next to a teleporter, four tanks with control panels. Every player holds interact on a different tank at the same time (solo: any one). A lockdown starts: kill zombies nearby until all four fill with red liquid. The central tank then drops. If it doesn\'t start, try again next round.'] },
-          { w: 244, name: 'Housing unit (buoy)', area: 'Bunker, Board Room', spots: ['A buoy hangs in the top-right corner. Stand in that corner so an Abomination charges and slams into the wall, and let it bite you for a second: the buoy falls. Back up and retry if it doesn\'t.'] },
-          { w: 291, name: 'Monitoring device', area: 'Arcade, then TV store', spots: ['Shock a zombie with Dead Wire (an ammo mod from Pack-a-Punch, 2,000) next to the Grand Prix arcade machine, opposite the pinball machines. It turns on. Pay 2,000 for an RC car and drive it into the TV store behind the counter: its pulse knocks the vent cover off. Drive in and blow it up next to the shelf. The part is now in a hole in the TV store wall.'] },
+          { w: 199, name: 'Fuel tank', area: 'Fuel Processing', spots: [{ text: 'Next to a teleporter, four tanks with control panels. Every player holds interact on a different tank at the same time (solo: any one). A lockdown starts: kill zombies nearby until all four fill with red liquid. The central tank then drops. If it doesn\'t start, try again next round.', imgs: [{ src: I + 'fuel.webp', cap: 'A fuel tank control panel' }] }] },
+          { w: 244, name: 'Housing unit (buoy)', area: 'Bunker, Board Room', spots: [{ text: 'A buoy hangs in the top-right corner. Stand in that corner so an Abomination charges and slams into the wall, and let it bite you for a second: the buoy falls. Back up and retry if it doesn\'t.', imgs: [{ src: I + 'buoy.webp', cap: 'The buoy in the Board Room' }] }] },
+          { w: 291, name: 'Monitoring device', area: 'Arcade, then TV store', spots: [{ text: 'Shock a zombie with Dead Wire (an ammo mod from Pack-a-Punch, 2,000) next to the Grand Prix arcade machine, opposite the pinball machines. It turns on. Pay 2,000 for an RC car and drive it into the TV store behind the counter: its pulse knocks the vent cover off. Drive in and blow it up next to the shelf. The part is now in a hole in the TV store wall.', imgs: [{ src: I + 'grand-prix.webp', cap: 'The Grand Prix machine' }, { src: I + 'vent.webp', cap: 'The vent in the TV store' }] }] },
         ],
-        blocks: [{ imgs: [
-          { src: I + 'fuel.webp', cap: 'A fuel tank control panel' },
-          { src: I + 'buoy.webp', cap: 'The buoy in the Board Room' },
-          { src: I + 'grand-prix.webp', cap: 'The Grand Prix machine' },
-          { src: I + 'vent.webp', cap: 'The vent in the TV store' },
-          { src: I + 'bench.webp', cap: 'The Neutralizer workbench' },
-        ] }],
+        blocks: [{ imgs: [{ src: I + 'bench.webp', cap: 'The Neutralizer workbench' }] }],
       },
 
       /* ------------------------------ WEAPONS ------------------------------ */

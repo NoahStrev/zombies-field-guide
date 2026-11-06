@@ -260,7 +260,7 @@
             ['7664', 'SONG', '"I Am The Well"'],
             ['8333', 'TEDD', 'Wakes T.E.D.D. up in the Lounge'],
             ['5653 · 5433 · 5683 · 1841 · 8459 · 8368 · 9296', 'JOKE · LIFE · LOVE · QUIZ · UGLY · VENT · YAWN', 'Rushmore replies with a joke, a quiz or another line'],
-            ['0001–0003, 1001–1005', '', 'Rushmore reads out Broken Arrow\'s project files (backstory)'],
+            ['0001–0003, 1001–1005', '—', 'Rushmore reads out Broken Arrow\'s project files (backstory)'],
           ] } },
         ],
       },

@@ -79,19 +79,21 @@
         facts: [['Parts', '3'], ['Build at', 'Back of the Marketplace']],
         video: { id: U, title: 'Ultimate guide to Ancient Evil', ch: 'MrDalekJD', len: '37:23' },
         parts: [
-          { w: 536, name: 'Handle (strap)', icon: I + 'part-strap.webp', area: 'Upper Road', spots: ['On a rock before the bridge.', 'On a rock under the bridge.', 'On a rock after the bridge.'] },
+          { w: 536, name: 'Handle (strap)', icon: I + 'part-strap.webp', area: 'Upper Road', spots: [
+            'On a rock before the bridge.',
+            { text: 'On a rock under the bridge.', imgs: [{ src: I + 'handle-under.webp', cap: 'Handle under the bridge' }] },
+            { text: 'On a rock after the bridge.', imgs: [{ src: I + 'handle-after.webp', cap: 'Handle after the bridge' }] },
+          ] },
           { w: 521, name: 'Spear', icon: I + 'part-spear.webp', area: 'Intersection of Treasuries / Stoa of the Athenians', spots: [
             { text: 'Intersection of Treasuries: against a statue.', imgs: [{ src: I + 'part-apollos-will-2-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
-            { text: 'Intersection of Treasuries: stuck in a low wall.', imgs: [{ src: I + 'part-apollos-will-2-2.webp', cap: 'Picture from Zombified\'s guide' }] },
-            { text: 'Stoa of the Athenians: against a pillar.', imgs: [{ src: I + 'part-apollos-will-2-3.webp', cap: 'Picture from Zombified\'s guide' }] },
+            { text: 'Intersection of Treasuries: stuck in a low wall.', imgs: [{ src: I + 'spear-wall.webp', cap: 'Spear in the low wall' }, { src: I + 'part-apollos-will-2-2.webp', cap: 'Picture from Zombified\'s guide' }] },
+            { text: 'Stoa of the Athenians: against a pillar.', imgs: [{ src: I + 'spear-pillar.webp', cap: 'Spear against the pillar' }, { src: I + 'part-apollos-will-2-3.webp', cap: 'Picture from Zombified\'s guide' }] },
           ] },
-          { w: 504, name: 'Shield (cover)', icon: I + 'part-cover.webp', area: 'Gegenees drop', spots: ['Dropped by the six-armed giant that spawns when you take the Golden Bridle.'] },
+          { w: 504, name: 'Shield (cover)', icon: I + 'part-cover.webp', area: 'Gegenees drop', spots: [
+            { text: 'Dropped by the six-armed giant that spawns when you take the Golden Bridle.', imgs: [{ src: I + 'shield-part.webp', cap: 'Shield part from the Gegenees' }] },
+          ] },
         ],
-        blocks: [{ imgs: [
-          { src: I + 'handle-under.webp', cap: 'Handle under the bridge' }, { src: I + 'handle-after.webp', cap: 'Handle after the bridge' },
-          { src: I + 'spear-wall.webp', cap: 'Spear in the low wall' }, { src: I + 'spear-pillar.webp', cap: 'Spear against the pillar' },
-          { src: I + 'shield-part.webp', cap: 'Shield part from the Gegenees' }, { src: I + 'workbench.webp', cap: 'The Marketplace workbench' },
-        ] }],
+        blocks: [{ imgs: [{ src: I + 'workbench.webp', cap: 'The Marketplace workbench' }] }],
       },
       {
         id: 'pegasus-strike', tab: 'parts', type: 'Buildable · Tactical', name: 'Pegasus Strike', img: I + 'pegasus-strike.webp', color: 'lightning',
@@ -99,7 +101,11 @@
         facts: [['Parts', '3'], ['Build at', 'The forge in the Cliff Ruins']],
         video: { id: U, title: 'Ultimate guide to Ancient Evil', ch: 'MrDalekJD', len: '37:23' },
         parts: [
-          { w: 723, name: 'Anvil', area: 'Cliff Ruins', spots: ['Against a column near the Mystery Box spot.', 'On a rock between the box spot and the forge.', 'On a rock across from the bird cage.'] },
+          { w: 723, name: 'Anvil', area: 'Cliff Ruins', spots: [
+            { text: 'Against a column near the Mystery Box spot.', imgs: [{ src: I + 'part-pegasus-strike-1-1.webp', cap: 'Picture from Gameranx\'s guide' }] },
+            'On a rock between the box spot and the forge.',
+            'On a rock across from the bird cage.',
+          ] },
           { w: 689, name: 'Hammer', area: 'Python Pass', spots: ['In the middle of Python Pass, in sight of the Titan wall-buy.', 'Against an exposed rib next to the Mystery Box spot.', 'Against a small wall across the room from the box spot, on the left.'] },
           { w: 673, name: 'Tongs (prongs)', area: 'River of Sorrow', spots: ['Right of the door with symbols.', 'In a fire on the way to Python Pass (on top of a burning torch).', 'In a skeleton\'s skull leaning against a wall.'] },
         ],

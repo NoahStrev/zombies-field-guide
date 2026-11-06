@@ -69,9 +69,9 @@
         facts: [['Parts', '3'], ['Build at', 'Smoking Room bench (next to the Billiards Room)']],
         video: { id: 'm6LRjVyZNu4', title: 'Dead of the Night: how to build the shield', ch: 'MrRoflWaffles', len: '2:20' },
         parts: [
-          { w: 0, name: 'Part 1', area: 'Balconies', spots: [
-            'East Balcony, against a pillar (near the Sentinel Artifact).',
-            'Through the Music Room, next to the Saug wall-buy.',
+          { w: 0, name: 'Part 1', area: 'Grand Staircase & balconies', spots: [
+            { text: 'Grand Staircase, by the Sentinel Artifact: leaning against a pillar.', imgs: [{ src: I + 'part-ballistic-shield-1-1.webp', cap: 'Picture from Gameranx\'s guide' }] },
+            'East Balcony, next to the Saug wall-buy (by the Music Room).',
             { text: 'West Balcony (through the Tea Room).', imgs: [{ src: I + 'part-ballistic-shield-1-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 30, name: 'Part 2', area: 'Library & Study', spots: [
@@ -81,8 +81,8 @@
           ] },
           { w: 47, name: 'Part 3', area: 'East Hallway & Dining Room', spots: [
             { text: 'On or next to a chair in the East Hallway.', imgs: [{ src: I + 'part-ballistic-shield-3-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
-            'On the counter just ahead, entering the Dining Room.',
-            'Next to a marble pillar in the main Dining Room.',
+            { text: 'On the counter just ahead, entering the Dining Room.', imgs: [{ src: I + 'part-ballistic-shield-3-2.webp', cap: 'Picture from zombies-web\'s guide' }] },
+            { text: 'Next to a marble pillar in the main Dining Room.', imgs: [{ src: I + 'part-ballistic-shield-3-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
         ],
       },

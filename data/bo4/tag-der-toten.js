@@ -91,8 +91,16 @@
             { text: 'On the boat next to the power switch.', imgs: [{ src: I + 'part-riot-shield-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
             'On the other side of the docks, by the gas pump.',
           ] },
-          { w: 111, name: 'Part 2', area: 'Lagoon (the parkour route from spawn)', spots: ['Up on the rocks on the parkour path.', 'Over past the Mystery Box spot, perched up high.', 'Down in the grassy area.'] },
-          { w: 172, name: 'Part 3', area: 'Lighthouse', spots: ['On the outside wall by the lighthouse.', 'Lighthouse Level 2, perched on a ledge.', 'One more flight up, on the side.'] },
+          { w: 111, name: 'Part 2', area: 'Frozen Crevasse & Lagoon (the parkour route from spawn)', spots: [
+            { text: 'Frozen Crevasse: up on the icy rocks along the parkour path, next to a glowing blue rock.', imgs: [{ src: I + 'part-riot-shield-2-1.webp', cap: 'Picture from Gameranx\'s guide' }] },
+            'Over past the Mystery Box spot, perched up high.',
+            'Down in the grassy area of the Lagoon.',
+          ] },
+          { w: 172, name: 'Part 3', area: 'Lighthouse', spots: [
+            'On the outside wall by the lighthouse.',
+            { text: 'Lighthouse Level 2: against the wall by the coiled cables and a wooden pallet.', imgs: [{ src: I + 'part-riot-shield-3-2.webp', cap: 'Picture from Gameranx\'s guide' }] },
+            'One more flight up, on the side.',
+          ] },
         ],
       },
       {
