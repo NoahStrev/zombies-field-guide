@@ -65,9 +65,9 @@
         video: { id: 'RONClLk2yx8', title: 'Beauty of Annihilation: the three jars', ch: 'Doughnuts', len: '1:12', t: 12 },
         summary: 'Hold interact on three glowing green jars with spines in them.',
         spots: [
-          'Animal Testing Lab, at the bottom of the stairs: on a table.',
-          'Animal Testing Lab, at the bottom of the stairs: on top of a tall shelf.',
-          'Near Teleporter B: on the back table of a small side room.',
+          { text: 'Animal Testing Lab, at the bottom of the stairs: on a table.', imgs: [{ src: I + 'spot-song-beauty-1.webp', cap: 'Picture from mmmrkennedy\'s guide (original Der Riese)' }] },
+          { text: 'Animal Testing Lab, at the bottom of the stairs: on top of a tall shelf.', imgs: [{ src: I + 'spot-song-beauty-2.webp', cap: 'Picture from mmmrkennedy\'s guide (original Der Riese)' }] },
+          { text: 'Near Teleporter B: on the back table of a small side room.', imgs: [{ src: I + 'spot-song-beauty-3.webp', cap: 'Picture from mmmrkennedy\'s guide (original Der Riese)' }] },
         ],
       },
       {

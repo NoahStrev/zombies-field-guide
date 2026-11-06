@@ -220,7 +220,7 @@
         summary: '"Rusty Cage": interact with three bottles. "Where Are We Going": in Afterlife, enter 935 on the number pad at the bottom of the spiral staircase once it\'s unlocked.',
         spots: [
           { text: 'On a bookshelf in the library (spawn).', imgs: [{ src: I + 'spot-songs-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
-          'On a cart in the infirmary, by the blood baths.',
+          { text: 'On a cart in the infirmary, by the blood baths.', imgs: [{ src: I + 'spot-songs-2.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
           { text: 'At the docks, tucked between a crate and a fence.', imgs: [{ src: I + 'spot-songs-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
       },

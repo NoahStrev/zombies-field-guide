@@ -149,14 +149,14 @@
         steps: [
           { w: 2, t: 'Shoot the weathervane to get the broken arrow', needs: ['bow'], d: 'On the Bastion, face the Clock Tower. A small tower with a lightning symbol has a weathervane on top. Shoot it; the bricks crumble and the broken arrow drops.', imgs: [{ src: I + 'storm-arrow.webp', cap: 'Picking up the broken Storm arrow' }] },
           { w: 22, anyList: 'Bonfires in any order', t: 'Light three bonfires out of bounds', d: 'Shoot each with the bow until it catches fire.', spots: [
-            { label: 'Fire 1', text: 'Leave the Clock Tower toward the computer terminal and look over the wall to the right: a turret in the distance. You can also shoot it from the Mule Kick room below.' },
-            { label: 'Fire 2', text: 'Stand at the outdoor KRM-262 wall-buy by Double Tap, turn about 45° right and look at the far right edge of the ridge above the rocket test site.' },
+            { label: 'Fire 1', text: 'Leave the Clock Tower toward the computer terminal and look over the wall to the right: a turret in the distance. You can also shoot it from the Mule Kick room below.', imgs: [{ src: I + 'step-storm-bow-2-1.webp', cap: 'Fire 1, picture from mmmrkennedy\'s guide' }] },
+            { label: 'Fire 2', text: 'Stand at the outdoor KRM-262 wall-buy by Double Tap, turn about 45° right and look at the far right edge of the ridge above the rocket test site.', imgs: [{ src: I + 'step-storm-bow-2-2.webp', cap: 'Fire 2, picture from mmmrkennedy\'s guide' }] },
             { label: 'Fire 3', text: 'At the Rocket Launch Pad, coming out of the teleporter tunnel: high up on the cliff on your right, looking back at the castle.', imgs: [{ src: I + 'step-storm-bow-2-3.webp', cap: 'Fire 3, picture from Zombified\'s guide' }] },
           ] },
           { w: 61, t: 'Wall-run across the five wind symbols', needs: ['anti-gravity'], d: 'In the Undercroft, five long hexagon-shaped wind etchings sit on the walls. During Anti-Gravity, run across all five in one go without touching the ground.', tip: 'Different sounds play when you touch a panel, finish, or fail. If you start right as Anti-Gravity begins, you usually have time for a second try.' },
           { w: 124, anyList: 'Urns in any order', t: 'Fill three lightning urns with 5 kills each', d: 'The urns spark with lightning now.', spots: [
-            { label: 'Urn 1', text: 'The room above Double Tap, between the workbench and the L-CAR 9 wall-buy.' },
-            { label: 'Urn 2', text: 'Rocket Launch Pad tunnel, against the wall across from the teleporter.' },
+            { label: 'Urn 1', text: 'The room above Double Tap, between the workbench and the L-CAR 9 wall-buy.', imgs: [{ src: I + 'step-storm-bow-4-1.webp', cap: 'Urn 1, picture from mmmrkennedy\'s guide' }] },
+            { label: 'Urn 2', text: 'Rocket Launch Pad tunnel, against the wall across from the teleporter.', imgs: [{ src: I + 'step-storm-bow-4-2.webp', cap: 'Urn 2, picture from mmmrkennedy\'s guide' }] },
             { label: 'Urn 3', text: 'Ground floor of the Clock Tower, on crates under the spiral stairs.', imgs: [{ src: I + 'step-storm-bow-4-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
           ] },
           { w: 186, anyList: 'Bonfires in any order', t: 'Shoot each bonfire with a charged-up arrow', d: 'Draw the bow next to a full urn and the arrow starts sparking. Shoot a bonfire with it; lightning circles the flames when it works. Missed? Walk back to an urn and try again.' },
@@ -174,9 +174,9 @@
           { w: 2, t: 'Shoot the red symbol at the top of the Clock Tower', needs: ['bow'], d: 'Climb the spiral stairs inside the Clock Tower (Radio Room). Shoot the glowing red symbol on the wall: the clock face opens and the broken arrow pieces drop in a pile.' },
           { w: 17, t: 'Shoot the hot rock after a Rocket Test', d: 'At the Rocket Launch Pad, go through the blast doors. On the right is a small building with the VMP wall-buy and a dark rock on top. When a Rocket Test finishes, run out and shoot the rock while it glows orange. A fireball flies off toward the castle.', tip: 'Spot: from the middle of the blast doors walk straight ahead until you have fully crossed the tracks running sideways (don\'t stand on them), turn right 90° and aim at the orange glow in the upper-left of the rock. Rocket Tests happen every 5–7 minutes.' },
           { w: 97, anyList: 'Rings in any order', t: 'Set three rings on fire from a Wundersphere', needs: ['wundersphere'], d: 'Each ring must be hit while you are flying. A demonic wail plays and the ring stays on fire.', tip: 'Hold a charged shot as you buy the launch — uncharged arrows are too slow.', spots: [
-            { label: 'Ring 1', text: 'By spawn, between the KRM-262 wall-buy and Double Tap. Launch from the Bastion or the Rocket Launch Pad.' },
-            { label: 'Ring 2', text: 'On the Bastion between the Death Ray and the Wundersphere next to it. Launch from the Upper Courtyard (by the Kuda wall-buy).' },
-            { label: 'Ring 3', text: 'Outside the Clock Tower on the way to the Bastion. Launch from the Lower Courtyard sphere above Double Tap.' },
+            { label: 'Ring 1', text: 'By spawn, between the KRM-262 wall-buy and Double Tap. Launch from the Bastion or the Rocket Launch Pad.', imgs: [{ src: I + 'step-fire-bow-3-1.webp', cap: 'Ring 1, picture from mmmrkennedy\'s guide' }] },
+            { label: 'Ring 2', text: 'On the Bastion between the Death Ray and the Wundersphere next to it. Launch from the Upper Courtyard (by the Kuda wall-buy).', imgs: [{ src: I + 'step-fire-bow-3-2.webp', cap: 'Ring 2, picture from mmmrkennedy\'s guide' }] },
+            { label: 'Ring 3', text: 'Outside the Clock Tower on the way to the Bastion. Launch from the Lower Courtyard sphere above Double Tap.', imgs: [{ src: I + 'step-fire-bow-3-3.webp', cap: 'Ring 3, picture from mmmrkennedy\'s guide' }] },
           ] },
           { w: 192, anyList: 'Rings in any order', t: 'Kill zombies while standing in each ring', d: 'The screen edges turn orange while you are inside. Only you need to be in the ring, not the zombies. Each ring sends a fire pillar to the fireball over the Bastion when it is full.' },
           { w: 224, t: 'Read the fireplace symbol at the Clock Tower', d: 'Back at the top of the Clock Tower, interact with the exposed clockwork. A symbol appears that points to one of three fireplaces, and the matching ring is now the only one still burning.', list: [
@@ -198,7 +198,7 @@
           { w: 15, t: 'Shoot the Demon Gate glyph in the Gate Trap room', needs: ['bow'], d: 'Next to Double Tap, on the slanted ceiling between the two iron gates of the trap. The brickwork breaks and the broken arrow falls.' },
           { w: 31, t: 'Release the urn in the Trophy Room', d: 'A floor tile in the middle of the Trophy Room glows purple. Kill a zombie on it with your knife: the tile breaks and reveals an urn. Interact so it rises and forms a summoning circle.' },
           { w: 63, anyList: 'Skulls in any order', t: 'Return the six Keeper skulls', d: 'Interact with each; it glows purple and flies back to the circle.', spots: [
-            { label: 'Skull 1', text: 'A few steps past the L-CAR 9 wall-buy going up from spawn, before the round room with Mule Kick. In a floor nook left of the slumped corpse, under a lantern.' },
+            { label: 'Skull 1', text: 'A few steps past the L-CAR 9 wall-buy going up from spawn, before the round room with Mule Kick. In a floor nook left of the slumped corpse, under a lantern.', imgs: [{ src: I + 'step-void-bow-3-1.webp', cap: 'Skull 1, picture from mmmrkennedy\'s guide' }] },
             { label: 'Skull 2', text: 'Upper Courtyard, on a windowsill up the stairs past the Vesper wall-buy, before the Church entrance.', imgs: [{ src: I + 'step-void-bow-3-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             { label: 'Skull 3', text: 'Samantha\'s Room, in the open toy chest against the left wall near the bed.', imgs: [{ src: I + 'step-void-bow-3-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             { label: 'Skull 4', text: 'By Double Tap, on the broken wall right of the tipped-over shelves.', imgs: [{ src: I + 'step-void-bow-3-4.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
@@ -313,7 +313,7 @@
         summary: 'Hold interact on three teddy bears.',
         spots: [
           { text: 'Samantha\'s Room, sitting on a chair.', imgs: [{ src: I + 'spot-song-dead-again-1.webp', cap: 'Still from Jedi98\'s guide video' }] },
-          'In the cell opposite the Juggernog cell, sitting on a crate.',
+          { text: 'In the cell opposite the Juggernog cell, sitting on a crate.', imgs: [{ src: I + 'spot-song-dead-again-2.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
           { text: 'Right of the rocket launch pad (looking from the blast doors), in the passenger seat of a truck.', imgs: [{ src: I + 'spot-song-dead-again-3.webp', cap: 'Picture from Zombified\'s guide' }, { src: I + 'spot-song-dead-again-3b.webp', cap: 'Picture from Zombified\'s guide' }] },
         ],
       },

@@ -138,9 +138,9 @@
         summary: 'Put each record on its gramophone and, while the music plays, kill five zombies the way it asks. Each trial gives a Mystery Perk plus Essence and Salvage.',
         video: SE(288),
         steps: [
-          { w: 298, t: 'Melee kills', d: 'Gramophone on a cabinet across from Speed Cola in Museum Infinitum. Its record is on a pillar left of a painting, left of the Crafting Table.' },
-          { w: 325, t: 'Field upgrade kills', d: 'Gramophone in the Luminarium room with the Energy Rock case, in the corner between two sofas. Its record is on a bookshelf left of the grandfather clock.' },
-          { w: 357, t: 'Equipment kills', d: 'Gramophone on a table right of Stamin-Up in the Archive of Orbis. Its record is in a wooden box in Machina Astralis, above the armour wall-buy left of the grandfather clock.' },
+          { w: 298, t: 'Melee kills', d: 'Gramophone on a cabinet across from Speed Cola in Museum Infinitum. Its record is on a pillar left of a painting, left of the Crafting Table.', imgs: [{ src: I + 'step-gramophones-1.webp', cap: 'Gramophone, picture from mmmrkennedy\'s guide' }, { src: I + 'step-gramophones-1b.webp', cap: 'Record, picture from mmmrkennedy\'s guide' }] },
+          { w: 325, t: 'Field upgrade kills', d: 'Gramophone in the Luminarium room with the Energy Rock case, in the corner between two sofas. Its record is on a bookshelf left of the grandfather clock.', imgs: [{ src: I + 'step-gramophones-2.webp', cap: 'Gramophone, picture from mmmrkennedy\'s guide' }, { src: I + 'step-gramophones-2b.webp', cap: 'Record, picture from mmmrkennedy\'s guide' }] },
+          { w: 357, t: 'Equipment kills', d: 'Gramophone on a table right of Stamin-Up in the Archive of Orbis. Its record is in a wooden box in Machina Astralis, above the armour wall-buy left of the grandfather clock.', imgs: [{ src: I + 'step-gramophones-3.webp', cap: 'Gramophone, picture from mmmrkennedy\'s guide' }, { src: I + 'step-gramophones-3b.webp', cap: 'Record, picture from mmmrkennedy\'s guide' }] },
         ],
       },
       {
@@ -175,7 +175,7 @@
         summary: 'A few extra tracks besides "Magic".',
         video: SE(758),
         spots: [
-          'Alpha Omega\'s game-over music: take three records to the gramophone in the Luminarium (a wooden box on the middle floor of Machina Astralis, the top of a Luminarium bookshelf, a ledge above a zombie window in the museum).',
+          { text: 'Alpha Omega\'s game-over music: take three records to the gramophone in the Luminarium (a wooden box on the middle floor of Machina Astralis, the top of a Luminarium bookshelf, a ledge above a zombie window in the museum).', imgs: [{ src: I + 'step-gramophones-3b.webp', cap: 'Record in Machina Astralis, picture from mmmrkennedy\'s guide' }, { src: I + 'step-gramophones-2b.webp', cap: 'Record in the Luminarium, picture from mmmrkennedy\'s guide' }, { src: I + 'step-gramophones-1b.webp', cap: 'Record in Museum Infinitum, picture from mmmrkennedy\'s guide' }] },
           'Pareidolia remix: wall-jump off the left side of the floating rock by Wisp Tea and drift through space.',
           'The original Pareidolia: aim at the giant statue head on Mars for a few seconds.',
           '"Once In A Blown Up Moon": from round 16, aim at the floating rocket in front of Saturn for a while.',
@@ -194,7 +194,7 @@
           { text: 'Max Armor: in a rock on the left of Stargazer\'s Courtyard as you come from the Observatory Dome.', imgs: [{ src: I + 'spot-powerups-6.webp', cap: 'Max Armor, still from MrDalekJD\'s guide video' }] },
           { text: 'Nuke: right of the balcony at the top of Machina Astralis, seen from the Veilwalk.', imgs: [{ src: I + 'spot-powerups-7.webp', cap: 'Nuke, still from MrDalekJD\'s guide video' }] },
           { text: 'Fire Sale: in a zombie window in Museum Infinitum, on the left coming from Stargazer\'s Courtyard.', imgs: [{ src: I + 'spot-powerups-8.webp', cap: 'Fire Sale, still from MrDalekJD\'s guide video' }] },
-          'Random Perk: next to the ball on the right stair pillar, looking at the Luminarium from the Abyssal Rim.',
+          { text: 'Random Perk: next to the ball on the right stair pillar, looking at the Luminarium from the Abyssal Rim.', imgs: [{ src: I + 'spot-powerups-9.webp', cap: 'Random Perk, picture from mmmrkennedy\'s guide' }] },
         ],
       },
     ],

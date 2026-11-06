@@ -174,7 +174,7 @@
         spots: [
           { text: 'In spawn, on a barrel near the boat that leads to the lighthouse.', imgs: [{ src: I + 'spot-song-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           { text: 'On the ship, in the diner.', imgs: [{ src: I + 'spot-song-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
-          'In the PhD Flopper room, under a small table.',
+          { text: 'In the PhD Flopper room, under a small table.', imgs: [{ src: I + 'spot-song-3.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
         ],
       },
     ],

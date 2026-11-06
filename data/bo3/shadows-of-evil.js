@@ -261,9 +261,9 @@
         id: 'song-cold-hard-cash', tab: 'side', type: 'Song', name: '"Cold Hard Cash"',
         summary: 'Collect three microphone parts, then interact with the stage of the Black Lace in Footlight.',
         spots: [
-          { label: 'Wire', text: 'Under the stairs from the Ruby Rabbit down into the canals, opposite the power box behind the Beast-only wall.' },
+          { label: 'Wire', text: 'Under the stairs from the Ruby Rabbit down into the canals, opposite the power box behind the Beast-only wall.', imgs: [{ src: I + 'spot-song-cold-hard-cash-1.webp', cap: 'Wire, picture from mmmrkennedy\'s guide' }] },
           { label: 'Stand', text: 'Nero\'s lair, to the left of a bloody knife-throwing target.', imgs: [{ src: I + 'spot-song-cold-hard-cash-2.webp', cap: 'Stand, still from JokerAlex 21\'s guide video' }] },
-          { label: 'Mic', text: 'In the Rift by a trash can, near the portal to the Waterfront.' },
+          { label: 'Mic', text: 'In the Rift by a trash can, near the portal to the Waterfront.', imgs: [{ src: I + 'spot-song-cold-hard-cash-3.webp', cap: 'Mic, picture from mmmrkennedy\'s guide' }] },
         ],
         video: { id: 'CxjCh4f-WWE', title: 'Secret song in Shadows of Evil (Cold Hard Cash)', ch: 'MrRoflWaffles', len: '5:40' },
       },

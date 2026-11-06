@@ -87,7 +87,7 @@
         video: { id: 'XUBitFJNSpM', title: 'Abracadavre: the three teddy bears', ch: 'JokerAlex 21', len: '7:30' },
         summary: 'Hold interact on three teddy bears holding sickles.',
         spots: [
-          'Centrifuge room: go up the stairs, turn right — at the end of the walkway.',
+          { text: 'Centrifuge room: go up the stairs, turn right — at the end of the walkway.', imgs: [{ src: I + 'spot-song-abracadavre-1.webp', cap: 'Picture from mmmrkennedy\'s guide (original Black Ops version)' }] },
           { text: 'By the lunar lander nearest Stamin-Up there\'s a gate: under the red star.', imgs: [{ src: I + 'spot-song-abracadavre-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           { text: 'Near the lunar lander past Speed Cola, sitting on top of a wall.', imgs: [{ src: I + 'spot-song-abracadavre-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
