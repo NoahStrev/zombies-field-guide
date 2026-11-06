@@ -58,7 +58,10 @@
         facts: [['Parts', '4'], ['Build at', 'The table two floors down from spawn']],
         video: EV,
         parts: [
-          { w: 436, name: 'Chicken wire', area: 'Spawn building', spots: ['Left of the dragon statue in spawn.', 'Through the first door out of spawn, against the wall on the left.'] },
+          { w: 436, name: 'Chicken wire', area: 'Spawn building', spots: [
+            { text: 'Left of the dragon statue in spawn.', imgs: [{ src: I + 'part-trample-steam-1-1.webp', cap: 'Still from GregFPS\'s guide video' }] },
+            { text: 'Through the first door out of spawn, against the wall on the left.', imgs: [{ src: I + 'part-trample-steam-1-2.webp', cap: 'Still from GregFPS\'s guide video' }] },
+          ] },
           { w: 451, name: 'Motor', area: 'Spawn building', spots: [
             { text: 'On the lobby desk.', imgs: [{ src: I + 'part-trample-steam-2-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
             { text: 'Out of the first spawn door, left then right: in the corner before the drop.', imgs: [{ src: I + 'part-trample-steam-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
@@ -79,9 +82,9 @@
         facts: [['Parts', '4 (fixed spots)'], ['Build at', 'Under the staircase up to the pylon']],
         video: EV,
         parts: [
-          { w: 62, name: 'Radio', area: 'Roof', spots: ['In the corner near the crashed water tower.'] },
-          { w: 79, name: 'Board', area: 'Roof', spots: ['Directly opposite where the table is built, under the ramp.'] },
-          { w: 85, name: 'Meteor', area: 'Roof', spots: ['In a pile of debris across from the Claymores.'] },
+          { w: 62, name: 'Radio', area: 'Roof', spots: [{ text: 'In the corner near the crashed water tower.', imgs: [{ src: I + 'part-nav-table-1-1.webp', cap: 'Still from Hes Rips\'s guide video' }] }] },
+          { w: 79, name: 'Board', area: 'Roof', spots: [{ text: 'Directly opposite where the table is built, under the ramp.', imgs: [{ src: I + 'part-nav-table-2-1.webp', cap: 'Still from Hes Rips\'s guide video' }] }] },
+          { w: 85, name: 'Meteor', area: 'Roof', spots: [{ text: 'In a pile of debris across from the Claymores.', imgs: [{ src: I + 'part-nav-table-3-1.webp', cap: 'Still from Hes Rips\'s guide video' }] }] },
           { w: 95, name: 'Power box', area: 'Dead Man\'s Corner', spots: ['Up the pylon stairs, go right past the Semtex wall-buy and drop down: in the corner.'] },
         ],
       },
@@ -95,7 +98,7 @@
         parts: [
           { w: 312, name: 'Mannequin foot', area: 'Next to the power room', spots: ['Always in the side room to the right of the power room.'] },
           { w: 328, name: 'Handbrake', area: 'Power room or kitchen', spots: [
-            'On the table right of the power switch, opposite the sewing machine.',
+            { text: 'On the table right of the power switch, opposite the sewing machine.', imgs: [{ src: I + 'part-sliquifier-2-1.webp', cap: 'Still from Knux Pro\'s guide video' }] },
             { text: 'In the kitchen to the left of the build room.', imgs: [{ src: I + 'part-sliquifier-2-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           ] },
           { w: 349, name: 'Air tank', area: 'Build room or power room', spots: [

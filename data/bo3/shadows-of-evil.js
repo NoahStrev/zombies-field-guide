@@ -105,7 +105,7 @@
             { text: 'Outside at the top of the stairs: on the crates by the "Waterfront District" sign.', imgs: [{ src: I + 'part-rocket-shield-2-3.webp', cap: 'Picture from zombies-web\'s guide' }] },
           ] },
           { w: 14, name: 'Window', icon: I + 'shield-screen.webp', area: 'Footlight District, upstairs (Beast Mode opens the stairs)', spots: [
-            'On the railing left of the Perk-a-Cola machine.',
+            { text: 'On the railing left of the Perk-a-Cola machine.', imgs: [{ src: I + 'part-rocket-shield-3-1.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
             { text: 'Out on the terrace by the telephone booths: on the bench next to the red bar stools.', imgs: [{ src: I + 'part-rocket-shield-3-2.webp', cap: 'Still from Resaliate\'s guide video' }] },
             { text: 'On the red couch near the Kuda wall-buy.', imgs: [{ src: I + 'part-rocket-shield-3-3.webp', cap: 'Still from Resaliate\'s guide video' }] },
           ] },

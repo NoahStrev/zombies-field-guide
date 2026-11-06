@@ -85,7 +85,7 @@
         parts: [
           { w: 255, name: 'Cell door', area: 'Citadel tunnels / Building 64', spots: [
             { text: 'On the Citadel tunnel stairs (third wall on the left going down).', imgs: [{ src: I + 'part-zombie-shield-1-1.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
-            'In the hallway towards the elevator, on the left through the doorway.',
+            { text: 'In the hallway towards the elevator, on the left through the doorway.', imgs: [{ src: I + 'part-zombie-shield-1-2.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
             { text: 'In the corner just outside Building 64, leaning on the wall.', imgs: [{ src: I + 'part-zombie-shield-1-3.webp', cap: 'Picture from zombies-web\'s guide' }] },
           ] },
           { w: 264, name: 'Handle', area: 'Building 64 (generator room)', spots: [
@@ -93,7 +93,11 @@
             { text: 'In a corner of the room.', imgs: [{ src: I + 'part-zombie-shield-2-2.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
             { text: 'Next to one of the generators.', imgs: [{ src: I + 'part-zombie-shield-2-3.webp', cap: 'Still from Alejandro Sears\'s guide video' }] },
           ] },
-          { w: 280, name: 'Dolly', area: 'The docks', spots: ['Near the crane.', 'Among the cargo.', 'Beneath the tower trap.'] },
+          { w: 280, name: 'Dolly', area: 'The docks', spots: [
+            { text: 'Near the crane, beside a big tarp-covered crate by the wire fence.', imgs: [{ src: I + 'part-zombie-shield-3-1.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
+            { text: 'Among the cargo further toward the watchtower, by a wooden crate and a pallet.', imgs: [{ src: I + 'part-zombie-shield-3-2.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
+            { text: 'Beneath the tower trap, between a crate and some barrels.', imgs: [{ src: I + 'part-zombie-shield-3-3.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
+          ] },
         ],
       },
       {

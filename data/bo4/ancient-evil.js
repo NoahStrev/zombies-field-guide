@@ -103,10 +103,14 @@
         parts: [
           { w: 723, name: 'Anvil', area: 'Cliff Ruins', spots: [
             { text: 'Against a column near the Mystery Box spot.', imgs: [{ src: I + 'part-pegasus-strike-1-1.webp', cap: 'Picture from Gameranx\'s guide' }] },
-            'On a rock between the box spot and the forge.',
+            { text: 'On a rock between the box spot and the forge.', imgs: [{ src: I + 'part-pegasus-strike-1-2.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
             'On a rock across from the bird cage.',
           ] },
-          { w: 689, name: 'Hammer', area: 'Python Pass', spots: ['In the middle of Python Pass, in sight of the Titan wall-buy.', 'Against an exposed rib next to the Mystery Box spot.', 'Against a small wall across the room from the box spot, on the left.'] },
+          { w: 689, name: 'Hammer', area: 'Python Pass', spots: [
+            'In the middle of Python Pass, in sight of the Titan wall-buy.',
+            { text: 'Against an exposed rib next to the Mystery Box spot.', imgs: [{ src: I + 'part-pegasus-strike-2-2.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
+            { text: 'Against a small wall across the room from the box spot, on the left, under a wall torch.', imgs: [{ src: I + 'part-pegasus-strike-2-3.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
+          ] },
           { w: 673, name: 'Tongs (prongs)', area: 'River of Sorrow', spots: ['Right of the door with symbols.', 'In a fire on the way to Python Pass (on top of a burning torch).', 'In a skeleton\'s skull leaning against a wall.'] },
         ],
       },

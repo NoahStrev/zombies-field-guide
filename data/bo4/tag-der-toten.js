@@ -89,17 +89,17 @@
           { w: 95, name: 'Part 1', area: 'Docks (spawn)', spots: [
             { text: 'On a wooden panel.', imgs: [{ src: I + 'part-riot-shield-1-1.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
             { text: 'On the boat next to the power switch.', imgs: [{ src: I + 'part-riot-shield-1-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
-            'On the other side of the docks, by the gas pump.',
+            { text: 'On the other side of the docks, leaning on the gas pump.', imgs: [{ src: I + 'part-riot-shield-1-3.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
           ] },
           { w: 111, name: 'Part 2', area: 'Frozen Crevasse & Lagoon (the parkour route from spawn)', spots: [
             { text: 'Frozen Crevasse: up on the icy rocks along the parkour path, next to a glowing blue rock.', imgs: [{ src: I + 'part-riot-shield-2-1.webp', cap: 'Picture from Gameranx\'s guide' }] },
-            'Over past the Mystery Box spot, perched up high.',
-            'Down in the grassy area of the Lagoon.',
+            { text: 'Over past the Mystery Box spot, perched up on a ledge.', imgs: [{ src: I + 'part-riot-shield-2-2.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
+            { text: 'Down in the grassy area of the Lagoon, at the water\'s edge.', imgs: [{ src: I + 'part-riot-shield-2-3.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
           ] },
           { w: 172, name: 'Part 3', area: 'Lighthouse', spots: [
-            'On the outside wall by the lighthouse.',
+            { text: 'Lighthouse Level 1: leaning against the wall by the doorway out to the Lighthouse Cove.', imgs: [{ src: I + 'part-riot-shield-3-1.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
             { text: 'Lighthouse Level 2: against the wall by the coiled cables and a wooden pallet.', imgs: [{ src: I + 'part-riot-shield-3-2.webp', cap: 'Picture from Gameranx\'s guide' }] },
-            'One more flight up, on the side.',
+            { text: 'Lighthouse Level 3 (one more flight up): on the floor by the railing, just below the stairs to Level 4.', imgs: [{ src: I + 'part-riot-shield-3-3.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
           ] },
         ],
       },

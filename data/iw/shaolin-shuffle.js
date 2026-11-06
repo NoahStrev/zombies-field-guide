@@ -67,8 +67,8 @@
             { text: 'On a couch by the Skullbuster arcade machine in the Inferno Club.', imgs: [{ src: I + 'part-pap-parts-2-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             { text: 'On a crate in the sewer passage just before Tuff \'Nuff.', imgs: [{ src: I + 'part-pap-parts-2-2.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
             { text: 'In one of the sewer pipes in the Rat King\'s lair.', imgs: [{ src: I + 'part-pap-parts-2-3.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },
-            'On a pile of boxes by the lockers in the second subway.',
-            'On a chair inside the Pink Cat.',
+            { text: 'On a pile of boxes by the lockers in the second subway, next to the change booth.', imgs: [{ src: I + 'part-pap-parts-2-4.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
+            { text: 'On a chair inside the Pink Cat, by the side exit.', imgs: [{ src: I + 'part-pap-parts-2-5.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
           ] },
           { w: 110, name: 'Token', area: 'Sewers', spots: [
             { text: 'Under the Tuff \'Nuff machine. Go prone to reach it.', imgs: [{ src: I + 'part-pap-parts-3-1.webp', cap: 'Still from MrRoflWaffles\'s guide video' }] },

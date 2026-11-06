@@ -93,7 +93,7 @@
           { w: 419, name: 'Part 3', area: 'Generators (bunker)', spots: [
             'Right as you come in from Beds.',
             { text: 'Up by the generator button.', imgs: [{ src: I + 'part-telepads-3-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
-            'By the yellow buckets.',
+            { text: 'By the yellow buckets, leaning on the wall behind a pallet of sacks (near the Solitary tunnel).', imgs: [{ src: I + 'part-telepads-3-3.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
           ] },
         ],
       },
@@ -113,7 +113,11 @@
             { text: 'On a barrel.', imgs: [{ src: I + 'part-assembly-kit-2-2.webp', cap: 'Still from MrDalekJD\'s guide video' }] },
             'On a small tank on the way back to the Generators.',
           ] },
-          { w: 635, name: 'Part 3', area: 'Bunker, by the mannequin', spots: ['On the table with the mannequin.', 'On a trolley.', 'On a chair by the workbench.'] },
+          { w: 635, name: 'Part 3', area: 'Bunker, by the mannequin', spots: [
+            { text: 'On the table with the mannequin.', imgs: [{ src: I + 'part-assembly-kit-3-1.webp', cap: 'Picture from mmmrkennedy\'s guide' }] },
+            'On a trolley.',
+            'On a chair by the workbench.',
+          ] },
         ],
         steps: [
           { w: 527, t: 'Unlock the Mark II frames with the TV code', d: 'Four TVs around the map light up one after another (listen for static). Interact with the lit one, kill zombies until it shows a digit, then find the next. Enter the four digits at Rushmore; the frames become available behind you in Operations.' },

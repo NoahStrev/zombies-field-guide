@@ -62,9 +62,9 @@
         facts: [['Parts', '3 (fixed spots)'], ['Use at', 'Broken bridge, Exterior']],
         video: { id: P, title: 'How to Pack-a-Punch on The Beast from Beyond', ch: 'MrDalekJD', len: '2:05' },
         parts: [
-          { w: 46, name: 'Piece 1', area: 'Medical Bay, lower level', spots: ['Leaning right of Blue Bolts, tucked in the corner up the stairs.'] },
-          { w: 62, name: 'Piece 2', area: 'Cargo Bay, lowest level', spots: ['Wedged between the bottom staircase and a container.'] },
-          { w: 78, name: 'Piece 3', area: 'Outside the theater (real world)', spots: ['On the roof of a crushed car, right of the portal outside the Afterlife Arcade. To get to the theater, hit the button by the Cargo Bay door: a laser opens the portal (N31L must be installed).'] },
+          { w: 46, name: 'Piece 1', area: 'Medical Bay, lower level', spots: [{ text: 'Leaning right of Blue Bolts, tucked in the corner at the bottom of the stairs.', imgs: [{ src: I + 'part-bridge-pieces-1-1.webp', cap: 'Picture from mmmrkennedy\'s guide' }] }] },
+          { w: 62, name: 'Piece 2', area: 'Cargo Bay, lowest level', spots: [{ text: 'Wedged between the bottom staircase and a container.', imgs: [{ src: I + 'part-bridge-pieces-2-1.webp', cap: 'Picture from mmmrkennedy\'s guide' }] }] },
+          { w: 78, name: 'Piece 3', area: 'Outside the theater (real world)', spots: [{ text: 'On the roof of a crushed car, right of the portal outside the Afterlife Arcade. To get to the theater, hit the button by the Cargo Bay door: a laser opens the portal (N31L must be installed).', imgs: [{ src: I + 'part-bridge-pieces-3-1.webp', cap: 'Picture from mmmrkennedy\'s guide' }] }] },
         ],
       },
 
