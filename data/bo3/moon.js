@@ -100,7 +100,7 @@
         spots: [
           { text: 'Outside the Receiving Bay, on a pile of crates just below the building, by the launch pad.', imgs: [{ src: I + 'spot-song-coming-home-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           { text: 'On the wall opposite the P.E.S. suit in the airlock between Tunnel 6 and the power switch area.', imgs: [{ src: I + 'spot-song-coming-home-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
-          'Near Stamin-Up in Tunnel 11, in a hole in the wall (the helmet sticks out).',
+          { text: 'Near Stamin-Up in Tunnel 11, in a hole in the wall (the helmet sticks out).', imgs: [{ src: I + 'spot-song-coming-home-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
       },
       {

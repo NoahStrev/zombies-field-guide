@@ -83,7 +83,7 @@
         blocks: [{ note: 'Videos titled "Shangri-La Remastered" show a newer version of the map where two of the rocks have moved. The spots below are for Black Ops and Black Ops III.' }],
         spots: [
           'Starting room behind Quick Revive: left of the window, in the rubble behind the fallen pillar.',
-          'By the bridge near spawn and the moving walls, next to the perk machine.',
+          { text: 'By the bridge near spawn and the moving walls, next to the perk machine.', imgs: [{ src: I + 'spot-song-pareidolia-2.webp', cap: 'Still from GameFront\'s guide video (original Black Ops)' }] },
           'In the room after the AK-74u room, in the broken wall across from the Semtex outline.',
         ],
       },

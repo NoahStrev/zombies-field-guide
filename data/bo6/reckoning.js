@@ -219,7 +219,7 @@
           { text: 'Bonus Points: T1 Executive Suite, on the radio tower above the ceiling, seen from the launcher.', imgs: [{ src: I + 'spot-powerups-1.webp', cap: 'Bonus Points, still from MrDalekJD\'s guide video' }] },
           { text: 'Max Ammo: T2 Android Assembly, on a cabinet near the ceiling left of the launcher to the Mutant Research Lab.', imgs: [{ src: I + 'spot-powerups-2.webp', cap: 'Max Ammo, still from MrDalekJD\'s guide video' }] },
           { text: 'Double Points: T1 Quantum Computing Core, in a rack above the central structure, seen from the turret.', imgs: [{ src: I + 'spot-powerups-3.webp', cap: 'Double Points, still from MrDalekJD\'s guide video' }] },
-          'Full Power: above the T1 Mutant Research Lab, seen from Deadshot Daiquiri.',
+          { text: 'Full Power: above the T1 Mutant Research Lab, seen from Deadshot Daiquiri.', imgs: [{ src: I + 'spot-powerups-4.webp', cap: 'Full Power through a scope, picture from Zombified\'s guide' }, { src: I + 'spot-powerups-4b.webp', cap: 'Where to look, picture from Zombified\'s guide' }] },
           { text: 'Insta-Kill: T2 Dark Entity Containment, on the servers in the Employees Only window on the right after the elevator shaft.', imgs: [{ src: I + 'spot-powerups-5.webp', cap: 'Insta-Kill, still from MrDalekJD\'s guide video' }] },
           { text: 'Max Armor: on the turret of the rightmost armoured vehicle outside Reception.', imgs: [{ src: I + 'spot-powerups-6.webp', cap: 'Max Armor, picture from Zombified\'s guide' }] },
           { text: 'Nuke: T2 Sublevel 10, above the blue pipe left of the Crafting Table.', imgs: [{ src: I + 'spot-powerups-7.webp', cap: 'Nuke, still from MrDalekJD\'s guide video' }] },

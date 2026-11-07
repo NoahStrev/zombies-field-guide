@@ -314,9 +314,9 @@
         video: { id: 'gVz7uXDOOO4', title: 'Shepherd of Fire: the three radios', ch: 'MrDalekJD', len: '1:28', t: 10 },
         summary: 'Hold interact on three red radios.',
         spots: [
-          'On the scaffolding inside the Excavation Site, above a Maxis Drone part spot.',
-          'Inside the robot Freya, across from the audio log.',
-          'On the left edge of the fire section in the Crazy Place.',
+          { text: 'On the scaffolding inside the Excavation Site, above a Maxis Drone part spot.', imgs: [{ src: I + 'spot-song-shepherd-1.webp', cap: 'The radio, still from iPlutohs\'s guide video' }, { src: I + 'spot-song-shepherd-1b.webp', cap: 'The scaffold walkway, still from iPlutohs\'s guide video' }] },
+          { text: 'Inside the robot Freya, across from the audio log.', imgs: [{ src: I + 'spot-song-shepherd-2.webp', cap: 'Still from iPlutohs\'s guide video' }] },
+          { text: 'On the left edge of the fire section in the Crazy Place.', imgs: [{ src: I + 'spot-song-shepherd-3.webp', cap: 'Still from iPlutohs\'s guide video' }] },
         ],
       },
       {
@@ -333,9 +333,9 @@
         summary: 'Take the Maxis Drone near four small yellow discs so it collects them. It then drops a Pack-a-Punched MG08/15 in front of Pack-a-Punch.',
         spots: [
           { text: 'On the destroyed roof beside Generator 5.', imgs: [{ src: I + 'spot-magna-collider-1.webp', cap: 'Still from SBZ vSylent\'s guide video' }] },
-          'Outside the spawn room door to Generator 2: a hole in the trenches with burning debris; the disc is at the end.',
+          { text: 'Outside the spawn room door to Generator 2: a hole in the trenches with burning debris; the disc is at the end.', imgs: [{ src: I + 'spot-magna-collider-2.webp', cap: 'Still from GregFPS\'s guide video' }] },
           'On the roof of the broken church, along the tank path toward Generator 4.',
-          'On the scaffold above the Excavation Site entrance closest to the church.',
+          { text: 'On the scaffold above the Excavation Site entrance closest to the church.', imgs: [{ src: I + 'spot-magna-collider-4.webp', cap: 'Still from GregFPS\'s guide video' }] },
         ],
       },
       {

@@ -99,7 +99,7 @@
         spots: [
           { text: 'Just right of Widow\'s Wine.', imgs: [{ src: I + 'spot-song-not-ready-1.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
           { text: 'In the Mule Kick room, left of a Mystery Box spot.', imgs: [{ src: I + 'spot-song-not-ready-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
-          'In the centrifuge room near the lunar lander, behind a fuse box.',
+          { text: 'In the centrifuge room near the lunar lander, behind a fuse box.', imgs: [{ src: I + 'spot-song-not-ready-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
       },
     ],

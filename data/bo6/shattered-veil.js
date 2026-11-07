@@ -184,11 +184,11 @@
         summary: 'From round 13, with a thermal scope, find the red-eyed ghost lady in a window and look at her through the scope until she vanishes. Do it four times, then interact with the antique mirror by the bed in the Nursery. After a jump scare it opens with up to four rewards, always including a Random Perk.',
         video: SE(278),
         spots: [
-          'Motor Court: behind the statue of the boy.',
-          { text: 'Motor Court: above the balcony of the main entrance.', imgs: [{ src: I + 'spot-ghost-mirror-2.webp', cap: 'Motor Court, still from MrDalekJD\'s guide video' }] },
+          { text: 'Motor Court: behind the statue of the boy.', imgs: [{ src: I + 'spot-ghost-mirror-1.webp', cap: 'Motor Court, still from MrDalekJD\'s guide video' }] },
+          { text: 'Motor Court: above the balcony of the main entrance.', imgs: [{ src: I + 'spot-ghost-mirror-2b.webp', cap: 'Motor Court, still from MrDalekJD\'s guide video' }] },
           { text: 'Rear Patio: above the right-hand way into the elevator room.', imgs: [{ src: I + 'spot-ghost-mirror-3.webp', cap: 'Rear Patio, still from MrDalekJD\'s guide video' }] },
           { text: 'West Balcony: the southernmost window.', imgs: [{ src: I + 'spot-ghost-mirror-4.webp', cap: 'West Balcony, still from MrDalekJD\'s guide video' }] },
-          'South West Balcony: next to a blue crystal.',
+          { text: 'South West Balcony: next to a blue crystal.', imgs: [{ src: I + 'spot-ghost-mirror-5.webp', cap: 'South West Balcony through a thermal scope, picture from Zombified\'s guide' }, { src: I + 'spot-ghost-mirror-5b.webp', cap: 'The South West Balcony window, picture from Zombified\'s guide' }] },
         ],
       },
       {

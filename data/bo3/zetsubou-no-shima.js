@@ -267,7 +267,7 @@
         spots: [
           { text: 'On a power generator, left of a perk machine by the blue 115 water.', imgs: [{ src: I + 'spot-song-dead-flowers-1.webp', cap: 'Picture from Zombified\'s guide' }] },
           { text: 'Top floor of Lab B, on a table left of a floodlight, in front of zombie diagrams.', imgs: [{ src: I + 'spot-song-dead-flowers-2.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
-          'On a table in the bunker, right of the KT-4 bench and left of the Masamune bench.',
+          { text: 'On a table in the bunker, right of the KT-4 bench and left of the Masamune bench.', imgs: [{ src: I + 'spot-song-dead-flowers-3.webp', cap: 'Still from JokerAlex 21\'s guide video' }] },
         ],
       },
       {

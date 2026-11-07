@@ -162,7 +162,7 @@
           { text: 'Max Armor: on a basket opposite the broken generator in Lief\'s Boat Repair.', imgs: [{ src: I + 'spot-powerups-6.webp', cap: 'Max Armor, still from MrDalekJD\'s guide video' }] },
           { text: 'Nuke: in the War Factory, behind the giant robot head, on a round structure.', imgs: [{ src: I + 'spot-powerups-7.webp', cap: 'Nuke, still from MrDalekJD\'s guide video' }] },
           { text: 'Fire Sale: top floor of the house above Loven\'s Antiquities, by a wooden chair.', imgs: [{ src: I + 'spot-powerups-8.webp', cap: 'Fire Sale, still from MrDalekJD\'s guide video' }] },
-          'Random Perk: on a shelf against the back wall of the red house right behind spawn in Eidskallen Landing.',
+          { text: 'Random Perk: on a shelf against the back wall of the red house right behind spawn in Eidskallen Landing.', imgs: [{ src: I + 'spot-powerups-9.webp', cap: 'Random Perk, still from Invalid\'s guide video' }] },
         ],
       },
     ],

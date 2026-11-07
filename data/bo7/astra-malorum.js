@@ -176,9 +176,9 @@
         video: SE(758),
         spots: [
           { text: 'Alpha Omega\'s game-over music: take three records to the gramophone in the Luminarium (a wooden box on the middle floor of Machina Astralis, the top of a Luminarium bookshelf, a ledge above a zombie window in the museum).', imgs: [{ src: I + 'step-gramophones-3b.webp', cap: 'Record in Machina Astralis, picture from mmmrkennedy\'s guide' }, { src: I + 'step-gramophones-2b.webp', cap: 'Record in the Luminarium, picture from mmmrkennedy\'s guide' }, { src: I + 'step-gramophones-1b.webp', cap: 'Record in Museum Infinitum, picture from mmmrkennedy\'s guide' }] },
-          'Pareidolia remix: wall-jump off the left side of the floating rock by Wisp Tea and drift through space.',
-          'The original Pareidolia: aim at the giant statue head on Mars for a few seconds.',
-          '"Once In A Blown Up Moon": from round 16, aim at the floating rocket in front of Saturn for a while.',
+          { text: 'Pareidolia remix: wall-jump off the left side of the floating rock by Wisp Tea and drift through space.', imgs: [{ src: I + 'spot-songs-more-2.webp', cap: 'The rock by Wisp Tea, picture from Zombified\'s guide' }] },
+          { text: 'The original Pareidolia: aim at the giant statue head on Mars for a few seconds.', imgs: [{ src: I + 'spot-songs-more-3.webp', cap: 'The statue head on Mars, picture from Zombified\'s guide' }] },
+          { text: '"Once In A Blown Up Moon": from round 16, aim at the floating rocket in front of Saturn for a while.', imgs: [{ src: I + 'spot-songs-more-4.webp', cap: 'The rocket (circled), picture from Zombified\'s guide' }] },
         ],
       },
       {
@@ -187,7 +187,7 @@
         video: SE(790),
         spots: [
           { text: 'Bonus Points: outside the Crash Site, near a lamp post.', imgs: [{ src: I + 'spot-powerups-1.webp', cap: 'Bonus Points, still from MrDalekJD\'s guide video' }] },
-          'Max Ammo: on top of the wall out of the map, left of the Luminarium trap room as you come from the Crash Site.',
+          { text: 'Max Ammo: on top of the wall out of the map, left of the Luminarium trap room as you come from the Crash Site.', imgs: [{ src: I + 'spot-powerups-2.webp', cap: 'Max Ammo through a scope, picture from Zombified\'s guide' }, { src: I + 'spot-powerups-2b.webp', cap: 'Where to look, picture from Zombified\'s guide' }] },
           { text: 'Double Points: under a cabinet on the top floor of Machina Astralis, by the stairs.', imgs: [{ src: I + 'spot-powerups-3.webp', cap: 'Double Points, still from MrDalekJD\'s guide video' }] },
           { text: 'Full Power: on the telescope platform, seen from Stargazer\'s Courtyard.', imgs: [{ src: I + 'spot-powerups-4.webp', cap: 'Full Power, still from MrDalekJD\'s guide video' }] },
           { text: 'Insta-Kill: on top of a pillar on the right of Scholar\'s Way, looking towards Machina Astralis.', imgs: [{ src: I + 'spot-powerups-5.webp', cap: 'Insta-Kill, still from MrDalekJD\'s guide video' }] },
