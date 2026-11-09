@@ -103,6 +103,7 @@
       {
         id: 'song-aether', tab: 'side', type: 'Song', name: '"Aether" (Tomb mix)',
         summary: 'Quickly shoot the symbols I, I and V on both Staff of Ice murals.',
+        video: { id: 'gZWBCPvoMA8', title: '"Aether" song Easter egg on The Tomb', ch: 'TheGamingRevolution', len: '3:00' },
       },
       {
         id: 'golden-armor', tab: 'side', type: 'Upgrade', name: 'Golden Armor (self-repairing)', img: I + 'golden-armor.webp',

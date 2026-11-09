@@ -106,6 +106,7 @@
       {
         id: 'songs-8bit', tab: 'side', type: 'Songs', name: 'Terminal songs',
         summary: 'Three computer terminals play short tracks in Black Ops III.',
+        video: { id: 'Ux3VlUmpwl8', title: 'Moon 101: 8-bit songs Easter egg', ch: 'Doughnuts', len: '1:00' },
         blocks: [{ list: [
           '"Re-Damned": computer equipment in Tunnel 11 next to the door to the Power Room.',
           '8-bit "Coming Home": a terminal in the spawn room.',
@@ -115,6 +116,7 @@
       {
         id: 'space-dog', tab: 'side', type: 'Fun (BO3 only)', name: 'Space dog',
         summary: 'Kill a Hellhound at Area 51, shoot all the Mystery Box teddy bears (including the one left when the box moves) and the bone on the pipes near the Moon teleporter — all with the Wave Gun. Then hack the pair of dog bowls in the labs and feed them zombie souls. A dog in a space suit skips across the surface outside.',
+        video: { id: 'F38oDZd6DX0', title: 'Space dog Easter egg solved', ch: 'MrDalekJD', len: '5:07' },
       },
     ],
   });

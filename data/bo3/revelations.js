@@ -221,6 +221,7 @@
       {
         id: 'path-of-sorrows', tab: 'side', type: 'Reward', name: 'Path of Sorrows (A Better Tomorrow bonus)',
         summary: 'Only if someone in the lobby completed A Better Tomorrow. Grab the "spark" from the headlight of the broken truck in the spawn room (don\'t take any damage while carrying it). During the Kronorium step, place it on the wooden crate with a white "?" in Samantha\'s room. Afterwards, the Path of Sorrows sword is a 500-point wall-buy at the top of the Shangri-La staircase, and every wall and box weapon comes Pack-a-Punched.',
+        video: { id: 'B80bYDWMO-I', title: 'Takeo\'s katana secret wall-buy', ch: 'MrDalekJD', len: '2:25' },
       },
       {
         id: 'hats', tab: 'side', type: 'Wearables', name: 'Hats and helmets',

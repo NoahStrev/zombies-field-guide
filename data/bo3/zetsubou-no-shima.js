@@ -273,6 +273,7 @@
       {
         id: 'song-lullaby', tab: 'side', type: 'Song', name: '"Samantha\'s Lullaby (Magic Mix)"',
         summary: 'Seven melody bulbs sit on the wall next to the purple water in the Living Quarters. Fill the first six with purple water to the amounts 1, 3, 5, 6, 7 and 5, then interact with the seventh bulb to play the song.',
+        video: { id: 'hh4tNdl5xbY', title: 'Samantha\'s Lullaby: the melody bulbs song', ch: 'MrRoflWaffles', len: '4:46' },
         blocks: [{ tip: 'These amounts come from the wiki; no guide video shows the step.' }],
       },
       {

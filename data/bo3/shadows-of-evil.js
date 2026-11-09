@@ -270,10 +270,12 @@
       {
         id: 'free-megas', tab: 'side', type: 'Free item', name: 'Free Mega GobbleGum (lions)',
         summary: 'Throw four Widow\'s Wine grenades into the mouths of the four lion heads in the Canal District room connected to the Double Tap room. Each lion then shows a small grey sphere (one per player): take yours and place it on the plate in a shop in the first room. Two rounds later, interact with the plate for a free GobbleGum.',
+        video: { id: 'oMkPxt_sG3E', title: 'Lion head gumball Easter egg (free Mega GobbleGum)', ch: 'MrDalekJD', len: '3:30' },
       },
       {
         id: 'trip-mine-upgrade', tab: 'side', type: 'Upgrade', name: 'Trip Mine upgrade (food carts)',
         summary: 'Pick one food-cart brand and set off a Trip Mine next to every cart of that brand.',
+        video: { id: 'JQZLNhnxBQo', title: 'All 11 side Easter eggs on Shadows of Evil', ch: 'CodeNamePizza', len: '5:57', t: 55 },
         blocks: [{ list: [
           'Blow up all four **Devil-O-Donuts** carts → your Trip Mines become cream cakes.',
           'Blow up all three **Holly\'s Cream Cake** carts → your Trip Mines become donuts.',
@@ -282,10 +284,12 @@
       {
         id: 'round-skip', tab: 'side', type: 'Points boost', name: 'Round skip (Shadowman)',
         summary: 'At the very start, the Shadowman stands on the stairs up to Nero\'s ritual room. If every player shoots him, you can skip to round 5, 10 and then 15, earning 1,000, 4,000 and 11,000 points. Solo, private and local matches only.',
+        video: { id: 'JQZLNhnxBQo', title: 'All 11 side Easter eggs on Shadows of Evil', ch: 'CodeNamePizza', len: '5:57' },
       },
       {
         id: 'noir', tab: 'side', type: 'Fun', name: 'Black-and-white "Noir" mode',
         summary: 'Shoot the picture frame behind the boxing ring in The Anvil, then interact with it.',
+        video: { id: 'JQZLNhnxBQo', title: 'All 11 side Easter eggs on Shadows of Evil', ch: 'CodeNamePizza', len: '5:57', t: 109 },
       },
     ],
   });

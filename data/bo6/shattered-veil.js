@@ -204,14 +204,15 @@
       {
         id: 'fog', tab: 'side', type: 'Free reward', name: '"Fog rolling in" (free Aetherium crystals)',
         summary: 'A long one that covers the map in fog for a minute and scatters Aetherium crystals around it.',
+        video: { id: 'LWIyo_iFRd0', title: '"Fog rolling in" side Easter egg', ch: 'Muted360x', len: '4:40' },
         steps: [
           { t: 'Bring the Wunderwaffe DG-2 and a Chopper Gunner' },
-          { t: 'Grab the baby Vermin in the Supply Depot', d: 'Just inside on the left, behind a grate under some machines.' },
-          { t: 'Read the chemical sign by the stairs to Pack-a-Punch', d: 'Behind the zombie window at the bottom of the left stairs: three coloured chemicals with a number of drops under each. Fewest drops goes first.' },
-          { t: 'Put the Vermin on the tray by the Mainframe Crafting Table and shoot the bottles in that order', d: 'Blue-capped white bottles = orange, the white bottle nearest the pill bottle = green, the pill bottle = pink. It starts oozing yellow.' },
-          { t: 'Microwave it until it turns red', d: 'Two microwaves in the West Hallways, one by the coffee machine in the Overlook.' },
-          { t: 'Put it in the blood halfway up the right stairs to Pack-a-Punch and shoot the fan above with the DG-2', d: 'Red smoke now comes out of every chimney.' },
-          { t: 'From the Motor Court, shoot every smoking chimney with the Chopper Gunner', d: 'Fireworks go off, then fog and crystals fill the map for a minute.' },
+          { w: 3, t: 'Grab the baby Vermin in the Supply Depot', d: 'Just inside on the left, behind a grate under some machines.' },
+          { w: 18, t: 'Read the chemical sign by the stairs to Pack-a-Punch', d: 'Behind the zombie window at the bottom of the left stairs: three coloured chemicals with a number of drops under each. Fewest drops goes first.' },
+          { w: 34, t: 'Put the Vermin on the tray by the Mainframe Crafting Table and shoot the bottles in that order', d: 'Blue-capped white bottles = orange, the white bottle nearest the pill bottle = green, the pill bottle = pink. It starts oozing yellow.' },
+          { w: 60, t: 'Microwave it until it turns red', d: 'Two microwaves in the West Hallways, one by the coffee machine in the Overlook.' },
+          { w: 109, t: 'Put it in the blood halfway up the right stairs to Pack-a-Punch and shoot the fan above with the DG-2', d: 'Red smoke now comes out of every chimney.' },
+          { w: 126, t: 'From the Motor Court, shoot every smoking chimney with the Chopper Gunner', d: 'Fireworks go off, then fog and crystals fill the map for a minute.' },
         ],
       },
       {

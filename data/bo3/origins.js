@@ -322,10 +322,12 @@
       {
         id: 'song-aether', tab: 'side', type: 'Song', name: '"Aether"',
         summary: 'Go prone and press interact in front of both "1" floor panels at Generator 1, then the "5" panel at Generator 5 (Generator 5 must be on).',
+        video: { id: 'bWmKfOxjlgg', title: 'Origins third song Easter egg: "Aether"', ch: 'MrDalekJD', len: '1:14' },
       },
       {
         id: 'song-remember', tab: 'side', type: 'Song (BO3 only)', name: '"Remember Forever"',
         summary: 'Shoot the four Zombie-Blood-only wisps on the lowest ring of the Excavation Site, each with its matching staff (staffs don\'t need upgrading; wrong guesses don\'t reset). Then go to the centre of the Crazy Place, interact with the Samantha doll, and shoot all the dolls that appear around it. One rises, drops a Max Ammo, and the song starts.',
+        video: { id: 's9zR0xCS6Dk', title: 'Wisps Easter egg: "Remember Forever"', ch: 'MrRoflWaffles', len: '10:07' },
       },
       {
         id: 'magna-collider', tab: 'side', type: 'Free weapon', name: 'Free Magna Collider (upgraded MG08)',

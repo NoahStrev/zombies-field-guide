@@ -274,6 +274,7 @@
       {
         id: 'free-perks', tab: 'side', type: 'Free perk', name: 'Free perks from the ghosts',
         summary: 'After you leave the mansion, kill the ghosts that follow you: the last one drops a free perk. This works once every five rounds: lit windows on the front of the mansion mean it\'s ready (plant a Time Bomb before killing the last ghost to win it twice). Also: shoot the bullseye in the saloon with the Ballistic Knife from behind the chalk line, then put 10 points in the tip jar of the ghost playing the piano in the mansion for another perk.',
+        video: { id: 'jZW8hZbmN9Q', title: 'Buried free perks guide', ch: 'JokerAlex 21', len: '1:42' },
       },
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Always Running"',

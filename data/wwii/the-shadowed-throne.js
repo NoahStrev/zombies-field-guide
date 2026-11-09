@@ -132,6 +132,7 @@
       {
         id: 'hangman', tab: 'side', type: 'Free reward', name: 'Hangman', img: I + 'hangman.webp',
         summary: 'The sign over the Cabaret entrance is a game of Hangman. Shoot the up and down arrows to pick a letter and the middle button to guess it. Spell these for rewards (each once per game):',
+        video: { id: '8NP8OysW9gs', title: 'Hangman Easter egg (secret Tesla Gun and Ripsaw)', ch: 'MrDalekJD', len: '3:24' },
         blocks: [
           { table: { head: ['Word', 'Reward'], rows: [
             ['WONDER', 'A Tesla Gun and a Ripsaw'],

@@ -183,6 +183,7 @@
       {
         id: 'perkaholic', tab: 'side', type: 'Free perk', name: 'Free Perkaholic (50 fish)',
         summary: 'Kill 50 fish with explosive ammo or explosive equipment. Look for bubbles or splashes: around Crab Island, in and around the Shipwreck, under the Sea Tower and docks, and in the water under the Bio Lab.',
+        video: { id: 'WvCnGc1pb18', title: 'Free Perkaholic Easter egg', ch: 'TheGamingRevolution', len: '3:50' },
       },
       {
         id: 'culinary', tab: 'side', type: 'Fun', name: 'Culinary Delight (achievement)',

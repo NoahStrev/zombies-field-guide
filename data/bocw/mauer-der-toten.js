@@ -183,10 +183,12 @@
       {
         id: 'mister-peeks', tab: 'side', type: 'Free reward', name: 'Mister Peeks nightclub',
         summary: 'Collect six bunny parts: a desk in Hotel Room 304, a tyre stack in the Alley, a couch near Juggernog in the bar, a cardboard box in the Sewer Access, a shelf in the department store, and a shelf in front of the Grocery Store counter. You\'re taken to a nightclub to fight three waves (with a Mangler, a Mimic and a Disciple). Win and pick one of three doors for a reward. You can go back twice more: 15 rounds after each visit, shoot the Mister Peeks bunny that appears in a window of the Hasenbau building.',
+        video: { id: 'TV3E5IEA4PI', title: 'Every side Easter egg in Mauer der Toten', ch: 'MrDalekJD', len: '14:25', t: 159 },
       },
       {
         id: 'rooftop-targets', tab: 'side', type: 'Free reward', name: 'Rooftop shooting gallery',
         summary: 'After the power is on, interact with the file on the Apartment Rooftop that looks over the Königshaus and Korber signs. Targets move around the skyline; shoot them all in time for an Aether Tool (a free rarity upgrade).',
+        video: { id: 'TV3E5IEA4PI', title: 'Every side Easter egg in Mauer der Toten', ch: 'MrDalekJD', len: '14:25', t: 31 },
       },
     ],
   });

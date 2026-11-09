@@ -219,6 +219,7 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Where Are We Going"',
         summary: 'Spirit blast the dials at the bottom of the Citadel Tunnels and enter 115.',
+        video: { id: 'jddPBPg1Z1Y', title: 'Blood of the Dead song Easter egg ("Where Are We Going")', ch: 'JSkeleton', len: '2:51' },
       },
       {
         id: 'free-monkeys', tab: 'side', type: 'Free equipment', name: 'Free Monkey Bombs',

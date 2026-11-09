@@ -176,6 +176,7 @@
       {
         id: 'blood-pool', tab: 'side', type: 'Free reward', name: 'Blood pool',
         summary: 'Throw three Semtex into the swimming pool of blood left of the GobbleGum machine on West Main Street. A red orb flies out with Salvage and equipment. You can repeat it every five rounds, twice more; the third time also gives a Fire Sale.',
+        video: { id: 'nQjo6reMm4U', title: 'Blood pool free loot Easter egg', ch: 'Invalid', len: '1:05' },
       },
       {
         id: 'dance-party', tab: 'side', type: 'Fun', name: 'Zombie dance party',
@@ -185,6 +186,7 @@
       {
         id: 'graves', tab: 'side', type: 'Free reward', name: 'Grave digging',
         summary: 'A barrel sits on an unreachable ledge west of the Washington Ave rooftops. Destroy it with a scorestreak and a shovel drops down for you. Dig up the cemetery graves for prizes; digging them all gives Essence.',
+        video: { id: '36bTZSf3B7Y', title: 'Shovel Easter egg: dig up the graveyard', ch: 'Invalid', len: '1:14' },
       },
       {
         id: 'napalm-church', tab: 'side', type: 'Map tip', name: 'Church napalm trap',

@@ -125,14 +125,17 @@
       {
         id: 'bunny', tab: 'side', type: 'Free reward', name: 'Stuffed bunny crate',
         summary: 'Once all three reactors are on, go upstairs in the village Atrium and stare at the stuffed bunny at the end of the blocked balcony. It flies at you and takes you to a dark forest. Shoot the pink glowing bunny three times as it teleports around. A crate appears with loot and a free Juggernog.',
+        video: { id: 'fnDJ-o4aUjg', title: 'Free Juggernog: bunny Easter egg', ch: 'CodeNamePizza', len: '1:25' },
       },
       {
         id: 'head-safe', tab: 'side', type: 'Free reward', name: 'Kravchenko\'s safe',
         summary: 'Pick up a zombie head that sometimes appears around the map and put it on an empty stand in the Field Hospital. Power the stand with an Essence Trap holding any zombie: the head says a code and explodes. Use the code on the safe in Kravchenko\'s office for a free perk and intel (and some Hellhounds).',
+        video: { id: 'BQdRFlZb874', title: 'Sergei\'s head free perks Easter egg', ch: 'MrDalekJD', len: '5:09' },
       },
       {
         id: 'jump-pads', tab: 'side', type: 'Free reward', name: 'Free jump pads',
         summary: 'After the reactors are on, shoot the green button on a jump pad and follow the five arrows on its screen without stepping off. Do it on all six pads and they\'re free for the rest of the game.',
+        video: { id: 'RxNdpyPY688', title: 'Firebase Z jump pads Easter egg', ch: 'MrRoflWaffles', len: '4:27' },
       },
     ],
   });

@@ -190,14 +190,17 @@
       {
         id: 'coffin-dance', tab: 'side', type: 'Free reward', name: 'Coffin Dance crate',
         summary: 'After Pack-a-Punch is built, shoot the five blue orbs around the Particle Accelerator room. You\'re pulled into the Dark Aether, where zombies dance with a crate near Pack-a-Punch. When you come back out, the crate is there: open it for loot and a free Juggernog.',
+        video: { id: '63yrWQyw8jg', title: 'Coffin Dance party Easter egg', ch: 'CodeNamePizza', len: '2:06' },
       },
       {
         id: 'giant-hand', tab: 'side', type: 'Free reward', name: 'Free Legendary weapon',
         summary: 'In the Dark Aether, shoot the four buttons in the window behind Speed Cola in the Medical Bay. A giant hand reaches out of a door in the window: let it grab and kill 15 zombies and your gun becomes Legendary.',
+        video: { id: 'oo_XcYKzDyE', title: 'Free Legendary rarity upgrade: monster hand', ch: 'Invalid', len: '1:45' },
       },
       {
         id: 'floating-zombies', tab: 'side', type: 'Free reward', name: 'Free scorestreak',
         summary: 'In the Dark Aether, shoot five floating zombies around the map. A free scorestreak appears. (Standing under the last one gives you a jump scare.)',
+        video: { id: 'C5-hoTjmnuE', title: 'Free scorestreak and jump scare', ch: 'Invalid', len: '1:17' },
       },
     ],
   });

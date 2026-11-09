@@ -87,10 +87,12 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Vanishing Shore"',
         summary: 'Interact three times with the instrument upstairs in the Radio Outpost.',
+        video: { id: 'zP-LUakrIco', title: 'The Archon music Easter egg', ch: 'Spesh', len: '1:17' },
       },
       {
         id: 'peeks', tab: 'side', type: 'Free reward', name: 'Mr. Peeks',
         summary: 'Dig up three parts of a Mr. Peeks bunny with a shovel at dig spots around the map. The last part spawns a Ray Gun and some Bonus Points power-ups.',
+        video: { id: '8H1c66bGS_o', title: 'Bunny Easter egg: free Ray Gun', ch: 'Spesh', len: '2:31' },
       },
     ],
   });

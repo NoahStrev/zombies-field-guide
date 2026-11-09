@@ -105,14 +105,17 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"The One"',
         summary: 'Interact three times with the telephone in the Comm Room.',
+        video: { id: 'VocnbujhlH4', title: 'Every side Easter egg in Shi No Numa', ch: 'MrDalekJD', len: '8:18', t: 171 },
       },
       {
         id: 'sorrow', tab: 'side', type: 'Song', name: '"Samantha\'s Sorrow"',
         summary: 'Shoot the four pans in the Fishing Hut with your starting pistol. A Samantha doll appears in the far left room: pick it up. It reappears on the bridge posts between the Fishing Hut and spawn; shoot it there. Keep repeating until it stands upright back in the Fishing Hut, then interact once more. A skeleton arm takes the doll, drops a Max Ammo and the song plays.',
+        video: { id: 'VocnbujhlH4', title: 'Every side Easter egg in Shi No Numa', ch: 'MrDalekJD', len: '8:18', t: 78 },
       },
       {
         id: 'peeks', tab: 'side', type: 'Free reward', name: 'Mr. Peeks',
         summary: 'Ride the zipline once and make the Mystery Box move once. Then, during the blood vision from the main quest, collect three bunny parts: a corner outside the Fishing Hut, under the zipline platform at the Doctor\'s Quarters (send the zipline back first), and at a Mystery Box spot after the box moves while you\'re in the vision. A loot pile appears with 5,000 Essence, a Fire Sale and other goodies.',
+        video: { id: 'VocnbujhlH4', title: 'Every side Easter egg in Shi No Numa', ch: 'MrDalekJD', len: '8:18', t: 241 },
       },
     ],
   });

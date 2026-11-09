@@ -202,9 +202,10 @@
       {
         id: 'secret-rooms', tab: 'side', type: 'Free items', name: 'Secret rooms (pool table, wine barrels, bookshelf)',
         summary: 'Three little puzzles that open hidden rooms with points, a weapon, an elixir or silver bullets.',
+        video: { id: 'cmkfba5xaw8', title: 'Secret rooms Easter egg guide', ch: 'MrDalekJD', len: '7:42' },
         steps: [
-          { any: 'Any of the three, in any order', t: 'Billiards: pot the balls 1 to 9 in order', d: 'Shoot the pool balls into the pockets in number order for 500 points. Pot them all on the side away from the fireplace instead and a bookcase opens with an SG12, a Sword Flay elixir or a random power-up.' },
-          { any: 'Any of the three, in any order', t: 'Wine Cellar: knife the barrels from fastest to slowest drip', d: 'Six barrels drip wine at different speeds. Knife the nozzle of the fastest, then the next fastest, down to the slowest (you see a wine splash when it\'s right). One wrong barrel and you can\'t retry. A cabinet opens with silver bullets or 500 points.' },
+          { any: 'Any of the three, in any order', w: 129, t: 'Billiards: pot the balls 1 to 9 in order', d: 'Shoot the pool balls into the pockets in number order for 500 points. Pot them all on the side away from the fireplace instead and a bookcase opens with an SG12, a Sword Flay elixir or a random power-up.' },
+          { any: 'Any of the three, in any order', w: 264, t: 'Wine Cellar: knife the barrels from fastest to slowest drip', d: 'Six barrels drip wine at different speeds. Knife the nozzle of the fastest, then the next fastest, down to the slowest (you see a wine splash when it\'s right). One wrong barrel and you can\'t retry. A cabinet opens with silver bullets or 500 points.' },
           { any: 'Any of the three, in any order', w: ['7HDVa71R6Js', 172], t: 'Two bookshelves by the stairs: match the symbols', d: 'Hold interact on the symbol shown on one bookshelf, then find and press the matching symbols on the other in turn. A secret room opens with points or a weapon.' },
         ],
       },

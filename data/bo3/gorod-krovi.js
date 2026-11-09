@@ -248,6 +248,7 @@
       {
         id: 'song-ace', tab: 'side', type: 'Song', name: '"Ace of Spades"',
         summary: 'Interact with three ace of spades cards. (During the boss fight you can also trigger it by hitting the three sparking telephone poles with explosives.)',
+        video: { id: 'aPhceYXaJHQ', title: 'All 3 ace of spades card locations', ch: 'Jedi98', len: '1:44' },
         spots: [
           { text: 'Bottom-left corner of the blackboard in the Double Tap room, Tank Factory.', imgs: [{ src: I + 'spot-song-ace-1.webp', cap: 'Picture from Zombified\'s guide' }] },
           { text: 'On S.O.P.H.I.A.\'s desk in Dragon Command.', imgs: [{ src: I + 'spot-song-ace-2.webp', cap: 'Still from Jedi98\'s guide video' }] },
@@ -257,6 +258,7 @@
       {
         id: 'song-sorrow', tab: 'side', type: 'Song', name: '"Samantha\'s Sorrow" (hide and seek)',
         summary: 'Throw Monkey Bombs into three different areas while a dragon is burning them. A Samantha doll appears by the tombstone near the Trials boards in Belinski Square; interact to start the game. Five dolls hide in random spots playing a lullaby — shoot each before time runs out. Finish, and the last doll is dragged into the grave as the song plays.',
+        video: { id: 'm5i1f4M8Nug', title: 'Samantha hide and seek Easter egg', ch: 'MrRoflWaffles', len: '6:48' },
       },
       {
         id: 'helmets', tab: 'side', type: 'Wearables', name: 'Mangler Helmet and Valkyrie Drone Hat',

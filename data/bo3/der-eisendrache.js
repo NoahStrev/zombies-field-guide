@@ -334,10 +334,12 @@
       {
         id: 'disco', tab: 'side', type: 'Fun', name: 'Control Room disco',
         summary: 'In the Control Room, shoot the Moon globe to stop it, then shoot the small rocket when it is next to the Moon. Disco lights and 80s music play for about a minute — only for people inside the room. Repeatable.',
+        video: { id: 'Kdrtlv33Xjo', title: 'Der Eisendrache secret disco room', ch: 'TheGamingRevolution', len: '1:07' },
       },
       {
         id: 'skeletons', tab: 'side', type: 'Fun', name: 'Turn zombies into skeletons',
         summary: 'Three invisible skulls float around the map. They only show up with the In Plain Sight GobbleGum. Hit them with the bow\'s splash damage.',
+        video: { id: 'tiePIDr5dzY', title: 'How to turn zombies into skeletons (flying skulls)', ch: 'MrRoflWaffles', len: '5:43' },
         spots: [
           { text: 'On the ledge near Double Tap.', imgs: [{ src: I + 'spot-skeletons-1.webp', cap: 'Picture from Zombified\'s guide' }] },
           { text: 'On the ledge near Mule Kick.', imgs: [{ src: I + 'spot-skeletons-2.webp', cap: 'Picture from Zombified\'s guide' }, { src: I + 'spot-skeletons-2b.webp', cap: 'Picture from Zombified\'s guide' }] },
@@ -348,6 +350,7 @@
       {
         id: 'free-gum', tab: 'side', type: 'Free item', name: 'Free Mega GobbleGum (plant pot)',
         summary: 'In the Undercroft teleporter room, pick up the plant pot. Take it with you on a trip to the past (main easter egg step 3), and put it back where it belongs in the past. Back in the present the plant has grown — interact with it for a free GobbleGum.',
+        video: { id: '7EJ7aEjs_WU', title: 'Free Mega GobbleGum: potted plant Easter egg', ch: 'Jedi98', len: '1:40' },
       },
       {
         id: 'plunger', tab: 'weapons', type: 'Melee weapon', name: 'The Plunger', img: I + 'plunger.webp',

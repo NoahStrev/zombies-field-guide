@@ -210,6 +210,7 @@
       {
         id: 'basketball', tab: 'side', type: 'Free reward', name: 'Basketball (free Aetherium Crystal)',
         summary: 'In Sublevel 10, from the GobbleGum machine side, shoot the basketball stuck in the ceiling while low gravity is on. Kick it into the zombie window by that GobbleGum machine (top of the first stairs from the Particle Accelerator), then shoot it for a free Aetherium Crystal.',
+        video: { id: '_mkQ7fXiaNw', title: 'Basketball Easter egg (free Pack-a-Punch crystal)', ch: 'TheGamingRevolution', len: '1:22' },
       },
       {
         id: 'powerups', tab: 'side', type: 'Free power-ups', name: 'Hidden power-ups',

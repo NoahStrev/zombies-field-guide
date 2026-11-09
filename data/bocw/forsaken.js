@@ -135,6 +135,7 @@
       {
         id: 'song', tab: 'side', type: 'Song', name: '"Samantha\'s Ballad"',
         summary: 'Needs PhD Slider at tier 5. Slide off Anytown rooftops onto one of three scorched patches of road until an Aether bunny plush drops. Put it in the back of the Bubby animatronic and defend Bubby for three minutes. A loot chest with the cassette appears.',
+        video: { id: 'UIkxu-XUeLc', title: 'Bubby bunny Easter egg (free perks and the hidden song)', ch: 'MrDalekJD', len: '4:21' },
       },
     ],
   });

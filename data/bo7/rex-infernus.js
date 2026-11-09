@@ -146,6 +146,7 @@
       {
         id: 'song-dream', tab: 'side', type: 'Song', name: '"Samantha\'s Dream"',
         summary: 'Play the phonograph in the bedroom above Quick Revive in Her House. Only audible close by.',
+        video: { id: 'Mluzf6rnhUU', title: 'Samantha\'s Dream song Easter egg', ch: 'TheGamingRevolution', len: '5:51' },
       },
       {
         id: 'masks', tab: 'side', type: 'Wearable', name: 'The four masks',
