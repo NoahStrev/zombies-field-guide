@@ -70,7 +70,7 @@
         blocks: [{ warn: 'Skip the Mister Peeks bunny side quest around round 10: it can mess up the Krasny Soldat spawns.' }],
       },
       {
-        id: 'klaus-upgrade', tab: 'parts', type: 'Upgrade', name: 'Klaus upgrades', color: 'gold',
+        id: 'klaus-upgrade', tab: 'parts', type: 'Upgrade', name: 'Klaus upgrades', img: I + 'klaus-blueprint.webp', color: 'gold',
         summary: 'Three tiers, done at the Upgrade Station in the Garment Factory. The easter egg only needs the first tier. Each tier gives him a better gun (and new clothes).',
         video: KV,
         steps: [
@@ -91,7 +91,7 @@
         ],
       },
       {
-        id: 'helm', tab: 'parts', type: 'Buildable · Quest', name: 'Hacking Helm', color: 'storm',
+        id: 'helm', tab: 'parts', type: 'Buildable · Quest', name: 'Hacking Helm', img: I + 'helm.webp', color: 'storm',
         summary: 'Headgear for Klaus that lets him hack the Requiem computer in the easter egg. Shoot three electronic parts loose with the CRBR-S (any variant). You can build it early.',
         facts: [['Parts', '3 (shot loose with the CRBR-S)'], ['Build at', 'On Klaus while he sits in his chair']],
         video: EV,

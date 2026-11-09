@@ -13,6 +13,7 @@
     game: 'bo7', id: 'astra-malorum', order: 2,
     name: 'Astra Malorum', dlc: 'Season One', eeName: 'Main quest: free the celestial Shadowsmith',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'The tac map with every area outlined and named. Picture from Zombified\'s guide' }],
     tags: ['LGM-1', 'O.S.C.A.R.', 'Mars'],
     blurb: 'Silas Thurston\'s observatory, haunted by the robot O.S.C.A.R. Kill O.S.C.A.R. with three traps for the LGM-1, steal Thurston\'s brain to power a teleporter to Mars, and fight the Shadowsmith Caltheris in a Martian temple.',
     quick: [

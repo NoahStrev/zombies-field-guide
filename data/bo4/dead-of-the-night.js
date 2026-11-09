@@ -64,7 +64,7 @@
 
       /* ------------------------------ PARTS ------------------------------ */
       {
-        id: 'ballistic-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Ballistic Shield', color: 'gold',
+        id: 'ballistic-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Ballistic Shield', img: 'assets/img/bo4/vod/shield.webp', color: 'gold',
         summary: 'A riot shield with a strong machine pistol (aim to fire). The easter egg uses it to bash things and carry fire and electricity.',
         facts: [['Parts', '3'], ['Build at', 'Smoking Room bench (next to the Billiards Room)']],
         video: { id: 'm6LRjVyZNu4', title: 'Dead of the Night: how to build the shield', ch: 'MrRoflWaffles', len: '2:20' },

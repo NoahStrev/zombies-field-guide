@@ -98,7 +98,7 @@
         ],
       },
       {
-        id: 'pap-parts', tab: 'parts', type: 'Buildable · Pack-a-Punch', name: 'Pack-a-Punch parts', short: 'PaP parts', color: 'gold',
+        id: 'pap-parts', tab: 'parts', type: 'Buildable · Pack-a-Punch', name: 'Pack-a-Punch parts', short: 'PaP parts', img: I + 'pap.webp', color: 'gold',
         summary: 'Three parts in the hallway under the bank in Town. Build the machine at the table at the end of the hallway.',
         facts: [['Parts', '3'], ['Build at', 'End of the hallway under the bank']],
         video: AV,

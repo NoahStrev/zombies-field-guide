@@ -14,6 +14,10 @@
     game: 'bo7', id: 'paradox-junction', order: 3,
     name: 'Paradox Junction', dlc: 'Season Two Reloaded', eeName: 'Main quest: kill the Dark Heart',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [
+      { src: I + 'layout.webp', cap: 'The destroyed town (after the bomb): areas, door costs, perks (P), wall-buys (G), Mystery Box spots (M) and more, with a key at the bottom. Picture from Zombified\'s guide' },
+      { src: I + 'layout-past.webp', cap: 'The town in the past (before the bomb), marked the same way. Picture from Zombified\'s guide' },
+    ],
     tags: ['Blundergat / Sundergat', 'Two Nuketowns', 'Dark Heart boss'],
     blurb: 'Nuketown in two times at once: the town before the bomb and the destroyed town after, with teleporters between them. Build and upgrade the Blundergat, play three children\'s games with the ghostly Twins and destroy the Dark Heart.',
     quick: [

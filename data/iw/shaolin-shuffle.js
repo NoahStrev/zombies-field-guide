@@ -90,7 +90,7 @@
         ],
       },
       {
-        id: 'kirisute-gomen', tab: 'weapons', type: 'Melee wonder weapon', name: 'Kirisute Gomen (katana)', short: 'Kirisute Gomen', color: 'red',
+        id: 'kirisute-gomen', tab: 'weapons', type: 'Melee wonder weapon', name: 'Kirisute Gomen (katana)', short: 'Kirisute Gomen', img: I + 'katana.webp', color: 'red',
         summary: 'Pam Grier\'s katana. Free on the Black Cat Dojo wall once the main easter egg is done in that game; in later games it costs 10,000 if you\'ve finished the egg before.',
         facts: [['Upgraded', 'Sprites of Hell (shockwave every third swing)'], ['Upgraded twice', 'Feral Instinct (sends a ghost tiger)']],
       },

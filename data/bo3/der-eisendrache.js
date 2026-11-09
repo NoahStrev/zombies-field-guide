@@ -350,7 +350,7 @@
         summary: 'In the Undercroft teleporter room, pick up the plant pot. Take it with you on a trip to the past (main easter egg step 3), and put it back where it belongs in the past. Back in the present the plant has grown — interact with it for a free GobbleGum.',
       },
       {
-        id: 'plunger', tab: 'weapons', type: 'Melee weapon', name: 'The Plunger',
+        id: 'plunger', tab: 'weapons', type: 'Melee weapon', name: 'The Plunger', img: I + 'plunger.webp',
         summary: 'A melee weapon that hits like a knife, but kill a Panzersoldat and it catches fire for a minute, killing anything in one strike (Panzers included). The fire relights every time you kill another Panzer.',
         video: { id: 'CPkf2RSGpuI', title: 'Getting and upgrading the Plunger', ch: 'MrDalekJD', len: '4:33', t: 33 },
         steps: [

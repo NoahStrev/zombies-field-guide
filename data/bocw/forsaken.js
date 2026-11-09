@@ -50,7 +50,7 @@
 
       /* ------------------------------ PARTS ------------------------------ */
       {
-        id: 'neutralizer', tab: 'parts', type: 'Buildable · Quest', name: 'Aetherium Neutralizer', color: 'aether',
+        id: 'neutralizer', tab: 'parts', type: 'Buildable · Quest', name: 'Aetherium Neutralizer', img: I + 'neutralizer.webp', color: 'aether',
         summary: 'The machine that carries you through the Dark Aether wall at the end of the easter egg. Three parts in any order, plus three catalysed crystal shards as fuel. They only appear after the cutscene from the second red button.',
         facts: [['Parts', '3 + 3 crystal shards'], ['Build at', 'Workbench in Main Street, facing the collapsed walkway'], ['Unlocks', 'Two rounds after the cutscene']],
         video: EV,

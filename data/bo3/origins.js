@@ -87,7 +87,7 @@
 
       /* ------------------------------ PARTS ------------------------------ */
       {
-        id: 'zombie-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Zombie Shield', color: 'gold',
+        id: 'zombie-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Zombie Shield', img: I + 'shield.webp', color: 'gold',
         summary: 'Blocks hits from the front while you hold it and from behind while it is on your back, and can be planted as a barrier. Build it at any workbench.',
         facts: [['Parts', '3']],
         parts: [
@@ -110,7 +110,7 @@
         video: { id: 'g00RXa_eibI', title: 'Origins — How to Build the Zombie Shield (part locations)', ch: 'Ricktness', len: '2:41' },
       },
       {
-        id: 'maxis-drone', tab: 'parts', type: 'Buildable · Drone', name: 'Maxis Drone', color: 'storm',
+        id: 'maxis-drone', tab: 'parts', type: 'Buildable · Drone', name: 'Maxis Drone', img: I + 'drone.webp', color: 'storm',
         summary: 'A flying drone with Maxis\'s brain that shoots zombies, grabs power-ups and revives you for about 90 seconds before recharging. Essential for the easter egg.',
         facts: [['Parts', '3'], ['Note (BO3)', 'You can carry the drone or Trip Mines, not both']],
         parts: [

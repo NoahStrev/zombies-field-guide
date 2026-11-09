@@ -78,7 +78,7 @@
         ],
       },
       {
-        id: 'zombie-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Zombie Shield', color: 'gold',
+        id: 'zombie-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Zombie Shield', img: I + 'shield.webp', color: 'gold',
         summary: 'Three parts, built at any of the three workbenches (cafeteria, top floor of the cell block, outside Building 64).',
         facts: [['Parts', '3'], ['Build at', 'Any workbench']],
         video: AV,
@@ -101,7 +101,7 @@
         ],
       },
       {
-        id: 'acid-gat-kit', tab: 'parts', type: 'Buildable · Upgrade kit', name: 'Acid Gat kit', color: 'green',
+        id: 'acid-gat-kit', tab: 'parts', type: 'Buildable · Upgrade kit', name: 'Acid Gat kit', img: I + 'acid-gat-kit.webp', color: 'green',
         summary: 'Three parts, built at any workbench. Use the finished kit on a Blundergat to turn it into the Acid Gat.',
         facts: [['Parts', '3'], ['Build at', 'Any workbench']],
         video: AV,

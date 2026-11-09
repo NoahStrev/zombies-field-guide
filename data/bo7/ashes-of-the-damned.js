@@ -59,7 +59,7 @@
 
       /* ------------------------------ PARTS ------------------------------ */
       {
-        id: 'klaus', tab: 'parts', type: 'Helper', name: 'Klaus', color: 'gold',
+        id: 'klaus', tab: 'parts', type: 'Helper', name: 'Klaus', img: I + 'klaus.webp', color: 'gold',
         summary: 'From round 8, kill an Uber Klaus at Janus Towers Plaza for a stabilizer chip, fit it in the Ashwood jail and wake Klaus with stun grenades. His remote takes a grenade slot (bumper, or Q on PC).',
         video: GV,
         steps: [

@@ -125,7 +125,7 @@
         video: SE(298),
       },
       {
-        id: 'gorgofex-n', tab: 'weapons', type: 'Gorgofex upgrade', name: 'Gorgofex N (Blanchard\'s essence)', color: 'aether',
+        id: 'gorgofex-n', tab: 'weapons', type: 'Gorgofex upgrade', name: 'Gorgofex N (Blanchard\'s essence)', img: I + 'gorgofex-n.webp', color: 'aether',
         summary: 'Side with Panos: drain Blanchard\'s life into the Gorgofex. Zombies hit by it writhe in green decay. Taking this upgrade rules out the Gorgofex C (it moves to the Mystery Box instead). Pack-a-Punched it becomes the Gorgofex Necrodystonia.',
         video: GV,
         steps: [
@@ -144,7 +144,7 @@
         ],
       },
       {
-        id: 'gorgofex-c', tab: 'weapons', type: 'Gorgofex upgrade', name: 'Gorgofex C (Panos\'s spirit)', color: 'lightning',
+        id: 'gorgofex-c', tab: 'weapons', type: 'Gorgofex upgrade', name: 'Gorgofex C (Panos\'s spirit)', img: I + 'gorgofex-c.webp', color: 'lightning',
         summary: 'Side with Blanchard: capture Dr Panos\'s spirit in the Gorgofex for its blue upgrade. Taking it rules out the Gorgofex N (it moves to the Mystery Box instead). Pack-a-Punched it becomes the Gorgofex Corpsloder.',
         video: GV,
         steps: [

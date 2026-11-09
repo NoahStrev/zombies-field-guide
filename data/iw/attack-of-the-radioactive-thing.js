@@ -62,7 +62,7 @@
 
       /* ------------------------------ PARTS ------------------------------ */
       {
-        id: 'seismic', tab: 'parts', type: 'Buildable', name: 'Seismic Wave Generator', color: 'storm',
+        id: 'seismic', tab: 'parts', type: 'Buildable', name: 'Seismic Wave Generator', img: I + 'seismic.webp', color: 'storm',
         summary: 'Three parts and a bench in the diner area. Keep one: the easter egg uses it to dig up a zombie arm on the beach.',
         facts: [['Parts', '3'], ['Build at', 'The bench in the diner']],
         video: AV,
