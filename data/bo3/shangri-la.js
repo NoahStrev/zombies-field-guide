@@ -22,8 +22,8 @@
         id: 'power-pap', tab: 'start', type: 'Getting started', name: 'Power & Pack-a-Punch', short: 'Power & PaP',
         summary: 'Pull both water levers in the Power Room, then get every player onto a stone slab at once to raise the temple stairs.',
         steps: [
-          { t: 'Reach the Power Room', d: 'From spawn, open either the debris toward the Mine Cart or toward the waterfall. Both routes lead underground to the Power Room.' },
-          { w: ['tctR5oCbxWk', 31], t: 'Pull both water levers', d: 'They drive the water-powered generators and turn the power on.' },
+          { w: ['tctR5oCbxWk', 38], t: 'Reach the Power Room', d: 'From spawn, open either the debris toward the Mine Cart or toward the waterfall. Both routes lead underground to the Power Room.' },
+          { w: ['tctR5oCbxWk', 41], t: 'Pull both water levers', d: 'They drive the water-powered generators and turn the power on.' },
           { w: ['tctR5oCbxWk', 737], t: 'Stop the spinning statues', d: 'Four small stone statues around the map now have spinning parts — one spinning part per player in the game. Next to each is a stone slab; standing on it stops that part.', list: [
             'Next to Quick Revive.',
             'By the big wooden bridge.',

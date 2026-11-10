@@ -138,7 +138,7 @@
           name: 'Electric Shield', summary: 'Shocks zombies, halves perk and GobbleGum prices while held, and powers three special consoles (the Lab A and Lab B cages and the zipline).',
           steps: [
             { t: 'Every player finishes all three Trials', needs: ['trials'] },
-            { t: 'Hold the shield out at the skull altar until lightning strikes you' },
+            { w: ['Oe8yHL9Gc3Q', 33], t: 'Hold the shield out at the skull altar until lightning strikes you' },
           ],
         },
         video: { id: 'FQ7SHBEsDig', title: 'All Shield Part Locations (Zetsubou No Shima)', ch: 'MrRoflWaffles', len: '1:52' },
@@ -198,13 +198,13 @@
         video: { id: '6pxC9-9LzTo', title: 'Easy Skull of Nan Sapwe guide', ch: 'MrRoflWaffles', len: '5:53' },
         stepsTitle: 'How to get it',
         steps: [
-          { imgs: [{ src: I + 'skull-altar.webp', cap: 'The four skulls on the Trials altar' }], anyList: 'Skulls in any order', t: 'Cleanse the four bloody skulls', d: 'Take one skull at a time from the Trials altar to the pedestal with the matching symbol (pedestal symbols are random). Placing it starts a defence: green-glowing zombies go for the skull. Protect it until it\'s clean (+500 points each), then bring it back to the altar.', list: [
+          { imgs: [{ src: I + 'skull-altar.webp', cap: 'The four skulls on the Trials altar' }], anyList: 'Skulls in any order', w: 18, t: 'Cleanse the four bloody skulls', d: 'Take one skull at a time from the Trials altar to the pedestal with the matching symbol (pedestal symbols are random). Placing it starts a defence: green-glowing zombies go for the skull. Protect it until it\'s clean (+500 points each), then bring it back to the altar.', list: [
             'In front of spawn, next to the big central rock before the GobbleGum machine.',
             'By the Propeller Trap, nearest the lowest switch.',
             'Bunker docks area, left of the main power switch, among wooden crates.',
             'Bunker operations room, downstairs next to the KT-4 and Masamune benches.',
           ], warn: 'Spiders and Thrashers can join the later defences — they attack you, not the skull. If the skull breaks, it goes back to the altar next round.', tip: 'Enemies spawned here don\'t count toward the round, so leaving a crawler alive is safe.' },
-          { t: 'Defend the Skull of Nan Sapwe from Keepers', d: 'With all four cleansed, stairs open in front of the altar. Grab the Skull: the room locks and Keepers attack. Kill them (20 in solo) to charge it.' },
+          { w: 262, t: 'Defend the Skull of Nan Sapwe from Keepers', d: 'With all four cleansed, stairs open in front of the altar. Grab the Skull: the room locks and Keepers attack. Kill them (20 in solo) to charge it.' },
         ],
       },
       {

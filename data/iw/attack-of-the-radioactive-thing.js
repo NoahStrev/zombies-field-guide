@@ -30,7 +30,7 @@
         summary: 'Take the power handle from the beach to the Power Station. Then bring Elvira her spell book, fill her vial with Cleaver kills, and lead her to a blue portal to open Pack-a-Punch.',
         video: { id: P, title: 'How to Pack-a-Punch on Attack of the Radioactive Thing', ch: 'MrDalekJD', len: '2:37' },
         steps: [
-          { t: 'Turn on the power', d: 'A zombie arm sticking out of the sand on the beach holds the power handle. Take it to the switch in the Power Station.' },
+          { w: ['MkIi6-sVL1I', 42], t: 'Turn on the power', d: 'A zombie arm sticking out of the sand on the beach holds the power handle. Take it to the switch in the Power Station.' },
           { w: 32, t: 'Talk to Elvira in the TV studio, then fetch her spell book', d: 'After the power is on, a wall panel opens in the diner (by the Ghosts \'n Skulls machine) with the book inside. Give it to her and she hands you an empty vial.', imgs: [{ src: I + 'elvira.webp', cap: 'Elvira' }] },
           { w: 48, t: 'Fill the vial with Cleaver kills', d: 'The Cleaver is in the Beachside Market by the freezer. Melee zombies with it (the glowing radioactive soldiers count); check the vial with the inventory button. About 5–10 kills.', needs: ['cleaver'] },
           { w: 98, t: 'Give Elvira the vial and lead her to a blue portal', d: 'She gets off her couch and fights with you. Walk her to the portal (one is right outside her studio by the Magic Wheel; others are by the trailer park campfire and the diner). She opens it to the projection room. Pack-a-Punch costs 5,000.' },
@@ -170,6 +170,7 @@
       {
         id: 'elvira-code', tab: 'side', type: 'Unlockable character', name: 'Play as Elvira',
         summary: 'Once you\'ve finished Soul-Less, quickly press **Down, Right, Down, Left, Up, Right** in the Attack of the Radioactive Thing pre-game lobby. You start as Elvira.',
+        video: { id: 'X4wj33rIBIA', title: 'How to play as Elvira', ch: 'MJPW', len: '1:43' },
         facts: [['Needs', 'Soul-Less completed'], ['Reward', '"Mistress of the Dark" achievement']],
       },
     ],

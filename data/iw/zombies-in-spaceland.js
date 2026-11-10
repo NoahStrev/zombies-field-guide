@@ -248,6 +248,7 @@
       {
         id: 'hoff', tab: 'side', type: 'Unlockable character', name: 'Play as David Hasselhoff',
         summary: 'Once you\'ve finished Sooooul Key, quickly press **Left, Right, Left, Up, Down** in the Zombies in Spaceland pre-game lobby. His portrait appears at the bottom of the screen. When the match starts you play as the Hoff, with his own melee and the Knight Rider theme.',
+        video: { id: 'AQvMyqYrbsg', title: 'Play as Hasselhoff Easter egg', ch: 'MrDalekJD', len: '3:36' },
         facts: [['Needs', 'Sooooul Key completed'], ['Reward', '"Hoff the Charts!" achievement']],
       },
     ],

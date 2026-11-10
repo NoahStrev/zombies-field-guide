@@ -104,7 +104,7 @@
           name: 'Estoom-oth', summary: 'The Pack-a-Punched Servant: more ammo, longer black holes, bigger blast. You must unlock it first.',
           video: { id: 'MvIuwsb0HlM', title: 'Upgraded Apothicon Servant', ch: 'MrDalekJD', len: '3:13' },
           steps: [
-            { anyList: 'Tablets in any order', t: 'Shoot five blue floating tablets with the Servant', d: 'Hit each tablet directly; it disappears when hit (no sound). Aim between the two middle barbs on top of the gun.', list: [
+            { w: 20, anyList: 'Tablets in any order', t: 'Shoot five blue floating tablets with the Servant', d: 'Hit each tablet directly; it disappears when hit (no sound). Aim between the two middle barbs on top of the gun.', list: [
               'Above the jump pad at the House (spawn) that leads to Shangri-La.',
               'Above and behind the doorway joining Shangri-La and Der Eisendrache — easiest from the top of the big Shangri-La staircase.',
               'Above the Origins/Mob of the Dead island toward the jump pad to Verrückt — easiest from the top of the central mound (old Origins PaP).',
@@ -127,7 +127,7 @@
           video: { id: 'XSGuiyqVVTQ', title: 'Upgraded Li\'l Arnie', ch: 'MrDalekJD', len: '1:38' },
           steps: [
             { t: 'Get 150 kills with Li\'l Arnies (whole team combined)' },
-            { t: 'Throw one into the church bell-tower window', d: 'Samantha giggles and everyone holding Li\'l Arnies gets upgraded ones.' },
+            { w: 35, t: 'Throw one into the church bell-tower window', d: 'Samantha giggles and everyone holding Li\'l Arnies gets upgraded ones.' },
           ],
         },
       },
@@ -206,8 +206,8 @@
         summary: 'Unlocks the table downstairs in Nacht for storing or passing weapons, and adds an M1927 wall-buy.',
         video: { id: '4EzCjmpIKHw', title: 'Tommy Gun chalk wall-buy and weapon table', ch: 'GregFPS', len: '3:10' },
         steps: [
-          { t: 'Pick up the pink chalk', d: 'During Anti-Gravity in Der Eisendrache, on top of a narrow carved pillar in the hallway between the VMP wall-buy and the Pyramid (slightly above and left of a Fafnir part spot).' },
-          { t: 'Use the chalk at each spot, in this order', ol: [
+          { w: 27, t: 'Pick up the pink chalk', d: 'During Anti-Gravity in Der Eisendrache, on top of a narrow carved pillar in the hallway between the VMP wall-buy and the Pyramid (slightly above and left of a Fafnir part spot).' },
+          { w: 44, t: 'Use the chalk at each spot, in this order', ol: [
             'Der Eisendrache: on the wall under where the Undercroft dragon used to be.',
             'Verrückt: upstairs in the electric-trap room, on the floor in front of the Mystery Box spot.',
             'Nacht: on the wall in the middle of the curved staircase up to Juggernog.',

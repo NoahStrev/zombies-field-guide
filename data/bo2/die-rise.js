@@ -191,10 +191,12 @@
       {
         id: 'navcard', tab: 'side', type: 'Story link', name: 'Navcard (linking TranZit, Die Rise and Buried)', short: 'Navcard',
         summary: 'Die Rise\'s NAV table takes the navcard from TranZit (behind the dumpster at the back of the Bus Depot). Die Rise\'s own navcard is in the room with the PDW-57, in a broken glass display case near the Speed Cola / Who\'s Who elevator; it goes into Buried\'s table. Not needed for this map\'s quest.',
+        video: { id: 'B0qfwtEVH1U', title: 'Black Ops II navcards explained', ch: 'WistfulSum', len: '7:01', t: 172 },
       },
       {
         id: 'free-perk', tab: 'side', type: 'Free perk', name: 'Perfect Jumping Jack round',
         summary: 'Finish a Jumping Jack (special) round without missing a single shot to get a free perk. Letting Trample Steams do the killing means you never have to shoot.',
+        video: { id: 'Ty3mlRtMYUs', title: 'Die Rise free perks: a perfect Jumping Jack round', ch: 'Ricktness', len: '0:52' },
       },
       {
         id: 'song', tab: 'side', type: 'Song', name: '"We All Fall Down"',

@@ -30,7 +30,7 @@
         summary: 'Turn on the four power generators to open the sewers. Collect a Pink Cat flyer, a token and a film reel, then fix the projector in the Pink Cat\'s back room for Pack-a-Punch.',
         video: { id: P, title: 'All Pack-a-Punch part locations', ch: 'MrRoflWaffles', len: '4:20' },
         steps: [
-          { anyList: 'Generators in any order', t: 'Turn on all four power generators', list: [
+          { w: ['t5_OZB_E9bw', 16], anyList: 'Generators in any order', t: 'Turn on all four power generators', list: [
             'First subway (spawn): on a pole next to the train.',
             'The park: in the small area at the bottom of the stairs, by Deadeye Dewdrops.',
             'Inferno Club roof (through the 1,500 door in the DJ booth).',
@@ -187,6 +187,7 @@
       {
         id: 'pam', tab: 'side', type: 'Unlockable character', name: 'Play as Pam Grier',
         summary: 'Once you\'ve finished Pest Control, quickly press **Up, Up, Right, Left, Down, Left** in the Shaolin Shuffle pre-game lobby. You start as Pam Grier, and the Nunchucks join the Magic Wheel.',
+        video: { id: 'R-z00lPJP3c', title: 'Play as Pam Grier Easter egg', ch: 'MrDalekJD', len: '1:40' },
         facts: [['Needs', 'Pest Control completed']],
       },
     ],

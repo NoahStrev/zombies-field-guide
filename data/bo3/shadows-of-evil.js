@@ -113,9 +113,10 @@
         video: { id: '03k_5s-KTNU', title: 'Shadows of Evil shield fast guide: all nine part spots', ch: 'Schleyerz', len: '0:49' },
         upgrade: {
           name: 'Goddard Apparatus', summary: 'Takes more hits and holds four charges instead of three.',
+          video: { id: 'wblXpcX8Tsw', title: 'Upgraded shield Easter egg: Goddard Apparatus', ch: 'MrDalekJD', len: '5:18' },
           steps: [
-            { t: 'Hit 10+ zombies with one burst, twelve bursts in a row', d: 'A bowling-strike sound means the burst counted. Hitting fewer than 10 resets the streak; the shield breaking does not.' },
-            { t: 'Collect the upgraded shield', d: 'In solo you can pick it up again from the workbench where you built it.' },
+            { w: 61, t: 'Hit 10+ zombies with one burst, twelve bursts in a row', d: 'A bowling-strike sound means the burst counted. Hitting fewer than 10 resets the streak; the shield breaking does not.' },
+            { w: 240, t: 'Collect the upgraded shield', d: 'In solo you can pick it up again from the workbench where you built it.' },
           ],
         },
       },
@@ -136,8 +137,8 @@
           ] },
         ],
         steps: [
-          { t: 'Put the three fuses in the Master Switch', d: 'The fuse box is down below Morg City in the Rift.' },
-          { t: 'Call it from an Emergency Response panel when it shows green', list: [
+          { w: 142, t: 'Put the three fuses in the Master Switch', d: 'The fuse box is down below Morg City in the Rift.' },
+          { w: 162, t: 'Call it from an Emergency Response panel when it shows green', list: [
             'Junction: near the GobbleGum machine and Chang\'s laundry.',
             'Canal District: in front of the Ruby Rabbit, over the bridge near the Harsha hotel.',
             'Footlight District: near the Apothicon statue and the gate to the Burlesque/theatre.',

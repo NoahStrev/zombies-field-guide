@@ -227,6 +227,7 @@
       {
         id: 'lullaby', tab: 'side', type: 'Secret ending', name: 'Samantha\'s Lullaby ending',
         summary: 'At the very start of a game, don\'t move and let your Afterlife meter run out. You get a special death screen with Samantha\'s Lullaby.',
+        video: { id: '8JQP_CF4r28', title: 'Samantha\'s Lullaby in the alternate game ending', ch: 'NGTZombies', len: '3:50' },
       },
     ],
   });

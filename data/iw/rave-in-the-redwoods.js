@@ -177,6 +177,7 @@
       {
         id: 'kevin', tab: 'side', type: 'Unlockable character', name: 'Play as Kevin Smith',
         summary: 'Once you\'ve finished Locksmith, quickly press **Right, Left, Left, Down, Down, Right** in the Rave in the Redwoods pre-game lobby. You start the match as Kevin Smith.',
+        video: { id: 'wxRpPr8zocU', title: 'Play as Kevin Smith Easter egg', ch: 'CodeNamePizza', len: '2:54' },
         facts: [['Needs', 'Locksmith completed']],
       },
     ],

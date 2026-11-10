@@ -237,6 +237,7 @@
       {
         id: 'rushmore-codes', tab: 'side', type: 'Cheat codes', name: 'Rushmore keypad codes',
         summary: 'Rushmore accepts words typed as numbers on a phone-style keypad. One cheat code per round, and each one only works once per game. Reported to work only in online Classic games (not offline or with Mutations).',
+        video: { id: 'jaf0DnzAuek', title: 'All 40 Rushmore codes', ch: 'Fast Guides Glitch', len: '10:09' },
         blocks: [
           { p: '**Useful**' },
           { table: { head: ['Code', 'Word', 'Effect'], rows: [

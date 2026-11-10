@@ -32,8 +32,9 @@
       {
         id: 'generators', tab: 'start', type: 'Getting started', name: 'Generators & Pack-a-Punch', short: 'Generators & PaP', img: I + 'map.webp',
         summary: 'Pack-a-Punch, at the top of the Excavation Site in the middle of the map, turns on once all six 115 generators are running.',
+        video: { id: 'aWjhvP1nGCo', title: 'Origins: Ultimate Guide', ch: 'AceOfSpades', len: '21:40' },
         steps: [
-          { anyList: 'Generators in any order', t: 'Turn on the six generators', d: 'Pay at a generator to start it, then stay inside its area while zombies rush in until it\'s captured. Templar zombies sometimes try to take generators back later — defend them or turn them on again.', list: [
+          { w: 3, anyList: 'Generators in any order', t: 'Turn on the six generators', d: 'Pay at a generator to start it, then stay inside its area while zombies rush in until it\'s captured. Templar zombies sometimes try to take generators back later — defend them or turn them on again.', list: [
             'Generator 1: starting room.',
             'Generator 2: near the workshop, by the tank station.',
             'Generator 3: near the workshop and Speed Cola.',
@@ -41,7 +42,7 @@
             'Generator 5: far right of No Man\'s Land, by the Lightning tunnel and Stamin-Up.',
             'Generator 6: behind the church, where the tank stops.',
           ] },
-          { t: 'Use Pack-a-Punch at the top of the Excavation Site', d: 'It works while all six generators are on.' },
+          { w: 41, t: 'Use Pack-a-Punch at the top of the Excavation Site', d: 'It works while all six generators are on.' },
         ],
         blocks: [{ imgs: [{ src: I + 'map.webp', cap: 'Generator locations (in-game map)', wide: true }] }],
       },
@@ -343,6 +344,7 @@
       {
         id: 'rituals', tab: 'side', type: 'Rewards', name: 'Rituals of the Ancients',
         summary: 'Boards at Generators 1 and 6 track four challenges. Spend the earned token at either board.',
+        video: { id: '2lb86VuzTNs', title: 'Origins 101: Rituals of the Ancients challenges', ch: 'Doughnuts', len: '1:48' },
         blocks: [{ table: { head: ['Challenge', 'Reward'], rows: [
           ['Spend 30,000 points', 'Double Tap (if you don\'t have it)'],
           ['115 headshots on normal zombies', 'A Pack-a-Punched ICR-1, STG-44, Weevil or MP40'],

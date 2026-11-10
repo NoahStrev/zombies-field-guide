@@ -25,7 +25,7 @@
         id: 'power-pap', tab: 'start', type: 'Getting started', name: 'Power & Pack-a-Punch',
         summary: 'Turn on the power, then send Pack-a-Punch pieces away from two of its three possible spots so the machine builds at the third.',
         steps: [
-          { t: 'Turn on the power', d: 'Open your way up into the castle. The power switch is in the Armory, on the T-shaped hallway that joins Samantha\'s Room and the Church (Mission Control). Power opens the way down to the Undercroft.' },
+          { w: ['pXLtp0TC1L8', 13], t: 'Turn on the power', d: 'Open your way up into the castle. The power switch is in the Armory, on the T-shaped hallway that joins Samantha\'s Room and the Church (Mission Control). Power opens the way down to the Undercroft.' },
           { w: ['nwjpp1jWZ5Y', 31], anyList: 'Any two spots, in any order', t: 'Visit the three Pack-a-Punch spots', list: [
             '**Undercroft**: by the large central pillar, on the side opposite the dragon statue.',
             '**Bastion**: the outdoor area behind the power switch, across from the Wundersphere.',
@@ -37,8 +37,9 @@
       {
         id: 'anti-gravity', tab: 'start', type: 'Map mechanic', name: 'Anti-Gravity (wall-running)', color: 'storm',
         summary: 'Low gravity in the Undercroft lets you double-jump and wall-run. Several parts and two bow quests need it.',
+        video: { id: 'ffzxSTEy7F4', title: 'How to activate zero gravity', ch: 'Engage', len: '1:40' },
         steps: [
-          { t: 'Stand on each of the four tiles around the Pyramid', d: 'Each tile needs about 4–5 seconds before it stays lit blue. When all four are lit, Anti-Gravity turns on.' },
+          { w: 13, t: 'Stand on each of the four tiles around the Pyramid', d: 'Each tile needs about 4–5 seconds before it stays lit blue. When all four are lit, Anti-Gravity turns on.' },
           { t: 'Wait for it to repeat', d: 'After the first time, Anti-Gravity switches itself back on every few minutes for the rest of the game.' },
         ],
       },
@@ -98,7 +99,7 @@
         upgrade: {
           name: 'Goddard Apparatus', summary: 'Takes more hits and holds four rocket charges instead of three.',
           steps: [
-            { t: 'Hit 10 or more zombies with one rocket burst — twelve times in a row', d: 'A bowling-strike sound confirms each good burst. A burst that hits fewer than 10 zombies resets the streak, but the shield breaking does not.', tip: 'Train a big horde, then burst straight through the middle of it.' },
+            { t: 'Hit 10 or more zombies with one rocket burst — twelve times in a row', d: 'A bowling-strike sound confirms each good burst. A burst that hits fewer than 10 zombies resets the streak, but the shield breaking does not.', tip: 'Train a big horde, then burst straight through the middle of it.', warn: 'Sources disagree here: the wiki says the upgrade works on this map as in Shadows of Evil, but TheGamingRevolution tested it on Der Eisendrache in 2018 and the shield did not upgrade.' },
             { t: 'Pick up the upgraded shield', d: 'It replaces your shield automatically. If it breaks later, the workbench gives you the upgraded version again.' },
           ],
         },
@@ -330,6 +331,7 @@
       {
         id: 'song-lullaby', tab: 'side', type: 'Song', name: 'Samantha\'s Lullaby',
         summary: 'Hold interact on the music box on the table next to the bed in Samantha\'s Room.',
+        video: { id: 'cHwhlaZvJm0', title: 'Samantha music box Easter egg', ch: 'MrRoflWaffles', len: '1:37' },
       },
       {
         id: 'disco', tab: 'side', type: 'Fun', name: 'Control Room disco',

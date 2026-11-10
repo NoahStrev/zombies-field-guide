@@ -76,8 +76,8 @@
         video: { id: '1bf0fa6sxdk', title: 'The Giant secret perk machine', ch: 'MrDalekJD', len: '3:13' },
         steps: [
           { t: 'Get Monkey Bombs from the Mystery Box and link all teleporters', needs: ['power-pap'] },
-          { anyList: 'Teleporters in any order', t: 'Teleport a Monkey Bomb from each teleporter', d: 'Throw a Monkey Bomb onto a teleporter pad and teleport with it. Back at the Mainframe, one of three lights on the panel beside it turns from red to green. Repeat for all three teleporters.' },
-          { t: 'Press the red button on the panel', d: 'The giant robot\'s head outside fires its eye beam, which bounces off the welcome sign and melts a snow pile, revealing Stamin-Up or Deadshot Daiquiri.' },
+          { w: 61, anyList: 'Teleporters in any order', t: 'Teleport a Monkey Bomb from each teleporter', d: 'Throw a Monkey Bomb onto a teleporter pad and teleport with it. Back at the Mainframe, one of three lights on the panel beside it turns from red to green. Repeat for all three teleporters.' },
+          { w: 99, t: 'Press the red button on the panel', d: 'The giant robot\'s head outside fires its eye beam, which bounces off the welcome sign and melts a snow pile, revealing Stamin-Up or Deadshot Daiquiri.' },
         ],
       },
     ],

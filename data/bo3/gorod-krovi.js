@@ -27,7 +27,7 @@
           { w: ['EDLnCiwz24w', 7], t: 'Turn on the power in Dragon Command', d: 'Work your way to the Dragon Command building and turn the power on.' },
           { w: ['EDLnCiwz24w', 17], t: 'Talk to S.O.P.H.I.A.', d: 'Press the button under her centre console (it flashes green, then red). Zombies now start dropping Code Cylinders.' },
           { w: ['EDLnCiwz24w', 20], anyList: 'Pods in any order', t: 'Defend three Groph Pods', d: 'Each Code Cylinder matches a console in Dragon Command, the Supply Depot or the Tank Factory. Insert it and a Groph Pod crashes somewhere on the map (green beam in the sky). Kill 15 zombies close to the pod before they wreck it; it opens with a module. Get all three.', warn: 'Zombies start attacking the pod right away, even far from you. Lose one and you need another Code Cylinder.', tip: 'Buy Stamin-Up before calling pods, especially solo.' },
-          { t: 'Install the modules in the Operations Bunker', d: 'Put all three into the Dragon Network console in the middle of the room. This is the Dragon Network Controller.' },
+          { w: ['U4xqbODRzuw', 118], t: 'Install the modules in the Operations Bunker', d: 'Put all three into the Dragon Network console in the middle of the room. This is the Dragon Network Controller.' },
           { w: ['EDLnCiwz24w', 33], t: 'Ride the dragon to Pack-a-Punch', d: 'Call the dragon (500 points) at the platform in Dragon Command, the Supply Depot or the Tank Factory and hold interact to climb on. It flies you to the Hatchery, where Pack-a-Punch is on the ground floor. The sewer in the Hatchery basement takes you back to Belinski Square.' },
         ],
       },
@@ -108,8 +108,8 @@
         summary: 'A controller that marks a spot for a dragon to blast with fire. Earned from a lockdown in the Hatchery.',
         steps: [
           { w: ['EDLnCiwz24w', 681], t: 'Start the Hatchery lockdown', needs: ['power-pap'], d: 'Interact with the crystal on the top floor of the Hatchery (in co-op, everyone must). A Max Ammo floats near Pack-a-Punch — grab it when the fourth wave starts.' },
-          { t: 'Survive four waves', d: 'Zombies, Manglers and Valkyrie Drones attack, first one side at a time, then all windows. No points are earned and Pack-a-Punch is closed until it ends. The round number is frozen.', tip: 'Before round 10 the Bowie Knife still one-hits. Shoot Mangler helmets and arm cannons now to unlock the Mangler Helmet.' },
-          { t: 'Take the Dragon Strike from the crystal' },
+          { w: ['EDLnCiwz24w', 707], t: 'Survive four waves', d: 'Zombies, Manglers and Valkyrie Drones attack, first one side at a time, then all windows. No points are earned and Pack-a-Punch is closed until it ends. The round number is frozen.', tip: 'Before round 10 the Bowie Knife still one-hits. Shoot Mangler helmets and arm cannons now to unlock the Mangler Helmet.' },
+          { w: ['EDLnCiwz24w', 738], t: 'Take the Dragon Strike from the crystal' },
         ],
         upgrade: {
           name: 'Draconite Controller', summary: 'Bigger blast and more damage. Progress is shared in co-op.',
@@ -232,7 +232,7 @@
           { any: 'Do these three in any order', t: 'Ride the dragon from all three platforms', needs: ['power-pap'], d: 'Dragon Command, Tank Factory and Supply Depot (any order; shared in co-op).' },
           { any: 'Do these three in any order', t: 'Get the Dragon Strike', needs: ['dragon-strike'] },
           { any: 'Do these three in any order', t: 'Fully hatch the egg (someone holds the Gauntlet)', needs: ['gauntlet'] },
-          { t: 'Put them on', d: 'Department Store 3rd floor, on a mannequin facing a wall near the black valve (along the right wall if you come in from the top of the Infirmary).' },
+          { w: 11, t: 'Put them on', d: 'Department Store 3rd floor, on a mannequin facing a wall near the black valve (along the right wall if you come in from the top of the Infirmary).' },
         ],
       },
       {
