@@ -16,7 +16,7 @@ Run it with no command to see the full list. Image downloads need Pillow (`pip i
 
 1. **Read up:** `wiki-fetch "Map Name" "Main Quest Name"`, then `wiki-show "Map Name" "Section"`.
 2. **Find videos:** `yt-search "map name easter egg guide"`, then `yt-info <ids>` to check they embed, their length and that they have English captions.
-3. **Get captions:** open a YouTube watch page, paste `tools/browser/captions.js` into the console, run `await zgCaptions([...ids])`, paste the result into `tools/.cache/captions.txt`, then run `captions`. Transcripts land in `tools/.cache/tx/<id>.txt` as `seconds [m:ss] text` blocks, which is how the `w:` timestamps are found.
+3. **Get captions:** open a YouTube watch page, paste `tools/browser/captions.js` into the console, run `await zgCaptions([...ids])`, paste the result into `tools/.cache/captions.txt`, then run `captions`. Transcripts land in `tools/.cache/tx/<id>.txt` as `seconds [m:ss] text` blocks, which is how the `w:` timestamps are found. For a quick look at one video, `tools/browser/yt-helpers.js` (below) reads the transcript right in the YouTube tab.
 4. **Get images:** `wiki-images "Map Name"` to list them, then `get-images <game>/<map> name="Wiki File.png" hero@1400="Other File.jpg"`.
 5. **Write** `data/<game>/<map>.js` (see the main README) and add its `<script>` tag to `index.html`.
 
@@ -37,10 +37,29 @@ Every guide was checked step by step against the Call of Duty Wiki in October 20
 3. Where the wiki and the guide disagree, the guide video settles it: search its transcript in `tools/.cache/tx/`. If the video shows our version on screen, keep it. Otherwise look for a second written guide.
 4. Wording a step differently is fine; a wrong number, place or order is not. Missing locations, retry rules and solo/co-op differences are worth adding.
 
+## Coverage numbers
+
+Paste `tools/browser/coverage.js` into the console on the site. It returns how many maps have a Map button, cards have a picture, side quests have a video, quest steps have a Watch clip, and part and side-quest spots have a picture, and leaves the lists of what's missing in `window.zgGaps`.
+
+## Finding pictures and clips
+
+Pictures come from the wiki first; video stills and other guides only where the wiki has none and the picture clearly matches the spot's wording. Each caption credits its source ("Still from <channel>'s guide video", "Picture from <site>'s guide").
+
+- `python -X utf8 tools/research/wikifiles.py "words"`: search the wiki's File namespace (pictures not used on any page show up too).
+- `python -I -X utf8 tools/research/wikidl.py "File name.png" ...`: download wiki files full size into `tools/.cache/wikidl/` with contact sheets, to look before choosing. `zg.py get-images` puts the chosen one on the site.
+- `python -I -X utf8 tools/research/pagelist.py URL [regex]`: a web guide page as headings, text and picture links, in order (needs `pip install beautifulsoup4`). Good sources so far: mmmrkennedy's guides, Henry's Zombified blog, Game8 (Black Ops 6 and 7), zombies-web, PowerPyx and Gameranx (Black Ops 4).
+- `python -X utf8 tools/research/blogq.py "words"`: search the Zombified blog. It also has map layouts (whole-map and per-area).
+- `python -I -X utf8 tools/research/dlimgs.py NAME URL ...`: download pictures into `tools/.cache/dl/NAME/` (Blogger pictures at full size).
+- **Video transcripts and stills:** paste `tools/browser/yt-helpers.js` into a YouTube watch tab. `zgFind(id, 'regex')` finds when something is said; `zgGrab(id, [seconds])` and `zgSheet2(...)` / `zgShow2(...)` draw frames to screenshot. The file's header explains the steps and gotchas.
+
 ## Publishing
 
 - **GitHub Pages:** bump the `?v=` numbers in `index.html`, commit and push to `main`.
-- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish (served path: local file), always including `index.html`, the page wrapped in its own document skeleton because the publishing tool serves it exactly as sent. One publish takes at most 255 files, so publish only what changed. One version can hold at most 511 files, so the hosted copy packs things up:
+- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish (served path: local file), always including `index.html`. Then publish to the same artifact (never a new one) with whichever artifact tool the session has:
+  - the built-in Artifact tool: read the artifact's link first, then publish with `file_path` = `tools/.cache/artifact/zombies-field-guide.html` (the bare page; this tool adds the document skeleton itself) and `files` = the printed map minus `index.html`;
+  - the claude-artifacts server: `get_artifact` for the version, `list_files`, then `publish_files` in patch mode with the printed map, whose `index.html` is already wrapped in the skeleton because that tool serves it exactly as sent.
+
+  Check the upload by comparing each file's sha256 with the local build. If the tools answer "not available to this session", a new session usually fixes it. One publish takes at most 255 files, so publish only what changed. One version can hold at most 511 files, so the hosted copy packs things up:
   - every map script goes into a single `data/bundle.js` (built in the same order as `index.html`);
   - every image folder's pictures, except `hero.webp`, go into one pack, `img/<game>-<folder>.js`, which the page loads when a map opens. Hero banners stay separate files because the home and game pages show them.
 
