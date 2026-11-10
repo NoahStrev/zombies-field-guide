@@ -8,6 +8,17 @@
     game: 'vg', id: 'the-archon', order: 2,
     name: 'The Archon', dlc: 'Season Five', eeName: 'There Archon Be Only One',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [
+      { src: I + 'areas-01.webp', cap: 'Temple. Picture from Zombified\'s guide' },
+      { src: I + 'areas-02.webp', cap: 'East Spring, Tents, Fuel Depot, Radio Post and Outpost Courtyard, ground floor. Picture from Zombified\'s guide' },
+      { src: I + 'areas-03.webp', cap: 'East Spring to Outpost Courtyard, upper floors. Picture from Zombified\'s guide' },
+      { src: I + 'areas-04.webp', cap: 'Merchant Road and Storehouse. Picture from Zombified\'s guide' },
+      { src: I + 'areas-05.webp', cap: 'Debris Field. Picture from Zombified\'s guide' },
+      { src: I + 'areas-06.webp', cap: 'The Spike. Picture from Zombified\'s guide' },
+      { src: I + 'areas-07.webp', cap: 'West Spring, Bazaar, Arroyo, Merchant Road West and Train Wreck. Picture from Zombified\'s guide' },
+      { src: I + 'areas-08.webp', cap: 'Bazaar, upper floor. Picture from Zombified\'s guide' },
+      { src: I + 'areas-09.webp', cap: 'Derailment. Picture from Zombified\'s guide' },
+    ],
     tags: ['Decimator Shield', 'Three trials', 'Kortifex'],
     blurb: 'Vanguard\'s finale, back at the desert oasis from Der Anfang. Rebuild Pack-a-Punch with a ritual, pass the Construct\'s three trials, then follow Kortifex into the Dark Aether and destroy his eyes.',
     quick: [

@@ -20,6 +20,9 @@ Checking (after exporting the site data with tools/browser/export.js)
                                 readable text file per map in tools/.cache/dump/, for fact-checking
   retitled [REF]                Step titles in data/ that existed at git REF (default HEAD) but are gone now.
                                 Ticks are saved under the title, so a reworded step needs key: '<old slug>'
+  video-check                   Every YouTube video in data/ still plays and can be embedded (reads the data
+                                files directly, no export needed; about 10 minutes, it goes slowly so YouTube
+                                doesn't throttle it). Exit code 1 if a video is broken, 2 if some couldn't be checked.
 
 Publishing
   build-artifact [--since REF] [--mirror]
@@ -590,10 +593,59 @@ def build_artifact(args):
     print(json.dumps(out))
 
 
+def data_video_ids():
+    """{video id: [data files using it]} from video objects ({ id: '...', title: ... }), step clips
+    (w: ['...', t]) and constants used for either (const E = '...'; then id: E or w: [E, t])."""
+    vid = r"[A-Za-z0-9_-]{11}"
+    found = {}
+    for f in sorted((ROOT / "data").glob("*/*.js")):
+        s = f.read_text(encoding="utf-8")
+        consts = dict(re.findall(r"const\s+([A-Za-z_]\w*)\s*=\s*'(" + vid + r")'", s))
+        ids = set(re.findall(r"\bid:\s*'(" + vid + r")',\s*title:", s))
+        ids |= set(re.findall(r"\bw:\s*\[\s*'(" + vid + r")'", s))
+        for name in re.findall(r"\bid:\s*([A-Za-z_]\w*),\s*title:", s) + re.findall(r"\bw:\s*\[\s*([A-Za-z_]\w*)\s*,", s):
+            if name in consts:
+                ids.add(consts[name])
+        for v in ids:
+            found.setdefault(v, []).append(f.relative_to(ROOT / "data").as_posix())
+    return found
+
+
+def video_check(args):
+    """Checks slowly (YouTube answers 429 Too Many Requests to quick bursts). A video that still can't be
+    reached after backing off is listed as "couldn't check", not as broken."""
+    found = data_video_ids()
+    print(f"checking {len(found)} videos used in data/ (takes about 10 minutes) ...")
+    bad, unchecked = [], []
+    for i, (v, files) in enumerate(sorted(found.items()), 1):
+        for wait_s in (0, 60, 180, 420):
+            if wait_s:
+                print(f"  YouTube is throttling; waiting {wait_s} s before retrying {v}")
+                time.sleep(wait_s)
+            info = video_info(v, {})
+            if not str(info.get("status", "")).startswith("ERR"):
+                break
+        where = f"used in {', '.join(files)}"
+        if str(info.get("status", "")).startswith("ERR"):
+            unchecked.append(v)
+            print(f"  COULDN'T CHECK {v} ({info['status'][4:80]}) | {where}")
+        elif info.get("status") != "OK" or not info.get("embed"):
+            why = info.get("status") if info.get("status") != "OK" else "can't be embedded"
+            bad.append(v)
+            print(f"  PROBLEM {v} ({why}) {info.get('author') or ''} | {(info.get('title') or '')[:60]} | {where}")
+        time.sleep(1.5)
+        if i % 50 == 0:
+            print(f"  ... {i} checked")
+    print(f"{len(found) - len(bad) - len(unchecked)} of {len(found)} videos play and embed; "
+          f"{len(bad)} problem(s); {len(unchecked)} couldn't be checked (network or throttling, try again later).")
+    sys.exit(1 if bad else (2 if unchecked else 0))
+
+
 COMMANDS = {
     "wiki-fetch": lambda a: wiki_fetch(a), "wiki-show": wiki_show, "wiki-images": wiki_images, "get-images": get_images,
     "yt-search": yt_search, "yt-info": yt_info, "captions": lambda a: captions(),
     "receiver": lambda a: receiver(), "audit": audit, "verify": verify, "retitled": retitled, "dump": dump, "build-artifact": build_artifact,
+    "video-check": video_check,
 }
 
 if __name__ == "__main__":

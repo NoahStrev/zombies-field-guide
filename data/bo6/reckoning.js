@@ -13,6 +13,18 @@
     game: 'bo6', id: 'reckoning', order: 6,
     name: 'Reckoning', dlc: 'Season Five', eeName: 'Main quest: unleash the Sentinel Artifact',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [
+      { src: I + 'areas-01.webp', cap: 'T1: Project Janus Reception (spawn). Picture from Zombified\'s guide' },
+      { src: I + 'areas-02.webp', cap: 'T1: Mutant Research Lab. Picture from Zombified\'s guide' },
+      { src: I + 'areas-03.webp', cap: 'T1: Bio Lab. Picture from Zombified\'s guide' },
+      { src: I + 'areas-04.webp', cap: 'T1: Quantum Computing. Picture from Zombified\'s guide' },
+      { src: I + 'areas-05.webp', cap: 'T2: Android Assembly. Picture from Zombified\'s guide' },
+      { src: I + 'areas-06.webp', cap: 'T2: Dark Entity Containment. Picture from Zombified\'s guide' },
+      { src: I + 'areas-07.webp', cap: 'T2: Dark Entity Containment, upper and lower floor. Picture from Zombified\'s guide' },
+      { src: I + 'areas-08.webp', cap: 'T2: Executive Suite. Picture from Zombified\'s guide' },
+      { src: I + 'areas-09.webp', cap: 'T2: Sublevel 10. Picture from Zombified\'s guide' },
+      { src: I + 'areas-10.webp', cap: 'Teleportation Lab. Picture from Zombified\'s guide' },
+    ],
     tags: ['Gorgofex', 'Franken-Klaus', 'Choose a side'],
     blurb: 'The Janus Towers above Liberty Falls, the final Black Ops 6 map. Build the Gorgofex, rebuild Klaus, open a portal to Tower 3 and decide the ending: side with Richtofen and fight S.A.M., or side with S.A.M. and fight Richtofen.',
     quick: [

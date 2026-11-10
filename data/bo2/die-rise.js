@@ -23,6 +23,15 @@
     game: 'bo2', id: 'die-rise', order: 2,
     name: 'Die Rise', dlc: 'Revolution · DLC 1', eeName: 'High Maintenance',
     hero: I + 'hero.webp', players: 'four',
+    layout: [
+      { src: I + 'areas-01.webp', cap: 'First floor (spawn). Picture from Zombified\'s guide' },
+      { src: I + 'areas-02.webp', cap: 'Second floor. Picture from Zombified\'s guide' },
+      { src: I + 'areas-03.webp', cap: 'Third floor. Picture from Zombified\'s guide' },
+      { src: I + 'areas-04.webp', cap: 'Electricity (power) room, building 2. Picture from Zombified\'s guide' },
+      { src: I + 'areas-05.webp', cap: 'Floor beneath the rooftop. Picture from Zombified\'s guide' },
+      { src: I + 'areas-06.webp', cap: 'Rooftop. Picture from Zombified\'s guide' },
+      { src: I + 'areas-07.webp', cap: 'Trample Steam room. Picture from Zombified\'s guide' },
+    ],
     tags: ['Sliquifier', 'Trample Steam', 'Elevators'],
     blurb: 'Collapsed skyscrapers in China. Ride the elevators, build the Sliquifier, and power the rooftop pylon for Maxis or Richtofen.',
     quick: [

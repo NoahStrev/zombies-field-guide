@@ -13,6 +13,15 @@
     game: 'bo6', id: 'the-tomb', order: 4,
     name: 'The Tomb', dlc: 'Season Two', eeName: 'Main quest: claim the Sentinel Artifact',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [
+      { src: I + 'areas-01.webp', cap: 'Dig Site. Picture from Zombified\'s guide' },
+      { src: I + 'areas-02.webp', cap: 'Ossuary. Picture from Zombified\'s guide' },
+      { src: I + 'areas-03.webp', cap: 'Subterranean Temple and Deep Excavation. Picture from Zombified\'s guide' },
+      { src: I + 'areas-04.webp', cap: 'The Tomb. Picture from Zombified\'s guide' },
+      { src: I + 'areas-05.webp', cap: 'Neolithic Catacombs. Picture from Zombified\'s guide' },
+      { src: I + 'areas-06.webp', cap: 'Shrine of the Hierophants. Picture from Zombified\'s guide' },
+      { src: I + 'areas-07.webp', cap: 'Dark Aether Nexus. Picture from Zombified\'s guide' },
+    ],
     tags: ['Staff of Ice', 'Dark Aether Nexus', 'Sentinel Artifact'],
     blurb: 'An excavation site in catacombs below Avalon, with portals into a Dark Aether Nexus. Build and upgrade the Staff of Ice, complete four creature challenges, and destroy the Sentinel Artifact.',
     quick: [
