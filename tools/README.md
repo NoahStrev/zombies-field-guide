@@ -55,7 +55,7 @@ Pictures come from the wiki first; video stills and other guides only where the 
 ## Publishing
 
 - **GitHub Pages:** bump the `?v=` numbers in `index.html`, commit and push to `main`.
-- **Private claude.ai page:** `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish (served path: local file), always including `index.html`. Then publish to the same artifact (never a new one) with whichever artifact tool the session has:
+- **Private claude.ai page (retired 2026-11-10):** the guide used to have a second, private copy on claude.ai (https://claude.ai/artifact/9j9Uk5jz6z5ZMqc5QZm787). It is no longer updated and was left at version 44 (commit 21cb48a); GitHub Pages is the only copy kept current. The code that only matters there (picture packs, account tick sync, no video embeds) stays in place and does nothing on GitHub Pages. If it's ever revived, the steps were: `build-artifact --since <last published commit>` writes the hosted page to `tools/.cache/artifact/` and prints the changed files to publish (served path: local file), always including `index.html`. Then publish to the same artifact (never a new one) with whichever artifact tool the session has:
   - the built-in Artifact tool: read the artifact's link first, then publish with `file_path` = `tools/.cache/artifact/zombies-field-guide.html` (the bare page; this tool adds the document skeleton itself) and `files` = the printed map minus `index.html`;
   - the claude-artifacts server: `get_artifact` for the version, `list_files`, then `publish_files` in patch mode with the printed map, whose `index.html` is already wrapped in the skeleton because that tool serves it exactly as sent.
 
