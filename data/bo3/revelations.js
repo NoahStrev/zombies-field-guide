@@ -7,6 +7,10 @@
     game: 'bo3', id: 'revelations', order: 6, group: 'original',
     name: 'Revelations', dlc: 'Salvation · DLC 4', eeName: 'For The Good Of All',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [
+      { src: I + 'layout.webp', cap: 'Every area and the map it comes from (Origins, Der Eisendrache, Shangri-La and more). Map by u/Deathkore115, design by u/sketchitout, via Zombified\'s blog' },
+      { src: I + 'layout-2.webp', cap: 'Which portal leads where, with the Pack-a-Punch rituals, Apothicon upgrades, shield parts and masks marked. By @IMZAMBIE, via Zombified\'s blog' },
+    ],
     tags: ['Guard of Fafnir', 'Keeper Protector', 'Thundergun'],
     blurb: 'The Aether story finale: floating fragments of old maps around the Shadowman\'s realm. Rebuild S.O.P.H.I.A., recover the Summoning Key and finish the Shadowman for good.',
     quick: [

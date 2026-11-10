@@ -5,6 +5,7 @@
     game: 'bo3', id: 'shangri-la', order: 8, group: 'chronicles',
     name: 'Shangri-La', dlc: 'Zombies Chronicles', eeName: 'Time Travel Will Tell',
     hero: I + 'hero.webp', players: 'four',
+    layout: [{ src: I + 'layout.webp', cap: 'Original Black Ops layout: perks, Mystery Box spots, the Pack-a-Punch pads, doors and their costs, wall-buys and the routes to the waterfall, mine cart and slide. Picture from Zombified\'s guide' }],
     tags: ['31-79 JGb215', 'Time travel', '4 players'],
     blurb: 'A temple in the Himalayan jungle with geysers, a mine cart and a water slide. Travel between past and present during eclipses to help two explorers stuck in a time loop.',
     quick: [

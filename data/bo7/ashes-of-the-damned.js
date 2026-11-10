@@ -14,6 +14,7 @@
     game: 'bo7', id: 'ashes-of-the-damned', order: 1,
     name: 'Ashes of the Damned', dlc: 'Launch map', eeName: 'Dust To Dust',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [{ src: I + 'layout.webp', cap: 'The tac map with every area outlined and named. Picture from Zombified\'s guide' }],
     tags: ['Ol\' Tessie', 'Necrofluid Gauntlet', 'Veytharion boss'],
     blurb: 'The biggest round-based map ever: towns and a cosmodrome joined by foggy roads, crossed in the armoured truck Ol\' Tessie. Upgrade Tessie, build the Necrofluid Gauntlet, brew a serum, unlock four rituals and drive into a pyramid to fight Veytharion.',
     quick: [

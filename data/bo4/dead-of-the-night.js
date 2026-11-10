@@ -7,6 +7,10 @@
     game: 'bo4', id: 'dead-of-the-night', order: 4, group: 'chaos',
     name: 'Dead of the Night', dlc: 'Black Ops Pass · DLC 1', eeName: 'Trial by Ordeal',
     hero: I + 'hero.webp', players: 'solo',
+    layout: [
+      { src: I + 'layout.webp', cap: 'The house: Entrance Hall, Grand Staircase, the galleries and balconies, the bedrooms, Billiards Room, Study and the Cemetery. Fan-made layout by Sandkastles (Reddit), via Zombified\'s blog' },
+      { src: I + 'layout-2.webp', cap: 'The garden side: Gardens, Greenhouse Laboratory, Dining Room, Wine Cellar, Forest Terrace and the Forest. Fan-made layout by Sandkastles (Reddit), via Zombified\'s blog' },
+    ],
     tags: ['Alistair\'s Folly', 'Savage Impaler', 'Silver bullets'],
     blurb: 'A haunted English manor full of vampires (Nosferatu) and werewolves. Craft silver bullets, upgrade Alistair\'s pistol twice, finish three quest lines and trap the werewolf boss.',
     quick: [
