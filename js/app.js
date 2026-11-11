@@ -811,7 +811,7 @@
     const u = item.upgrade;
     return `<section class="upgrade">
       <div class="upgrade-head${u.img ? '' : ' no-img'}">
-        ${u.img ? `<button type="button" class="zoom upgrade-img" data-full="${esc(imgUrl(u.img))}" data-cap="${esc(u.name)}"><img src="${esc(imgUrl(u.img))}" alt="" loading="lazy"></button>` : ''}
+        ${u.img ? `<button type="button" class="zoom upgrade-img" data-full="${esc(imgUrl(u.img))}" data-cap="${esc(u.imgCap ? `${u.name} · ${u.imgCap}` : u.name)}"><img src="${esc(imgUrl(u.img))}" alt="" loading="lazy"></button>` : ''}
         <div><div class="item-type">Upgrade</div><h4 class="upgrade-name">${esc(u.name)}</h4>${u.aka ? `<div class="item-aka">${esc(u.aka)}</div>` : ''}${u.summary ? `<p>${fmt(u.summary, map)}</p>` : ''}</div>
       </div>
       ${checklistHtml(map, item, 'upgrade', u.steps, u.stepsTitle || 'Upgrade steps', opts)}
@@ -822,7 +822,7 @@
 
   function itemHtml(map, item, opts = {}) {
     const imgBtn = item.img
-      ? `<button type="button" class="zoom item-img" data-full="${esc(imgUrl(item.img))}" data-cap="${esc(item.name)}"><img src="${esc(imgUrl(item.img))}" alt="${esc(item.name)}" loading="lazy" decoding="async"></button>`
+      ? `<button type="button" class="zoom item-img" data-full="${esc(imgUrl(item.img))}" data-cap="${esc(item.imgCap ? `${item.name} · ${item.imgCap}` : item.name)}"><img src="${esc(imgUrl(item.img))}" alt="${esc(item.name)}" loading="lazy" decoding="async"></button>`
       : '';
     return `<article class="item${opts.drawer ? ' in-drawer' : ''}${item.img ? '' : ' no-img'}"${opts.drawer ? '' : ` id="item-${esc(item.id)}"`} style="${colorVar(item)}">
       <header class="item-head">

@@ -52,7 +52,7 @@
 
       /* ------------------------------ PARTS ------------------------------ */
       {
-        id: 'riot-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Riot Shield', color: 'gold',
+        id: 'riot-shield', tab: 'parts', type: 'Buildable · Shield', name: 'Riot Shield', img: I + 'riot-shield.webp', imgCap: 'Still from MrDalekJD\'s guide video', color: 'gold',
         summary: 'A shield with a machine pistol (aim to fire). Turn your back (shield) to the Avogadro\'s zaps in the boss fight.',
         facts: [['Parts', '3'], ['Build at', 'Any bench: Green House upstairs, APD Control or Operations']],
         video: { id: D, title: 'Ultimate guide to Alpha Omega', ch: 'MrDalekJD', len: '25:55' },

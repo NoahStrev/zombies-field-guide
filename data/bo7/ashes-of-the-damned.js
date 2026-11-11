@@ -70,7 +70,7 @@
         ],
       },
       {
-        id: 'tessie-upgrades', tab: 'parts', type: 'Ol\' Tessie upgrades', name: 'Abomination Beam and DG-2 turret', color: 'storm',
+        id: 'tessie-upgrades', tab: 'parts', type: 'Ol\' Tessie upgrades', name: 'Abomination Beam and DG-2 turret', img: I + 'tessie-beam.webp', imgCap: 'Tessie\'s Abomination Beam, still from MrRoflWaffles\'s guide video', color: 'storm',
         summary: 'Tessie\'s other two upgrades. Both are installed in the Ashwood garage, like Pack-a-Punch.',
         video: EV,
         steps: [

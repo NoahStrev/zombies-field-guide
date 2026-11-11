@@ -79,7 +79,7 @@
         ],
       },
       {
-        id: 'power-switch', tab: 'parts', type: 'Buildable · Power', name: 'Power switch', color: 'lightning',
+        id: 'power-switch', tab: 'parts', type: 'Buildable · Power', name: 'Power switch', img: I + 'power-switch.webp', imgCap: 'Still from JokerAlex 21\'s guide video', color: 'lightning',
         summary: 'Three parts, all around the power room under the Power Station. Build it at the table in the power room.',
         facts: [['Parts', '3'], ['Build at', 'The power room table']],
         video: { id: E, title: 'TranZit easter egg guide (Maxis and Richtofen)', ch: 'MrDalekJD', len: '14:04' },

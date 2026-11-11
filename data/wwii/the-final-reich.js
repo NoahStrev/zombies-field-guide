@@ -84,7 +84,7 @@
         ],
       },
       {
-        id: 'bloodthirst', tab: 'weapons', type: 'Tesla Gun upgrade', name: 'Bloodthirst', color: 'red',
+        id: 'bloodthirst', tab: 'weapons', type: 'Tesla Gun upgrade', name: 'Bloodthirst', img: I + 'bloodthirst.webp', imgCap: 'Still from MrRoflWaffles\'s guide video', color: 'red',
         summary: 'Stuns zombies, then makes them explode and hurt whatever is next to them.',
         facts: [['Battery', 'Lit streetlights, then Pests in the Morgue trap'], ['Machine', 'Morgue, left slot']],
         video: BV,
@@ -99,7 +99,7 @@
         ],
       },
       {
-        id: 'hurricane', tab: 'weapons', type: 'Tesla Gun upgrade', name: 'Hurricane', color: 'void',
+        id: 'hurricane', tab: 'weapons', type: 'Tesla Gun upgrade', name: 'Hurricane', img: I + 'hurricane.webp', imgCap: 'The slow purple ball, still from MrRoflWaffles\'s guide video', color: 'void',
         summary: 'A very slow ball that drifts through zombies and keeps damaging everything around it after it stops.',
         facts: [['Battery', 'A Bomber blows a locker open; Wüstlings in the Laboratory trap'], ['Machine', 'Laboratory, right slot']],
         video: UV,
@@ -128,7 +128,7 @@
         ],
       },
       {
-        id: 'reaper', tab: 'weapons', type: 'Tesla Gun upgrade', name: 'Reaper', color: 'gold',
+        id: 'reaper', tab: 'weapons', type: 'Tesla Gun upgrade', name: 'Reaper', img: I + 'reaper.webp', imgCap: 'Still from MrRoflWaffles\'s guide video', color: 'gold',
         summary: 'Stuns its target, which then runs at the nearest zombie and explodes.',
         facts: [['Battery', 'A Wüstling opens a locker; Bombers in the Sewers saw trap'], ['Machine', 'Morgue, right slot']],
         video: RV,
